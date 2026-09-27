@@ -119,14 +119,20 @@ end
 // * the third is for dual issue cpu. port for single issue and port for dual 
 // * issue cannot be valied at the same time.
 integer GPR_FH;
+reg gpr_log_enabled;
 
 initial
 begin
-  GPR_FH = $fopen("GPR.log");
-  if(GPR_FH == 0)
+  // Register dumps are for debugging; keep benchmark runs free of this I/O.
+  gpr_log_enabled = $test$plusargs("gpr_log");
+  if(gpr_log_enabled)
     begin
-      $display("can't open log file GPR.log in mnt.v!");
-      $finish;
+      GPR_FH = $fopen("GPR.log");
+      if(GPR_FH == 0)
+        begin
+          $display("can't open log file GPR.log in mnt.v!");
+          $finish;
+        end
     end
 end
 
@@ -138,7 +144,7 @@ assign retire_pc_print   = retire_latch;
 
 always @(posedge `clk)
 begin
-  if(retire_pc_print)      
+  if(retire_pc_print && gpr_log_enabled)
     begin
       $fwrite(GPR_FH, "PC : %8h |", retire_pc_latch[31:0]);
       $fwrite(GPR_FH, "PSR: %8h\n", `psr);

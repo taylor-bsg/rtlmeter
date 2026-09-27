@@ -147,11 +147,11 @@ execute:
       files:
         - tests/cmark/case.pat
       args:
-        - +iterations=6
+        - +iterations=120
     memcpy:
       files:
         - tests/memcpy/case.pat
       args:
-        - +iterations=3000
+        - +iterations=60000
       tags:
         - standard
