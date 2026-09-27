@@ -273,11 +273,11 @@ execute:
       files:
         - tests/cmark/case.pat
       args:
-        - +iterations=6
+        - +iterations=48
       tags:
         - standard
     memcpy:
       files:
         - tests/memcpy/case.pat
       args:
-        - +iterations=2400
+        - +iterations=21000
