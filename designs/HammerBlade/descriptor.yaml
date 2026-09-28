@@ -1,0 +1,294 @@
+# Native SPMD amoadd/barrier: 16x8 default and low-memory 2x1 mesh.
+# Default: machines/pod_1x1; 2x1: small mesh with 64 MiB test memory.
+# Regeneration and local validation: docs/source/hammerblade.rst.
+origin:
+  - repository: https://github.com/bespoke-silicon-group/bsg_manycore
+    revision: 0052ce8594864befae2b85d55193706c88b14584
+    licenses: [LICENSE-manycore]
+  - repository: https://github.com/bespoke-silicon-group/basejump_stl
+    revision: fa07b1f180d0d313e15dc828249eea07b341852b
+    licenses: [LICENSE-basejump]
+  - repository: https://github.com/bsg-external/HardFloat
+    revision: 5b7d5fe2df7e297b5ba095b3eb8a9517dc2e9d88
+    licenses: [LICENSE-HardFloat]
+  - repository: local
+    revision: local
+    licenses: [../../LICENSE]
+compile:
+  verilogSourceFiles:
+    - src/basejump/bsg_noc_pkg.sv
+    - src/basejump/bsg_mesh_router_pkg.sv
+    - src/basejump/bsg_wormhole_router_pkg.sv
+    - src/basejump/bsg_tag_pkg.sv
+    - src/basejump/bsg_cache_pkg.sv
+    - src/basejump/bsg_cache_non_blocking_pkg.sv
+    - src/manycore/bsg_manycore_pkg.sv
+    - src/manycore/bsg_vanilla_pkg.sv
+    - src/manycore/bsg_manycore_addr_pkg.sv
+    - src/hardfloat/bsg_hardfloat_pkg.sv
+    - src/basejump/bsg_less_than.sv
+    - src/basejump/bsg_reduce.sv
+    - src/basejump/bsg_abs.sv
+    - src/basejump/bsg_mul_synth.sv
+    - src/basejump/bsg_priority_encode.sv
+    - src/basejump/bsg_priority_encode_one_hot_out.sv
+    - src/basejump/bsg_encode_one_hot.sv
+    - src/basejump/bsg_scan.sv
+    - src/basejump/bsg_mux.sv
+    - src/basejump/bsg_mux_one_hot.sv
+    - src/basejump/bsg_mux_segmented.sv
+    - src/basejump/bsg_mux_bitwise.sv
+    - src/basejump/bsg_dff.sv
+    - src/basejump/bsg_dff_chain.sv
+    - src/basejump/bsg_dff_en_bypass.sv
+    - src/basejump/bsg_dff_reset_en_bypass.sv
+    - src/basejump/bsg_dff_en.sv
+    - src/basejump/bsg_dff_reset.sv
+    - src/basejump/bsg_dff_reset_en.sv
+    - src/basejump/bsg_dff_reset_set_clear.sv
+    - src/basejump/bsg_transpose.sv
+    - src/basejump/bsg_crossbar_o_by_i.sv
+    - src/basejump/bsg_decode_with_v.sv
+    - src/basejump/bsg_decode.sv
+    - src/basejump/bsg_counter_clear_up.sv
+    - src/basejump/bsg_counter_up_down.sv
+    - src/basejump/bsg_counter_set_down.sv
+    - src/basejump/bsg_round_robin_arb.sv
+    - src/basejump/bsg_arb_round_robin.sv
+    - src/basejump/bsg_circular_ptr.sv
+    - src/basejump/bsg_imul_iterative.sv
+    - src/basejump/bsg_idiv_iterative.sv
+    - src/basejump/bsg_idiv_iterative_controller.sv
+    - src/basejump/bsg_inv.sv
+    - src/basejump/bsg_buf.sv
+    - src/basejump/bsg_buf_ctrl.sv
+    - src/basejump/bsg_xnor.sv
+    - src/basejump/bsg_nor2.sv
+    - src/basejump/bsg_adder_cin.sv
+    - src/basejump/bsg_expand_bitmask.sv
+    - src/basejump/bsg_lru_pseudo_tree_decode.sv
+    - src/basejump/bsg_lru_pseudo_tree_encode.sv
+    - src/basejump/bsg_lru_pseudo_tree_backup.sv
+    - src/basejump/bsg_thermometer_count.sv
+    - src/basejump/bsg_id_pool.sv
+    - src/basejump/bsg_concentrate_static.sv
+    - src/basejump/bsg_array_concentrate_static.sv
+    - src/basejump/bsg_unconcentrate_static.sv
+    - src/basejump/bsg_mux2_gatestack.sv
+    - src/basejump/bsg_counting_leading_zeros.sv
+    - src/basejump/bsg_mul_add_unsigned.sv
+    - src/basejump/bsg_hashing_ipoly.sv
+    - src/basejump/bsg_tag_client.sv
+    - src/basejump/bsg_fifo_1r1w_large.sv
+    - src/basejump/bsg_fifo_1rw_large.sv
+    - src/basejump/bsg_fifo_1r1w_small.sv
+    - src/basejump/bsg_fifo_1r1w_small_unhardened.sv
+    - src/basejump/bsg_two_fifo.sv
+    - src/basejump/bsg_round_robin_n_to_1.sv
+    - src/basejump/bsg_round_robin_2_to_2.sv
+    - src/basejump/bsg_parallel_in_serial_out.sv
+    - src/basejump/bsg_serial_in_parallel_out.sv
+    - src/basejump/bsg_fifo_tracker.sv
+    - src/basejump/bsg_make_2D_array.sv
+    - src/basejump/bsg_flatten_2D_array.sv
+    - src/basejump/bsg_mem_1r1w.sv
+    - src/basejump/bsg_mem_1r1w_synth.sv
+    - src/basejump/bsg_mem_1r1w_sync.sv
+    - src/basejump/bsg_mem_1r1w_sync_synth.sv
+    - src/basejump/bsg_mem_1rw_sync.sv
+    - src/basejump/bsg_mem_1rw_sync_synth.sv
+    - src/basejump/bsg_mem_2r1w_sync.sv
+    - src/basejump/bsg_mem_2r1w_sync_synth.sv
+    - src/basejump/bsg_mem_3r1w_sync.sv
+    - src/basejump/bsg_mem_3r1w_sync_synth.sv
+    - src/basejump/bsg_mem_1rw_sync_mask_write_byte.sv
+    - src/basejump/bsg_mem_1rw_sync_mask_write_byte_synth.sv
+    - src/basejump/bsg_mem_1rw_sync_mask_write_bit.sv
+    - src/basejump/bsg_mem_1rw_sync_mask_write_bit_synth.sv
+    - src/basejump/bsg_mesh_stitch.sv
+    - src/basejump/bsg_mesh_router.sv
+    - src/basejump/bsg_mesh_router_decoder_dor.sv
+    - src/basejump/bsg_mesh_router_buffered.sv
+    - src/basejump/bsg_wormhole_router.sv
+    - src/basejump/bsg_wormhole_router_decoder_dor.sv
+    - src/basejump/bsg_wormhole_router_input_control.sv
+    - src/basejump/bsg_wormhole_router_output_control.sv
+    - src/basejump/bsg_wormhole_concentrator.sv
+    - src/basejump/bsg_wormhole_concentrator_in.sv
+    - src/basejump/bsg_wormhole_concentrator_out.sv
+    - src/basejump/bsg_barrier.sv
+    - src/basejump/bsg_launch_sync_sync.sv
+    - src/basejump/bsg_sync_sync.sv
+    - src/basejump/bsg_async_fifo.sv
+    - src/basejump/bsg_async_ptr_gray.sv
+    - src/basejump/bsg_cache.sv
+    - src/basejump/bsg_cache_decode.sv
+    - src/basejump/bsg_cache_dma.sv
+    - src/basejump/bsg_cache_dma_to_wormhole.sv
+    - src/basejump/bsg_cache_miss.sv
+    - src/basejump/bsg_cache_sbuf.sv
+    - src/basejump/bsg_cache_tbuf.sv
+    - src/basejump/bsg_cache_buffer_queue.sv
+    - src/manycore/bsg_manycore_link_to_cache.sv
+    - src/hardfloat/fNToRecFN.v
+    - src/hardfloat/compareRecFN.v
+    - src/hardfloat/divSqrtRecFN.v
+    - src/hardfloat/divSqrtRecFN_medium.v
+    - src/hardfloat/divSqrtRecFN_small.v
+    - src/hardfloat/iNToRecFN.v
+    - src/hardfloat/mulAddRecFN.v
+    - src/hardfloat/recFNToFN.v
+    - src/hardfloat/HardFloat_rawFN.v
+    - src/hardfloat/HardFloat_primitives.v
+    - src/hardfloat/isSigNaNRecFN.v
+    - src/hardfloat/recFNToIN.v
+    - src/hardfloat/HardFloat_specialize.v
+    - src/manycore/bsg_manycore_proc_vanilla.sv
+    - src/manycore/network_rx.sv
+    - src/manycore/network_tx.sv
+    - src/manycore/vanilla_core.sv
+    - src/manycore/alu.sv
+    - src/manycore/cl_decode.sv
+    - src/manycore/fpu_float.sv
+    - src/manycore/fpu_float_fma.sv
+    - src/manycore/fpu_float_fma_round.sv
+    - src/manycore/fpu_float_aux.sv
+    - src/manycore/fpu_int.sv
+    - src/manycore/fpu_int_fclass.sv
+    - src/manycore/fcsr.sv
+    - src/manycore/mcsr.sv
+    - src/manycore/fpu_fdiv_fsqrt.sv
+    - src/manycore/fpu_fmin_fmax.sv
+    - src/manycore/icache.sv
+    - src/manycore/idiv.sv
+    - src/manycore/load_packer.sv
+    - src/manycore/lsu.sv
+    - src/manycore/regfile.sv
+    - src/manycore/regfile_synth.sv
+    - src/manycore/regfile_hard.sv
+    - src/manycore/scoreboard.sv
+    - src/manycore/bsg_manycore_pod_ruche_array.sv
+    - src/manycore/bsg_manycore_pod_ruche.sv
+    - src/manycore/bsg_manycore_pod_ruche_row.sv
+    - src/manycore/bsg_manycore_pod_mesh_array.sv
+    - src/manycore/bsg_manycore_pod_mesh.sv
+    - src/manycore/bsg_manycore_pod_mesh_row.sv
+    - src/manycore/bsg_manycore_tile_compute_array_ruche.sv
+    - src/manycore/bsg_manycore_tile_compute_ruche.sv
+    - src/manycore/bsg_manycore_tile_compute_array_mesh.sv
+    - src/manycore/bsg_manycore_tile_compute_mesh.sv
+    - src/manycore/bsg_manycore_tile_vcache_array.sv
+    - src/manycore/bsg_manycore_tile_vcache.sv
+    - src/manycore/bsg_manycore_hetero_socket.sv
+    - src/manycore/bsg_manycore_mesh_node.sv
+    - src/manycore/bsg_manycore_endpoint.sv
+    - src/manycore/bsg_manycore_endpoint_fc.sv
+    - src/manycore/bsg_manycore_endpoint_standard.sv
+    - src/manycore/bsg_manycore_reg_id_decode.sv
+    - src/manycore/bsg_manycore_eva_to_npa.sv
+    - src/manycore/bsg_manycore_dram_hash_function.sv
+    - src/manycore/bsg_manycore_link_sif_tieoff.sv
+    - src/manycore/bsg_manycore_ruche_x_link_sif_tieoff.sv
+    - src/manycore/bsg_ruche_buffer.sv
+    - src/manycore/bsg_manycore_mem_cfg_pkg.sv
+    - src/manycore/bsg_manycore_network_cfg_pkg.sv
+    - src/basejump/bsg_nonsynth_clock_gen.sv
+    - src/basejump/bsg_nonsynth_reset_gen.sv
+    - src/basejump/bsg_cycle_counter.sv
+    - src/basejump/bsg_serial_in_parallel_out_full.sv
+    - src/basejump/bsg_round_robin_1_to_n.sv
+    - src/basejump/bsg_one_fifo.sv
+    - src/basejump/bsg_trace_replay.sv
+    - src/basejump/bsg_tag_trace_replay.sv
+    - src/basejump/bsg_tag_master.sv
+    - src/manycore/bsg_nonsynth_manycore_tag_master.sv
+    - src/manycore/bsg_nonsynth_manycore_io_complex.sv
+    - src/manycore/bsg_nonsynth_manycore_spmd_loader.sv
+    - src/manycore/bsg_nonsynth_manycore_monitor.sv
+    - src/manycore/bsg_nonsynth_wormhole_test_mem.sv
+    - src/manycore/bsg_nonsynth_manycore_testbench.sv
+    - src/manycore/spmd_testbench.sv
+    - src/generated/bsg_tag_boot_rom.v
+  verilogIncludeFiles:
+    - src/basejump/bsg_cache.svh
+    - src/basejump/bsg_defines.sv
+    - src/basejump/bsg_fpu_defines.svh
+    - src/basejump/bsg_noc_links.svh
+    - src/basejump/bsg_tag.svh
+    - src/basejump/bsg_wormhole_router.svh
+    - src/hardfloat/HardFloat_consts.vi
+    - src/hardfloat/HardFloat_localFuncs.vi
+    - src/hardfloat/HardFloat_specialize.vi
+    - src/manycore/bsg_manycore_defines.svh
+    - src/manycore/bsg_vanilla_defines.svh
+  verilogDefines:
+    BSG_MACHINE_BARRIER_RUCHE_FACTOR_X: 3
+    BSG_MACHINE_BRANCH_TRACE_EN: 0
+    BSG_MACHINE_DRAM_BANK_SIZE_WORDS: 16777216
+    BSG_MACHINE_DRAM_INCLUDED: 1
+    BSG_MACHINE_DRAM_SIZE_WORDS: 536870912
+    BSG_MACHINE_GLOBAL_X: 16
+    BSG_MACHINE_GLOBAL_Y: 8
+    BSG_MACHINE_HOST_X_CORD: 16
+    BSG_MACHINE_HOST_Y_CORD: 0
+    BSG_MACHINE_IPOLY_HASHING: 1
+    BSG_MACHINE_MAX_EPA_WIDTH: 28
+    BSG_MACHINE_MEM_CFG: e_vcache_test_mem
+    BSG_MACHINE_NETWORK_CFG: e_network_half_ruche_x
+    BSG_MACHINE_NUM_VCACHES_PER_CHANNEL: 16
+    BSG_MACHINE_NUM_VCACHE_ROWS: 1
+    BSG_MACHINE_ORIGIN_X_CORD: 16
+    BSG_MACHINE_ORIGIN_Y_CORD: 8
+    BSG_MACHINE_PODS_X: 1
+    BSG_MACHINE_PODS_Y: 1
+    BSG_MACHINE_RUCHE_FACTOR_X: 3
+    BSG_MACHINE_SUBARRAY_X: 1
+    BSG_MACHINE_SUBARRAY_Y: 1
+    BSG_MACHINE_VCACHE_BLOCK_SIZE_WORDS: 8
+    BSG_MACHINE_VCACHE_DMA_DATA_WIDTH: 32
+    BSG_MACHINE_VCACHE_SET: 64
+    BSG_MACHINE_VCACHE_WAY: 4
+    BSG_MACHINE_VCACHE_WORD_TRACKING: 1
+    BSG_MACHINE_WH_RUCHE_FACTOR: 2
+    BSG_MACHINE_X_CORD_WIDTH: 7
+    BSG_MACHINE_Y_CORD_WIDTH: 7
+    HOST_MODULE_PATH: spmd_testbench
+  topModule: spmd_testbench
+  mainClock: spmd_testbench.core_clk
+execute:
+  common:
+    postHook: tests/check.py
+configurations:
+  default:
+    execute:
+      tests:
+        amoadd:
+          files: [tests/16x8/amoadd.nbf]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +max_cycle=2000000]
+        amoadd_long:
+          files: [tests/16x8/amoadd_long.nbf]
+          args: [+nbf_file=amoadd_long.nbf, +num_finish=1, +max_cycle=2000000]
+  2x1:
+    compile:
+      verilogDefines:
+        BSG_MACHINE_BARRIER_RUCHE_FACTOR_X: 1
+        BSG_MACHINE_DRAM_BANK_SIZE_WORDS: 4194304
+        BSG_MACHINE_DRAM_SIZE_WORDS: 16777216
+        BSG_MACHINE_GLOBAL_X: 2
+        BSG_MACHINE_GLOBAL_Y: 1
+        BSG_MACHINE_HOST_X_CORD: 2
+        BSG_MACHINE_IPOLY_HASHING: 0
+        BSG_MACHINE_NETWORK_CFG: e_network_mesh
+        BSG_MACHINE_NUM_VCACHES_PER_CHANNEL: 2
+        BSG_MACHINE_ORIGIN_X_CORD: 2
+        BSG_MACHINE_ORIGIN_Y_CORD: 2
+        BSG_MACHINE_RUCHE_FACTOR_X: 1
+        BSG_MACHINE_WH_RUCHE_FACTOR: 1
+    execute:
+      tests:
+        amoadd:
+          files: [tests/2x1/amoadd.nbf]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +max_cycle=2000000]
+        amoadd_long:
+          files: [tests/2x1/amoadd_long.nbf]
+          args: [+nbf_file=amoadd_long.nbf, +num_finish=1, +max_cycle=100000000]
