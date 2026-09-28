@@ -263,10 +263,10 @@ configurations:
     execute:
       tests:
         amoadd:
-          files: [tests/amoadd.nbf]
+          files: [tests/16x8/amoadd.nbf]
           args: [+nbf_file=amoadd.nbf, +num_finish=1, +max_cycle=2000000]
         amoadd_long:
-          files: [tests/amoadd_long.nbf]
+          files: [tests/16x8/amoadd_long.nbf]
           args: [+nbf_file=amoadd_long.nbf, +num_finish=1, +max_cycle=2000000]
   2x1:
     compile:

@@ -15,6 +15,11 @@ with eight simulator workers. Wall time depends on the host and worker
 count; the iteration count is fixed so worker comparisons run identical work.
 AES remains a separate application-workload follow-up.
 
+Device images are grouped by physical geometry under
+designs/HammerBlade/tests/16x8 and designs/HammerBlade/tests/2x1.
+The shared checker remains at designs/HammerBlade/tests/check.py, and
+HammerBlade:default:* continues to select the 16x8 configuration.
+
 Low-memory 2x1 configuration
 ----------------------------
 
@@ -176,7 +181,7 @@ With HardFloat populated under $MC/imports/HardFloat::
 To regenerate the longer resource, supply these additional arguments in a
 fresh build directory::
 
-    --iterations 176 --output-file designs/HammerBlade/tests/amoadd_long.nbf
+    --iterations 176 --output-file designs/HammerBlade/tests/16x8/amoadd_long.nbf
 
 The iteration count is selected when generating the device image, not by a
 simulator plusarg. It does not require recompiling the Verilator model.

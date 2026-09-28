@@ -107,7 +107,7 @@ assert release == {
     (x, y) for x in range(origin_x, origin_x + tiles_x) for y in range(origin_y, origin_y + tiles_y)
 }, release
 resource = (
-    a.output_file.resolve() if a.output_file else root / "designs/HammerBlade/tests/amoadd.nbf"
+    a.output_file.resolve() if a.output_file else root / "designs/HammerBlade/tests/16x8/amoadd.nbf"
 )
 resource.parent.mkdir(parents=True, exist_ok=True)
 resource.write_text(nbf)

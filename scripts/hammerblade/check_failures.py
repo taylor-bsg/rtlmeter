@@ -16,7 +16,7 @@ sim = a.simulator.resolve()
 root = Path(__file__).resolve().parents[2]
 out = a.out.resolve()
 out.mkdir(parents=True, exist_ok=False)
-resource = "tests/2x1/amoadd.nbf" if a.configuration == "2x1" else "tests/amoadd.nbf"
+resource = "tests/2x1/amoadd.nbf" if a.configuration == "2x1" else "tests/16x8/amoadd.nbf"
 good = (root / "designs/HammerBlade" / resource).read_text()
 # main.map: data starts at EVA 0x81000000. The pinned 16x8 iPoly mapping
 # sends data[0] to north cache (22,7), word EPA 0x20000.
