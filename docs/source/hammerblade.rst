@@ -1,4 +1,4 @@
-HammerBlade SPMD smoke benchmark
+HammerBlade SPMD benchmarks
 ================================
 
 HammerBlade:default:amoadd runs the upstream software/spmd/bsg_barrier_amoadd_test
@@ -10,9 +10,9 @@ its physical coordinates are (16,8).
 The original amoadd case is an integration/sanity workload.
 HammerBlade:default:amoadd_long changes only the device loop bound to 176,
 retaining all 128 participants, atomic updates, barriers, and per-iteration
-neighbor checks. It targets roughly one minute on this Mac with eight
-simulator workers. Wall time depends on the host and worker count; the
-iteration count is fixed so worker comparisons run identical work.
+neighbor checks. The reference Apple M5 Max runs took roughly one minute
+with eight simulator workers. Wall time depends on the host and worker
+count; the iteration count is fixed so worker comparisons run identical work.
 AES remains a separate application-workload follow-up.
 
 Machine and execution
@@ -130,7 +130,8 @@ link command naming those archives. New integration scripts use Apache-2.0.
 Validation evidence
 -------------------
 
-Local validation is recorded separately under work/. One-, two-, four-, and eight-worker
+The initial macOS validation is recorded separately under work/.
+One-, two-, four-, and eight-worker
 smoke configurations each passed twice at 49,975 total clock cycles, including
 reset and loading. Re-importing the design files was byte-identical,
 and two fresh device builds produced identical ELF and NBF hashes.
@@ -144,8 +145,9 @@ The 176-iteration case passed with four and eight workers, twice each
 475,850 clocks. On the local Apple M5 Max, eight-worker runs took 60.15 and
 59.89 seconds; four-worker runs took 41.75 and 41.48 seconds.
 Host-counter replays used macOS /usr/bin/time -l. Detailed measurements are
-preserved separately under work/LONG-RUNS.md and work/verification-long.json. Linux execution
-and upstream review remain separate gates from this macOS bring-up.
+preserved separately under work/LONG-RUNS.md and work/verification-long.json.
+The Linux validation below is a separate host qualification; upstream review
+remains pending.
 
 To run the longer case, substitute HammerBlade:default:amoadd_long in the
 run commands above. Changing the NBF resource does not require recompiling
@@ -156,3 +158,77 @@ To repeat the failure-path checks after compiling::
     python3 scripts/hammerblade/check_failures.py \
         --simulator work-hb-1/HammerBlade/default/compile-0/obj_dir/Vsim \
         --out work-hb-negative
+
+Linux validation
+----------------
+
+On 2026-09-27, the integration at
+23b61cccd973265b429f7d3ac6899dfa8f8fe2b2 (RTLmeter base
+abba286aae8baa6d1e95a0d8bb8faa4d0489a27f) passed the complete native matrix
+on AlmaLinux 9.8, kernel 5.14.0-687.48.1.el9_8.x86_64. The host had four
+Xeon Gold 6254 sockets, 72 physical cores / 144 logical CPUs and 754 GiB RAM.
+The verified stock Verilator 5.052 revision above and Clang 21.1.8 were used
+with flat compilation, --assert and the default generated-C++ flags.
+There was no PGO or experimental Verilator patch.
+
+Each entry below represents two independent executions, both passing the
+post-hook. Every smoke execution had exactly 49,975 total simulated clocks;
+every long execution had exactly 475,850. These match the macOS reference.
+Times include initialization and loading, and exclude compilation.
+
+.. list-table:: Linux simulation wall times (seconds)
+   :header-rows: 1
+
+   * - Simulator workers
+     - amoadd (7 iterations)
+     - amoadd_long (176 iterations)
+   * - 1
+     - 37.94, 37.60
+     - Not in the requested matrix
+   * - 2
+     - 39.16, 39.68
+     - Not in the requested matrix
+   * - 4
+     - 23.01, 23.20
+     - 208.47, 207.72
+   * - 8
+     - 16.12, 15.93
+     - 140.56, 143.52
+
+The launch affinity was CPUs 0-15, sixteen physical cores on one socket.
+This also bounded RTLmeter's C++ compilation to make -j16. Simulations were
+serial and did not overlap compilation. Distinct work roots were used for
+each worker count; the four- and eight-worker models each served both NBFs.
+The image hashes above were unchanged, and the descriptor's two-million-cycle
+watchdog was retained without +max_cycles truncation.
+
+Verilation took 205.48, 223.08, 227.96 and 232.75 seconds for 1, 2, 4 and 8
+workers respectively; C++ compilation took 35.94, 41.56, 42.20 and 42.55 seconds.
+GNU time reported about 7.35 GiB peak RSS for Verilation and 278-343 MiB
+for C++ compilation. The latter is the largest individual compiler process,
+not aggregate memory across parallel jobs. Simulator peak RSS was 2.05-2.10 GiB.
+
+Source import was byte-identical on two repetitions. An optional maintainer
+check using an existing HammerBlade GCC 9.2.0 SDK regenerated each image twice:
+ELF and NBF hashes were identical across repetitions, and both NBFs matched
+the checked-in resources. Normal execution used only the supplied images.
+Descriptor validation and check_failures.py also passed: corrupted input
+produced BSG_FAIL and the watchdog produced BSG_TIMEOUT, with nonzero simulator
+and checker statuses in both cases.
+
+Six additional serial perf stat replays (one per case/worker entry) also
+passed the post-hook and matched the reference clocks. The instructions:u
+and cycles:u events inherited across all simulator threads and reported
+100% running time, with no multiplexing reported. The long case retired
+1,341,662,465,967 host instructions at four workers and 1,423,944,932,240 at
+eight; host CPU cycles were 3,175,621,666,322 and 4,227,832,321,113 respectively.
+These are user-mode host counters, not simulated RISC-V instruction counts;
+kernel-mode activity was excluded under the existing perf permissions.
+No system permissions were changed. Raw commands, counters, timing records
+and build/run logs were retained separately from Git.
+
+No Linux portability code changes were needed. Processor RTL, the harness,
+the descriptor, the integration scripts and RTLmeter core remained unchanged.
+This qualifies the recorded host/compiler combination, not a portable wall-time
+target. Imported RTL still emits nonfatal width, timescale and other warnings;
+upstream review remains pending.
