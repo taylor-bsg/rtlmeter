@@ -15,6 +15,78 @@ with eight simulator workers. Wall time depends on the host and worker
 count; the iteration count is fixed so worker comparisons run identical work.
 AES remains a separate application-workload follow-up.
 
+Low-memory 2x1 configuration
+----------------------------
+
+HammerBlade:2x1:amoadd and HammerBlade:2x1:amoadd_long instantiate two
+physical cores, with matching two-participant device programs. The default
+configuration remains the 16x8 benchmark. The small configuration is useful
+for inexpensive integration checks; its traffic and timing are different
+from the physical 128-core configuration.
+
+The machine profile in scripts/hammerblade/machines/2x1 is derived from the
+pinned manycore machines/pod_1x1_2X2Y profile. It selects one compute row and
+64 MiB of backing memory (four 16 MiB banks), with a mesh network, iPoly off,
+and four 8 KiB cache banks. DMEM and instruction-cache sizes remain 4 KiB
+per core. Physical core coordinates are (2,2) and (3,2). Singleton rows
+reserve a Y coordinate bit, so the south cache row is Y=4, not Y=3.
+
+Example commands after normal RTLmeter setup::
+
+    ./rtlmeter run --cases 'HammerBlade:2x1:*' \
+        --compileArgs='--threads 1 --assert' --nExecute 2 --workRoot work-hb-2x1
+    ./rtlmeter run --cases 'HammerBlade:2x1:*' \
+        --compileArgs='--threads 2 --assert' --nExecute 2 --workRoot work-hb-2x1-t2
+
+The smoke resource retains seven iterations and completes in 1,921 clocks.
+The 2x1 amoadd_long resource uses 180,000 iterations: 176 iterations took
+less than half a second, so that loop bound was unsuitable for measurement.
+With stock Verilator 5.052 and assertions, both worker settings passed
+twice (a native RTLmeter execution and a host-counter replay), each at
+23,401,013 clocks. On the local Apple M5 Max, one-worker runs took
+61.42 and 61.72 seconds; two-worker runs took 83.47 and 84.17 seconds.
+The counter replays used about 74-75 MB peak RSS and retired 1.322 trillion
+and 2.337 trillion host instructions, respectively, measured using macOS
+/usr/bin/time -l. These are host CPU instructions, not device instructions.
+The count is fixed across worker settings; the one-minute target is a
+calibration on this host, not a portable wall-time guarantee.
+Verilation took 2.39 seconds and about 574 MB peak RSS; C++ compilation took
+1.79 seconds.
+The original 16x8 simulations used about 2.1 GB peak RSS and Verilation
+about 10.8 GB.
+
+The testbench now derives its backing allocation from the configured
+capacity; the default setting still allocates exactly 2 GiB. The existing
+memory model also omits the cache-selector bit for a dedicated single-cache
+port. SAFE_CLOG2(1) otherwise reserves a nonexistent bank and aliases half
+of the address space. A separate eviction probe verified distinct low/high
+addresses across all four banks, including near the end of the 64 MiB range.
+No processor, cache, or network RTL was changed.
+
+The pinned NBF generator places south-cache writes at origin_y + tile_count.
+For this singleton row, regeneration explicitly remaps those cache writes
+from Y=3 to Y=4 and checks every destination and the exact two unfreeze
+writes. It preserves both the raw and corrected NBF in the build directory.
+
+To regenerate with the existing SDK::
+
+    python3 scripts/hammerblade/regenerate.py \
+        --manycore "$MC" --basejump "$BJ" --riscv-bin "$RISCV_BIN" \
+        --configuration 2x1 --build-dir work-hb-device-2x1 --make gmake \
+        --output-file designs/HammerBlade/tests/2x1/amoadd.nbf
+    python3 scripts/hammerblade/regenerate.py \
+        --manycore "$MC" --basejump "$BJ" --riscv-bin "$RISCV_BIN" \
+        --configuration 2x1 --iterations 180000 \
+        --build-dir work-hb-device-2x1-long --make gmake \
+        --output-file designs/HammerBlade/tests/2x1/amoadd_long.nbf
+
+Use --configuration 2x1 with scripts/hammerblade/check_failures.py when
+checking the small simulator. Corrupted-input and watchdog checks passed.
+A fresh one-worker rebuild of both default cases retained their original
+49,975 and 475,850 clock counts after the shared harness changes.
+The 2x1 configuration has been validated on macOS; its Linux validation is
+still pending and is separate from the 16x8 Linux evidence below.
+
 Machine and execution
 ---------------------
 
@@ -42,8 +114,9 @@ setup and selecting stock Verilator on PATH::
 
 Use a fresh compile directory after changing sources: RTLmeter caches
 successful graph steps. Repeated executions start independent processes
-and reload the image. The case has a two-million-cycle watchdog and a
-post-hook requiring exactly one success from physical tile (16,8).
+and reload the image. The 2x1 long case has a 100-million-cycle watchdog;
+the other cases retain two million cycles. Every case has a post-hook
+requiring exactly one success from the selected machine's origin tile.
 Do not use RTLmeter's +max_cycles truncation for correctness validation.
 The optional CLI --timeout requires GNU timeout; macOS also requires
 GNU gtime, as does RTLmeter itself.
@@ -51,8 +124,10 @@ GNU gtime, as does RTLmeter itself.
 Imported-source adaptations
 ---------------------------
 
-Processor, cache, network, BaseJump, HardFloat, and backing-memory behavior
-are imported unchanged. Simulation-harness adaptations are:
+Processor, cache, network, BaseJump, and HardFloat RTL are imported
+unchanged. The backing-memory capacity and single-cache address selection
+are adapted as described for the 2x1 configuration above. Other
+simulation-harness adaptations are:
 
 * Add RTLmeter's top include and report spmd_testbench.core_clk.
 * Retain the existing test-memory branch; omit the inactive DRAMSim3 branch
@@ -67,6 +142,7 @@ are imported unchanged. Simulation-harness adaptations are:
 * Disable Linux /proc/uptime reporting.
 * Bound the NBF array to 262144 records (this image contains 30462).
   Reject missing boot-file arguments and loader-capacity exhaustion.
+  Each 2x1 image contains 672 records.
 * Require a positive finish count and make device failure and watchdog
   timeout terminate with a nonzero status.
 
@@ -113,7 +189,7 @@ The seven-iteration boot-image SHA-256 is
 The 176-iteration image SHA-256 is
 854b0f0df21ac1309a218c04f7acf7b1c8a6a4e7e6103a7517213cb888079966.
 The generation script checks the terminator, capacity, and complete set
-of 128 unfreeze writes. Generated reset-ROM comments omit local paths.
+of unfreeze writes for the selected physical tile group. Generated reset-ROM comments omit local paths.
 The import script uses the upstream architectural file list and recursively
 resolves includes, then adds only the SPMD simulation dependencies.
 

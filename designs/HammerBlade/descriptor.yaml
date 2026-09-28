@@ -1,5 +1,5 @@
-# Native 16x8 SPMD amoadd/barrier: seven-iteration smoke and 176-iteration long case.
-# Machine: bsg_manycore machines/pod_1x1; this is not the historical HBM AES profile.
+# Native SPMD amoadd/barrier: 16x8 default and low-memory 2x1 mesh.
+# Default: machines/pod_1x1; 2x1: small mesh with 64 MiB test memory.
 # Regeneration and local validation: docs/source/hammerblade.rst.
 origin:
   - repository: https://github.com/bespoke-silicon-group/bsg_manycore
@@ -258,16 +258,37 @@ compile:
 execute:
   common:
     postHook: tests/check.py
-  tests:
-    amoadd:
-      files: [tests/amoadd.nbf]
-      args:
-        - +nbf_file=amoadd.nbf
-        - +num_finish=1
-        - +max_cycle=2000000
-    amoadd_long:
-      files: [tests/amoadd_long.nbf]
-      args:
-        - +nbf_file=amoadd_long.nbf
-        - +num_finish=1
-        - +max_cycle=2000000
+configurations:
+  default:
+    execute:
+      tests:
+        amoadd:
+          files: [tests/amoadd.nbf]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +max_cycle=2000000]
+        amoadd_long:
+          files: [tests/amoadd_long.nbf]
+          args: [+nbf_file=amoadd_long.nbf, +num_finish=1, +max_cycle=2000000]
+  2x1:
+    compile:
+      verilogDefines:
+        BSG_MACHINE_BARRIER_RUCHE_FACTOR_X: 1
+        BSG_MACHINE_DRAM_BANK_SIZE_WORDS: 4194304
+        BSG_MACHINE_DRAM_SIZE_WORDS: 16777216
+        BSG_MACHINE_GLOBAL_X: 2
+        BSG_MACHINE_GLOBAL_Y: 1
+        BSG_MACHINE_HOST_X_CORD: 2
+        BSG_MACHINE_IPOLY_HASHING: 0
+        BSG_MACHINE_NETWORK_CFG: e_network_mesh
+        BSG_MACHINE_NUM_VCACHES_PER_CHANNEL: 2
+        BSG_MACHINE_ORIGIN_X_CORD: 2
+        BSG_MACHINE_ORIGIN_Y_CORD: 2
+        BSG_MACHINE_RUCHE_FACTOR_X: 1
+        BSG_MACHINE_WH_RUCHE_FACTOR: 1
+    execute:
+      tests:
+        amoadd:
+          files: [tests/2x1/amoadd.nbf]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +max_cycle=2000000]
+        amoadd_long:
+          files: [tests/2x1/amoadd_long.nbf]
+          args: [+nbf_file=amoadd_long.nbf, +num_finish=1, +max_cycle=100000000]

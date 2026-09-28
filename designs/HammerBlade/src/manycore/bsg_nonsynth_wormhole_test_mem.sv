@@ -245,7 +245,13 @@ module bsg_nonsynth_wormhole_test_mem
 
   
   // address hashing
-  if (no_concentration_p) begin
+  if (no_concentration_p && num_vcaches_p == 1) begin
+    assign mem_addr = {
+      addr_r[block_offset_width_lp+:mem_addr_width_lp-count_width_lp],
+      count_lo
+    };
+  end
+  else if (no_concentration_p) begin
     // no concentration. each wh ruche link gets a test_mem.
     assign mem_addr = {
       src_cord_r[lg_wh_ruche_factor_lp+:lg_num_vcaches_lp],

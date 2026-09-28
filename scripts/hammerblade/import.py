@@ -195,6 +195,34 @@ mon = mon.replace(
 )
 write(monrel, mon)
 
+# Size the backing array from the machine capacity. At the original 16x8
+# setting this is exactly the upstream 2 GiB allocation.
+tbrel = "src/manycore/bsg_nonsynth_manycore_testbench.sv"
+tb = (dst / tbrel).read_text()
+old = "(2**30)*num_pods_x_p/wh_ruche_factor_p/2"
+assert tb.count(old) == 1
+tb = tb.replace(old, "(64'(bsg_dram_size_p)*4)*num_pods_x_p/wh_ruche_factor_p/4")
+write(tbrel, tb)
+
+# A dedicated single-cache memory port has no cache-selector address bits.
+# SAFE_CLOG2(1) is one, so the upstream concatenation otherwise selects a
+# nonexistent bank and aliases the upper half of that port's memory.
+memrel = "src/manycore/bsg_nonsynth_wormhole_test_mem.sv"
+mem = (dst / memrel).read_text()
+old = "  if (no_concentration_p) begin"
+assert mem.count(old) == 1
+mem = mem.replace(
+    old,
+    """  if (no_concentration_p && num_vcaches_p == 1) begin
+    assign mem_addr = {
+      addr_r[block_offset_width_lp+:mem_addr_width_lp-count_width_lp],
+      count_lo
+    };
+  end
+  else if (no_concentration_p) begin""",
+)
+write(memrel, mem)
+
 # Generate the existing 1x1-pod reset ROM with the upstream generators.
 scratch = root / "work/hammerblade-import"
 scratch.mkdir(parents=True, exist_ok=True)
@@ -228,11 +256,33 @@ for line in (mc / "machines/pod_1x1/Makefile.machine.include").read_text().split
         if m[1] not in ("BSG_MACHINE_DRAMSIM3_PKG", "BSG_MACHINE_HETERO_TYPE_VEC"):
             defines[m[1]] = m[2]
 defines["HOST_MODULE_PATH"] = "spmd_testbench"
+# Use the pinned small-mesh profile, with a singleton row and 64 MiB.
+# Keep the reserved two-row coordinate span: origin (2,2), south cache Y=4.
+small_machine = (mc / "machines/pod_1x1_2X2Y/Makefile.machine.include").read_text()
+small_values = {
+    "BSG_MACHINE_GLOBAL_Y": "1",
+    "BSG_MACHINE_DRAM_SIZE_WORDS": "16777216",
+    "BSG_MACHINE_DRAM_BANK_SIZE_WORDS": "4194304",
+}
+for key, value in small_values.items():
+    small_machine, count = re.subn(
+        r"(?m)^(" + key + r"\s*=\s*)\S+", lambda m: m[1] + value, small_machine
+    )
+    assert count == 1, key
+profile = root / "scripts/hammerblade/machines/2x1/Makefile.machine.include"
+profile.parent.mkdir(parents=True, exist_ok=True)
+profile.write_text(small_machine)
+small_defines = {}
+for line in small_machine.splitlines():
+    if m := re.match(r"(BSG_MACHINE_\w+)\s*=\s*(\S+)", line):
+        if m[1] in defines and defines[m[1]] != m[2]:
+            small_defines[m[1]] = m[2]
+
 sources = list(dict.fromkeys(sources))
 source_rels = [str(relpath(f)) for f in sources] + ["src/generated/bsg_tag_boot_rom.v"]
 inc_rels = sorted(str(relpath(f)) for f in includes)
-desc = """# Native 16x8 SPMD amoadd/barrier: seven-iteration smoke and 176-iteration long case.
-# Machine: bsg_manycore machines/pod_1x1; this is not the historical HBM AES profile.
+desc = """# Native SPMD amoadd/barrier: 16x8 default and low-memory 2x1 mesh.
+# Default: machines/pod_1x1; 2x1: small mesh with 64 MiB test memory.
 # Regeneration and local validation: docs/source/hammerblade.rst.
 origin:
   - repository: https://github.com/bespoke-silicon-group/bsg_manycore
@@ -258,19 +308,29 @@ desc += """  topModule: spmd_testbench
 execute:
   common:
     postHook: tests/check.py
-  tests:
-    amoadd:
-      files: [tests/amoadd.nbf]
-      args:
-        - +nbf_file=amoadd.nbf
-        - +num_finish=1
-        - +max_cycle=2000000
-    amoadd_long:
-      files: [tests/amoadd_long.nbf]
-      args:
-        - +nbf_file=amoadd_long.nbf
-        - +num_finish=1
-        - +max_cycle=2000000
+configurations:
+  default:
+    execute:
+      tests:
+        amoadd:
+          files: [tests/amoadd.nbf]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +max_cycle=2000000]
+        amoadd_long:
+          files: [tests/amoadd_long.nbf]
+          args: [+nbf_file=amoadd_long.nbf, +num_finish=1, +max_cycle=2000000]
+  2x1:
+    compile:
+      verilogDefines:
+"""
+desc += "".join(f"        {k}: {v}\n" for k, v in sorted(small_defines.items()))
+desc += """    execute:
+      tests:
+        amoadd:
+          files: [tests/2x1/amoadd.nbf]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +max_cycle=2000000]
+        amoadd_long:
+          files: [tests/2x1/amoadd_long.nbf]
+          args: [+nbf_file=amoadd_long.nbf, +num_finish=1, +max_cycle=100000000]
 """
 write("descriptor.yaml", desc)
 write(
@@ -286,9 +346,16 @@ if re.search(r"BSG_FAIL|BSG_TIMEOUT|%Error|Assertion failed", log):
 if log.count("RECEIVED BSG_FINISH PACKET from all pods") != 1:
     raise SystemExit("Missing or duplicate completion")
 packets = re.findall(r"RECEIVED a finish packet from tile y,x=\\s*(\\d+),\\s*(\\d+)", log)
-if packets != [("8", "16")]:
-    raise SystemExit("Expected exactly one finish from physical tile (16,8)")
-print("PASS: HammerBlade 16x8 amoadd (all device checks passed)")
+geometry = []
+for axis in ("X", "Y"):
+    values = re.findall(r"BSG_MACHINE_GLOBAL_" + axis + r"\\s*=\\s*(\\d+)", log)
+    if len(values) != 1:
+        raise SystemExit("Missing or duplicate physical geometry")
+    geometry.append(int(values[0]))
+finish = {(16, 8): ("8", "16"), (2, 1): ("2", "2")}.get(tuple(geometry))
+if finish is None or packets != [finish]:
+    raise SystemExit("Expected exactly one finish from this machine's origin tile")
+print(f"PASS: HammerBlade {geometry[0]}x{geometry[1]} amoadd (all device checks passed)")
 """,
 )
 (dst / "tests/check.py").chmod(0o755)

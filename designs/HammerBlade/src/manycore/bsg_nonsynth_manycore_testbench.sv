@@ -368,7 +368,7 @@ module bsg_nonsynth_manycore_testbench
   if (mem_cfg_lp[e_vcache_test_mem]) begin: test_mem
     // in bytes
     // north + south row of vcache
-    localparam longint unsigned mem_size_lp = (2**30)*num_pods_x_p/wh_ruche_factor_p/2;
+    localparam longint unsigned mem_size_lp = (64'(bsg_dram_size_p)*4)*num_pods_x_p/wh_ruche_factor_p/4;
     localparam num_vcaches_per_test_mem_lp = (num_tiles_x_p*num_pods_x_p)/wh_ruche_factor_p/2;
 
     for (genvar i = W; i <= E; i++) begin: hs                           // horizontal side
