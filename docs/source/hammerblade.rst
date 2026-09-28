@@ -39,17 +39,23 @@ Example commands after normal RTLmeter setup::
         --compileArgs='--threads 2 --assert' --nExecute 2 --workRoot work-hb-2x1-t2
 
 The smoke resource retains seven iterations and completes in 1,921 clocks.
-The 2x1 amoadd_long resource uses 180,000 iterations: 176 iterations took
-less than half a second, so that loop bound was unsuitable for measurement.
-With stock Verilator 5.052 and assertions, both worker settings passed
-twice (a native RTLmeter execution and a host-counter replay), each at
+The 2x1 amoadd_long resource uses 60,000 iterations and completes in
+7,801,013 clocks. It was reduced from 180,000 after Linux qualification
+to shorten validation runs; all worker counts use the same image.
+Only the two loop-bound immediate instructions changed; atomic operations,
+barriers and per-iteration checks are unchanged.
+
+The earlier 180,000-iteration image was calibrated on macOS after a
+176-iteration trial took less than half a second. With stock Verilator
+5.052 and assertions, both worker settings passed twice (a native RTLmeter
+execution and a host-counter replay), each at
 23,401,013 clocks. On the local Apple M5 Max, one-worker runs took
 61.42 and 61.72 seconds; two-worker runs took 83.47 and 84.17 seconds.
 The counter replays used about 74-75 MB peak RSS and retired 1.322 trillion
 and 2.337 trillion host instructions, respectively, measured using macOS
 /usr/bin/time -l. These are host CPU instructions, not device instructions.
-The count is fixed across worker settings; the one-minute target is a
-calibration on this host, not a portable wall-time guarantee.
+These timings and counters describe the earlier 180,000-iteration image.
+Its one-minute calibration was specific to that host, not a portable target.
 Verilation took 2.39 seconds and about 574 MB peak RSS; C++ compilation took
 1.79 seconds.
 The original 16x8 simulations used about 2.1 GB peak RSS and Verilation
@@ -76,7 +82,7 @@ To regenerate with the existing SDK::
         --output-file designs/HammerBlade/tests/2x1/amoadd.nbf
     python3 scripts/hammerblade/regenerate.py \
         --manycore "$MC" --basejump "$BJ" --riscv-bin "$RISCV_BIN" \
-        --configuration 2x1 --iterations 180000 \
+        --configuration 2x1 --iterations 60000 \
         --build-dir work-hb-device-2x1-long --make gmake \
         --output-file designs/HammerBlade/tests/2x1/amoadd_long.nbf
 
@@ -84,8 +90,8 @@ Use --configuration 2x1 with scripts/hammerblade/check_failures.py when
 checking the small simulator. Corrupted-input and watchdog checks passed.
 A fresh one-worker rebuild of both default cases retained their original
 49,975 and 475,850 clock counts after the shared harness changes.
-The 2x1 configuration has been validated on macOS; its Linux validation is
-still pending and is separate from the 16x8 Linux evidence below.
+Both configurations also passed the expanded Linux matrix below, including
+long tests at one, two, four and eight simulator workers.
 
 Machine and execution
 ---------------------
@@ -235,8 +241,8 @@ To repeat the failure-path checks after compiling::
         --simulator work-hb-1/HammerBlade/default/compile-0/obj_dir/Vsim \
         --out work-hb-negative
 
-Linux validation
-----------------
+Initial 16x8 Linux validation
+------------------------------
 
 On 2026-09-27, the integration at
 23b61cccd973265b429f7d3ac6899dfa8f8fe2b2 (RTLmeter base
@@ -308,3 +314,101 @@ the descriptor, the integration scripts and RTLmeter core remained unchanged.
 This qualifies the recorded host/compiler combination, not a portable wall-time
 target. Imported RTL still emits nonfatal width, timescale and other warnings;
 upstream review remains pending.
+
+Expanded Linux validation (8409032)
+------------------------------------
+
+On 2026-09-28 (UTC), parent revision 840903276e961206b834c270f60daa05104d2662
+and the 60,000-iteration 2x1 long-image update were validated in isolated
+checkouts on the same AlmaLinux/Xeon host and
+stock Verilator 5.052 / Clang 21.1.8 toolchain recorded above. Both physical
+configurations passed smoke and long at 1, 2, 4 and 8 simulator workers,
+twice each: 32 successful executions, all with --assert, flat compilation
+and passing post-hooks. Each pair comprises a native RTLmeter execution
+and an independent perf stat replay checked by the same post-hook.
+
+All eight executions of each case had deterministic cycle counts. The
+unchanged cases matched macOS; the shortened 2x1 long image establishes
+a new Linux reference:
+
+* 2x1 smoke: 1,921; 2x1 long: 7,801,013.
+* 16x8 smoke: 49,975; 16x8 long: 475,850.
+
+The long images remained fixed at 60,000 iterations for 2x1 and 176 for
+16x8, with identical hashes across worker counts. Descriptor watchdogs
+were retained without +max_cycles truncation. Simulations ran serially
+without overlapping compilation; CPUs 0-15 bounded compilation to -j16.
+
+.. list-table:: Expanded Linux wall times, native / counter replay (seconds)
+   :header-rows: 1
+
+   * - Physical configuration
+     - Workers
+     - Smoke
+     - Long
+   * - 2x1
+     - 1
+     - 0.09 / 0.12
+     - 59.71 / 59.56
+   * - 2x1
+     - 2
+     - 0.11 / 0.13
+     - 128.04 / 125.18
+   * - 2x1
+     - 4
+     - 0.12 / 0.14
+     - 189.16 / 188.81
+   * - 2x1
+     - 8
+     - 0.13 / 0.15
+     - 227.43 / 224.72
+   * - 16x8
+     - 1
+     - 37.43 / 37.63
+     - 369.25 / 379.06
+   * - 16x8
+     - 2
+     - 38.52 / 37.66
+     - 374.77 / 356.61
+   * - 16x8
+     - 4
+     - 23.07 / 22.90
+     - 202.37 / 201.83
+   * - 16x8
+     - 8
+     - 16.13 / 16.08
+     - 138.66 / 140.72
+
+Times include initialization and loading, and exclude compilation. Native
+timing wraps the simulator directly; replay timing also includes perf's
+small launcher overhead. Host counters attach to the simulator and inherit
+across all its threads. All sixteen replays recorded instructions:u and
+cycles:u with 100% event running time and no reported multiplexing under
+the existing permissions. These are user-mode host counters, not simulated
+RISC-V instruction counts. Raw wall/CPU time, peak RSS, counters, exact
+commands and source/tool hashes were preserved outside Git.
+
+For 2x1, Verilation took 7.82-8.04 seconds (336-337 MiB peak RSS);
+C++ compilation took 3.71-3.75 seconds (about 232 MiB peak RSS).
+Simulation used about 73 MiB peak RSS.
+
+For 16x8, Verilation took 252.35-300.88 seconds (about 7531 MiB peak RSS);
+C++ compilation took 36.17-42.75 seconds (279-343 MiB peak RSS).
+Simulation used 2100-2154 MiB peak RSS.
+
+Compiler RSS is the largest individual process, not summed parallel-job
+memory. Descriptor validation and both geometries' corrupted-input and
+watchdog checks passed. Source import was byte-identical twice. Using an
+existing GCC 9.2.0 SDK for an optional maintainer check, all four device
+images regenerated twice with identical ELF/NBF hashes; every NBF matched
+the checked-in resource, including the singleton south-cache remapping.
+
+No Linux portability code changes were needed. The 2x1 long loop bound
+was reduced from 180,000 to 60,000 at the user's request; the original
+180,000-iteration matrix also passed and its evidence was preserved.
+The shared harness passed the full 16x8 regression. Nonfatal imported-RTL
+warnings and upstream review remain as noted above; Linux wall times are
+observations, not calibration targets.
+
+The 60,000-iteration NBF SHA-256 is
+e10ba75a02ff10a1a6215a2d97ae7c85dbf9d57271d7555c0dd5ea63462380e5.
