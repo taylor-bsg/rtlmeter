@@ -4,18 +4,12 @@ Ccache
 cocotb
 Dhrystone
 executables
-GiB
 globbing
 heterogenous
-iPoly
 judgement
-KiB
 labelled
-MiB
 plusargs
 pre
-profiler
-Replicant
 rtlmeter
 RTLMeter
 runnable
@@ -37,7 +31,6 @@ testbench
 testbenches
 toolchain
 toolchains
-uptime
 VeeR
 verilate
 verilated
@@ -45,4 +38,3 @@ verilating
 verilation
 verilator
 Verilog
-Xeon
