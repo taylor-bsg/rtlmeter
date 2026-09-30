@@ -56,6 +56,80 @@ link. Run the failure checks against a matching compiled model::
 
 Historical fixed-image measurements below remain available for comparison.
 
+Runtime validation (2026-09-30)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The reviewed source closure and runtime images passed eight fresh stock
+Verilator 5.052 builds and 32 executions on the reference Apple M5 Max:
+both configurations, hello/amoadd, 1/2/4/8 workers, twice per case. Every build
+used --assert, flat compilation, and the default generated-C++ flags, with no
+PGO or experimental patch. Compilation and simulations ran serially.
+The release checkout was clean at ea338be98e1e838d3518809ce8899f85a009963c.
+
+The unchanged Linux-selected counts remain 176 for 16x8 and 60,000 for 2x1.
+They were not recalibrated on the Mac. All repeats and worker counts agreed:
+hello/amoadd completed in 36,402/477,402 clocks for 16x8 and
+1,182/7,801,052 clocks for 2x1. These include reset and loading. Earlier clock
+counts below describe different device images and are not equivalence targets.
+
+.. list-table:: Local simulation wall times, including initialization (seconds)
+   :header-rows: 1
+
+   * - Geometry
+     - Workers
+     - hello range
+     - amoadd range
+   * - 2x1
+     - 1
+     - 0.26-0.36
+     - 20.62-20.75
+   * - 2x1
+     - 2
+     - 0.25-0.35
+     - 28.79-29.25
+   * - 2x1
+     - 4
+     - 0.24-0.33
+     - 46.97-47.27
+   * - 2x1
+     - 8
+     - 0.27-0.36
+     - 125.81-126.22
+   * - 16x8
+     - 1
+     - 7.31-7.38
+     - 66.70-68.42
+   * - 16x8
+     - 2
+     - 7.67-7.78
+     - 75.19-76.05
+   * - 16x8
+     - 4
+     - 5.06-5.18
+     - 42.64-43.60
+   * - 16x8
+     - 8
+     - 6.56-6.57
+     - 59.42-60.64
+
+A seven-iteration 2x1 run used the identical image/model and passed at 1,962
+clocks. A native CLI duplicate-argument check confirmed that the descriptor's
+first +iterations value wins, as documented above.
+
+Thirteen negative checks passed for each geometry: device failure, watchdog,
+missing/zero/negative/oversized/overflowing/malformed counts, missing or duplicate
+iteration words, a wrong marker, a missing fence, and a missing terminator.
+Each returned nonzero and was rejected by the post-hook.
+
+Two fresh regenerations per geometry produced identical adapted C, normalized
+linker scripts, ELF files, and NBF images. The images also match those used in
+all 32 matrix executions. Import reproduced all 182 design files byte-for-byte.
+Physical defines are unchanged from the Linux-tested PR revision cccbdd93;
+all 174 retained source/header files except the loader are byte-identical to it.
+
+New-revision Linux coverage is provided by the upstream PR CI after publication;
+the historical Linux matrix below remains separately identified.
+
 Historical fixed-image integration
 ----------------------------------
 
