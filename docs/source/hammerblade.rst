@@ -1,6 +1,64 @@
 HammerBlade SPMD benchmarks
 ================================
 
+Runtime iteration maintenance
+-----------------------------
+
+This section describes the review revision of upstream PR #48. The sections
+below retain the earlier fixed-image validation, including the Linux adjustment
+of the 2x1 benchmark from 180,000 to 60,000 iterations. Their case names and cycle
+counts describe those preserved revisions, not the runtime-adjustable images.
+
+The configurations are now ``16x8`` and ``2x1``. Each has ``hello`` (one iteration)
+and ``amoadd`` (176 or 60,000 iterations, respectively). Both tests in a geometry
+share one NBF image. Change the descriptor's ``+iterations=N`` argument to select
+another count without rebuilding the device image or simulator. Valid counts
+are 1 through 1,000,000. The simulator uses the first matching plusarg, so an
+extra duplicate passed with ``--executeArgs`` does not replace the descriptor
+value. ``+max_cycle`` is an independent watchdog and must allow the chosen work.
+
+The device source replaces the constant loop bound with a single volatile load
+before the loop. The linker reserves byte address 8, immediately after the two
+interrupt words, in each tile's local memory. Linker assertions and the ELF symbol
+table verify that placement. The checked-in image holds marker 0x48424954 there.
+The loader checks every tile's marker, patches the count in its NBF buffer, and
+requires a credit fence before the complete tile-release sequence. The existing
+network loader delivers the patched words; no processor or memory-model RTL is
+changed by this revision. Startup also rejects an unpatched or out-of-range
+device count.
+
+The importer follows module/package references and includes from spmd_testbench,
+retaining whole files and all parameter-controlled branches. It removes 29
+unreachable files from the pinned source closure, leaving 165 source units and
+10 headers. It records the removed list in work/hammerblade-import/.
+The SDK remains a maintainer-only dependency.
+
+To reproduce from clean pinned manycore/BaseJump checkouts and an existing
+HammerBlade GCC 9.2.0 SDK (GNU Make is called gmake on the reference Mac)::
+
+    python3 scripts/hammerblade/import.py --manycore "$MC" --basejump "$BJ"
+    python3 scripts/hammerblade/regenerate.py \
+        --manycore "$MC" --basejump "$BJ" --riscv-bin "$RISCV_BIN" --make gmake \
+        --configuration 2x1 --build-dir work-runtime-device-2x1 \
+        --output-file designs/HammerBlade/tests/2x1/amoadd.nbf
+    python3 scripts/hammerblade/regenerate.py \
+        --manycore "$MC" --basejump "$BJ" --riscv-bin "$RISCV_BIN" --make gmake \
+        --configuration 16x8 --build-dir work-runtime-device-16x8 \
+        --output-file designs/HammerBlade/tests/16x8/amoadd.nbf
+
+Each build directory must be new. It retains the adapted C and linker script,
+ELF and symbol table, NBF image, compiler identity, command lines, link map, and
+hash manifest. Import records the maintenance revision in the descriptor's recipe
+link. Run the failure checks against a matching compiled model::
+
+    python3 scripts/hammerblade/check_failures.py --configuration 2x1 \
+        --simulator "$SMALL_SIMULATOR" --out work-runtime-negative-2x1
+
+Historical fixed-image measurements below remain available for comparison.
+
+Historical fixed-image integration
+----------------------------------
+
 HammerBlade:default:amoadd runs the upstream software/spmd/bsg_barrier_amoadd_test
 without changing its device source. All 128 tiles perform seven iterations
 of atomic increments, participant barriers, and neighbor-value checks.

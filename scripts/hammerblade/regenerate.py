@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import subprocess
 from pathlib import Path
 
@@ -15,14 +16,9 @@ p.add_argument("--basejump", type=Path, required=True)
 p.add_argument("--riscv-bin", type=Path, required=True)
 p.add_argument("--build-dir", type=Path, required=True)
 p.add_argument("--make", default="make")
-p.add_argument("--configuration", choices=["default", "2x1"], default="default")
-p.add_argument("--iterations", type=int, default=7, help="Device amoadd loop count")
-p.add_argument("--output-file", type=Path, help="NBF destination; required for non-smoke builds")
+p.add_argument("--configuration", choices=["16x8", "2x1"], default="16x8")
+p.add_argument("--output-file", type=Path, required=True, help="NBF destination")
 a = p.parse_args()
-if not 1 <= a.iterations <= 1000000:
-    p.error("--iterations must be between 1 and 1000000")
-if (a.iterations != 7 or a.configuration != "default") and a.output_file is None:
-    p.error("Specify --output-file to preserve the seven-iteration smoke image")
 mc, bj, rv, out = map(lambda v: v.resolve(), (a.manycore, a.basejump, a.riscv_bin, a.build_dir))
 out.mkdir(parents=True, exist_ok=False)
 root = Path(__file__).resolve().parents[2]
@@ -37,7 +33,20 @@ assert (
 src = mc / "software/spmd/bsg_barrier_amoadd_test"
 original_source = (src / "main.c").read_text()
 assert original_source.count("#define N 7") == 1
-(out / "main.c").write_text(original_source.replace("#define N 7", f"#define N {a.iterations}"))
+device_source = original_source.replace(
+    "#define N 7",
+    'volatile unsigned int rtlmeter_iterations __attribute__((section(".rtlmeter_iterations"), used)) = 0x48424954;',
+)
+device_source = device_source.replace(
+    "  bsg_set_tile_x_y();",
+    """  bsg_set_tile_x_y();
+  const int N = (int)rtlmeter_iterations;
+  if (N < 1 || N > 1000000) {
+    bsg_fail();
+    bsg_wait_while(1);
+  }""",
+)
+(out / "main.c").write_text(device_source)
 make = (src / "Makefile").read_text()
 make = make.replace(
     "include ../Makefile.include", "include $(BSG_MANYCORE_DIR)/software/spmd/Makefile.include"
@@ -69,11 +78,37 @@ cmd = [
 if small:
     # The upstream test Makefile hard-codes a 16x8 tile group.
     cmd += [f"bsg_tiles_X={tiles_x}", f"bsg_tiles_Y={tiles_y}"]
+# Generate the pinned linker script, then reserve one word after the interrupt
+# table. The section remains part of .dmem, which the upstream NBF tool exports.
+link_cmd = cmd.copy()
+link_cmd[2] = str(out / "bsg_link.ld")
+with (out / "linker.log").open("w") as log:
+    subprocess.run(link_cmd, cwd=out, env=env, stdout=log, stderr=subprocess.STDOUT, check=True)
+linker = (out / "bsg_link.ld").read_text()
+linker = re.sub(r" Generated at .*", " Generated from the pinned manycore linker template", linker)
+needle = "  *(.dmem.interrupt)"
+assert linker.count(needle) == 1
+linker = linker.replace(
+    needle,
+    needle
+    + """
+  ASSERT(. <= 8, "Interrupt table overlaps iteration word");
+  . = 8;
+  KEEP(*(.rtlmeter_iterations))
+  ASSERT(. == 12, "Iteration word must occupy exactly four bytes");
+  ASSERT(rtlmeter_iterations == 8, "Iteration word address changed");""",
+)
+(out / "bsg_link.ld").write_text(linker)
 with (out / "build.log").open("w") as log:
     result = subprocess.run(cmd, cwd=out, env=env, stdout=log, stderr=subprocess.STDOUT)
 if result.returncode:
     print((out / "build.log").read_text()[-10000:])
     raise SystemExit(result.returncode)
+symbols = subprocess.check_output(
+    [str(rv / "riscv32-unknown-elf-dramfs-nm"), "-n", str(out / "main.riscv")], text=True
+)
+assert "00000008 D rtlmeter_iterations" in symbols
+(out / "symbols.txt").write_text(symbols)
 nbf = (out / "main.nbf").read_text()
 rows = nbf.splitlines()
 cache_row_rewrites = 0
@@ -106,25 +141,31 @@ release = {
 assert release == {
     (x, y) for x in range(origin_x, origin_x + tiles_x) for y in range(origin_y, origin_y + tiles_y)
 }, release
-resource = (
-    a.output_file.resolve() if a.output_file else root / "designs/HammerBlade/tests/16x8/amoadd.nbf"
-)
+patches = [
+    r.split("_") for r in rows if r.split("_")[2] == "00000002" and r.split("_")[3] == "48424954"
+]
+assert len(patches) == tiles_x * tiles_y
+assert {(int(r[0], 16), int(r[1], 16)) for r in patches} == release
+resource = a.output_file.resolve()
 resource.parent.mkdir(parents=True, exist_ok=True)
 resource.write_text(nbf)
 record = {
     "manycore": pin,
-    "iterations": a.iterations,
+    "iterations": "runtime +iterations (1..1000000)",
+    "iteration_byte_address": 8,
+    "iteration_marker": "48424954",
+    "linker_command": link_cmd,
     "configuration": a.configuration,
     "physical_tiles": [tiles_x, tiles_y],
     "origin": [origin_x, origin_y],
     "south_cache_row_rewrites": cache_row_rewrites,
-    "adaptation": "Device C changes only #define N; 2x1 overrides tile-group dimensions and corrects singleton south-cache NBF destinations",
+    "adaptation": "Runtime loop bound in linker-reserved per-tile DMEM word; singleton south-cache NBF correction for 2x1",
     "original_source_sha256": hashlib.sha256(original_source.encode()).hexdigest(),
     "command": cmd,
     "nbf_records": len(rows),
     "sha256": {
         name: hashlib.sha256((out / name).read_bytes()).hexdigest()
-        for name in ["main.c", "main.riscv", "main.nbf"]
+        for name in ["main.c", "bsg_link.ld", "main.riscv", "main.nbf"]
     },
     "gcc": subprocess.check_output(
         [str(rv / "riscv32-unknown-elf-dramfs-gcc"), "--version"], text=True

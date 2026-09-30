@@ -171,6 +171,11 @@ loader = loader.replace(
 
   logic loader_done_r, loader_done_n;""",
 )
+start = loader.index("  string nbf_file;")
+end = loader.index("\n  always @(posedge clk_i)", start)
+loader = (
+    loader[:start] + (root / "scripts/hammerblade/loader_initial.sv").read_text() + loader[end:]
+)
 write(loaderrel, loader)
 
 monrel = "src/manycore/bsg_nonsynth_manycore_monitor.sv"
@@ -272,18 +277,67 @@ for key, value in small_values.items():
 profile = root / "scripts/hammerblade/machines/2x1/Makefile.machine.include"
 profile.parent.mkdir(parents=True, exist_ok=True)
 profile.write_text(small_machine)
-small_defines = {}
+small_all = {}
 for line in small_machine.splitlines():
     if m := re.match(r"(BSG_MACHINE_\w+)\s*=\s*(\S+)", line):
-        if m[1] in defines and defines[m[1]] != m[2]:
-            small_defines[m[1]] = m[2]
+        if m[1] in defines:
+            small_all[m[1]] = m[2]
+small_all["HOST_MODULE_PATH"] = "spmd_testbench"
+common_defines = {k: v for k, v in defines.items() if small_all[k] == v}
+large_defines = {k: v for k, v in defines.items() if k not in common_defines}
+small_defines = {k: v for k, v in small_all.items() if k not in common_defines}
 
 sources = list(dict.fromkeys(sources))
 source_rels = [str(relpath(f)) for f in sources] + ["src/generated/bsg_tag_boot_rom.v"]
 inc_rels = sorted(str(relpath(f)) for f in includes)
-desc = """# Native SPMD amoadd/barrier: 16x8 default and low-memory 2x1 mesh.
-# Default: machines/pod_1x1; 2x1: small mesh with 64 MiB test memory.
-# Regeneration and local validation: docs/source/hammerblade.rst.
+# Trim only files outside the complete textual dependency closure of the top.
+# Whole files and all conditional branches remain intact.
+texts = {}
+for rel in source_rels + inc_rels:
+    texts[rel] = re.sub(r"/\*.*?\*/|//[^\n]*", "", (dst / rel).read_text(), flags=re.S)
+symbols = {}
+for rel, text in texts.items():
+    for match in re.finditer(r"\b(?:module|package)\s+(\w+)", text):
+        symbols[match[1]] = rel
+by_name = {Path(rel).name: rel for rel in texts}
+pending = ["src/manycore/spmd_testbench.sv"]
+reachable = set()
+while pending:
+    rel = pending.pop()
+    if rel in reachable:
+        continue
+    reachable.add(rel)
+    pending.extend(
+        symbols[word] for word in set(re.findall(r"\b\w+\b", texts[rel])) if word in symbols
+    )
+    pending.extend(
+        by_name[name]
+        for name in re.findall(r'\x60include\s+"([^"]+)"', texts[rel])
+        if name in by_name
+    )
+removed = sorted(set(texts) - reachable)
+for rel in removed:
+    (dst / rel).unlink()
+source_rels = [rel for rel in source_rels if rel in reachable]
+inc_rels = [rel for rel in inc_rels if rel in reachable]
+(scratch / "removed-sources.txt").write_text("\n".join(removed) + "\n")
+recipe_revision = subprocess.check_output(
+    ["git", "-C", str(root), "rev-parse", "HEAD"], text=True
+).strip()
+desc = """# HammerBlade self-checking atomic-add/barrier SPMD benchmark.
+# 16x8: 128 cores, ruche network, iPoly, 32 x 8 KiB caches, 2 GiB test memory.
+# 2x1: two cores, mesh, no iPoly, 4 x 8 KiB caches, 64 MiB test memory.
+# Both use 4 KiB DMEM and 4 KiB instruction cache per core.
+# hello runs one iteration; amoadd uses the Linux-calibrated workload length.
+# One NBF image per geometry: +iterations patches a linker-reserved DMEM word
+# on every tile before unfreeze. Set counts in args; the first duplicate plusarg
+# wins in Verilator. +max_cycle bounds execution independently of iterations.
+# Native generated main/--timing; no SDK, DPI, host runtime, or DRAMSim3 at run time.
+# Harness changes: reset ordering, clock reporting, bounded NBF loading/patching,
+# fatal failures/timeouts, configured memory capacity, and singleton bank addressing.
+# Hardware RTL is unchanged; unused sources and profiler/DRAMSim3 branches are omitted.
+# Pinned import, device source/linker adaptation, SDK requirements, and regeneration:
+# https://github.com/taylor-bsg/rtlmeter/blob/RECIPE_REVISION/docs/source/hammerblade.rst#runtime-iteration-maintenance
 origin:
   - repository: https://github.com/bespoke-silicon-group/bsg_manycore
     revision: %s
@@ -302,36 +356,47 @@ compile:
 """ % (pins["manycore"], pins["basejump"], pins["hardfloat"])
 desc += "".join("    - " + f + "\n" for f in source_rels)
 desc += "  verilogIncludeFiles:\n" + "".join("    - " + f + "\n" for f in inc_rels)
-desc += "  verilogDefines:\n" + "".join(f"    {k}: {v}\n" for k, v in sorted(defines.items()))
+desc += "  verilogDefines:\n" + "".join(
+    f"    {k}: {v}\n" for k, v in sorted(common_defines.items())
+)
 desc += """  topModule: spmd_testbench
   mainClock: spmd_testbench.core_clk
 execute:
   common:
     postHook: tests/check.py
 configurations:
-  default:
-    execute:
+  16x8:
+    compile:
+      verilogDefines:
+"""
+desc += "".join(f"        {k}: {v}\n" for k, v in sorted(large_defines.items()))
+desc += """    execute:
+      common:
+        files: [tests/16x8/amoadd.nbf]
       tests:
+        hello:
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=1, +max_cycle=2000000]
+          tags: [sanity]
         amoadd:
-          files: [tests/16x8/amoadd.nbf]
-          args: [+nbf_file=amoadd.nbf, +num_finish=1, +max_cycle=2000000]
-        amoadd_long:
-          files: [tests/16x8/amoadd_long.nbf]
-          args: [+nbf_file=amoadd_long.nbf, +num_finish=1, +max_cycle=2000000]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=176, +max_cycle=2000000]
+          tags: [standard]
   2x1:
     compile:
       verilogDefines:
 """
 desc += "".join(f"        {k}: {v}\n" for k, v in sorted(small_defines.items()))
 desc += """    execute:
+      common:
+        files: [tests/2x1/amoadd.nbf]
       tests:
+        hello:
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=1, +max_cycle=2000000]
+          tags: [sanity]
         amoadd:
-          files: [tests/2x1/amoadd.nbf]
-          args: [+nbf_file=amoadd.nbf, +num_finish=1, +max_cycle=2000000]
-        amoadd_long:
-          files: [tests/2x1/amoadd_long.nbf]
-          args: [+nbf_file=amoadd_long.nbf, +num_finish=1, +max_cycle=100000000]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=60000, +max_cycle=100000000]
+          tags: [standard]
 """
+desc = desc.replace("RECIPE_REVISION", recipe_revision)
 write("descriptor.yaml", desc)
 write(
     "tests/check.py",
@@ -359,4 +424,6 @@ print(f"PASS: HammerBlade {geometry[0]}x{geometry[1]} amoadd (all device checks 
 """,
 )
 (dst / "tests/check.py").chmod(0o755)
+for geometry in ("16x8", "2x1"):
+    (dst / f"tests/{geometry}/amoadd_long.nbf").unlink(missing_ok=True)
 print(f"Imported {len(source_rels)} sources and {len(inc_rels)} headers to {dst}")
