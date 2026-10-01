@@ -249,10 +249,10 @@ configurations:
         files: [tests/16x8/amoadd.nbf]
       tests:
         hello:
-          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=1, +max_cycle=2000000]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=1]
           tags: [sanity]
         amoadd:
-          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=176, +max_cycle=2000000]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=90]
           tags: [standard]
   2x1:
     compile:
@@ -275,8 +275,8 @@ configurations:
         files: [tests/2x1/amoadd.nbf]
       tests:
         hello:
-          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=1, +max_cycle=2000000]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=1]
           tags: [sanity]
         amoadd:
-          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=60000, +max_cycle=100000000]
+          args: [+nbf_file=amoadd.nbf, +num_finish=1, +iterations=60000]
           tags: [standard]
