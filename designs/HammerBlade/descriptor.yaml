@@ -5,7 +5,7 @@
 # hello runs one iteration; amoadd uses the Linux-calibrated workload length.
 # One NBF image per geometry: +iterations patches a linker-reserved DMEM word
 # on every tile before unfreeze. Set counts in args; the first duplicate plusarg
-# wins in Verilator. +max_cycle bounds execution independently of iterations.
+# wins in Verilator.
 # Native generated main/--timing; no SDK, DPI, host runtime, or DRAMSim3 at run time.
 # Harness changes: reset ordering, clock reporting, bounded NBF loading/patching,
 # fatal failures/timeouts, configured memory capacity, and singleton bank addressing.

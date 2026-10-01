@@ -59,6 +59,14 @@ module bsg_nonsynth_manycore_monitor
     if (max_cycle == 0) begin
       max_cycle = 1000000; // default
     end
+  int num_finish;   // Number of finish packets needs to be received to end the simulation.
+                    // By default, number of pods running the SPMD program. Each pod sends one finish packet.
+                    // However, you can set a different number, depending on the nature of the spmd program.
+                    // For example, you can require a finish packet from each tile in 4x4 tile-group spmd program.
+                    // In  that case, you would set num_finish to 16. this helps with not requiring barrier to synchronize task completion of all tiles.
+  initial begin
+    if (!$value$plusargs("num_finish=%d", num_finish) || num_finish <= 0)
+      $fatal(1, "Missing or invalid +num_finish");
   end
 
 
@@ -105,7 +113,6 @@ module bsg_nonsynth_manycore_monitor
         $fatal(1, "BSG_TIMEOUT reached max_cycle = %d", max_cycle);
       end
     end
-  end
 
   // off-chip memory that tiles can access.
   //
