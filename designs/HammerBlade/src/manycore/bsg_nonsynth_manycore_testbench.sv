@@ -314,7 +314,7 @@ module bsg_nonsynth_manycore_testbench
   bsg_manycore_link_sif_s [(num_pods_x_p*num_tiles_x_p)-1:0][S:P] io_link_sif_lo;
 
   for (genvar x = 0; x < num_pods_x_p*num_tiles_x_p; x++) begin: io_rtr_x
-    bsg_manycore_mesh_node #(
+    bsg_manycore_io_mesh_node #(
       .x_cord_width_p(x_cord_width_p)
       ,.y_cord_width_p(y_cord_width_p)
       ,.addr_width_p(addr_width_p)

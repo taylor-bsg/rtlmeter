@@ -57,7 +57,7 @@ link. Run the failure checks against a matching compiled model::
 Historical fixed-image measurements below remain available for comparison.
 
 Runtime validation (2026-09-30)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The reviewed source closure and runtime images passed eight fresh stock
 Verilator 5.052 builds and 32 executions on the reference Apple M5 Max:

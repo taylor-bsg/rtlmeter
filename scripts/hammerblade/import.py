@@ -289,6 +289,20 @@ small_defines = {k: v for k, v in small_all.items() if k not in common_defines}
 
 sources = list(dict.fromkeys(sources))
 source_rels = [str(relpath(f)) for f in sources] + ["src/generated/bsg_tag_boot_rom.v"]
+
+# Give the testbench I/O routers their own module type for threads_unit profiles.
+# Keep the entire router body identical; tile/cache routers keep the original type.
+router_name = "bsg_manycore_mesh_node"
+io_router_name = "bsg_manycore_io_mesh_node"
+io_router_rel = f"src/manycore/{io_router_name}.sv"
+router = (dst / f"src/manycore/{router_name}.sv").read_text()
+write(io_router_rel, router.replace(router_name, io_router_name))
+tbrel = "src/manycore/bsg_nonsynth_manycore_testbench.sv"
+tb = (dst / tbrel).read_text()
+assert tb.count(f"{router_name} #(") == 1
+write(tbrel, tb.replace(f"{router_name} #(", f"{io_router_name} #("))
+source_rels.insert(source_rels.index(f"src/manycore/{router_name}.sv") + 1, io_router_rel)
+
 inc_rels = sorted(str(relpath(f)) for f in includes)
 # Trim only files outside the complete textual dependency closure of the top.
 # Whole files and all conditional branches remain intact.

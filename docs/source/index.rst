@@ -30,6 +30,7 @@ produced by either of:
    compare.rst
    collate.rst
    advanced.rst
+   threads-unit.rst
 
 .. toctree::
    :maxdepth: 1
