@@ -125,8 +125,49 @@ To compile and inspect the mapping::
         --compileArgs="--threads 8 --threads-unit-list '$profile'" \
         --nExecute 0 --workRoot work-blackparrot-kk10
 
-Only this design-size/worker-count combination is currently mapped. Runtime
-correctness and performance measurements for this placement are pending.
+Only this design-size/worker-count combination is currently mapped.
+
+The following measurements used ``BlackParrot:4x4:dhry`` with 300 workload
+iterations on kk10 on 2026-10-24, at RTLMeter revision
+``cd176bf19f231c615054f1822aaaf13f0e124bec`` and the Verilator revision recorded
+above. Verilator and all freshly built models used Clang 21.1.8. Worker ``i``
+was pinned to CPU ``i``: CPUs 0 through 3 and 4 through 7 occupy two chiplets
+on socket 0. Memory was bound to node 0; the one-worker reference used CPU 0.
+Times are medians of three interleaved, isolated process runs, including
+initialization and cleanup, with the default Verilator C++ optimization flags.
+
+.. list-table:: BlackParrot 4x4 Dhrystone placement comparison
+   :header-rows: 1
+   :widths: 50 10 20 20
+
+   * - Configuration
+     - Workers
+     - Median seconds
+     - Speedup vs. 1 worker
+   * - Serial reference
+     - 1
+     - 52.285
+     - 1.00x
+   * - Automatic core-tile placement (portable profile)
+     - 8
+     - 9.068
+     - 5.77x
+   * - Automatic core and I/O tile placement
+     - 8
+     - 7.907
+     - 6.61x
+   * - Explicit column-pair placement (kk10 profile)
+     - 8
+     - 7.598
+     - 6.88x
+
+The automatic core-and-I/O control selects the same two module types as the
+kk10 profile, without ``-workers`` lists. The explicit placement reduces
+runtime by 16.2% relative to the portable profile and by 3.9% relative to this
+control. Its three measured runs span 7.581 through 7.632 seconds.
+All four correctness screens and all twelve timed runs passed the workload's
+post-hook and matched the reference output byte for byte, with 225,368
+simulated cycles in every run. Other workloads remain unmeasured.
 
 Coverage and validation
 -----------------------
@@ -156,7 +197,8 @@ this profile-storage branch.
      - ``threads-unit-kk10.vlt``
      - All 20 assignments audited through generated worker dispatch: sixteen
        core tiles and four I/O tile nodes across eight workers and 35 parallel
-       NBA tasks. Runtime correctness and performance validation pending.
+       NBA tasks. The 4x4 Dhrystone placement comparison above passed all
+       correctness checks and measured 6.88x speedup versus one worker.
    * - HammerBlade
      - ``threads-unit.vlt``
      - Existing compute-tile grouping for 16x8; automatic assignment.
