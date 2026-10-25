@@ -8,7 +8,7 @@ Select one explicitly with ``--compileArgs``; profiles are not enabled by defaul
 These files currently require the experimental Verilator
 `worker-assignment branch
 <https://github.com/taylor-bsg/verilator/tree/codex/threads-unit-worker-assignment>`_
-(validated at ``6d0c22abe49251ba0c43f32bbee53a282a843204``), based on PR #8804.
+(validated at ``91c6d81a3a94436be4f5d697acdd2232872b8021``), based on PR #8804.
 They are not configurations for a released Verilator version.
 
 Layout
@@ -21,10 +21,15 @@ Load one profile per design, rather than combining the portable and machine file
 
 One machine file can hold several design sizes and worker counts using repeated
 ``-workers N->W: { ... }`` lists. ``N`` is the retained instance count of the
-module type; ``W`` is the simulator worker count. The list contains ``N`` logical
-worker indices in the range ``0`` through ``W-1``. Lists can wrap across lines
-and contain comments to show the design's topology. Exactly one list must match
-both counts for each explicitly mapped module type.
+module type after any ``-instance`` filtering; ``W`` is the simulator worker
+count. The list contains ``N`` logical worker indices in the range ``0`` through
+``W-1``. Lists can wrap across lines and contain comments to show the design's
+topology. Exactly one list must match both counts for each explicitly mapped
+module type and instance pattern.
+
+The optional ``-instance "prefix*"`` selects instances by their local RTL name,
+without needing the enclosing hierarchy path. Omitting it selects all instances
+of the module type. Different patterns for the same module type must not overlap.
 
 Worker indices refer to simulator threads. Physical CPU affinity is configured
 separately. Worker ``W-1`` is the thread calling ``eval()``; the other workers
@@ -43,8 +48,10 @@ Use an absolute profile path because Verilator runs in a compilation directory::
 
 ``--threads-unit-list`` writes ``obj_dir/Vsim__threads_units.txt`` in the case's
 compilation directory. It lists the module type, instance index, explicit worker
-index (or ``auto``), and hierarchical instance name. Indices are assigned in
-natural hierarchical-name order, so index 2 sorts before index 10. Generate this
+index (or ``auto``), hierarchical instance name, and instance pattern. Indices
+start at zero for each module type and pattern, in natural hierarchical-name
+order, so index 2 sorts before index 10. Comment lines summarize local instance
+names and their counts, which helps choose an instance filter. Generate this
 listing with a grouping-only profile before writing new assignment lists, and
 regenerate it when the RTL or Verilator changes. ``auto`` does not report the
 scheduler's final automatic assignment.
@@ -58,11 +65,17 @@ Each worker owns 16 compute tiles, four v-caches, and two I/O routers. It preser
 the placement from the prior tuning runs, including the final I/O assignment.
 Only this design-size/worker-count combination is currently mapped.
 
-The I/O routers use ``bsg_manycore_io_mesh_node``, a name-only copy of
-``bsg_manycore_mesh_node`` maintained by ``scripts/hammerblade/import.py``.
-Only the testbench's I/O-router instantiation uses the alias. This allows the
-profile to group I/O routers independently of routers inside tiles and caches;
-the router implementation and ports are identical.
+The I/O routers use the original ``bsg_manycore_mesh_node`` module, selected by
+their local instance names::
+
+    threads_unit -module "bsg_manycore_mesh_node" -instance "io_rtr*" -workers 16->8: {
+        3 3 7 7 5 5 1 1 4 4 0 0 2 2 6 6
+    }
+
+The 160 internal routers named ``rtr`` remain part of their enclosing compute
+tile or v-cache unit and remain eligible for inlining. The selected I/O routers
+keep their boundaries so they can be assigned independently. No RTL renaming or
+copied router module is needed.
 
 To compile and inspect the mapping::
 
@@ -108,10 +121,11 @@ this profile-storage branch.
    * - HammerBlade
      - ``threads-unit-kk10.vlt``
      - All 176 assignments audited through generated worker dispatch on this
-       branch's RTL (115 parallel NBA tasks). Package 58 contains measurements
-       of the accepted placement with its prototype implementation and the
-       source snapshot recorded there. A runtime benchmark of the new syntax
-       on this branch is still pending.
+       branch's RTL (115 parallel NBA tasks). Owners, task order, and
+       synchronization counts match the earlier router-alias profile.
+       Package 58 contains measurements of the accepted placement with its
+       prototype implementation and the source snapshot recorded there.
+       A runtime benchmark of the new syntax on this branch is still pending.
    * - OpenPiton
      - ``threads-unit.vlt``
      - Existing ``tile`` grouping; representative 4x4 runs in package 58.

@@ -167,7 +167,6 @@ compile:
     - src/manycore/bsg_manycore_tile_vcache.sv
     - src/manycore/bsg_manycore_hetero_socket.sv
     - src/manycore/bsg_manycore_mesh_node.sv
-    - src/manycore/bsg_manycore_io_mesh_node.sv
     - src/manycore/bsg_manycore_endpoint.sv
     - src/manycore/bsg_manycore_endpoint_fc.sv
     - src/manycore/bsg_manycore_endpoint_standard.sv
