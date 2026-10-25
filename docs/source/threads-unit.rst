@@ -8,7 +8,7 @@ Select one explicitly with ``--compileArgs``; profiles are not enabled by defaul
 These files currently require the experimental Verilator
 `worker-assignment branch
 <https://github.com/taylor-bsg/verilator/tree/codex/threads-unit-worker-assignment>`_
-(validated at ``91c6d81a3a94436be4f5d697acdd2232872b8021``), based on PR #8804.
+(validated at ``8c052270d87fe6edef528d1f23b176b52682b212``), based on PR #8804.
 They are not configurations for a released Verilator version.
 
 Layout
@@ -32,7 +32,7 @@ without needing the enclosing hierarchy path. Omitting it selects all instances
 of the module type. Different patterns for the same module type must not overlap.
 
 Worker indices refer to simulator threads. Physical CPU affinity is configured
-separately. Worker ``W-1`` is the thread calling ``eval()``; the other workers
+separately. Worker 0 is the thread calling ``eval()``; workers 1 through ``W-1``
 belong to the worker pool.
 
 Selecting a profile and inspecting indices
@@ -65,11 +65,16 @@ Each worker owns 16 compute tiles, four v-caches, and two I/O routers. It preser
 the placement from the prior tuning runs, including the final I/O assignment.
 Only this design-size/worker-count combination is currently mapped.
 
+With the experiment's CPU pinning, worker indices match CPU indices: workers
+0 through 3 share the chiplet handling tile rows 0 through 3, and workers 4
+through 7 share the chiplet handling rows 4 through 7. Each worker's tiles form
+an 8x2 region, with even workers on the left and odd workers on the right.
+
 The I/O routers use the original ``bsg_manycore_mesh_node`` module, selected by
 their local instance names::
 
     threads_unit -module "bsg_manycore_mesh_node" -instance "io_rtr*" -workers 16->8: {
-        3 3 7 7 5 5 1 1 4 4 0 0 2 2 6 6
+        4 4 0 0 6 6 2 2 5 5 1 1 3 3 7 7
     }
 
 The 160 internal routers named ``rtr`` remain part of their enclosing compute
@@ -123,6 +128,8 @@ this profile-storage branch.
      - All 176 assignments audited through generated worker dispatch on this
        branch's RTL (115 parallel NBA tasks). Owners, task order, and
        synchronization counts match the earlier router-alias profile.
+       Numbering the caller as worker 0 also preserves the preceding profile's
+       complete generated task schedule; only the reported worker indices change.
        Package 58 contains measurements of the accepted placement with its
        prototype implementation and the source snapshot recorded there.
        A runtime benchmark of the new syntax on this branch is still pending.
