@@ -96,6 +96,38 @@ iterations. Set the 16x8 ``amoadd`` descriptor's existing ``+iterations`` value
 to 15 before executing: appending a duplicate with ``--executeArgs`` does not
 override the first value. The compile-only command above does not run a workload.
 
+BlackParrot on kk10
+-------------------
+
+``designs/BlackParrot/verilator/threads-unit-kk10.vlt`` maps the 4x4 design to
+eight workers. Let ``Cxy`` denote the core tile in column ``x``, row ``y``, with
+row 0 at the north edge beside the four I/O nodes. For each column ``i`` from
+0 through 3, worker ``i`` owns ``Ci0``, ``Ci1``, and ``IOi``; worker ``4+i`` owns
+``Ci2`` and ``Ci3``. The worker map follows the physical layout::
+
+    I/O:     0 1 2 3
+    row 0:   0 1 2 3
+    row 1:   0 1 2 3
+    row 2:   4 5 6 7
+    row 3:   4 5 6 7
+
+The profile selects ``bp_core_tile_node`` with a ``16->8`` list and
+``bp_io_tile_node`` with a ``4->8`` list. Each worker owns two vertically
+adjacent core tiles; workers 0 through 3 also own the I/O node in their column.
+With workers 0 through 3 pinned to one chiplet and 4 through 7 to another on
+the same socket, the chiplets handle the top and bottom halves respectively.
+Affinity is configured separately from the profile.
+
+To compile and inspect the mapping::
+
+    profile="$PWD/designs/BlackParrot/verilator/threads-unit-kk10.vlt"
+    ./rtlmeter run --cases 'BlackParrot:4x4:dhry' \
+        --compileArgs="--threads 8 --threads-unit-list '$profile'" \
+        --nExecute 0 --workRoot work-blackparrot-kk10
+
+Only this design-size/worker-count combination is currently mapped. Runtime
+correctness and performance measurements for this placement are pending.
+
 Coverage and validation
 -----------------------
 
@@ -120,6 +152,11 @@ this profile-storage branch.
    * - BlackParrot
      - ``threads-unit.vlt``
      - Existing ``bp_core_tile_node`` grouping; representative 4x4 runs in package 58.
+   * - BlackParrot
+     - ``threads-unit-kk10.vlt``
+     - All 20 assignments audited through generated worker dispatch: sixteen
+       core tiles and four I/O tile nodes across eight workers and 35 parallel
+       NBA tasks. Runtime correctness and performance validation pending.
    * - HammerBlade
      - ``threads-unit.vlt``
      - Existing compute-tile grouping for 16x8; automatic assignment.

@@ -1,0 +1,14 @@
+`verilator_config
+// BlackParrot 4x4 on eight workers; worker 0 is the calling thread.
+// Cxy denotes column x, row y, with row 0 next to the north-edge I/O nodes.
+// Workers 0..3 share the top-half chiplet; workers 4..7 share the bottom half.
+threads_unit -module "bp_core_tile_node" -workers 16->8: {
+    0 1 2 3
+    0 1 2 3
+    4 5 6 7
+    4 5 6 7
+}
+// I/O node i stays with column i's two northern core tiles.
+threads_unit -module "bp_io_tile_node" -workers 4->8: {
+    0 1 2 3
+}
