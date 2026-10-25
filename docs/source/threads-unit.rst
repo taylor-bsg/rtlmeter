@@ -298,6 +298,127 @@ one- and eight-worker models. These measurements apply to the experimental
 compiler and this workload. The linked OpenPiton PR records the separate
 paired VCS regressions and per-module logic-equivalence results for the RTL fix.
 
+Vortex on kk10
+---------------
+
+``designs/Vortex/verilator/threads-unit-kk10.vlt`` maps the ``sane`` design to
+eight workers. The design has two clusters, each containing four GPU cores
+and a shared instruction and data cache. GPU core index ``4*cluster + core``
+follows natural hierarchical-name order. The placement is::
+
+    GPU core:             0 1 2 3 | 4 5 6 7
+    worker / physical CPU: 0 1 2 3 | 4 5 6 7
+
+    cluster:              0       1
+    instruction cache:    CPU 1   CPU 5
+    data cache:           CPU 2   CPU 6
+
+The calling thread runs the simulator scheduler on CPU 0 and also evaluates
+GPU core 0. Worker ``i`` must be pinned to physical CPU ``i``: CPUs 0 through
+3 and 4 through 7 occupy two chiplets on the same socket in the kk10 setup.
+The profile specifies logical workers; the launcher establishes CPU affinity.
+With the experiment's affinity preload shim, set ``HB_CPUS=0,1,2,3,4,5,6,7``
+and ``VERILATOR_NUMA_STRATEGY=none``. A process-wide ``taskset -c 0-7`` alone
+does not establish this per-thread mapping.
+
+The profile selects eight ``VX_core`` units and four ``VX_cache_cluster``
+units. Local instance filters distinguish ``icache`` and ``dcache`` without
+requiring hierarchy paths. Each filter has its own ``2->8`` list: index 0 is
+cluster 0's cache and index 1 is cluster 1's cache. L2 and L3 are disabled in
+this design configuration; their bypass/arbitration logic remains automatically
+assigned. The portable profile selects only ``VX_core`` with automatic placement.
+
+To compile and inspect the mapping::
+
+    profile="$PWD/designs/Vortex/verilator/threads-unit-kk10.vlt"
+    ./rtlmeter run --cases 'Vortex:sane:saxpy' \
+        --compileArgs="--threads 8 --threads-unit-list '$profile'" \
+        --nExecute 0 --workRoot work-vortex-kk10
+
+Only this design-size/worker-count combination is currently mapped. All twelve
+assignments were verified in the emitted index listing and through 53 generated
+parallel NBA tasks, including 208 retained-unit and descendant-interface scopes.
+A grouping-only control confirmed the same unit indices.
+
+The following measurements used ``Vortex:sane:saxpy`` and
+``Vortex:sane:sgemm`` on kk10 on 2026-10-25, with the default one workload
+iteration, at RTLMeter base revision
+``d8f866ebf975aa9a119966dad66503b615865e50`` and the Verilator revision recorded
+above. Verilator and all four freshly built models used Clang 21.1.8, with
+default Verilator C++ optimization flags. Worker ``i`` was pinned to CPU ``i``;
+the calling/scheduler thread and the one-worker reference used CPU 0. All runs
+used memory node 0. Times are medians of three interleaved, isolated process
+runs, including initialization, simulation, and cleanup.
+
+.. list-table:: Vortex sane placement comparison
+   :header-rows: 1
+   :widths: 15 45 10 15 15
+
+   * - Workload
+     - Configuration
+     - Workers
+     - Median seconds
+     - Speedup vs. 1 worker
+   * - SAXPY
+     - Serial reference
+     - 1
+     - 34.476
+     - 1.00x
+   * - SAXPY
+     - Automatic GPU-core placement (portable profile)
+     - 8
+     - 2.881
+     - 11.96x
+   * - SAXPY
+     - Automatic placement of the same twelve units
+     - 8
+     - 2.989
+     - 11.53x
+   * - SAXPY
+     - Explicit core and shared-cache placement (kk10 profile)
+     - 8
+     - 2.235
+     - 15.43x
+   * - SGEMM
+     - Serial reference
+     - 1
+     - 33.560
+     - 1.00x
+   * - SGEMM
+     - Automatic GPU-core placement (portable profile)
+     - 8
+     - 2.714
+     - 12.37x
+   * - SGEMM
+     - Automatic placement of the same twelve units
+     - 8
+     - 2.823
+     - 11.89x
+   * - SGEMM
+     - Explicit core and shared-cache placement (kk10 profile)
+     - 8
+     - 2.097
+     - 16.00x
+
+The same-unit control selects eight GPU cores and four shared caches using the
+same instance filters as the kk10 profile, without explicit worker lists.
+Explicit placement reduces runtime by 22.4% for SAXPY and 22.7% for SGEMM
+relative to the portable profile, and by 25.2% and 25.7% relative to the same-unit
+control. Mapped runs span 2.185 through 2.239 seconds for SAXPY and 2.067 through
+2.098 seconds for SGEMM. The one- and eight-worker executables are generated
+separately; their speedup ratios include differences in generated code and
+execution efficiency.
+
+All eight correctness screens and all twenty-four timed runs passed the
+workload post-hook, matched the previously validated output byte for byte, and
+matched the complete memory dump from the fresh one-worker screen. Every SAXPY
+run completed 166,501 simulated cycles and every SGEMM run completed 161,875.
+Live affinity checks confirmed the caller on CPU 0 and one thread per physical
+CPU 0 through 7 for each eight-worker run. Executable pages were verified on
+memory node 0. The benchmark lock covered the complete workflow, and all builds
+finished before simulations started. Other workloads remain unmeasured with
+this placement.
+
 Coverage and validation
 -----------------------
 
@@ -351,6 +472,15 @@ this profile-storage branch.
        checks and measured 2.83x speedup versus one worker, with the caller
        on CPU 3. With the separate PR #180 RTL changes, the same placement
        measured 9.84x versus its one-worker reference.
+   * - Vortex
+     - ``threads-unit.vlt``
+     - Existing ``VX_core`` grouping; representative sane runs in package 58.
+   * - Vortex
+     - ``threads-unit-kk10.vlt``
+     - All twelve assignments audited through 53 generated parallel NBA tasks:
+       eight GPU cores and four shared caches across eight workers. SAXPY and
+       SGEMM passed all correctness and affinity checks, with 15.43x and 16.00x
+       speedup versus their one-worker references.
 
 .. list-table:: Designs still needing profiles and validation
    :header-rows: 1
@@ -374,8 +504,6 @@ this profile-storage branch.
    * - VeeR-EH2
      - Pending
    * - VeeR-EL2
-     - Pending
-   * - Vortex
      - Pending
    * - XiangShan
      - Pending
