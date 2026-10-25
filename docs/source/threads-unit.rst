@@ -169,6 +169,135 @@ All four correctness screens and all twelve timed runs passed the workload's
 post-hook and matched the reference output byte for byte, with 225,368
 simulated cycles in every run. Other workloads remain unmeasured.
 
+OpenPiton on kk10
+-----------------
+
+``designs/OpenPiton/verilator/threads-unit-kk10.vlt`` maps the 4x4 design to
+eight workers. Coordinates are ``(y, x)``, and tile index ``4*y + x`` follows
+the natural instance-name ordering. Physical CPU ownership is::
+
+    row 0:   0 1 2 3
+    row 1:   0 1 2 3
+    row 2:   4 5 6 7
+    row 3:   4 5 6 7
+
+Each CPU owns two vertically adjacent tiles, including their caches and three
+mesh routers. CPUs 0 through 3 share the chiplet handling the top half; CPUs
+4 through 7 share the chiplet handling the bottom half on the same socket.
+Both chipset I/O crossbars, ``io_xbar_noc2`` and ``io_xbar_noc3``, run on CPU 0.
+``riscv_peripherals`` runs on CPU 1, and ``pc_cmp`` runs on CPU 4.
+
+The calling thread runs the simulator scheduler on CPU 3 and also evaluates
+the two tiles assigned to that CPU. Since the public interface always calls
+this thread worker 0, this profile requires the following affinity::
+
+    logical worker:   0 1 2 3 4 5 6 7
+    physical CPU:     3 1 2 0 4 5 6 7
+
+The VLT lists therefore use ``3 1 2 0`` for each of the top two tile rows,
+and worker 3 for both I/O crossbars. The profile sets logical assignments;
+the launcher must pin the caller and pool threads using the CPU list above.
+With the experiment's affinity preload shim, set
+``HB_CPUS=3,1,2,0,4,5,6,7`` and ``VERILATOR_NUMA_STRATEGY=none``. A process-wide
+``taskset -c 0-7`` alone does not establish this per-thread mapping.
+
+To compile and inspect the logical mapping::
+
+    profile="$PWD/designs/OpenPiton/verilator/threads-unit-kk10.vlt"
+    ./rtlmeter run --cases 'OpenPiton:4x4:dhry' \
+        --compileArgs="--threads 8 --threads-unit-list '$profile'" \
+        --nExecute 0 --workRoot work-openpiton-kk10
+
+Only this design-size/worker-count combination is currently mapped.
+
+The following measurements used ``OpenPiton:4x4:dhry`` on kk10 on 2026-10-24,
+with the bundled RTL at RTLMeter revision
+``f16e42a7b979bbcce37262b74b650f3213ba3744``, the default two workload iterations,
+and 111,764 simulated cycles.
+Verilator and all four freshly built models used Clang 21.1.8 and the compiler
+revision recorded above, with the default Verilator C++ optimization flags.
+All eight-worker configurations used the affinity above, including the caller
+on CPU 3; the one-worker reference also used CPU 3. Memory was bound to node 0.
+Times are medians of three interleaved, isolated process runs, including
+initialization and cleanup.
+
+.. list-table:: OpenPiton 4x4 Dhrystone placement comparison
+   :header-rows: 1
+   :widths: 50 10 20 20
+
+   * - Configuration
+     - Workers
+     - Median seconds
+     - Speedup vs. 1 worker
+   * - Serial reference
+     - 1
+     - 40.117
+     - 1.00x
+   * - Automatic tile placement (portable profile)
+     - 8
+     - 14.962
+     - 2.68x
+   * - Automatic placement of the same 20 units
+     - 8
+     - 15.078
+     - 2.66x
+   * - Explicit tile and shared-block placement (kk10 profile)
+     - 8
+     - 14.191
+     - 2.83x
+
+The same-unit control selects tiles, both I/O crossbars, RISC-V peripherals,
+and ``pc_cmp``, without ``-workers`` lists. The explicit placement reduces
+runtime by 5.2% relative to the portable profile and by 5.9% relative to this
+control. Its three measured runs span 14.181 through 14.233 seconds.
+All four correctness screens and all twelve timed runs passed the workload's
+post-hook and matched the reference output byte for byte, with the same cycle
+count. Live affinity checks confirmed the caller on CPU 3 and one thread per
+physical CPU 0 through 7 for every eight-worker run. Other workloads remain
+unmeasured with this placement.
+
+The same placement was measured again on 2026-10-25 with the combinational RTL
+changes from `OpenPiton PR #180
+<https://github.com/PrincetonUniversity/openpiton/pull/180>`_
+(upstream source commit ``8d02edcab228054fa41daba294ddeb7649d305a9``).
+Reproducing the following results requires applying those changes to the
+vendored RTLMeter RTL. The profile selects units and workers; the RTL changes
+replace explicit sensitivity lists and non-blocking combinational assignments
+with ``always @(*)`` and blocking assignments in nine modules.
+
+Both sides used the same compiler revision, Clang 21.1.8, workload, CPU affinity,
+and memory placement described above. The original-RTL controls were retimed
+alongside the changed-RTL models, using three interleaved, isolated runs per
+configuration. These are flat-model results:
+
+.. list-table:: OpenPiton 4x4 Dhrystone with the separate RTL fix
+   :header-rows: 1
+   :widths: 10 20 20 20 30
+
+   * - Workers
+     - Before (seconds)
+     - After (seconds)
+     - Improvement
+     - Speedup vs. 1 worker (before / after)
+   * - 1
+     - 40.071
+     - 27.559
+     - 1.45x
+     - 1.00x / 1.00x
+   * - 8
+     - 14.177
+     - 2.800
+     - 5.06x
+     - 2.83x / 9.84x
+
+The flat model's active-region trigger count falls from 6,732 to 175. All
+requested unit assignments remain intact, and every run in the comparison
+matched the reference output and 111,764 simulated cycles. The 9.84x ratio
+includes differences in generated code and execution efficiency between the
+one- and eight-worker models. These measurements apply to the experimental
+compiler and this workload. The linked OpenPiton PR records the separate
+paired VCS regressions and per-module logic-equivalence results for the RTL fix.
+
 Coverage and validation
 -----------------------
 
@@ -215,6 +344,13 @@ this profile-storage branch.
    * - OpenPiton
      - ``threads-unit.vlt``
      - Existing ``tile`` grouping; representative 4x4 runs in package 58.
+   * - OpenPiton
+     - ``threads-unit-kk10.vlt``
+     - All 20 assignments audited through 28 generated parallel NBA tasks.
+       The 4x4 Dhrystone comparison above passed all correctness and affinity
+       checks and measured 2.83x speedup versus one worker, with the caller
+       on CPU 3. With the separate PR #180 RTL changes, the same placement
+       measured 9.84x versus its one-worker reference.
 
 .. list-table:: Designs still needing profiles and validation
    :header-rows: 1
