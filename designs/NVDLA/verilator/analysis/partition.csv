@@ -1,0 +1,8 @@
+instance,cost,percent
+tb_top.nvdla_top.u_partition_c,1942332,25.87818918812333
+tb_top.nvdla_top.u_partition_o,1600938,21.329709052034246
+tb_top.nvdla_top.u_partition_p,1463362,19.496748592264623
+tb_top.nvdla_top.u_partition_ma,1063934,14.175066536347446
+tb_top.nvdla_top.u_partition_mb,1063916,14.174826717714284
+tb_top.nvdla_top.u_partition_a,364953,4.8623627571255446
+Outside device,6237,0.08309715639052706

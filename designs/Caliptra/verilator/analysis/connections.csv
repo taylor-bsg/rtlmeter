@@ -1,0 +1,157 @@
+source,target,shared_variables
+caliptra_top_tb.caliptra_top_dut.pcr_vault1,Device wiring / own logic,384
+caliptra_top_tb.caliptra_top_dut.abr_inst,Outside device,123
+caliptra_top_tb.caliptra_top_dut.rvtop,caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,28
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,Outside device,28
+caliptra_top_tb.caliptra_top_dut.rvtop,caliptra_top_tb.caliptra_top_dut.lsu_ahb,20
+caliptra_top_tb.caliptra_top_dut.rvtop,caliptra_top_tb.caliptra_top_dut.sb_ahb,20
+Outside device,caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,18
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.key_vault1,17
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,Device wiring / own logic,17
+caliptra_top_tb.caliptra_top_dut.sha512,caliptra_top_tb.caliptra_top_dut.abr_inst,16
+caliptra_top_tb.caliptra_top_dut.sha512,Device wiring / own logic,12
+Outside device,caliptra_top_tb.caliptra_top_dut.abr_inst,11
+caliptra_top_tb.caliptra_top_dut.aes_inst,Device wiring / own logic,11
+caliptra_top_tb.caliptra_top_dut.hmac,Device wiring / own logic,11
+Outside device,caliptra_top_tb.caliptra_top_dut.rvtop,10
+caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,10
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,9
+caliptra_top_tb.caliptra_top_dut.abr_inst,Device wiring / own logic,9
+caliptra_top_tb.caliptra_top_dut.abr_inst,caliptra_top_tb.caliptra_top_dut.responder_inst[14],9
+caliptra_top_tb.caliptra_top_dut.ecc_top1,Device wiring / own logic,9
+caliptra_top_tb.caliptra_top_dut.key_vault1,caliptra_top_tb.caliptra_top_dut.abr_inst,9
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.aes_inst,9
+caliptra_top_tb.caliptra_top_dut.rvtop,caliptra_top_tb.caliptra_top_dut.responder_inst[8],8
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.rvtop,8
+caliptra_top_tb.caliptra_top_dut.doe,Device wiring / own logic,6
+caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux,caliptra_top_tb.caliptra_top_dut.imem,6
+caliptra_top_tb.caliptra_top_dut.aes_inst,caliptra_top_tb.caliptra_top_dut.responder_inst[15],5
+caliptra_top_tb.caliptra_top_dut.aes_inst,caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,5
+caliptra_top_tb.caliptra_top_dut.sha3,caliptra_top_tb.caliptra_top_dut.responder_inst[16],5
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,5
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.responder_inst[7],5
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.pcr_vault1,4
+caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux,4
+caliptra_top_tb.caliptra_top_dut.csrng,caliptra_top_tb.caliptra_top_dut.responder_inst[12],4
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.csrng,4
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.responder_inst[13],4
+caliptra_top_tb.caliptra_top_dut.lsu_ahb,caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,4
+caliptra_top_tb.caliptra_top_dut.sb_ahb,caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,4
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.hmac,3
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.rvtop,3
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.sha512,3
+Outside device,caliptra_top_tb.caliptra_top_dut.entropy_src,3
+caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,caliptra_top_tb.caliptra_top_dut.rvtop,3
+caliptra_top_tb.caliptra_top_dut.doe,caliptra_top_tb.caliptra_top_dut.key_vault1,3
+caliptra_top_tb.caliptra_top_dut.responder_inst[14],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,3
+caliptra_top_tb.caliptra_top_dut.responder_inst[15],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,3
+caliptra_top_tb.caliptra_top_dut.responder_inst[16],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,3
+caliptra_top_tb.caliptra_top_dut.responder_inst[7],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,3
+caliptra_top_tb.caliptra_top_dut.responder_inst[8],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,3
+caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,3
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,3
+Device wiring / own logic,Outside device,2
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.doe,2
+Outside device,caliptra_top_tb.caliptra_top_dut.data_vault1,2
+caliptra_top_tb.caliptra_top_dut.abr_inst,caliptra_top_tb.caliptra_top_dut.key_vault1,2
+caliptra_top_tb.caliptra_top_dut.aes_inst,caliptra_top_tb.caliptra_top_dut.key_vault1,2
+caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,caliptra_top_tb.caliptra_top_dut.imem,2
+caliptra_top_tb.caliptra_top_dut.cg,caliptra_top_tb.caliptra_top_dut.rvtop,2
+caliptra_top_tb.caliptra_top_dut.csrng,caliptra_top_tb.caliptra_top_dut.entropy_src,2
+caliptra_top_tb.caliptra_top_dut.data_vault1,caliptra_top_tb.caliptra_top_dut.responder_inst[5],2
+caliptra_top_tb.caliptra_top_dut.doe,caliptra_top_tb.caliptra_top_dut.responder_inst[0],2
+caliptra_top_tb.caliptra_top_dut.ecc_top1,caliptra_top_tb.caliptra_top_dut.key_vault1,2
+caliptra_top_tb.caliptra_top_dut.ecc_top1,caliptra_top_tb.caliptra_top_dut.responder_inst[1],2
+caliptra_top_tb.caliptra_top_dut.hmac,caliptra_top_tb.caliptra_top_dut.key_vault1,2
+caliptra_top_tb.caliptra_top_dut.hmac,caliptra_top_tb.caliptra_top_dut.responder_inst[2],2
+caliptra_top_tb.caliptra_top_dut.imem,caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux,2
+caliptra_top_tb.caliptra_top_dut.key_vault1,caliptra_top_tb.caliptra_top_dut.responder_inst[3],2
+caliptra_top_tb.caliptra_top_dut.pcr_vault1,caliptra_top_tb.caliptra_top_dut.responder_inst[4],2
+caliptra_top_tb.caliptra_top_dut.responder_inst[12],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,2
+caliptra_top_tb.caliptra_top_dut.responder_inst[13],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,2
+caliptra_top_tb.caliptra_top_dut.responder_inst[8],Device wiring / own logic,2
+caliptra_top_tb.caliptra_top_dut.responder_inst[8],caliptra_top_tb.caliptra_top_dut.rvtop,2
+caliptra_top_tb.caliptra_top_dut.rvtop,Device wiring / own logic,2
+caliptra_top_tb.caliptra_top_dut.rvtop,caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,2
+caliptra_top_tb.caliptra_top_dut.sha256,caliptra_top_tb.caliptra_top_dut.responder_inst[10],2
+caliptra_top_tb.caliptra_top_dut.sha512,caliptra_top_tb.caliptra_top_dut.responder_inst[6],2
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.cg,2
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.abr_inst,2
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,2
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.abr_inst,1
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.cg,1
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.ecc_top1,1
+Device wiring / own logic,caliptra_top_tb.caliptra_top_dut.sha256,1
+Outside device,caliptra_top_tb.caliptra_top_dut.aes_inst,1
+Outside device,caliptra_top_tb.caliptra_top_dut.hmac,1
+Outside device,caliptra_top_tb.caliptra_top_dut.key_vault1,1
+Outside device,caliptra_top_tb.caliptra_top_dut.pcr_vault1,1
+Outside device,caliptra_top_tb.caliptra_top_dut.sha256,1
+Outside device,caliptra_top_tb.caliptra_top_dut.sha3,1
+Outside device,caliptra_top_tb.caliptra_top_dut.sha512,1
+Outside device,caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux,1
+caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,1
+caliptra_top_tb.caliptra_top_dut.csrng,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.data_vault1,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.data_vault1,caliptra_top_tb.caliptra_top_dut.key_vault1,1
+caliptra_top_tb.caliptra_top_dut.data_vault1,caliptra_top_tb.caliptra_top_dut.pcr_vault1,1
+caliptra_top_tb.caliptra_top_dut.data_vault1,caliptra_top_tb.caliptra_top_dut.rvtop,1
+caliptra_top_tb.caliptra_top_dut.doe,caliptra_top_tb.caliptra_top_dut.abr_inst,1
+caliptra_top_tb.caliptra_top_dut.doe,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.ecc_top1,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.abr_inst,1
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.aes_inst,1
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.hmac,1
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.key_vault1,1
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.pcr_vault1,1
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.sha256,1
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.sha3,1
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.sha512,1
+caliptra_top_tb.caliptra_top_dut.entropy_src,caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,1
+caliptra_top_tb.caliptra_top_dut.hmac,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.key_vault1,Device wiring / own logic,1
+caliptra_top_tb.caliptra_top_dut.key_vault1,caliptra_top_tb.caliptra_top_dut.aes_inst,1
+caliptra_top_tb.caliptra_top_dut.key_vault1,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.key_vault1,caliptra_top_tb.caliptra_top_dut.ecc_top1,1
+caliptra_top_tb.caliptra_top_dut.key_vault1,caliptra_top_tb.caliptra_top_dut.hmac,1
+caliptra_top_tb.caliptra_top_dut.key_vault1,caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,1
+caliptra_top_tb.caliptra_top_dut.pcr_vault1,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.responder_inst[0],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.responder_inst[10],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.responder_inst[1],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.responder_inst[2],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.responder_inst[3],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.responder_inst[4],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.responder_inst[5],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.responder_inst[6],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.responder_inst[8],caliptra_top_tb.caliptra_top_dut.responder_inst[9],1
+caliptra_top_tb.caliptra_top_dut.responder_inst[9],caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.rvtop,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.rvtop,caliptra_top_tb.caliptra_top_dut.cg,1
+caliptra_top_tb.caliptra_top_dut.rvtop,caliptra_top_tb.caliptra_top_dut.imem,1
+caliptra_top_tb.caliptra_top_dut.rvtop,caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux,1
+caliptra_top_tb.caliptra_top_dut.sha256,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.sha512,caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i,1
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.abr_inst,1
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.data_vault1,1
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.entropy_src,1
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.key_vault1,1
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.pcr_vault1,1
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux,1
+caliptra_top_tb.caliptra_top_dut.soc_ifc_top1,caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.aes_inst,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.csrng,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.data_vault1,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.doe,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.ecc_top1,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.entropy_src,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.hmac,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.imem,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.key_vault1,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.pcr_vault1,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.rvtop,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.sha256,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.sha3,1
+caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux,caliptra_top_tb.caliptra_top_dut.sha512,1

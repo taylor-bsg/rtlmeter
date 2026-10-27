@@ -1,0 +1,156 @@
+{
+  "design": "NVDLA",
+  "configuration": "default",
+  "workers": 8,
+  "threshold_percent": 0.25,
+  "total_cost": 7505672,
+  "normal_inlined_total_cost": 7498416,
+  "hierarchy_preserved_change_percent": 0.096767103879003,
+  "hierarchy_instances": 130260,
+  "qualifying_instances": 128,
+  "device_scope": "tb_top.nvdla_top",
+  "device_percent": 99.91690284360948,
+  "device_blocks": [
+    {
+      "instance": "tb_top.nvdla_top.u_partition_c",
+      "module": "NV_NVDLA_partition_c",
+      "module_index": 0,
+      "local_instance": "u_partition_c",
+      "parent": "tb_top.nvdla_top",
+      "inclusive_cost": 1942332,
+      "inclusive_percent": 25.87818918812333,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/NV_NVDLA_partition_c.v",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "tb_top.nvdla_top.u_partition_o",
+      "module": "NV_NVDLA_partition_o",
+      "module_index": 0,
+      "local_instance": "u_partition_o",
+      "parent": "tb_top.nvdla_top",
+      "inclusive_cost": 1600938,
+      "inclusive_percent": 21.329709052034246,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/NV_NVDLA_partition_o.v",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "tb_top.nvdla_top.u_partition_p",
+      "module": "NV_NVDLA_partition_p",
+      "module_index": 0,
+      "local_instance": "u_partition_p",
+      "parent": "tb_top.nvdla_top",
+      "inclusive_cost": 1463362,
+      "inclusive_percent": 19.496748592264623,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/NV_NVDLA_partition_p.v",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "tb_top.nvdla_top.u_partition_ma",
+      "module": "NV_NVDLA_partition_m",
+      "module_index": 0,
+      "local_instance": "u_partition_ma",
+      "parent": "tb_top.nvdla_top",
+      "inclusive_cost": 1063934,
+      "inclusive_percent": 14.175066536347446,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/NV_NVDLA_partition_m.v",
+      "normal_percent": 14.18878333770759
+    },
+    {
+      "instance": "tb_top.nvdla_top.u_partition_mb",
+      "module": "NV_NVDLA_partition_m",
+      "module_index": 1,
+      "local_instance": "u_partition_mb",
+      "parent": "tb_top.nvdla_top",
+      "inclusive_cost": 1063916,
+      "inclusive_percent": 14.174826717714284,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/NV_NVDLA_partition_m.v",
+      "normal_percent": 14.188543287008883
+    },
+    {
+      "instance": "tb_top.nvdla_top.u_partition_a",
+      "module": "NV_NVDLA_partition_a",
+      "module_index": 0,
+      "local_instance": "u_partition_a",
+      "parent": "tb_top.nvdla_top",
+      "inclusive_cost": 364953,
+      "inclusive_percent": 4.8623627571255446,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/NV_NVDLA_partition_a.v",
+      "normal_percent": 0.0
+    }
+  ],
+  "partition": [
+    {
+      "instance": "tb_top.nvdla_top.u_partition_c",
+      "cost": 1942332,
+      "percent": 25.87818918812333
+    },
+    {
+      "instance": "tb_top.nvdla_top.u_partition_o",
+      "cost": 1600938,
+      "percent": 21.329709052034246
+    },
+    {
+      "instance": "tb_top.nvdla_top.u_partition_p",
+      "cost": 1463362,
+      "percent": 19.496748592264623
+    },
+    {
+      "instance": "tb_top.nvdla_top.u_partition_ma",
+      "cost": 1063934,
+      "percent": 14.175066536347446
+    },
+    {
+      "instance": "tb_top.nvdla_top.u_partition_mb",
+      "cost": 1063916,
+      "percent": 14.174826717714284
+    },
+    {
+      "instance": "tb_top.nvdla_top.u_partition_a",
+      "cost": 364953,
+      "percent": 4.8623627571255446
+    },
+    {
+      "instance": "Outside device",
+      "cost": 6237,
+      "percent": 0.08309715639052706
+    }
+  ],
+  "execution_regions": {
+    "act": {
+      "vertices": 3035,
+      "cost": 44996
+    },
+    "nba": {
+      "vertices": 478700,
+      "cost": 7505672
+    },
+    "stl": {
+      "vertices": 165733,
+      "cost": 3882345
+    }
+  },
+  "instrumentation_preserves_generated_source": true,
+  "identical_generated_files": 587,
+  "estimated_cost_only": true,
+  "measured_runtime": false,
+  "limitations": [
+    "Costs are compiler instruction estimates for NBA input logic, not CPU-time samples.",
+    "Hierarchy preservation changes optimization; the normal-model total is reported alongside it.",
+    "Inclusive parent/child percentages overlap; own costs and the disjoint partition sum to 100%.",
+    "Initialization, serial regions, scheduling/waits and external DPI execution are outside the NBA denominator.",
+    "Instance indices refer to the elaborated hierarchy; regenerate --threads-unit-list after selecting units.",
+    "Connectivity weights count shared variables, not measured bandwidth."
+  ]
+}

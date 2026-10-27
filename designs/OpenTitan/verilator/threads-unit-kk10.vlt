@@ -1,0 +1,51 @@
+`verilator_config
+// OpenTitan default on eight workers; placement selected using AES runtime profiles.
+// Worker 0 is the calling/scheduler thread. Required worker-to-CPU affinity: 0 1 2 3 4 5 6 7.
+// On kk10, workers 0..3 and 4..7 occupy two chiplets on the same socket.
+// Explicit child units override their enclosing unit; all other logic follows its nearest unit.
+threads_unit -module "__rtlmeter_utils" -workers 1->8: { 0 }
+threads_unit -module "chip_earlgrey_verilator" -workers 1->8: { 0 }
+threads_unit -module "sim_sram" -workers 1->8: { 0 }
+threads_unit -module "sw_test_status_if" -workers 1->8: { 0 }
+threads_unit -module "adc_ctrl" -workers 1->8: { 2 }
+threads_unit -module "aes" -workers 1->8: { 7 }
+threads_unit -module "alert_handler" -workers 1->8: { 3 }
+threads_unit -module "aon_timer" -workers 1->8: { 2 }
+threads_unit -module "ast" -workers 1->8: { 2 }
+threads_unit -module "clkmgr" -workers 1->8: { 3 }
+threads_unit -module "csrng" -workers 1->8: { 5 }
+threads_unit -module "edn" -workers 2->8: { 7 5 }
+threads_unit -module "entropy_src" -workers 1->8: { 5 }
+threads_unit -module "flash_ctrl" -workers 1->8: { 3 }
+threads_unit -module "gpio" -workers 1->8: { 2 }
+threads_unit -module "hmac" -workers 1->8: { 3 }
+threads_unit -module "i2c" -workers 3->8: { 2 2 2 }
+threads_unit -module "keymgr" -workers 1->8: { 6 }
+threads_unit -module "kmac" -workers 1->8: { 6 }
+threads_unit -module "lc_ctrl" -workers 1->8: { 1 }
+threads_unit -module "otbn" -workers 1->8: { 1 }
+threads_unit -module "otp_ctrl" -workers 1->8: { 1 }
+threads_unit -module "pattgen" -workers 1->8: { 2 }
+threads_unit -module "pinmux" -workers 1->8: { 2 }
+threads_unit -module "pwm" -workers 1->8: { 2 }
+threads_unit -module "pwrmgr" -workers 1->8: { 2 }
+threads_unit -module "rom_ctrl" -workers 1->8: { 0 }
+threads_unit -module "rstmgr" -workers 1->8: { 3 }
+threads_unit -module "rv_core_ibex" -workers 1->8: { 0 }
+threads_unit -module "rv_dm" -workers 1->8: { 0 }
+threads_unit -module "rv_plic" -workers 1->8: { 7 }
+threads_unit -module "rv_timer" -workers 1->8: { 2 }
+threads_unit -module "sensor_ctrl" -workers 1->8: { 2 }
+threads_unit -module "spi_device" -workers 1->8: { 3 }
+threads_unit -module "spi_host" -workers 2->8: { 3 0 }
+threads_unit -module "sram_ctrl" -workers 2->8: { 0 0 }
+threads_unit -module "sysrst_ctrl" -workers 1->8: { 0 }
+threads_unit -module "uart" -workers 4->8: { 2 2 2 2 }
+threads_unit -module "usbdev" -workers 1->8: { 1 }
+threads_unit -module "xbar_main" -workers 1->8: { 0 }
+threads_unit -module "xbar_peri" -workers 1->8: { 2 }
+
+threads_unit -module "kmac_entropy" -workers 1->8: { 4 }
+threads_unit -module "keccak_2share" -workers 2->8: { 5 6 }
+threads_unit -module "kmac_reg_top" -workers 1->8: { 6 }
+threads_unit -module "alert_handler_reg_top" -workers 1->8: { 3 }

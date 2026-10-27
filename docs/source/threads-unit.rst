@@ -419,6 +419,90 @@ memory node 0. The benchmark lock covered the complete workflow, and all builds
 finished before simulations started. Other workloads remain unmeasured with
 this placement.
 
+OpenTitan on kk10
+------------------
+
+``designs/OpenTitan/verilator/threads-unit.vlt`` selects 54 module instances with
+automatic placement. ``threads-unit-kk10.vlt`` selects the same units with the
+saved AES runtime-guided placement for eight workers. Worker ``i`` is pinned
+to CPU ``i``; workers 0–3 and 4–7 occupy two chiplets on socket 0. The caller
+and scheduler are worker 0. The profile does not set physical affinity.
+
+These results use the separate `compiler integration branch
+<https://github.com/taylor-bsg/verilator/tree/2487df5b4b8665f0caf8aed7ea174d13c037bf19>`_
+at ``2487df5b4b8665f0caf8aed7ea174d13c037bf19``. It adds the final wide-zero-reset
+and bit-copy optimizations to the worker-assignment baseline. It preserves
+the original scheduler, cost, and merging heuristics. Earlier designs' results
+above retain their recorded compiler revisions.
+
+All four fresh models use Clang 21.1.8 and default Verilator C++ optimization
+flags. The RTL/firmware input revision is
+``39a9a85c5b32da0ec8b0184fd57c9a9fb2b919ee``. Measurements ran on kk10 on
+2026-10-27, with memory bound to node 0 and the one-worker reference on CPU 0.
+AES, RSA, and SHA retain three workload iterations; CoreMark retains one.
+Times are medians of three interleaved, isolated process runs, including
+initialization and cleanup. All configurations include the compiler fixes.
+
+.. list-table:: OpenTitan default placement comparison
+   :header-rows: 1
+
+   * - Workload
+     - 1 worker (s)
+     - Earlier auto, 25 units (s)
+     - Auto, 54 units (s)
+     - Mapped 8 workers (s)
+     - Speedup vs. 1 worker
+   * - aes
+     - 39.714
+     - 26.573
+     - 24.917
+     - 17.453
+     - 2.28x
+   * - cmark
+     - 52.245
+     - 33.817
+     - 31.979
+     - 22.285
+     - 2.34x
+   * - rsa
+     - 42.412
+     - 27.710
+     - 26.226
+     - 18.258
+     - 2.32x
+   * - sha
+     - 40.059
+     - 27.302
+     - 25.953
+     - 17.881
+     - 2.24x
+
+All 16 correctness screens and 48 timed runs passed the original post-hook,
+matched immutable previously validated stdout, and had the reference cycle
+count. All 54 unit assignments and descendant dispatch owners were audited.
+Live checks verified individual CPU pinning and executable-page locality for
+every run. The separate ``hello`` sanity workload remains outside this matrix.
+
+The `complete results and reproduction evidence
+<https://github.com/taylor-bsg/rtlmeter/blob/codex/threads-unit-profiles/designs/OpenTitan/verilator/results/2026-10-27/RESULTS.md>`_
+include ranges, raw timings, source hashes, build/test logs, and the generated
+module-index-to-worker listing. Only the default design with eight workers is
+explicitly mapped. Load one profile at a time.
+
+Caliptra and NVDLA preparation
+------------------------------
+
+The requested 0.25% hierarchy inventories are now available for
+`Caliptra
+<https://github.com/taylor-bsg/rtlmeter/blob/codex/threads-unit-profiles/designs/Caliptra/verilator/analysis/README.md>`_
+and `NVDLA
+<https://github.com/taylor-bsg/rtlmeter/blob/codex/threads-unit-profiles/designs/NVDLA/verilator/analysis/README.md>`_.
+They contain 174 and 128 qualifying instances respectively, topology diagrams,
+candidate unit boundaries, structural connection lists, and interactive
+hierarchies to download. Percentages are static compiler work estimates, not
+runtime samples; connectivity counts are not bandwidth measurements.
+Unit selection, worker assignment, and placement benchmarking remain pending.
+
 Coverage and validation
 -----------------------
 
@@ -482,21 +566,29 @@ this profile-storage branch.
        SGEMM passed all correctness and affinity checks, with 15.43x and 16.00x
        speedup versus their one-worker references.
 
+   * - OpenTitan
+     - ``threads-unit.vlt``
+     - Same 54 units as the machine profile, automatic assignment. All four
+       performance workloads passed the fresh LLVM comparison above.
+   * - OpenTitan
+     - ``threads-unit-kk10.vlt``
+     - Saved eight-worker mapping, all 54 unit/descendant dispatch owners
+       audited. AES, CoreMark, RSA, and SHA passed all correctness checks;
+       medians and speedups are in the table above.
+
 .. list-table:: Designs still needing profiles and validation
    :header-rows: 1
 
    * - Design
      - Status
    * - Caliptra
-     - Pending
+     - Hierarchy/connectivity analysis complete; unit selection and placement pending.
    * - Example
      - Pending
    * - HummingbirdV2-E203
      - Pending
    * - NVDLA
-     - Pending
-   * - OpenTitan
-     - Pending
+     - Hierarchy/connectivity analysis complete; unit selection and placement pending.
    * - Servant
      - Pending
    * - VeeR-EH1

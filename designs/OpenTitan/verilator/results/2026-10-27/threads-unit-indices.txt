@@ -1,0 +1,153 @@
+# module	instance_index	worker_index	instance	instance_pattern
+# Selection: module "__rtlmeter_utils" instance "*" matches 1
+# Local instance "__rtlmeter_utils_u" count 1
+"__rtlmeter_utils"	0	0	"chip_sim_tb.__rtlmeter_utils_u"	"*"
+# Selection: module "adc_ctrl" instance "*" matches 1
+# Local instance "u_adc_ctrl_aon" count 1
+"adc_ctrl"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_adc_ctrl_aon"	"*"
+# Selection: module "aes" instance "*" matches 1
+# Local instance "u_aes" count 1
+"aes"	0	7	"chip_sim_tb.u_dut.top_earlgrey.u_aes"	"*"
+# Selection: module "alert_handler" instance "*" matches 1
+# Local instance "u_alert_handler" count 1
+"alert_handler"	0	3	"chip_sim_tb.u_dut.top_earlgrey.u_alert_handler"	"*"
+# Selection: module "alert_handler_reg_top" instance "*" matches 1
+# Local instance "u_reg" count 1
+"alert_handler_reg_top"	0	3	"chip_sim_tb.u_dut.top_earlgrey.u_alert_handler.u_reg_wrap.u_reg"	"*"
+# Selection: module "aon_timer" instance "*" matches 1
+# Local instance "u_aon_timer_aon" count 1
+"aon_timer"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_aon_timer_aon"	"*"
+# Selection: module "ast" instance "*" matches 1
+# Local instance "u_ast" count 1
+"ast"	0	2	"chip_sim_tb.u_dut.u_ast"	"*"
+# Selection: module "chip_earlgrey_verilator" instance "*" matches 1
+# Local instance "u_dut" count 1
+"chip_earlgrey_verilator"	0	0	"chip_sim_tb.u_dut"	"*"
+# Selection: module "clkmgr" instance "*" matches 1
+# Local instance "u_clkmgr_aon" count 1
+"clkmgr"	0	3	"chip_sim_tb.u_dut.top_earlgrey.u_clkmgr_aon"	"*"
+# Selection: module "csrng" instance "*" matches 1
+# Local instance "u_csrng" count 1
+"csrng"	0	5	"chip_sim_tb.u_dut.top_earlgrey.u_csrng"	"*"
+# Selection: module "edn" instance "*" matches 2
+# Local instance "u_edn0" count 1
+# Local instance "u_edn1" count 1
+"edn"	0	7	"chip_sim_tb.u_dut.top_earlgrey.u_edn0"	"*"
+"edn"	1	5	"chip_sim_tb.u_dut.top_earlgrey.u_edn1"	"*"
+# Selection: module "entropy_src" instance "*" matches 1
+# Local instance "u_entropy_src" count 1
+"entropy_src"	0	5	"chip_sim_tb.u_dut.top_earlgrey.u_entropy_src"	"*"
+# Selection: module "flash_ctrl" instance "*" matches 1
+# Local instance "u_flash_ctrl" count 1
+"flash_ctrl"	0	3	"chip_sim_tb.u_dut.top_earlgrey.u_flash_ctrl"	"*"
+# Selection: module "gpio" instance "*" matches 1
+# Local instance "u_gpio" count 1
+"gpio"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_gpio"	"*"
+# Selection: module "hmac" instance "*" matches 1
+# Local instance "u_hmac" count 1
+"hmac"	0	3	"chip_sim_tb.u_dut.top_earlgrey.u_hmac"	"*"
+# Selection: module "i2c" instance "*" matches 3
+# Local instance "u_i2c0" count 1
+# Local instance "u_i2c1" count 1
+# Local instance "u_i2c2" count 1
+"i2c"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_i2c0"	"*"
+"i2c"	1	2	"chip_sim_tb.u_dut.top_earlgrey.u_i2c1"	"*"
+"i2c"	2	2	"chip_sim_tb.u_dut.top_earlgrey.u_i2c2"	"*"
+# Selection: module "keccak_2share" instance "*" matches 2
+# Local instance "u_keccak_p" count 2
+"keccak_2share"	0	5	"chip_sim_tb.u_dut.top_earlgrey.u_entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_keccak_p"	"*"
+"keccak_2share"	1	6	"chip_sim_tb.u_dut.top_earlgrey.u_kmac.u_sha3.u_keccak.u_keccak_p"	"*"
+# Selection: module "keymgr" instance "*" matches 1
+# Local instance "u_keymgr" count 1
+"keymgr"	0	6	"chip_sim_tb.u_dut.top_earlgrey.u_keymgr"	"*"
+# Selection: module "kmac" instance "*" matches 1
+# Local instance "u_kmac" count 1
+"kmac"	0	6	"chip_sim_tb.u_dut.top_earlgrey.u_kmac"	"*"
+# Selection: module "kmac_entropy" instance "*" matches 1
+# Local instance "u_entropy" count 1
+"kmac_entropy"	0	4	"chip_sim_tb.u_dut.top_earlgrey.u_kmac.gen_entropy.u_entropy"	"*"
+# Selection: module "kmac_reg_top" instance "*" matches 1
+# Local instance "u_reg" count 1
+"kmac_reg_top"	0	6	"chip_sim_tb.u_dut.top_earlgrey.u_kmac.u_reg"	"*"
+# Selection: module "lc_ctrl" instance "*" matches 1
+# Local instance "u_lc_ctrl" count 1
+"lc_ctrl"	0	1	"chip_sim_tb.u_dut.top_earlgrey.u_lc_ctrl"	"*"
+# Selection: module "otbn" instance "*" matches 1
+# Local instance "u_otbn" count 1
+"otbn"	0	1	"chip_sim_tb.u_dut.top_earlgrey.u_otbn"	"*"
+# Selection: module "otp_ctrl" instance "*" matches 1
+# Local instance "u_otp_ctrl" count 1
+"otp_ctrl"	0	1	"chip_sim_tb.u_dut.top_earlgrey.u_otp_ctrl"	"*"
+# Selection: module "pattgen" instance "*" matches 1
+# Local instance "u_pattgen" count 1
+"pattgen"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_pattgen"	"*"
+# Selection: module "pinmux" instance "*" matches 1
+# Local instance "u_pinmux_aon" count 1
+"pinmux"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_pinmux_aon"	"*"
+# Selection: module "pwm" instance "*" matches 1
+# Local instance "u_pwm_aon" count 1
+"pwm"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_pwm_aon"	"*"
+# Selection: module "pwrmgr" instance "*" matches 1
+# Local instance "u_pwrmgr_aon" count 1
+"pwrmgr"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_pwrmgr_aon"	"*"
+# Selection: module "rom_ctrl" instance "*" matches 1
+# Local instance "u_rom_ctrl" count 1
+"rom_ctrl"	0	0	"chip_sim_tb.u_dut.top_earlgrey.u_rom_ctrl"	"*"
+# Selection: module "rstmgr" instance "*" matches 1
+# Local instance "u_rstmgr_aon" count 1
+"rstmgr"	0	3	"chip_sim_tb.u_dut.top_earlgrey.u_rstmgr_aon"	"*"
+# Selection: module "rv_core_ibex" instance "*" matches 1
+# Local instance "u_rv_core_ibex" count 1
+"rv_core_ibex"	0	0	"chip_sim_tb.u_dut.top_earlgrey.u_rv_core_ibex"	"*"
+# Selection: module "rv_dm" instance "*" matches 1
+# Local instance "u_rv_dm" count 1
+"rv_dm"	0	0	"chip_sim_tb.u_dut.top_earlgrey.u_rv_dm"	"*"
+# Selection: module "rv_plic" instance "*" matches 1
+# Local instance "u_rv_plic" count 1
+"rv_plic"	0	7	"chip_sim_tb.u_dut.top_earlgrey.u_rv_plic"	"*"
+# Selection: module "rv_timer" instance "*" matches 1
+# Local instance "u_rv_timer" count 1
+"rv_timer"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_rv_timer"	"*"
+# Selection: module "sensor_ctrl" instance "*" matches 1
+# Local instance "u_sensor_ctrl_aon" count 1
+"sensor_ctrl"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_sensor_ctrl_aon"	"*"
+# Selection: module "sim_sram" instance "*" matches 1
+# Local instance "u_sim_sram" count 1
+"sim_sram"	0	0	"chip_sim_tb.u_sim_sram"	"*"
+# Selection: module "spi_device" instance "*" matches 1
+# Local instance "u_spi_device" count 1
+"spi_device"	0	3	"chip_sim_tb.u_dut.top_earlgrey.u_spi_device"	"*"
+# Selection: module "spi_host" instance "*" matches 2
+# Local instance "u_spi_host0" count 1
+# Local instance "u_spi_host1" count 1
+"spi_host"	0	3	"chip_sim_tb.u_dut.top_earlgrey.u_spi_host0"	"*"
+"spi_host"	1	0	"chip_sim_tb.u_dut.top_earlgrey.u_spi_host1"	"*"
+# Selection: module "sram_ctrl" instance "*" matches 2
+# Local instance "u_sram_ctrl_main" count 1
+# Local instance "u_sram_ctrl_ret_aon" count 1
+"sram_ctrl"	0	0	"chip_sim_tb.u_dut.top_earlgrey.u_sram_ctrl_main"	"*"
+"sram_ctrl"	1	0	"chip_sim_tb.u_dut.top_earlgrey.u_sram_ctrl_ret_aon"	"*"
+# Selection: module "sw_test_status_if" instance "*" matches 1
+# Local instance "u_sw_test_status_if" count 1
+"sw_test_status_if"	0	0	"chip_sim_tb.u_sw_test_status_if"	"*"
+# Selection: module "sysrst_ctrl" instance "*" matches 1
+# Local instance "u_sysrst_ctrl_aon" count 1
+"sysrst_ctrl"	0	0	"chip_sim_tb.u_dut.top_earlgrey.u_sysrst_ctrl_aon"	"*"
+# Selection: module "uart" instance "*" matches 4
+# Local instance "u_uart0" count 1
+# Local instance "u_uart1" count 1
+# Local instance "u_uart2" count 1
+# Local instance "u_uart3" count 1
+"uart"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_uart0"	"*"
+"uart"	1	2	"chip_sim_tb.u_dut.top_earlgrey.u_uart1"	"*"
+"uart"	2	2	"chip_sim_tb.u_dut.top_earlgrey.u_uart2"	"*"
+"uart"	3	2	"chip_sim_tb.u_dut.top_earlgrey.u_uart3"	"*"
+# Selection: module "usbdev" instance "*" matches 1
+# Local instance "u_usbdev" count 1
+"usbdev"	0	1	"chip_sim_tb.u_dut.top_earlgrey.u_usbdev"	"*"
+# Selection: module "xbar_main" instance "*" matches 1
+# Local instance "u_xbar_main" count 1
+"xbar_main"	0	0	"chip_sim_tb.u_dut.top_earlgrey.u_xbar_main"	"*"
+# Selection: module "xbar_peri" instance "*" matches 1
+# Local instance "u_xbar_peri" count 1
+"xbar_peri"	0	2	"chip_sim_tb.u_dut.top_earlgrey.u_xbar_peri"	"*"

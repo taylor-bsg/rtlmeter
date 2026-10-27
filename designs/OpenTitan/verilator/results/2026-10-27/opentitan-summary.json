@@ -1,0 +1,245 @@
+{
+  "passed": true,
+  "configurations": [
+    {
+      "case": "OpenTitan-default-aes",
+      "label": "OpenTitan-default-serial-1",
+      "workers": 1,
+      "median_seconds": 39.713669595,
+      "minimum_seconds": 39.691360663,
+      "maximum_seconds": 39.924283279,
+      "samples_seconds": [
+        39.691360663,
+        39.924283279,
+        39.713669595
+      ],
+      "clocks": 665044,
+      "speedup_vs_one_worker": 1.0
+    },
+    {
+      "case": "OpenTitan-default-aes",
+      "label": "OpenTitan-default-original-auto-8",
+      "workers": 8,
+      "median_seconds": 26.572677136,
+      "minimum_seconds": 26.089880741,
+      "maximum_seconds": 26.600412861,
+      "samples_seconds": [
+        26.572677136,
+        26.089880741,
+        26.600412861
+      ],
+      "clocks": 665044,
+      "speedup_vs_one_worker": 1.4945302421635533
+    },
+    {
+      "case": "OpenTitan-default-aes",
+      "label": "OpenTitan-default-auto-all-8",
+      "workers": 8,
+      "median_seconds": 24.916837166,
+      "minimum_seconds": 24.86413417,
+      "maximum_seconds": 25.354919201,
+      "samples_seconds": [
+        24.916837166,
+        24.86413417,
+        25.354919201
+      ],
+      "clocks": 665044,
+      "speedup_vs_one_worker": 1.5938487429371997
+    },
+    {
+      "case": "OpenTitan-default-aes",
+      "label": "OpenTitan-default-mapped-8",
+      "workers": 8,
+      "median_seconds": 17.452993913,
+      "minimum_seconds": 17.424071732,
+      "maximum_seconds": 17.472355508,
+      "samples_seconds": [
+        17.472355508,
+        17.424071732,
+        17.452993913
+      ],
+      "clocks": 665044,
+      "speedup_vs_one_worker": 2.2754645875066144
+    },
+    {
+      "case": "OpenTitan-default-cmark",
+      "label": "OpenTitan-default-serial-1",
+      "workers": 1,
+      "median_seconds": 52.245012685,
+      "minimum_seconds": 50.712448507,
+      "maximum_seconds": 52.523441402,
+      "samples_seconds": [
+        52.523441402,
+        52.245012685,
+        50.712448507
+      ],
+      "clocks": 865439,
+      "speedup_vs_one_worker": 1.0
+    },
+    {
+      "case": "OpenTitan-default-cmark",
+      "label": "OpenTitan-default-original-auto-8",
+      "workers": 8,
+      "median_seconds": 33.817409826,
+      "minimum_seconds": 33.709945125,
+      "maximum_seconds": 34.030310931,
+      "samples_seconds": [
+        33.709945125,
+        34.030310931,
+        33.817409826
+      ],
+      "clocks": 865439,
+      "speedup_vs_one_worker": 1.5449146742407283
+    },
+    {
+      "case": "OpenTitan-default-cmark",
+      "label": "OpenTitan-default-auto-all-8",
+      "workers": 8,
+      "median_seconds": 31.979102211,
+      "minimum_seconds": 31.894479173,
+      "maximum_seconds": 32.242716425,
+      "samples_seconds": [
+        31.979102211,
+        32.242716425,
+        31.894479173
+      ],
+      "clocks": 865439,
+      "speedup_vs_one_worker": 1.6337235592257822
+    },
+    {
+      "case": "OpenTitan-default-cmark",
+      "label": "OpenTitan-default-mapped-8",
+      "workers": 8,
+      "median_seconds": 22.285254014,
+      "minimum_seconds": 22.066178711,
+      "maximum_seconds": 22.322644014,
+      "samples_seconds": [
+        22.322644014,
+        22.066178711,
+        22.285254014
+      ],
+      "clocks": 865439,
+      "speedup_vs_one_worker": 2.3443759111822886
+    },
+    {
+      "case": "OpenTitan-default-rsa",
+      "label": "OpenTitan-default-serial-1",
+      "workers": 1,
+      "median_seconds": 42.412078895,
+      "minimum_seconds": 42.239606012,
+      "maximum_seconds": 42.803875005,
+      "samples_seconds": [
+        42.412078895,
+        42.803875005,
+        42.239606012
+      ],
+      "clocks": 700037,
+      "speedup_vs_one_worker": 1.0
+    },
+    {
+      "case": "OpenTitan-default-rsa",
+      "label": "OpenTitan-default-original-auto-8",
+      "workers": 8,
+      "median_seconds": 27.710493489,
+      "minimum_seconds": 27.533874588,
+      "maximum_seconds": 27.966903368,
+      "samples_seconds": [
+        27.533874588,
+        27.710493489,
+        27.966903368
+      ],
+      "clocks": 700037,
+      "speedup_vs_one_worker": 1.5305421721138226
+    },
+    {
+      "case": "OpenTitan-default-rsa",
+      "label": "OpenTitan-default-auto-all-8",
+      "workers": 8,
+      "median_seconds": 26.226383311,
+      "minimum_seconds": 26.144225639,
+      "maximum_seconds": 26.354687135,
+      "samples_seconds": [
+        26.226383311,
+        26.144225639,
+        26.354687135
+      ],
+      "clocks": 700037,
+      "speedup_vs_one_worker": 1.6171531694654717
+    },
+    {
+      "case": "OpenTitan-default-rsa",
+      "label": "OpenTitan-default-mapped-8",
+      "workers": 8,
+      "median_seconds": 18.258386004,
+      "minimum_seconds": 18.048527158,
+      "maximum_seconds": 18.410335276,
+      "samples_seconds": [
+        18.048527158,
+        18.410335276,
+        18.258386004
+      ],
+      "clocks": 700037,
+      "speedup_vs_one_worker": 2.3228821477269936
+    },
+    {
+      "case": "OpenTitan-default-sha",
+      "label": "OpenTitan-default-serial-1",
+      "workers": 1,
+      "median_seconds": 40.058529648,
+      "minimum_seconds": 40.05715325,
+      "maximum_seconds": 40.143545699,
+      "samples_seconds": [
+        40.058529648,
+        40.05715325,
+        40.143545699
+      ],
+      "clocks": 679627,
+      "speedup_vs_one_worker": 1.0
+    },
+    {
+      "case": "OpenTitan-default-sha",
+      "label": "OpenTitan-default-original-auto-8",
+      "workers": 8,
+      "median_seconds": 27.302222726,
+      "minimum_seconds": 27.120294778,
+      "maximum_seconds": 27.436043057,
+      "samples_seconds": [
+        27.436043057,
+        27.120294778,
+        27.302222726
+      ],
+      "clocks": 679627,
+      "speedup_vs_one_worker": 1.467225948964665
+    },
+    {
+      "case": "OpenTitan-default-sha",
+      "label": "OpenTitan-default-auto-all-8",
+      "workers": 8,
+      "median_seconds": 25.952720649,
+      "minimum_seconds": 25.635341611,
+      "maximum_seconds": 26.070217815,
+      "samples_seconds": [
+        26.070217815,
+        25.635341611,
+        25.952720649
+      ],
+      "clocks": 679627,
+      "speedup_vs_one_worker": 1.5435194710325493
+    },
+    {
+      "case": "OpenTitan-default-sha",
+      "label": "OpenTitan-default-mapped-8",
+      "workers": 8,
+      "median_seconds": 17.880680004,
+      "minimum_seconds": 17.742352471,
+      "maximum_seconds": 17.981128508,
+      "samples_seconds": [
+        17.981128508,
+        17.742352471,
+        17.880680004
+      ],
+      "clocks": 679627,
+      "speedup_vs_one_worker": 2.240324732562671
+    }
+  ]
+}

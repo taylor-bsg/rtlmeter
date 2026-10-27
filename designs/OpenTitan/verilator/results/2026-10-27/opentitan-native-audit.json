@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "correctness_checks": 16,
+  "timings": 48,
+  "independent_raw_log_and_hash_audit": true,
+  "unique_executable_inodes": 64,
+  "live_single_cpu_affinity_all_runs": true,
+  "executable_pages_node_zero_all_runs": true,
+  "clang_only_builds": true
+}

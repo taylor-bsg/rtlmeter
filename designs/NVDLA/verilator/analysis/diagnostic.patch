@@ -1,0 +1,125 @@
+--- original/V3OrderParallel.cpp
++++ diagnostic/V3OrderParallel.cpp
+@@ -30,6 +30,8 @@
+ #include "V3GraphStream.h"
+ #include "V3OrderCFuncEmitter.h"
+ #include "V3OrderInternal.h"
++#include "V3InstrCount.h"
++#include <fstream>
+ #include "V3OrderMTaskGraph.h"
+ 
+ #include <iomanip>
+@@ -372,6 +374,36 @@
+                                      bool slow) {
+     UINFO(2, "  Constructing parallel code for '" + tag + "'");
+ 
++
++    // Read-only instance-work diagnostic; does not change the AST or scheduler decisions.
++    std::ofstream workInventory{v3Global.opt.makeDir() + "/work-" + tag + ".tsv"};
++    workInventory << "logic\tscope\tmodule\tcost\tkind\tfile\tline\twrites\treads\n";
++    uint64_t workId = 0;
++    for (const V3GraphVertex& vertex : moveGraph.vertices()) {
++        const OrderLogicVertex* const logicp = vertex.as<OrderMoveVertex>()->logicp();
++        if (!logicp) continue;
++        workInventory << ++workId << '\t' << logicp->scopep()->name() << '\t'
++                      << logicp->scopep()->modp()->prettyDehashOrigOrName() << '\t'
++                      << V3InstrCount::count(logicp->nodep(), false) << '\t'
++                      << logicp->nodep()->typeName() << '\t'
++                      << logicp->nodep()->fileline()->filename() << '\t'
++                      << logicp->nodep()->fileline()->lineno() << '\t';
++        for (const OrderLogicVertex::VarAccess& access : logicp->varAccesses()) {
++            if (access.m_access.isWriteOrRW()) {
++                workInventory << access.m_vscp->scopep()->name() << '.'
++                              << access.m_vscp->varp()->name() << ';';
++            }
++        }
++        workInventory << '\t';
++        for (const OrderLogicVertex::VarAccess& access : logicp->varAccesses()) {
++            if (access.m_access.isReadOrRW()) {
++                workInventory << access.m_vscp->scopep()->name() << '.'
++                              << access.m_vscp->varp()->name() << ';';
++            }
++        }
++        workInventory << '\n';
++    }
++
+     // For nondeterminism debugging
+     moveGraph.hashGraphDebug("V3Order::createParallel input OrderMoveGraph");
+     moveGraph.orderGraph().hashGraphDebug("V3Order::createParallel input OrderGraph");
+
+--- original/V3OrderSerial.cpp
++++ diagnostic/V3OrderSerial.cpp
+@@ -22,6 +22,8 @@
+ 
+ #include "V3OrderCFuncEmitter.h"
+ #include "V3OrderInternal.h"
++#include "V3InstrCount.h"
++#include <fstream>
+ 
+ #include <memory>
+ 
+@@ -33,6 +35,36 @@
+ AstNodeStmt* V3Order::createSerial(OrderMoveGraph& moveGraph, const std::string& tag, bool slow) {
+ 
+     UINFO(2, "  Constructing serial code for '" + tag + "'");
++
++
++    // Read-only instance-work diagnostic; does not change the AST or scheduler decisions.
++    std::ofstream workInventory{v3Global.opt.makeDir() + "/work-" + tag + ".tsv"};
++    workInventory << "logic\tscope\tmodule\tcost\tkind\tfile\tline\twrites\treads\n";
++    uint64_t workId = 0;
++    for (const V3GraphVertex& vertex : moveGraph.vertices()) {
++        const OrderLogicVertex* const logicp = vertex.as<OrderMoveVertex>()->logicp();
++        if (!logicp) continue;
++        workInventory << ++workId << '\t' << logicp->scopep()->name() << '\t'
++                      << logicp->scopep()->modp()->prettyDehashOrigOrName() << '\t'
++                      << V3InstrCount::count(logicp->nodep(), false) << '\t'
++                      << logicp->nodep()->typeName() << '\t'
++                      << logicp->nodep()->fileline()->filename() << '\t'
++                      << logicp->nodep()->fileline()->lineno() << '\t';
++        for (const OrderLogicVertex::VarAccess& access : logicp->varAccesses()) {
++            if (access.m_access.isWriteOrRW()) {
++                workInventory << access.m_vscp->scopep()->name() << '.'
++                              << access.m_vscp->varp()->name() << ';';
++            }
++        }
++        workInventory << '\t';
++        for (const OrderLogicVertex::VarAccess& access : logicp->varAccesses()) {
++            if (access.m_access.isReadOrRW()) {
++                workInventory << access.m_vscp->scopep()->name() << '.'
++                              << access.m_vscp->varp()->name() << ';';
++            }
++        }
++        workInventory << '\n';
++    }
+ 
+     // Serializer
+     OrderMoveGraphSerializer serializer{moveGraph};
+
+--- original/V3Inline.cpp
++++ diagnostic/V3Inline.cpp
+@@ -28,6 +28,7 @@
+ #include "V3PchAstNoMT.h"  // VL_MT_DISABLED_CODE_UNIT
+ 
+ #include "V3Inline.h"
++#include <fstream>
+ 
+ #include "V3AstUserAllocator.h"
+ #include "V3Control.h"
+@@ -630,6 +631,16 @@
+ 
+ // Apply all inlining decisions
+ void process(AstNetlist* netlistp, InlineModGraph& graph) {
++
++    std::ofstream hierarchy{v3Global.opt.makeDir() + "/hierarchy.tsv"};
++    hierarchy << "scope\tparent\tmodule\tinstance\tfile\n";
++    netlistp->foreach([&](const AstScope* scopep) {
++        hierarchy << scopep->name() << '\t'
++                  << (scopep->aboveScopep() ? scopep->aboveScopep()->name() : "") << '\t'
++                  << scopep->modp()->prettyDehashOrigOrName() << '\t'
++                  << (scopep->aboveCellp() ? scopep->aboveCellp()->origName() : "") << '\t'
++                  << scopep->modp()->fileline()->filename() << '\n';
++    });
+     // Number of inlined instances, for statistics
+     VDouble0 m_nInlined;
+ 

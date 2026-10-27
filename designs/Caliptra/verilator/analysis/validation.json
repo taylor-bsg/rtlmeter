@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "own_costs_sum_to_total": true,
+  "inclusive_parent_child_sums_match": true,
+  "disjoint_partition_sums_to_total": true,
+  "diagnostic_codegen_byte_identical": true,
+  "threshold_rows": 174
+}

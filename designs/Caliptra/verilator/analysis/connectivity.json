@@ -1,0 +1,2342 @@
+{
+  "nodes": [
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "cost": 430757,
+      "percent": 35.248231070800536
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "cost": 129562,
+      "percent": 10.60187371068853
+    },
+    {
+      "instance": "Outside device",
+      "cost": 126902,
+      "percent": 10.384209703723283
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "cost": 113391,
+      "percent": 9.278623839773106
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "cost": 103578,
+      "percent": 8.475640042649053
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "cost": 89449,
+      "percent": 7.319484119937777
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "cost": 64071,
+      "percent": 5.242838567770834
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.csrng",
+      "cost": 31840,
+      "percent": 2.605421797659212
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "cost": 28615,
+      "percent": 2.3415246463573602
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "cost": 28322,
+      "percent": 2.317548874161564
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.doe",
+      "cost": 17254,
+      "percent": 1.4118702166084183
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "cost": 12451,
+      "percent": 1.0188475754602653
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha3",
+      "cost": 11959,
+      "percent": 0.9785879170290991
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "cost": 10068,
+      "percent": 0.8238500835060598
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "cost": 9103,
+      "percent": 0.744885509550622
+    },
+    {
+      "instance": "Device wiring / own logic",
+      "cost": 8478,
+      "percent": 0.6937426507711933
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha256",
+      "cost": 4023,
+      "percent": 0.32919635339142617
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "cost": 947,
+      "percent": 0.07749165962259025
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "cost": 242,
+      "percent": 0.019802514919394762
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux",
+      "cost": 205,
+      "percent": 0.01677485767965259
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[8]",
+      "cost": 145,
+      "percent": 0.011865143236827441
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sb_ahb",
+      "cost": 110,
+      "percent": 0.009001143145179438
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.lsu_ahb",
+      "cost": 110,
+      "percent": 0.009001143145179438
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.cg",
+      "cost": 100,
+      "percent": 0.008182857404708579
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.imem",
+      "cost": 68,
+      "percent": 0.005564343035201834
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[14]",
+      "cost": 54,
+      "percent": 0.004418742998542633
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[15]",
+      "cost": 33,
+      "percent": 0.0027003429435538315
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[16]",
+      "cost": 33,
+      "percent": 0.0027003429435538315
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[7]",
+      "cost": 33,
+      "percent": 0.0027003429435538315
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[12]",
+      "cost": 21,
+      "percent": 0.0017184000549888018
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[13]",
+      "cost": 21,
+      "percent": 0.0017184000549888018
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[10]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[0]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[2]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[3]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[5]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[6]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[1]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[4]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[9]",
+      "cost": 10,
+      "percent": 0.000818285740470858
+    }
+  ],
+  "edges": [
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "target": "Device wiring / own logic",
+      "shared_variables": 384,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[0][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[10][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[11][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[12][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[13][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[14][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[15][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[16][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[17][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[18][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[19][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[1][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[20][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[21][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[22][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[23][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[24][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[25][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[26][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[27][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[28][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[29][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[2][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[30][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[31][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[3][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[4][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[5][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[6][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[7][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[8][9]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.field_storage.PCR_ENTRY[9][9]"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "target": "Outside device",
+      "shared_variables": 123,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_233723",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_233728",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_233734",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234006",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234007",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234008",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234037",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234038",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234039",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234040",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234041",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234581",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234582",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234602",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.__Vdfg_Regularize_234607",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_233682",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234000",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234001",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234002",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234003",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234004",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234005",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234033",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234034",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234050",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234051",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234054",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234055",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234056",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234057",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234606",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_234762",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.api_sig_z_re",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.compress_top_inst.__Vdfg_Regularize_234025",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.compress_top_inst.__Vdfg_Regularize_234026",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.compress_top_inst.api_rw_addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.compress_top_inst.cmp_ctrl_inst.__Vdfg_Regularize_234009",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.compress_top_inst.cmp_ctrl_inst.__Vdfg_Regularize_234010",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.compress_top_inst.cmp_ctrl_inst.__Vdfg_Regularize_234011",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.compress_top_inst.cmp_ctrl_inst.__Vdfg_Regularize_234027",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.compress_top_inst.cmp_ctrl_inst.__Vdfg_Regularize_234028",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.compress_top_inst.cmp_ctrl_inst.mem_rd_addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decomp_mem_we[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decomp_mem_we[1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompose_inst.__Vdfg_Regularize_234575",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompose_inst.__Vdfg_Regularize_234579",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompose_inst.__Vdfg_Regularize_234603",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompose_inst.dcmp_ctrl_inst.__Vdfg_Regularize_234031",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompose_inst.dcmp_ctrl_inst.__Vdfg_Regularize_234032",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompose_inst.dcmp_ctrl_inst.mem_rd_addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompose_inst.mem_wr_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompress_top_inst.__Vdfg_Regularize_234761",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompress_top_inst.decomp_ctrl_inst.__Vdfg_Regularize_234573",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompress_top_inst.decomp_ctrl_inst.__Vdfg_Regularize_234577",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.decompress_top_inst.decomp_ctrl_inst.mem_wr_addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.makehint_inst.mem_rd_addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.makehint_inst.read_fsm_state_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.mldsa_ahb_slv_inst.__Vdfg_Regularize_234052",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.mldsa_ahb_slv_inst.__Vdfg_Regularize_234053",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.mldsa_ahb_slv_inst.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.norm_check_inst.norm_check_ctrl_inst.__Vdfg_Regularize_234012",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.norm_check_inst.norm_check_ctrl_inst.__Vdfg_Regularize_234013",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.norm_check_inst.norm_check_ctrl_inst.__Vdfg_Regularize_234014",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.norm_check_inst.norm_check_ctrl_inst.__Vdfg_Regularize_234029",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.norm_check_inst.norm_check_ctrl_inst.__Vdfg_Regularize_234030",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.norm_check_inst.norm_check_ctrl_inst.mem_rd_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.__Vdfg_Regularize_233780",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.__Vdfg_Regularize_234035",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.__Vdfg_Regularize_234036",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.__Vdfg_Regularize_234042",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.__Vdfg_Regularize_234043",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.__Vdfg_Regularize_234440",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.__Vdfg_Regularize_234590",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.__Vdfg_Regularize_234591",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.__Vdfg_Regularize_234592",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.__Vdfg_Regularize_234605",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_mem_re0_bank_f[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_mem_re_f[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_mem_we[0][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_mem_wr_req[0].addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_mem_wr_req_mux[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.pkdecode_inst.mem_a_wr_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.pkdecode_inst.mem_a_wr_req.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.pkdecode_inst.mem_b_wr_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.pkdecode_inst.mem_b_wr_req.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.power2round_inst.power2round_ctrl_inst.read_fsm_state_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.pwm_b_rd_req[0].addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.pwr2rnd_mem_rd_req[0].addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sampler_mem_we[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sampler_mem_we[1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sampler_top_inst.__Vdfg_Regularize_234576",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sampler_top_inst.__Vdfg_Regularize_234580",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sampler_top_inst.__Vdfg_Regularize_238201",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sampler_top_inst.sampler_mem_addr_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_h_inst.__Vdfg_Regularize_234574",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_h_inst.__Vdfg_Regularize_234578",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_h_inst.__Vdfg_Regularize_234604",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_h_inst.mem_wr_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_h_mem_we[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_h_mem_we[1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_z_inst.mem_a_wr_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_z_inst.mem_a_wr_req.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_z_inst.mem_b_wr_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_z_inst.mem_b_wr_req.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_z_inst.sigmem_a_rd_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigdecode_z_inst.sigmem_a_rd_req.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigencode_z_inst.mem_a_rd_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigencode_z_inst.mem_a_rd_req.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigencode_z_inst.mem_b_rd_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.sigencode_z_inst.mem_b_rd_req.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skdecode_inst.mem_a_wr_req_reg.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skdecode_inst.mem_a_wr_req_reg.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skdecode_inst.mem_b_wr_req_reg.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skdecode_inst.mem_b_wr_req_reg.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skdecode_inst.skdecode_ctrl_inst.__Vdfg_Regularize_238586",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skdecode_inst.skdecode_ctrl_inst.kmem_rd_addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skdecode_inst.skdecode_ctrl_inst.t0_enable_fsm",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skdecode_keymem_if[1].rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skencode_inst.mem_a_rd_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skencode_inst.mem_a_rd_req.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skencode_inst.mem_b_rd_req.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.skencode_inst.mem_b_rd_req.rd_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.zeroize_mem_re"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "target": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "shared_variables": 28,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_mux.dmi_uncore_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_mux.dmi_uncore_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_mux.is_uncore_aperture",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_232761",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234083",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234084",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234089",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234090",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234091",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234092",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234093",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234094",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234095",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234096",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234097",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234098",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234099",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234100",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234101",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234102",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234103",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234104",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234105",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.__Vdfg_Regularize_234106",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_jtag_tap.dr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.ifu.mem_ctl.iccm_enabled.dma_misc_bits.genblock.dff.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.ifu.mem_ctl.iccm_rd_ecc_double_err",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.lsu.ecc.L2U_Plus1_0.lsu_double_ecc_err_r.dout"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "Outside device",
+      "shared_variables": 28,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.r_ready_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.w_data_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.w_valid_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_mgr_rd.axi_ctx_sent",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_mgr_rd.i_ctx_skd.o_data",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_mgr_rd.i_ctx_skd.o_valid",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_mgr_rd.txn_active",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_mgr_wr.axi_ctx_sent",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_mgr_wr.i_ctx_skd.o_data",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_mgr_wr.i_ctx_skd.o_valid",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_mgr_wr.txn_active",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_mgr_wr.txn_down_cnt",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.w_req_if.resp",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_sub_sif_soc_ifc.i_axi_sub_rd.DATA_PIPELINE[0].i_dp_skd.BUF_STAGE.r_valid",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_sub_sif_soc_ifc.i_axi_sub_rd.axi_out_of_rst",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_sub_sif_soc_ifc.i_axi_sub_rd.txn_active",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_sub_sif_soc_ifc.i_axi_sub_rd.txn_final_beat",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_sub_sif_soc_ifc.i_axi_sub_rd.txn_rvalid[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_sub_sif_soc_ifc.i_axi_sub_wr.axi_out_of_rst",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_sub_sif_soc_ifc.i_axi_sub_wr.i_req_skd.BUF_STAGE.r_valid",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.__Vdfg_Regularize_236040",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.mbox_sram_req_wdata",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_arb.__Vdfg_Regularize_232729",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.__Vdfg_Regularize_232699",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.cpuif_wr_biten",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.decoded_reg_strb",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.field_storage.CPTRA_GENERIC_OUTPUT_WIRES[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.field_storage.SS_CALIPTRA_DMA_AXI_USER"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "target": "caliptra_top_tb.caliptra_top_dut.lsu_ahb",
+      "shared_variables": 20,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.__Vdfg_Regularize_234352",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_addrff.genblock.genblock.dff.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_aligned_in",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_alignedff.genblock.dffs.genblock.dffs.__Vdfg_Regularize_232749",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_alignedff.genblock.dffs.genblock.dffs.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_cmd_byte_ptr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_cmd_doneff.genblock.dffsc.genblock.dffsc.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_size_in[1:0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_sizeff.genblock.dffs.genblock.dffs.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_state_ff.genblock.dffsc.genblock.dffsc.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_writeff.genblock.dffs.genblock.dffs.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.bypass_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.hready_ff.genblock.dff.__Vdfg_Regularize_232749",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.hresp_ff.genblock.dff.__Vdfg_Regularize_232750",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.hresp_ff.genblock.dff.__Vdfg_Regularize_233846",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.hresp_ff.genblock.dff.__Vdfg_Regularize_234892",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.hwrite_ff.genblock.dff.__Vdfg_Regularize_232749",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.master_addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.master_valid",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.wr_cmd_vld"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "target": "caliptra_top_tb.caliptra_top_dut.sb_ahb",
+      "shared_variables": 20,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.__Vdfg_Regularize_234350",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_addrff.genblock.genblock.dff.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_aligned_in",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_alignedff.genblock.dffs.genblock.dffs.__Vdfg_Regularize_232749",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_alignedff.genblock.dffs.genblock.dffs.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_cmd_byte_ptr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_cmd_doneff.genblock.dffsc.genblock.dffsc.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_size_in[1:0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_sizeff.genblock.dffs.genblock.dffs.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_state_ff.genblock.dffsc.genblock.dffsc.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_writeff.genblock.dffs.genblock.dffs.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.bypass_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.hready_ff.genblock.dff.__Vdfg_Regularize_232749",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.hresp_ff.genblock.dff.__Vdfg_Regularize_232750",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.hresp_ff.genblock.dff.__Vdfg_Regularize_233846",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.hresp_ff.genblock.dff.__Vdfg_Regularize_234892",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.hwrite_ff.genblock.dff.__Vdfg_Regularize_232749",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.master_addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.master_valid",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.wr_cmd_vld"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "shared_variables": 18,
+      "signals": [
+        "TOP.caliptra_top_tb.m_axi_if.__Vdfg_Regularize_233854",
+        "TOP.caliptra_top_tb.m_axi_if.arready",
+        "TOP.caliptra_top_tb.m_axi_if.awready",
+        "TOP.caliptra_top_tb.m_axi_if.rlast",
+        "TOP.caliptra_top_tb.m_axi_if.rready",
+        "TOP.caliptra_top_tb.m_axi_if.rvalid",
+        "TOP.caliptra_top_tb.m_axi_if.wready",
+        "TOP.caliptra_top_tb.m_axi_if.wvalid",
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_pwrgood",
+        "TOP.caliptra_top_tb.tb_axi_complex_i.fifo_w_active",
+        "TOP.caliptra_top_tb.tb_axi_complex_i.i_axi_fifo.i_axi_sub.i_axi_sub_wr.i_rsp_skd.o_data",
+        "TOP.caliptra_top_tb.tb_axi_complex_i.i_axi_fifo.recovery_data_avail",
+        "TOP.caliptra_top_tb.tb_axi_complex_i.i_axi_sram.i_axi_sub.i_axi_sub_wr.i_rsp_skd.o_data",
+        "TOP.caliptra_top_tb.tb_axi_complex_i.inject_write_err",
+        "TOP.caliptra_top_tb.tb_axi_complex_i.sram_w_active",
+        "TOP.caliptra_top_tb.tb_services_i.mbox_ram1.__Vdfg_Regularize_232740",
+        "TOP.caliptra_top_tb.tb_services_i.mbox_ram1.rdata_o",
+        "TOP.caliptra_top_tb.tb_services_i.scan_mode"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 17,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.cptra_in_debug_scan_mode",
+        "TOP.caliptra_top_tb.caliptra_top_dut.debug_lock_or_scan_mode_switch",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_read",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[0].write_data",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[0].write_dest_valid",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[0].write_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[1].write_data",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[1].write_dest_valid",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[1].write_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[2].write_data",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[2].write_dest_valid",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[2].write_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[3].write_data",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[3].write_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[4].write_data",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[4].write_dest_valid",
+        "TOP.caliptra_top_tb.caliptra_top_dut.kv_write[4].write_en"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "Device wiring / own logic",
+      "shared_variables": 17,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.cptra_error_fatal",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.dma_data_kv_read.kv_read_fsm.kv_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.dma_data_kv_read.kv_read_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.i_axi_dma_reg.__Vdfg_Regularize_237630",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.dir_req_addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.dir_req_dv_q",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.dma_sram_req_dv_q",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.mbox_csr1.cpuif_req_is_wr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.mbox_protocol_sram_rd",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.mbox_protocol_sram_we",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.mbox_rdptr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.mbox_wrptr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_mbox.rst_mbox_rdptr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_sha512_acc_top.__Vdfg_Regularize_237631",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_arb.__Vdfg_Regularize_235678",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.field_storage.SS_DEBUG_INTENT",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.hwif_out"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "target": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "shared_variables": 16,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[10]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[11]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[12]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[13]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[14]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[15]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_sign_reg[9]"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "target": "Device wiring / own logic",
+      "shared_variables": 12,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.i_sha512_reg.field_storage",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.kv_reg",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pcr_hash_extend_ip",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pv_gen_hash1.gen_hash_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pv_gen_hash1.read_entry",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.pv_gen_hash1.read_offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.sha512_block_kv_read.kv_read_fsm.kv_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.sha512_block_kv_read.kv_read_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.sha512_result_kv_write.kv_dest_write_fsm.__Vdfg_Regularize_237030",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.sha512_result_kv_write.kv_dest_write_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.sha512_result_kv_write.kv_dest_write_fsm.write_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.sha512_result_kv_write.kv_write.write_entry"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "shared_variables": 11,
+      "signals": [
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_mem_inst0_bank0_inst.__Vdfg_Regularize_232997",
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_mem_inst0_bank0_inst.rdata_o",
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_mem_inst0_bank1_inst.rdata_o",
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_mem_inst1_inst.rdata_o",
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_mem_inst2_inst.rdata_o",
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_mem_inst3_inst.rdata_o",
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_pk_mem_inst.rdata_o",
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_sig_z_mem_inst.rdata_o",
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_sk_mem_bank0_inst.rdata_o",
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_sk_mem_bank1_inst.rdata_o",
+        "TOP.caliptra_top_tb.tb_services_i.abr_mem_top_inst.abr_w1_mem_inst.rdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "target": "Device wiring / own logic",
+      "shared_variables": 11,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_clp_reg_inst.field_storage.AES_KV_RD_KEY_CTRL.read_entry",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_clp_reg_inst.field_storage.AES_KV_WR_CTRL.write_entry",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_inst.aes2caliptra_kv_data_out",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_key_kv_read.kv_read_fsm.kv_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_key_kv_read.kv_read_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_result_kv_write.kv_dest_write_fsm.__Vdfg_Regularize_234461",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_result_kv_write.kv_dest_write_fsm.kv_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_result_kv_write.kv_dest_write_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_result_kv_write.kv_dest_write_fsm.write_last",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.busy_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.kv_write_ctrl_reg.write_dest_vld"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "target": "Device wiring / own logic",
+      "shared_variables": 11,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.__Vdfg_Regularize_233108",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.hmac_block_kv_read.kv_read_fsm.kv_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.hmac_key_kv_read.kv_read_fsm.kv_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.hmac_result_kv_write.kv_dest_write_fsm.__Vdfg_Regularize_234461",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.hmac_result_kv_write.kv_dest_write_fsm.kv_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.hmac_result_kv_write.kv_dest_write_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.hmac_result_kv_write.kv_dest_write_fsm.write_last",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.i_hmac_reg.hwif_out",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.kv_reg",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.kv_write_ctrl_reg",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.kv_read"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "shared_variables": 10,
+      "signals": [
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_pwrgood",
+        "TOP.caliptra_top_tb.tb_services_i.scan_mode",
+        "TOP.caliptra_top_tb.tb_services_i.veer_sram_export_inst.Gen_dccm_enable.dccm_loop[0].ram.Q",
+        "TOP.caliptra_top_tb.tb_services_i.veer_sram_export_inst.Gen_dccm_enable.dccm_loop[1].ram.Q",
+        "TOP.caliptra_top_tb.tb_services_i.veer_sram_export_inst.Gen_dccm_enable.dccm_loop[2].ram.Q",
+        "TOP.caliptra_top_tb.tb_services_i.veer_sram_export_inst.Gen_dccm_enable.dccm_loop[3].ram.Q",
+        "TOP.caliptra_top_tb.tb_services_i.veer_sram_export_inst.Gen_iccm_enable.iccm_loop[0].iccm_bank.Q",
+        "TOP.caliptra_top_tb.tb_services_i.veer_sram_export_inst.Gen_iccm_enable.iccm_loop[1].iccm_bank.Q",
+        "TOP.caliptra_top_tb.tb_services_i.veer_sram_export_inst.Gen_iccm_enable.iccm_loop[2].iccm_bank.Q",
+        "TOP.caliptra_top_tb.tb_services_i.veer_sram_export_inst.Gen_iccm_enable.iccm_loop[3].iccm_bank.Q"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "target": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "shared_variables": 10,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.access_blocked_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[7]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[8]"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "shared_variables": 9,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.__Vdfg_Regularize_233151",
+        "TOP.caliptra_top_tb.caliptra_top_dut.__Vdfg_Regularize_233445",
+        "TOP.caliptra_top_tb.caliptra_top_dut.__Vdfg_Regularize_233446",
+        "TOP.caliptra_top_tb.caliptra_top_dut.__Vdfg_Regularize_235676",
+        "TOP.caliptra_top_tb.caliptra_top_dut.clear_obf_secrets_debugScanQ",
+        "TOP.caliptra_top_tb.caliptra_top_dut.cptra_security_state_Latched",
+        "TOP.caliptra_top_tb.caliptra_top_dut.cptra_security_state_Latched_f.device_lifecycle",
+        "TOP.caliptra_top_tb.caliptra_top_dut.crypto_error",
+        "TOP.caliptra_top_tb.caliptra_top_dut.debug_lock_or_scan_mode_switch"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "target": "Device wiring / own logic",
+      "shared_variables": 9,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.__Vdfg_Regularize_238207",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.busy_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.kv_mlkem_sharedkey_write_inst.kv_dest_write_fsm.__Vdfg_Regularize_233323",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.kv_mlkem_sharedkey_write_inst.kv_dest_write_fsm.kv_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.kv_mlkem_sharedkey_write_inst.kv_dest_write_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.kv_read",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.mlkem_sharedkey_data",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_reg_inst.__Vdfg_Regularize_234135",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_reg_inst.field_storage.kv_mlkem_sharedkey_wr_ctrl.write_entry"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[14]",
+      "shared_variables": 9,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_reg_inst.cpuif_req_masked",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_reg_inst.external_rd_ack",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_reg_inst.external_req",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_reg_inst.external_wr_ack",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_reg_inst.s_cpuif_rd_data",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.mldsa_ahb_slv_inst.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.mldsa_ahb_slv_inst.dv",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.mldsa_ahb_slv_inst.err_f",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.mldsa_ahb_slv_inst.write"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "target": "Device wiring / own logic",
+      "shared_variables": 9,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_dsa_ctrl_i.busy_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_dsa_ctrl_i.ecc_privkey_kv_write.kv_dest_write_fsm.__Vdfg_Regularize_234233",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_dsa_ctrl_i.ecc_privkey_kv_write.kv_dest_write_fsm.__Vdfg_Regularize_237013",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_dsa_ctrl_i.ecc_privkey_kv_write.kv_dest_write_fsm.kv_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_dsa_ctrl_i.ecc_privkey_kv_write.kv_dest_write_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_dsa_ctrl_i.kv_read",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_dsa_ctrl_i.kv_reg",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_reg1.__Vdfg_Regularize_234137",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_reg1.field_storage"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "shared_variables": 9,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_rd_resp",
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_reg1.field_storage.KEY_ENTRY[8][0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_reg1.field_storage.KEY_ENTRY[8][1]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_reg1.field_storage.KEY_ENTRY[8][2]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_reg1.field_storage.KEY_ENTRY[8][3]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_reg1.field_storage.KEY_ENTRY[8][4]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_reg1.field_storage.KEY_ENTRY[8][5]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_reg1.field_storage.KEY_ENTRY[8][6]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_reg1.field_storage.KEY_ENTRY[8][7]"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "shared_variables": 9,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.aes_cif_read_cnt",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.aes_cif_write_cnt",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.aes_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.aes_req_data.write",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.aes_req_dv",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.bytes_remaining",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_axi_dma.i_axi_dma_ctrl.i_fifo.rdata_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.field_storage.SS_KEY_RELEASE_SIZE",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.field_storage.SS_OCP_LOCK_CTRL"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[8]",
+      "shared_variables": 8,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.dma_ahb_to_axi4.buf_read_error_ff.genblock.dff.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.dma_ahb_to_axi4.cmdbuf_full",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.dma_ahb_to_axi4.haddr_ff.genblock.dff.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.dma_ahb_to_axi4.hready_ff.genblock.dff.__Vdfg_Regularize_232749",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.dma_ahb_to_axi4.hsize_ff.genblock.dff.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.dma_ahb_to_axi4.htrans_ff.genblock.dff.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.dma_ahb_to_axi4.hwrite_ff.genblock.dff.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.dma_ahb_to_axi4.state_reg.genblock.dffs.genblock.dffs.dout"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "shared_variables": 8,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.cptra_error_fatal",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.cptra_uncore_dmi_locked_reg_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.cptra_uncore_dmi_unlocked_reg_wr_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.__Vdfg_Regularize_234134",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.__Vdfg_Regularize_236016",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.field_storage.CPTRA_CLK_GATING_EN",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.field_storage.internal_nmi_vector",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.strap_we_pre_fuse_done"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.doe",
+      "target": "Device wiring / own logic",
+      "shared_variables": 6,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_inst.busy_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_inst.clear_obf_secrets",
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_inst.doe_fsm1.dest_write_offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_inst.doe_fsm1.kv_doe_fsm_ps",
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_inst.doe_fsm1.kv_write_rules.write_allow",
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_inst.kv_result_reg"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.imem",
+      "shared_variables": 6,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux.__Vdfg_Regularize_233326",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux.htrans_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux.initiator0_pend_addr_ph",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux.initiator0_pend_haddr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux.initiator1_pend_addr_ph",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux.initiator1_pend_haddr"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[15]",
+      "shared_variables": 5,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.ahb_hold",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.ahb_rdata",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.ahb_slv_sif_inst.__Vdfg_Regularize_232733",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.ahb_slv_sif_inst.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.ahb_slv_sif_inst.err_f"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "target": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "shared_variables": 5,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_inst.u_reg.u_status_idle.q",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_inst.u_reg.u_status_input_ready.q",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_inst.u_reg.u_status_output_valid.q",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.dma_req_error",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.dma_req_hold"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.sha3",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[16]",
+      "shared_variables": 5,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha3.ahb_slv_sif_inst.__Vdfg_Regularize_234550",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha3.ahb_slv_sif_inst.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha3.ahb_slv_sif_inst.err_f",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha3.caliptra_tlul_adapter_vh_inst.__Vdfg_Regularize_237737",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha3.caliptra_tlul_adapter_vh_inst.rdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 5,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_boot_fsm.__Vdfg_Regularize_238621",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_boot_fsm.fw_update_rst_window",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.__Vdfg_Regularize_234134",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.__Vdfg_Regularize_236067",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.__Vdfg_Regularize_236072"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[7]",
+      "shared_variables": 5,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_ahb_slv_sif_soc_ifc.__Vdfg_Regularize_234872",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_ahb_slv_sif_soc_ifc.__Vdfg_Regularize_237067",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_ahb_slv_sif_soc_ifc.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_ahb_slv_sif_soc_ifc.err_f",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_arb.uc_rdata"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "shared_variables": 4,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.pv_write[0].write_data",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pv_write[0].write_en",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pv_write[0].write_entry",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pv_write[0].write_offset"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "target": "caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux",
+      "shared_variables": 4,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.__Vdfg_Regularize_234597",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hinitiatorready_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.htrans_o[0]"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.csrng",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[12]",
+      "shared_variables": 4,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.csrng.u_reg.u_ahb_slv_sif.__Vdfg_Regularize_236989",
+        "TOP.caliptra_top_tb.caliptra_top_dut.csrng.u_reg.u_ahb_slv_sif.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.csrng.u_reg.u_ahb_slv_sif.err_f",
+        "TOP.caliptra_top_tb.caliptra_top_dut.csrng.u_reg.u_ahb_to_reg_adapter.ahb_reg_rdata"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.csrng",
+      "shared_variables": 4,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.cs_aes_halt_q",
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_caliptra_prim_mubi4_sync_es_enable.mubi_o[0]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_entropy_src_ack_sm.u_state_regs.u_state_flop.gen_generic.u_impl_generic.q_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_reg.u_entropy_control_es_route.__Vdfg_Regularize_234787"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[13]",
+      "shared_variables": 4,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_reg.u_ahb_slv_sif.__Vdfg_Regularize_236975",
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_reg.u_ahb_slv_sif.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_reg.u_ahb_slv_sif.err_f",
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_reg.u_ahb_to_reg_adapter.ahb_reg_rdata"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.lsu_ahb",
+      "target": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "shared_variables": 4,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.lsu_ahb.haddr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.lsu_ahb.hsize",
+        "TOP.caliptra_top_tb.caliptra_top_dut.lsu_ahb.htrans",
+        "TOP.caliptra_top_tb.caliptra_top_dut.lsu_ahb.hwrite"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.sb_ahb",
+      "target": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "shared_variables": 4,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.sb_ahb.haddr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sb_ahb.hsize",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sb_ahb.htrans",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sb_ahb.hwrite"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.cptra_csr_hmac_key_reg",
+        "TOP.caliptra_top_tb.caliptra_top_dut.cptra_in_debug_scan_mode",
+        "TOP.caliptra_top_tb.caliptra_top_dut.debug_lock_or_scan_mode_switch"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.__Vdfg_Regularize_233151",
+        "TOP.caliptra_top_tb.caliptra_top_dut.cptra_dmi_reg_en_preQ",
+        "TOP.caliptra_top_tb.caliptra_top_dut.cptra_in_debug_scan_mode"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.debug_lock_or_scan_mode_switch",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pv_rd_resp[0].last",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pv_rd_resp[0].read_data"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.physical_rng.valid",
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_rst_b",
+        "TOP.caliptra_top_tb.tb_services_i.scan_mode"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "target": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hinitiatorready_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.htrans_o[0]"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.doe",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_inst.doe_cmd_reg",
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_inst.doe_fsm1.dest_addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_inst.doe_fsm1.dest_write_offset"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[14]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[14].hrdata",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[14].hreadyout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[14].hresp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[15]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[15].hrdata",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[15].hreadyout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[15].hresp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[16]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[16].hrdata",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[16].hreadyout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[16].hresp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[7]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[7].hrdata",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[7].hreadyout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[7].hresp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[8]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[8].hreadyout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[8].hreadyout__VforceVec__TOP__caliptra_top_tb__caliptra_top_dut__responder_inst[8]",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[8].hresp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux.hrdata_o_0",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux.hready_o_0",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux.hresp_o_0"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "shared_variables": 3,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.haddr_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwrite_o"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "Outside device",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.clear_obf_secrets_debugScanQ",
+        "TOP.caliptra_top_tb.caliptra_top_dut.cptra_in_debug_scan_mode"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.doe",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.cptra_obf_key_dbg",
+        "TOP.caliptra_top_tb.caliptra_top_dut.debug_lock_or_scan_mode_switch"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_rst_b",
+        "TOP.caliptra_top_tb.tb_services_i.scan_mode"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_ctrl_inst.kv_mlkem_sharedkey_write_inst.kv_dest_write_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.abr_inst.abr_reg_inst.field_storage.kv_mlkem_sharedkey_wr_ctrl.write_entry"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_clp_reg_inst.field_storage.AES_KV_WR_CTRL.write_entry",
+        "TOP.caliptra_top_tb.caliptra_top_dut.aes_inst.aes_result_kv_write.kv_dest_write_fsm.offset"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "target": "caliptra_top_tb.caliptra_top_dut.imem",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hinitiatorready_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hsel_o_int_pre[11]"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.cg",
+      "target": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.cg.caliptra_rdc_uc_icg.clk_cg",
+        "TOP.caliptra_top_tb.caliptra_top_dut.cg.generic_input_wires_f"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.csrng",
+      "target": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.csrng.u_csrng_core.cmd_entropy_avail",
+        "TOP.caliptra_top_tb.caliptra_top_dut.csrng.u_csrng_core.cs_aes_halt_q"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[5]",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.data_vault1.dv_ahb_slv1.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.data_vault1.dv_reg1.readback_data"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.doe",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[0]",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.ahb_slv_sif_uut.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_read_data[31:0]"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_dsa_ctrl_i.ecc_privkey_kv_write.kv_dest_write_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_reg1.field_storage"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[1]",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_ahb_slv_i.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_reg1.readback_data"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.hmac_result_kv_write.kv_dest_write_fsm.offset",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.i_hmac_reg.hwif_out"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[2]",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.ahb_slv_sif_uut.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.hmac_inst.i_hmac_reg.s_cpuif_rd_data"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.imem",
+      "target": "caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.imem.__Vdfg_Regularize_238203",
+        "TOP.caliptra_top_tb.caliptra_top_dut.imem.hresp_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[3]",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_ahb_slv1.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_reg1.s_cpuif_rd_data"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[4]",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_ahb_slv1.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_reg1.readback_data"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[12]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[12].hrdata",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[12].hresp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[13]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[13].hrdata",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[13].hresp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[8]",
+      "target": "Device wiring / own logic",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[8].hreadyout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[8].hreadyout__VforceVec__TOP__caliptra_top_tb__caliptra_top_dut__responder_inst[8]"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[8]",
+      "target": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[8].hreadyout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[8].hresp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "target": "Device wiring / own logic",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_dmi_jtag_to_core_sync.rden",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.dmi_wrapper.i_dmi_jtag_to_core_sync.reg_wr_en"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "target": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.lsu_axi4_to_ahb.buf_dataff.genblock.genblock.dff.dout",
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.sb_axi4_to_ahb.buf_dataff.genblock.genblock.dff.dout"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.sha256",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[10]",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha256.ahb_slv_sif_uut.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha256.sha256_inst.i_sha256_reg.s_cpuif_rd_data"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[6]",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.ahb_slv_sif_uut.addr",
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.sha512_inst.i_sha512_reg.s_cpuif_rd_data"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.cg",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_boot_fsm.fw_update_rst_window",
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_boot_fsm.rdc_clk_dis"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hsize_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 2,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.haddr_o",
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.htrans_o"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.debug_lock_or_scan_mode_switch"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[9].hreadyout"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.cg",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.s_axi_active"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.debug_lock_or_scan_mode_switch"
+      ]
+    },
+    {
+      "source": "Device wiring / own logic",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha256",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.debug_lock_or_scan_mode_switch"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_pwrgood"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_pwrgood"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_pwrgood"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_pwrgood"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha256",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_pwrgood"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha3",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_pwrgood"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.soc_bfm_inst.cptra_pwrgood"
+      ]
+    },
+    {
+      "source": "Outside device",
+      "target": "caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.tb_services_i.imem_inst1.rdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "target": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i.u_ahb_lite_address_decoder.hinitiatorready_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.csrng",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.csrng.u_reg.u_ahb_slv_sif.__Vdfg_Regularize_236989"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.data_vault1.dv_ahb_slv1.err_f"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.data_vault1.dv_reg_hwif_in.core_only_rst_b"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.data_vault1.dv_reg_hwif_in.core_only_rst_b"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.data_vault1.dv_reg_hwif_in.core_only_rst_b"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.doe",
+      "target": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.doe_inst.busy_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.doe",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.doe.ahb_slv_sif_uut.err_f"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.ecc_top1.ecc_ahb_slv_i.err_f"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_caliptra_prim_sec_anchor_buf.u_secure_anchor_buf.gen_generic.u_impl_generic.out_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_caliptra_prim_sec_anchor_buf.u_secure_anchor_buf.gen_generic.u_impl_generic.out_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_reg.u_ahb_slv_sif.__Vdfg_Regularize_236975"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_caliptra_prim_sec_anchor_buf.u_secure_anchor_buf.gen_generic.u_impl_generic.out_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_caliptra_prim_sec_anchor_buf.u_secure_anchor_buf.gen_generic.u_impl_generic.out_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_caliptra_prim_sec_anchor_buf.u_secure_anchor_buf.gen_generic.u_impl_generic.out_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha256",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_caliptra_prim_sec_anchor_buf.u_secure_anchor_buf.gen_generic.u_impl_generic.out_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha3",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_caliptra_prim_sec_anchor_buf.u_secure_anchor_buf.gen_generic.u_impl_generic.out_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_caliptra_prim_sec_anchor_buf.u_secure_anchor_buf.gen_generic.u_impl_generic.out_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "target": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_caliptra_prim_sec_anchor_buf.u_secure_anchor_buf.gen_generic.u_impl_generic.out_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.hmac.ahb_slv_sif_uut.err_f"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "target": "Device wiring / own logic",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.__Vdfg_Regularize_232770"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_rd_resp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_ahb_slv1.err_f"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_rd_resp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_rd_resp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.key_vault1.kv_rd_resp"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.pcr_vault1.pv_ahb_slv1.err_f"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[0]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[0].hrdata"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[10]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[10].hrdata"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[1]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[1].hrdata"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[2]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[2].hrdata"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[3]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[3].hrdata"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[4]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[4].hrdata"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[5]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[5].hrdata"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[6]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[6].hrdata"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[8]",
+      "target": "caliptra_top_tb.caliptra_top_dut.responder_inst[9]",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[8].hreadyout"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.responder_inst[9]",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.responder_inst[9].hreadyout__VforceVec__TOP__caliptra_top_tb__caliptra_top_dut__responder_inst[9]"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.dma_ahb_to_axi4.buf_rdata_ff.genblock.dff.dout"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "target": "caliptra_top_tb.caliptra_top_dut.cg",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.dec.tlu.exthaltff.genblock.dff.__Vdfg_Regularize_238204"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "target": "caliptra_top_tb.caliptra_top_dut.imem",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.ifu_axi4_to_ahb.__Vdfg_Regularize_234893"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "target": "caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.rvtop.veer.Gen_AXI_To_AHB.ifu_axi4_to_ahb.ahb_htrans"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.sha256",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha256.ahb_slv_sif_uut.err_f"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "target": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.sha512.ahb_slv_sif_uut.err_f"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_reg.field_storage.SS_OCP_LOCK_CTRL"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_boot_fsm.cptra_uc_rst_b_nq"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_boot_fsm.cptra_noncore_rst_b_nq"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_boot_fsm.fw_update_rst_window"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_boot_fsm.fw_update_rst_window"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_boot_fsm.fw_update_rst_window"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "target": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.soc_ifc_top1.i_soc_ifc_boot_fsm.fw_update_rst_window"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.csrng",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.doe",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.imem",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.haddr_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwrite_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha256",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha3",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    },
+    {
+      "source": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "target": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "shared_variables": 1,
+      "signals": [
+        "TOP.caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux.hwdata_o"
+      ]
+    }
+  ],
+  "metric": "Distinct scheduler-visible variables written/read across device-child blocks; no dynamic traffic or bit-width weighting"
+}

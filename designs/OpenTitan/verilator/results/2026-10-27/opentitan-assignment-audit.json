@@ -1,0 +1,504 @@
+{
+  "passed": true,
+  "units": 54,
+  "tasks": 237,
+  "all_indices_and_workers_match_saved_mapping": true,
+  "all_emitted_unit_dispatch_owners_match": true,
+  "same_unit_auto_control_matches_inventory": true,
+  "logical_worker_to_cpu": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "scheduler_worker": 0,
+  "listing_sha256": "67ad35319b286aaf4125ad74b05e438193650b1e60d894abff6cc94a3e880927",
+  "owners": {
+    "chip_sim_tb.u_dut.top_earlgrey.u_otbn": [
+      1
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_otp_ctrl": [
+      1
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_lc_ctrl": [
+      1
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_usbdev": [
+      1
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_pattgen": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_rv_timer": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_sensor_ctrl_aon": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_i2c1": [
+      2
+    ],
+    "chip_sim_tb.u_dut.u_ast": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_pwm_aon": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_i2c2": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_pinmux_aon": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_aon_timer_aon": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_i2c0": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_adc_ctrl_aon": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_pwrmgr_aon": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_uart3": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_gpio": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_uart0": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_uart2": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_uart1": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_xbar_peri": [
+      2
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_alert_handler": [
+      3
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_clkmgr_aon": [
+      3
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_flash_ctrl": [
+      3
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_spi_device": [
+      3
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_rstmgr_aon": [
+      3
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_alert_handler.u_reg_wrap.u_reg": [
+      3
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_hmac": [
+      3
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_spi_host0": [
+      3
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_kmac.gen_entropy.u_entropy": [
+      4
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_csrng": [
+      5
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_edn1": [
+      5
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_entropy_src": [
+      5
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_entropy_src.u_entropy_src_core.u_sha3.u_keccak.u_keccak_p": [
+      5
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_keymgr": [
+      6
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_kmac.u_reg": [
+      6
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_kmac": [
+      6
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_kmac.u_sha3.u_keccak.u_keccak_p": [
+      6
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_aes": [
+      7
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_edn0": [
+      7
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_rv_plic": [
+      7
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_rv_core_ibex": [
+      0
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_xbar_main": [
+      0
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_sram_ctrl_main": [
+      0
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_sram_ctrl_ret_aon": [
+      0
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_rv_dm": [
+      0
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_rom_ctrl": [
+      0
+    ],
+    "chip_sim_tb.__rtlmeter_utils_u": [
+      0
+    ],
+    "chip_sim_tb": [
+      0
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_spi_host1": [
+      0
+    ],
+    "chip_sim_tb.u_dut": [
+      0
+    ],
+    "chip_sim_tb.u_dut.top_earlgrey.u_sysrst_ctrl_aon": [
+      0
+    ],
+    "chip_sim_tb.u_sim_sram": [
+      0
+    ],
+    "chip_sim_tb.u_sw_test_status_if": [
+      0
+    ]
+  },
+  "schedules": {
+    "1": {
+      "tasks": [
+        21,
+        11,
+        13,
+        47,
+        4,
+        40,
+        38,
+        50,
+        97,
+        76,
+        99,
+        116,
+        161,
+        94,
+        127,
+        108,
+        143,
+        98,
+        163,
+        196,
+        218,
+        179,
+        176,
+        235
+      ],
+      "waits": 20,
+      "signals": 44
+    },
+    "2": {
+      "tasks": [
+        8,
+        9,
+        7,
+        3,
+        12,
+        66,
+        65,
+        67,
+        52,
+        54,
+        55,
+        56,
+        61,
+        59,
+        58,
+        62,
+        57,
+        45,
+        33,
+        63,
+        53,
+        37,
+        88,
+        86,
+        41,
+        80,
+        96,
+        106,
+        119,
+        121,
+        138,
+        137,
+        134,
+        145,
+        162,
+        122,
+        170,
+        128,
+        129,
+        130,
+        131,
+        136,
+        140,
+        141,
+        142,
+        147,
+        132,
+        135,
+        123,
+        126,
+        114,
+        110,
+        200,
+        197,
+        177,
+        194,
+        214,
+        192,
+        193,
+        191,
+        188,
+        213,
+        189,
+        187,
+        185,
+        180,
+        183,
+        181,
+        209,
+        210,
+        211,
+        226,
+        182,
+        227,
+        229,
+        230,
+        231
+      ],
+      "waits": 33,
+      "signals": 89
+    },
+    "3": {
+      "tasks": [
+        14,
+        5,
+        1,
+        2,
+        0,
+        28,
+        25,
+        70,
+        48,
+        51,
+        74,
+        46,
+        60,
+        103,
+        42,
+        83,
+        102,
+        91,
+        113,
+        152,
+        82,
+        85,
+        120,
+        174,
+        139,
+        146,
+        118,
+        81,
+        175,
+        117,
+        173,
+        144,
+        111,
+        167,
+        160,
+        195,
+        208,
+        178,
+        220,
+        198,
+        225,
+        186,
+        199
+      ],
+      "waits": 32,
+      "signals": 82
+    },
+    "4": {
+      "tasks": [
+        23,
+        149,
+        157,
+        166,
+        217,
+        223
+      ],
+      "waits": 5,
+      "signals": 5
+    },
+    "5": {
+      "tasks": [
+        16,
+        18,
+        22,
+        34,
+        36,
+        78,
+        32,
+        89,
+        77,
+        104,
+        165,
+        105,
+        172
+      ],
+      "waits": 8,
+      "signals": 21
+    },
+    "6": {
+      "tasks": [
+        19,
+        20,
+        73,
+        150,
+        68,
+        101,
+        151,
+        154,
+        87,
+        204,
+        156,
+        205,
+        206,
+        216,
+        215,
+        228,
+        236,
+        221,
+        222,
+        232,
+        212,
+        233
+      ],
+      "waits": 10,
+      "signals": 28
+    },
+    "7": {
+      "tasks": [
+        24,
+        17,
+        29,
+        71,
+        69,
+        31,
+        109,
+        153,
+        100,
+        107,
+        164,
+        171
+      ],
+      "waits": 8,
+      "signals": 57
+    },
+    "0": {
+      "tasks": [
+        15,
+        26,
+        10,
+        27,
+        6,
+        64,
+        43,
+        30,
+        39,
+        35,
+        44,
+        49,
+        72,
+        92,
+        95,
+        84,
+        75,
+        148,
+        115,
+        90,
+        79,
+        112,
+        155,
+        158,
+        169,
+        133,
+        159,
+        93,
+        184,
+        190,
+        207,
+        219,
+        224,
+        234,
+        168,
+        203,
+        124,
+        125,
+        202,
+        201
+      ],
+      "waits": 24,
+      "signals": 106
+    }
+  },
+  "graphs": {
+    "OpenTitan-default-serial-1": {
+      "lowered_bit_copy_loops": 151
+    },
+    "OpenTitan-default-original-auto-8": {
+      "mtask count": 90,
+      "edge count": 202,
+      "total graph cost": 1682331,
+      "critical path cost": 262632,
+      "selected_instances": 25,
+      "lowered_bit_copy_loops": 151
+    },
+    "OpenTitan-default-auto-all-8": {
+      "mtask count": 225,
+      "edge count": 721,
+      "total graph cost": 1765717,
+      "critical path cost": 289318,
+      "selected_instances": 54,
+      "lowered_bit_copy_loops": 151
+    },
+    "OpenTitan-default-mapped-8": {
+      "mtask count": 237,
+      "edge count": 748,
+      "total graph cost": 1767891,
+      "critical path cost": 289318,
+      "selected_instances": 54,
+      "lowered_bit_copy_loops": 151
+    }
+  },
+  "scope": "Retained units and descendant-interface calls in parallel NBA dispatch; serial ACT executes on caller"
+}

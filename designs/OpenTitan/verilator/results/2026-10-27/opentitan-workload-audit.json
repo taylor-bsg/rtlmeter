@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "OpenTitan:default:aes",
+      "args": [
+        "+iterations=3"
+      ],
+      "source_sha256": {
+        "tests/rom.vmem": "791ed196c3ce7addc70bb90af131ecbd7208337cd6c40cdeb385400267776553",
+        "tests/otp.vmem": "8faf81be004461fb41ae61aff650c244116eadd9f2c871c3259ab08138ee579d",
+        "tests/aes/flash0.vmem": "46898fa1d5d8d7dc44d967dee51e6e8c733592b266eba66d8458a2cb4f14db56",
+        "tests/post.bash": "dc8c6eb77e25f6cb595db7ed78d745319a6f746861329bd3e8098bdad324816b"
+      },
+      "passed": true
+    },
+    {
+      "case": "OpenTitan:default:cmark",
+      "args": [
+        "+iterations=1"
+      ],
+      "source_sha256": {
+        "tests/rom.vmem": "791ed196c3ce7addc70bb90af131ecbd7208337cd6c40cdeb385400267776553",
+        "tests/otp.vmem": "8faf81be004461fb41ae61aff650c244116eadd9f2c871c3259ab08138ee579d",
+        "tests/cmark/flash0.vmem": "726d68c4b9259d9d9f1d9b10ee5cf7aba13f551c856873d375a62d6b1da949ef",
+        "tests/post.bash": "dc8c6eb77e25f6cb595db7ed78d745319a6f746861329bd3e8098bdad324816b"
+      },
+      "passed": true
+    },
+    {
+      "case": "OpenTitan:default:rsa",
+      "args": [
+        "+iterations=3"
+      ],
+      "source_sha256": {
+        "tests/rom.vmem": "791ed196c3ce7addc70bb90af131ecbd7208337cd6c40cdeb385400267776553",
+        "tests/otp.vmem": "8faf81be004461fb41ae61aff650c244116eadd9f2c871c3259ab08138ee579d",
+        "tests/rsa/flash0.vmem": "db4cc7a7dbbe03cfdb67d57462a92100f589b5d1a7c467cfcb84b4379c057375",
+        "tests/post.bash": "dc8c6eb77e25f6cb595db7ed78d745319a6f746861329bd3e8098bdad324816b"
+      },
+      "passed": true
+    },
+    {
+      "case": "OpenTitan:default:sha",
+      "args": [
+        "+iterations=3"
+      ],
+      "source_sha256": {
+        "tests/rom.vmem": "791ed196c3ce7addc70bb90af131ecbd7208337cd6c40cdeb385400267776553",
+        "tests/otp.vmem": "8faf81be004461fb41ae61aff650c244116eadd9f2c871c3259ab08138ee579d",
+        "tests/sha/flash0.vmem": "79e90b37f138d3fd22767afec2e2d16e062dfd97f954674d05920f0e61490ae0",
+        "tests/post.bash": "dc8c6eb77e25f6cb595db7ed78d745319a6f746861329bd3e8098bdad324816b"
+      },
+      "passed": true
+    }
+  ],
+  "descriptor_sha256": "dac37d9c279b830d90633a4fcb5e4a95c21213c423284247811a15361c393078",
+  "hdl_cpp_source_files": 652
+}

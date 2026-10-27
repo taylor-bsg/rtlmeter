@@ -1,0 +1,14 @@
+{
+  "README.md": "e0781418bf2225aaad9aeeeffe3c1d2a9d62dfccfed26052d1ac03b674866980",
+  "connections.csv": "7f47fd12a03fc2fc356a6faf0b206dd76960172c6a52a5c205a87b180591452d",
+  "connectivity.json": "53ab215e82f946e9094d671d2c3973cb65cfa7795db74bfdfbff9af7d7b02851",
+  "diagnostic.patch": "9d50957b3fddf7671a9b65fb69ad87d51074bba158b2e28e6cb641084919c205",
+  "hierarchy.html": "9bd5f7f856d9f797fc152859a18eff0b089df4caa9c144366da06f3d2c96d611",
+  "instances-all.csv.gz": "7a52cd2dfab7e60c1ee6f5cbc7713edd6b1137fa25e553a6267e7784af781a4e",
+  "instances-ge-0.25pct.csv": "9707c71ccee8818cbd470b271a212f7aac0e4b6aee44a94c923218681121a338",
+  "partition.csv": "46706fcd606d16a217c0cb2f6b5b619b77b904d6e83d3ce9fbc8d6449187ef2a",
+  "provenance.json": "2ad2b8f8cb608066596875306ac7779cc826f1b744999b7668b3e0d227c197b2",
+  "source-equivalence.json": "a8ed808ff8145eefd356d03b74df24cd8cc0b86cb1dd4a81f26d353c550339f2",
+  "summary.json": "185e149a88e6dc3bc7582db3f78653fdb64a70035e60a6b0e41b8134b8a12190",
+  "validation.json": "a70607d091d2841cda620f47dbdc8bd6b3e335359f59f0b3ca19f94a67cc1d9d"
+}

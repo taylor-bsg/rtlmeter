@@ -1,0 +1,737 @@
+{
+  "design": "Caliptra",
+  "configuration": "default",
+  "workers": 8,
+  "threshold_percent": 0.25,
+  "total_cost": 1222067,
+  "normal_inlined_total_cost": 1221405,
+  "hierarchy_preserved_change_percent": 0.05419987637187429,
+  "hierarchy_instances": 15866,
+  "qualifying_instances": 174,
+  "device_scope": "caliptra_top_tb.caliptra_top_dut",
+  "device_percent": 89.61579029627671,
+  "device_blocks": [
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "module": "abr_top",
+      "module_index": 0,
+      "local_instance": "abr_inst",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 430757,
+      "inclusive_percent": 35.248231070800536,
+      "own_cost": 3156,
+      "own_percent": 0.2582509796926028,
+      "source": "verilogSourceFiles/abr_top.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "module": "el2_veer_wrapper",
+      "module_index": 0,
+      "local_instance": "rvtop",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 129562,
+      "inclusive_percent": 10.60187371068853,
+      "own_cost": 24,
+      "own_percent": 0.001963885777130059,
+      "source": "verilogSourceFiles/el2_veer_wrapper.sv",
+      "normal_percent": 0.003274917001322248
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "module": "ecc_top",
+      "module_index": 0,
+      "local_instance": "ecc_top1",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 113391,
+      "inclusive_percent": 9.278623839773106,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/ecc_top.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "module": "hmac_ctrl",
+      "module_index": 0,
+      "local_instance": "hmac",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 103578,
+      "inclusive_percent": 8.475640042649053,
+      "own_cost": 36,
+      "own_percent": 0.0029458286656950886,
+      "source": "verilogSourceFiles/hmac_ctrl.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "module": "aes_clp_wrapper",
+      "module_index": 0,
+      "local_instance": "aes_inst",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 89449,
+      "inclusive_percent": 7.319484119937777,
+      "own_cost": 1028,
+      "own_percent": 0.0841197741204042,
+      "source": "verilogSourceFiles/aes_clp_wrapper.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "module": "kv",
+      "module_index": 0,
+      "local_instance": "key_vault1",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 64071,
+      "inclusive_percent": 5.242838567770834,
+      "own_cost": 52619,
+      "own_percent": 4.305737737783607,
+      "source": "verilogSourceFiles/kv.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.csrng",
+      "module": "csrng",
+      "module_index": 0,
+      "local_instance": "csrng",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 31840,
+      "inclusive_percent": 2.605421797659212,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/csrng.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "module": "soc_ifc_top",
+      "module_index": 0,
+      "local_instance": "soc_ifc_top1",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 28615,
+      "inclusive_percent": 2.3415246463573602,
+      "own_cost": 1414,
+      "own_percent": 0.11570560370257932,
+      "source": "verilogSourceFiles/soc_ifc_top.sv",
+      "normal_percent": 0.018667026907536813
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "module": "pv",
+      "module_index": 0,
+      "local_instance": "pcr_vault1",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 28322,
+      "inclusive_percent": 2.317548874161564,
+      "own_cost": 16135,
+      "own_percent": 1.3203040422497294,
+      "source": "verilogSourceFiles/pv.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.doe",
+      "module": "doe_ctrl",
+      "module_index": 0,
+      "local_instance": "doe",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 17254,
+      "inclusive_percent": 1.4118702166084183,
+      "own_cost": 581,
+      "own_percent": 0.04754240152135685,
+      "source": "verilogSourceFiles/doe_ctrl.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "module": "entropy_src",
+      "module_index": 0,
+      "local_instance": "entropy_src",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 12451,
+      "inclusive_percent": 1.0188475754602653,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/entropy_src.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha3",
+      "module": "sha3_ctrl",
+      "module_index": 0,
+      "local_instance": "sha3",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 11959,
+      "inclusive_percent": 0.9785879170290991,
+      "own_cost": 181,
+      "own_percent": 0.01481097190252253,
+      "source": "verilogSourceFiles/sha3_ctrl.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "module": "dv",
+      "module_index": 0,
+      "local_instance": "data_vault1",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 10068,
+      "inclusive_percent": 0.8238500835060598,
+      "own_cost": 10,
+      "own_percent": 0.000818285740470858,
+      "source": "verilogSourceFiles/dv.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "module": "sha512_ctrl",
+      "module_index": 0,
+      "local_instance": "sha512",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 9103,
+      "inclusive_percent": 0.744885509550622,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/sha512_ctrl.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha256",
+      "module": "sha256_ctrl",
+      "module_index": 0,
+      "local_instance": "sha256",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 4023,
+      "inclusive_percent": 0.32919635339142617,
+      "own_cost": 0,
+      "own_percent": 0.0,
+      "source": "verilogSourceFiles/sha256_ctrl.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "module": "ahb_lite_bus",
+      "module_index": 0,
+      "local_instance": "ahb_lite_bus_i",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 947,
+      "inclusive_percent": 0.07749165962259025,
+      "own_cost": 50,
+      "own_percent": 0.0040914287023542896,
+      "source": "verilogSourceFiles/ahb_lite_bus.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "module": "ahb_lite_2to1_mux",
+      "module_index": 1,
+      "local_instance": "u_sb_lsu_ahb_mux",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 242,
+      "inclusive_percent": 0.019802514919394762,
+      "own_cost": 242,
+      "own_percent": 0.019802514919394762,
+      "source": "verilogSourceFiles/ahb_lite_2to1_mux.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux",
+      "module": "ahb_lite_2to1_mux",
+      "module_index": 0,
+      "local_instance": "u_ahb_lite_2to1_mux",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 205,
+      "inclusive_percent": 0.01677485767965259,
+      "own_cost": 205,
+      "own_percent": 0.01677485767965259,
+      "source": "verilogSourceFiles/ahb_lite_2to1_mux.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[8]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 10,
+      "local_instance": "responder_inst[8]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 145,
+      "inclusive_percent": 0.011865143236827441,
+      "own_cost": 145,
+      "own_percent": 0.011865143236827441,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.012444684605024542
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sb_ahb",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 19,
+      "local_instance": "sb_ahb",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 110,
+      "inclusive_percent": 0.009001143145179438,
+      "own_cost": 110,
+      "own_percent": 0.009001143145179438,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.00900602175363618
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.lsu_ahb",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 1,
+      "local_instance": "lsu_ahb",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 110,
+      "inclusive_percent": 0.009001143145179438,
+      "own_cost": 110,
+      "own_percent": 0.009001143145179438,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.00900602175363618
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.cg",
+      "module": "clk_gate",
+      "module_index": 0,
+      "local_instance": "cg",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 100,
+      "inclusive_percent": 0.008182857404708579,
+      "own_cost": 4,
+      "own_percent": 0.0003273142961883432,
+      "source": "verilogSourceFiles/clk_gate.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.imem",
+      "module": "caliptra_ahb_srom",
+      "module_index": 0,
+      "local_instance": "imem",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 68,
+      "inclusive_percent": 0.005564343035201834,
+      "own_cost": 68,
+      "own_percent": 0.005564343035201834,
+      "source": "verilogSourceFiles/caliptra_ahb_srom.sv",
+      "normal_percent": 0.0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[14]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 16,
+      "local_instance": "responder_inst[14]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 54,
+      "inclusive_percent": 0.004418742998542633,
+      "own_cost": 54,
+      "own_percent": 0.004418742998542633,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.004421137951785035
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[7]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 9,
+      "local_instance": "responder_inst[7]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 33,
+      "inclusive_percent": 0.0027003429435538315,
+      "own_cost": 33,
+      "own_percent": 0.0027003429435538315,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.002701806526090854
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[15]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 17,
+      "local_instance": "responder_inst[15]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 33,
+      "inclusive_percent": 0.0027003429435538315,
+      "own_cost": 33,
+      "own_percent": 0.0027003429435538315,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.002701806526090854
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[16]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 18,
+      "local_instance": "responder_inst[16]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 33,
+      "inclusive_percent": 0.0027003429435538315,
+      "own_cost": 33,
+      "own_percent": 0.0027003429435538315,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.002701806526090854
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[12]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 14,
+      "local_instance": "responder_inst[12]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 21,
+      "inclusive_percent": 0.0017184000549888018,
+      "own_cost": 21,
+      "own_percent": 0.0017184000549888018,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.0017193314256941802
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[13]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 15,
+      "local_instance": "responder_inst[13]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 21,
+      "inclusive_percent": 0.0017184000549888018,
+      "own_cost": 21,
+      "own_percent": 0.0017184000549888018,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.0017193314256941802
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[0]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 2,
+      "local_instance": "responder_inst[0]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 14,
+      "inclusive_percent": 0.0011456000366592012,
+      "own_cost": 14,
+      "own_percent": 0.0011456000366592012,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.0011462209504627867
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[1]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 3,
+      "local_instance": "responder_inst[1]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 14,
+      "inclusive_percent": 0.0011456000366592012,
+      "own_cost": 14,
+      "own_percent": 0.0011456000366592012,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.0011462209504627867
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[2]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 4,
+      "local_instance": "responder_inst[2]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 14,
+      "inclusive_percent": 0.0011456000366592012,
+      "own_cost": 14,
+      "own_percent": 0.0011456000366592012,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.0011462209504627867
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[3]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 5,
+      "local_instance": "responder_inst[3]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 14,
+      "inclusive_percent": 0.0011456000366592012,
+      "own_cost": 14,
+      "own_percent": 0.0011456000366592012,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.0011462209504627867
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[4]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 6,
+      "local_instance": "responder_inst[4]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 14,
+      "inclusive_percent": 0.0011456000366592012,
+      "own_cost": 14,
+      "own_percent": 0.0011456000366592012,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.0011462209504627867
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[5]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 7,
+      "local_instance": "responder_inst[5]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 14,
+      "inclusive_percent": 0.0011456000366592012,
+      "own_cost": 14,
+      "own_percent": 0.0011456000366592012,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.0011462209504627867
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[6]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 8,
+      "local_instance": "responder_inst[6]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 14,
+      "inclusive_percent": 0.0011456000366592012,
+      "own_cost": 14,
+      "own_percent": 0.0011456000366592012,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.0011462209504627867
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[10]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 12,
+      "local_instance": "responder_inst[10]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 14,
+      "inclusive_percent": 0.0011456000366592012,
+      "own_cost": 14,
+      "own_percent": 0.0011456000366592012,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.0011462209504627867
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[9]",
+      "module": "CALIPTRA_AHB_LITE_BUS_INF",
+      "module_index": 11,
+      "local_instance": "responder_inst[9]",
+      "parent": "caliptra_top_tb.caliptra_top_dut",
+      "inclusive_cost": 10,
+      "inclusive_percent": 0.000818285740470858,
+      "own_cost": 10,
+      "own_percent": 0.000818285740470858,
+      "source": "verilogSourceFiles/ahb_lite_bus_inf.sv",
+      "normal_percent": 0.000818729250330562
+    }
+  ],
+  "partition": [
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "cost": 430757,
+      "percent": 35.248231070800536
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "cost": 129562,
+      "percent": 10.60187371068853
+    },
+    {
+      "instance": "Outside device",
+      "cost": 126902,
+      "percent": 10.384209703723283
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "cost": 113391,
+      "percent": 9.278623839773106
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "cost": 103578,
+      "percent": 8.475640042649053
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "cost": 89449,
+      "percent": 7.319484119937777
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "cost": 64071,
+      "percent": 5.242838567770834
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.csrng",
+      "cost": 31840,
+      "percent": 2.605421797659212
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "cost": 28615,
+      "percent": 2.3415246463573602
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "cost": 28322,
+      "percent": 2.317548874161564
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.doe",
+      "cost": 17254,
+      "percent": 1.4118702166084183
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "cost": 12451,
+      "percent": 1.0188475754602653
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha3",
+      "cost": 11959,
+      "percent": 0.9785879170290991
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "cost": 10068,
+      "percent": 0.8238500835060598
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "cost": 9103,
+      "percent": 0.744885509550622
+    },
+    {
+      "instance": "Device wiring / own logic",
+      "cost": 8478,
+      "percent": 0.6937426507711933
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha256",
+      "cost": 4023,
+      "percent": 0.32919635339142617
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.ahb_lite_bus_i",
+      "cost": 947,
+      "percent": 0.07749165962259025
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.u_sb_lsu_ahb_mux",
+      "cost": 242,
+      "percent": 0.019802514919394762
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.u_ahb_lite_2to1_mux",
+      "cost": 205,
+      "percent": 0.01677485767965259
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[8]",
+      "cost": 145,
+      "percent": 0.011865143236827441
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sb_ahb",
+      "cost": 110,
+      "percent": 0.009001143145179438
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.lsu_ahb",
+      "cost": 110,
+      "percent": 0.009001143145179438
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.cg",
+      "cost": 100,
+      "percent": 0.008182857404708579
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.imem",
+      "cost": 68,
+      "percent": 0.005564343035201834
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[14]",
+      "cost": 54,
+      "percent": 0.004418742998542633
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[15]",
+      "cost": 33,
+      "percent": 0.0027003429435538315
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[16]",
+      "cost": 33,
+      "percent": 0.0027003429435538315
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[7]",
+      "cost": 33,
+      "percent": 0.0027003429435538315
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[12]",
+      "cost": 21,
+      "percent": 0.0017184000549888018
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[13]",
+      "cost": 21,
+      "percent": 0.0017184000549888018
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[10]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[0]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[2]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[3]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[5]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[6]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[1]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[4]",
+      "cost": 14,
+      "percent": 0.0011456000366592012
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.responder_inst[9]",
+      "cost": 10,
+      "percent": 0.000818285740470858
+    }
+  ],
+  "execution_regions": {
+    "act": {
+      "vertices": 158315,
+      "cost": 2728914
+    },
+    "nba": {
+      "vertices": 97845,
+      "cost": 1222067
+    },
+    "stl": {
+      "vertices": 27443,
+      "cost": 801883
+    }
+  },
+  "instrumentation_preserves_generated_source": true,
+  "identical_generated_files": 231,
+  "estimated_cost_only": true,
+  "measured_runtime": false,
+  "limitations": [
+    "Costs are compiler instruction estimates for NBA input logic, not CPU-time samples.",
+    "Hierarchy preservation changes optimization; the normal-model total is reported alongside it.",
+    "Inclusive parent/child percentages overlap; own costs and the disjoint partition sum to 100%.",
+    "Initialization, serial regions, scheduling/waits and external DPI execution are outside the NBA denominator.",
+    "Instance indices refer to the elaborated hierarchy; regenerate --threads-unit-list after selecting units.",
+    "Connectivity weights count shared variables, not measured bandwidth."
+  ]
+}

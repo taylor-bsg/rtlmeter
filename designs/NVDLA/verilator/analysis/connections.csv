@@ -1,0 +1,19 @@
+source,target,shared_variables
+tb_top.nvdla_top.u_partition_c,tb_top.nvdla_top.u_partition_o,289
+tb_top.nvdla_top.u_partition_o,tb_top.nvdla_top.u_partition_ma,265
+tb_top.nvdla_top.u_partition_c,tb_top.nvdla_top.u_partition_mb,264
+tb_top.nvdla_top.u_partition_p,tb_top.nvdla_top.u_partition_o,51
+tb_top.nvdla_top.u_partition_o,tb_top.nvdla_top.u_partition_p,42
+tb_top.nvdla_top.u_partition_o,Outside device,25
+tb_top.nvdla_top.u_partition_o,tb_top.nvdla_top.u_partition_c,25
+Outside device,tb_top.nvdla_top.u_partition_o,17
+tb_top.nvdla_top.u_partition_p,tb_top.nvdla_top.u_partition_a,14
+tb_top.nvdla_top.u_partition_ma,tb_top.nvdla_top.u_partition_p,12
+tb_top.nvdla_top.u_partition_mb,tb_top.nvdla_top.u_partition_a,11
+tb_top.nvdla_top.u_partition_a,tb_top.nvdla_top.u_partition_c,4
+tb_top.nvdla_top.u_partition_a,tb_top.nvdla_top.u_partition_p,4
+tb_top.nvdla_top.u_partition_c,tb_top.nvdla_top.u_partition_a,2
+tb_top.nvdla_top.u_partition_ma,tb_top.nvdla_top.u_partition_o,2
+tb_top.nvdla_top.u_partition_mb,tb_top.nvdla_top.u_partition_c,2
+tb_top.nvdla_top.u_partition_o,tb_top.nvdla_top.u_partition_a,1
+tb_top.nvdla_top.u_partition_o,tb_top.nvdla_top.u_partition_mb,1
