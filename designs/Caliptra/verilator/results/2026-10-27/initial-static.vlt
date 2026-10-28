@@ -1,0 +1,25 @@
+`verilator_config
+// Initial Caliptra default placement from static costs and NBA connectivity.
+// Workers 0-3 and 4-7 use separate chiplets; worker 0 is the caller.
+threads_unit -module "__rtlmeter_utils" -workers 1->8: { 0 }
+threads_unit -module "abr_mem_top" -workers 1->8: { 6 }
+threads_unit -module "abr_top" -workers 1->8: { 1 }
+threads_unit -module "aes_clp_wrapper" -workers 1->8: { 3 }
+threads_unit -module "caliptra_top" -workers 1->8: { 0 }
+threads_unit -module "caliptra_top_tb_axi_complex" -workers 1->8: { 5 }
+threads_unit -module "caliptra_top_tb_services" -workers 1->8: { 0 }
+threads_unit -module "csrng" -workers 1->8: { 4 }
+threads_unit -module "doe_ctrl" -workers 1->8: { 7 }
+threads_unit -module "dv" -workers 1->8: { 4 }
+threads_unit -module "ecc_top" -workers 1->8: { 7 }
+threads_unit -module "el2_veer_wrapper" -workers 1->8: { 2 }
+threads_unit -module "entropy_src" -workers 1->8: { 4 }
+threads_unit -module "hmac_ctrl" -workers 1->8: { 4 }
+threads_unit -module "kv" -workers 1->8: { 3 }
+threads_unit -module "ntt_masked_gs_butterfly" -workers 2->8: { 6 0 }
+threads_unit -module "ntt_masked_pwm" -workers 2->8: { 5 1 }
+threads_unit -module "pv" -workers 1->8: { 0 }
+threads_unit -module "sha256_ctrl" -workers 1->8: { 7 }
+threads_unit -module "sha3_ctrl" -workers 1->8: { 7 }
+threads_unit -module "sha512_ctrl" -workers 1->8: { 0 }
+threads_unit -module "soc_ifc_top" -workers 1->8: { 2 }

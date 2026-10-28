@@ -489,19 +489,80 @@ include ranges, raw timings, source hashes, build/test logs, and the generated
 module-index-to-worker listing. Only the default design with eight workers is
 explicitly mapped. Load one profile at a time.
 
-Caliptra and NVDLA preparation
-------------------------------
+Caliptra on kk10
+----------------
 
-The requested 0.25% hierarchy inventories are now available for
-`Caliptra
-<https://github.com/taylor-bsg/rtlmeter/blob/codex/threads-unit-profiles/designs/Caliptra/verilator/analysis/README.md>`_
-and `NVDLA
-<https://github.com/taylor-bsg/rtlmeter/blob/codex/threads-unit-profiles/designs/NVDLA/verilator/analysis/README.md>`_.
-They contain 174 and 128 qualifying instances respectively, topology diagrams,
-candidate unit boundaries, structural connection lists, and interactive
-hierarchies to download. Percentages are static compiler work estimates, not
-runtime samples; connectivity counts are not bandwidth measurements.
-Unit selection, worker assignment, and placement benchmarking remain pending.
+``designs/Caliptra/verilator/threads-unit.vlt`` selects 24 instances from 22 module
+types. ``threads-unit-kk10.vlt`` maps the same units onto eight workers. The large
+ABR arithmetic children override their enclosing ABR unit. Worker 0 is the caller;
+workers 0–3 and 4–7 occupy two chiplets on socket 0, with memory on node 0.
+Residual top-level testbench tasks remain automatically scheduled.
+
+The machine map puts AXI testbench memory on worker 0, ABR memory on worker 1,
+and the key vault on worker 2. The remaining map uses runtime samples from HMAC,
+MLKEM, SHA3 and TRNG. Every unit with emitted NBA work has its owner audited in
+generated dispatch; the selected RTLmeter utility has no emitted NBA task.
+The same four workloads pass the output, console, snapshot and placement checks.
+
+One worker is fastest on all four measured workloads. Automatic grouping is the
+fastest eight-worker configuration; the explicit map remains an experimental
+placement baseline.
+
+.. list-table:: Caliptra default, median seconds from two timing rounds
+   :header-rows: 1
+
+   * - Workload
+     - 1 worker
+     - Default 8
+     - Auto units 8
+     - Mapped 8
+     - Speedup vs. 1 worker
+   * - hmac
+     - 31.362
+     - 38.114
+     - 34.916
+     - 35.970
+     - 0.87x
+   * - mlkem
+     - 126.910
+     - 153.619
+     - 140.207
+     - 144.799
+     - 0.88x
+   * - sha3
+     - 39.642
+     - 48.777
+     - 44.150
+     - 45.339
+     - 0.87x
+   * - trng
+     - 51.173
+     - 62.079
+     - 56.836
+     - 58.393
+     - 0.88x
+
+These runs use Clang 21.1.8, the final runtime/loop-optimization integration
+``2487df5b4b8665f0caf8aed7ea174d13c037bf19``, and one workload iteration.
+Call-stack profiles of the initial map place about 83% of caller cycles in serial
+ACT evaluation, limiting what NBA placement can improve. The reviewed output gate
+permits only the exact exchange of two independent startup-banner blocks; all
+remaining output, clocks, console logs and emitted memory snapshots are checked.
+
+See the `full Caliptra results, mapping and raw evidence
+<https://github.com/taylor-bsg/rtlmeter/blob/codex/threads-unit-profiles/designs/Caliptra/verilator/results/2026-10-27/RESULTS.md>`_
+and the existing `0.25% hierarchy inventory
+<https://github.com/taylor-bsg/rtlmeter/blob/codex/threads-unit-profiles/designs/Caliptra/verilator/analysis/README.md>`_.
+Only the default design size with eight workers is mapped and measured.
+
+NVDLA preparation
+-----------------
+
+The `NVDLA hierarchy inventory
+<https://github.com/taylor-bsg/rtlmeter/blob/codex/threads-unit-profiles/designs/NVDLA/verilator/analysis/README.md>`_
+contains 128 instances at or above the 0.25% static-work threshold, a topology
+diagram, candidate unit boundaries and structural connection lists. Unit selection,
+worker assignment and placement benchmarking remain pending.
 
 Coverage and validation
 -----------------------
@@ -576,13 +637,20 @@ this profile-storage branch.
        audited. AES, CoreMark, RSA, and SHA passed all correctness checks;
        medians and speedups are in the table above.
 
+   * - Caliptra
+     - ``threads-unit.vlt``
+     - Automatic grouping of 24 units; code-identical to the LLVM control tested
+       on HMAC, MLKEM, SHA3 and TRNG above.
+   * - Caliptra
+     - ``threads-unit-kk10.vlt``
+     - Runtime-based eight-worker map with audited dispatch and all four workloads
+       checked. See the comparison above; the profile remains experimental.
+
 .. list-table:: Designs still needing profiles and validation
    :header-rows: 1
 
    * - Design
      - Status
-   * - Caliptra
-     - Hierarchy/connectivity analysis complete; unit selection and placement pending.
    * - Example
      - Pending
    * - HummingbirdV2-E203

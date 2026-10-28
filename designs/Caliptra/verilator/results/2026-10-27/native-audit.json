@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "independent_raw_evidence_audit": true,
+  "timed_runs": 32,
+  "comparison_correctness_gates": 16,
+  "initial_gate_runs": 16,
+  "revised_map_gate_runs": 4,
+  "unique_executable_inodes": 48,
+  "clang_only": true,
+  "live_worker_affinity_and_node_zero_checked": true,
+  "normalized_disassembly_headers_reconstruct_to_original_hashes": true,
+  "console_and_memory_snapshot_checks": true,
+  "output_rule": "Exact except for the documented two time-zero banners exchanging order"
+}

@@ -1,0 +1,59 @@
+{
+  "stage1": {
+    "status": "OPTIMAL",
+    "spread": 8947,
+    "bound": 8947.0,
+    "loads": [
+      151887,
+      151589,
+      150816,
+      150287,
+      159234,
+      153520,
+      152594,
+      152140
+    ]
+  },
+  "status": "OPTIMAL",
+  "objective": 1161.0,
+  "bound": 1161.0,
+  "loads": [
+    148168,
+    159234,
+    158177,
+    153520,
+    157937,
+    150287,
+    148117,
+    146627
+  ],
+  "mapping": {
+    "caliptra_top_tb": 0,
+    "caliptra_top_tb.__rtlmeter_utils_u": 0,
+    "caliptra_top_tb.caliptra_top_dut": 0,
+    "caliptra_top_tb.caliptra_top_dut.abr_inst": 1,
+    "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 6,
+    "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 0,
+    "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00": 5,
+    "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01": 1,
+    "caliptra_top_tb.caliptra_top_dut.aes_inst": 3,
+    "caliptra_top_tb.caliptra_top_dut.csrng": 4,
+    "caliptra_top_tb.caliptra_top_dut.data_vault1": 4,
+    "caliptra_top_tb.caliptra_top_dut.doe": 7,
+    "caliptra_top_tb.caliptra_top_dut.ecc_top1": 7,
+    "caliptra_top_tb.caliptra_top_dut.entropy_src": 4,
+    "caliptra_top_tb.caliptra_top_dut.hmac": 4,
+    "caliptra_top_tb.caliptra_top_dut.key_vault1": 3,
+    "caliptra_top_tb.caliptra_top_dut.pcr_vault1": 0,
+    "caliptra_top_tb.caliptra_top_dut.rvtop": 2,
+    "caliptra_top_tb.caliptra_top_dut.sha3": 7,
+    "caliptra_top_tb.caliptra_top_dut.sha256": 7,
+    "caliptra_top_tb.caliptra_top_dut.sha512": 0,
+    "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": 2,
+    "caliptra_top_tb.tb_axi_complex_i": 5,
+    "caliptra_top_tb.tb_services_i": 0,
+    "caliptra_top_tb.tb_services_i.abr_mem_top_inst": 6,
+    "ROOT": 0
+  },
+  "criterion": "Minimize shared-variable worker cuts plus 4x shared-variable chiplet cuts, within a bounded static-cost spread; chiplet cost ratio <=1.03"
+}

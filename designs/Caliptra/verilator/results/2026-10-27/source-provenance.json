@@ -1,0 +1,28 @@
+{
+  "compiler_commit": "2487df5b4b8665f0caf8aed7ea174d13c037bf19",
+  "compiler_sha256": "551fd7078360359fb85be8a6427b5e3673e5a95c5df97cb8fab69e5f8f45ab26",
+  "rtlmeter_commit": "ce4d260ba7c61a92d194b30dbb4676258c700ed6",
+  "unchanged_scheduler_and_merging": true,
+  "compiler_integration": {
+    "base": "8c052270d87fe6edef528d1f23b176b52682b212",
+    "head": "2487df5b4b8665f0caf8aed7ea174d13c037bf19",
+    "tree": "45bd81b37e89f8c9879745467ce62930d77d7c0e",
+    "branch": "codex/threads-unit-runtime-integration",
+    "patches": {
+      "546644f5ba1a908c8a4027d058c0dd4608e96753": {
+        "local": "6f67cfd409c70e193d4b801e771eb7cc336c0393",
+        "nonblank_edit_sha256": "f1f3580ff73e1bb150e0c62a968855ee735a2c8a77443e5e5259c0a8ba00d5bd"
+      },
+      "ddbd470c73ca9e5aa585aa1bbc8f48a35fa79492": {
+        "local": "3c02d04cd39b33722b56a17c5880edecbc050fd9",
+        "nonblank_edit_sha256": "1a4defc534cc5f9ac07149ab4be90332666ee926adc3b32899f358f39f542961"
+      }
+    },
+    "unchanged_scheduler": true,
+    "compiler_build_commit": "3c02d04cd39b33722b56a17c5880edecbc050fd9",
+    "test_compatibility": "Remove two UNOPTPUBLIC lint-control comments: this older base predates that warning. Public-destination behavior and checks are unchanged.",
+    "conflict_resolution": "Only deletion context near absent VL_UNPACKED_FILL differed; retained the old runtime and removed VL_ZERO_RESET_W. All nonblank added/deleted lines and file modes match upstream exactly.",
+    "compiler": "clang version 21.1.8 (AlmaLinux OS Foundation 21.1.8-2.el9)\nTarget: x86_64-redhat-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\nConfiguration file: /etc/clang/x86_64-redhat-linux-gnu-clang++.cfg\n",
+    "rtlmeter_commit": "39a9a85c5b32da0ec8b0184fd57c9a9fb2b919ee"
+  }
+}

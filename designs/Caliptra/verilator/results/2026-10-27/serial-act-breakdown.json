@@ -1,0 +1,970 @@
+{
+  "hmac": {
+    "total_act_cycles": 124273625216,
+    "module_types": [
+      {
+        "module": "caliptra_top_tb_services",
+        "cycles": 32899127693,
+        "act_percent": 26.473137510729266,
+        "library_copy_cycles": 18139515923,
+        "library_copy_act_percent": 14.596432582916693
+      },
+      {
+        "module": "ntt_masked_gs_butterfly",
+        "cycles": 20839945477,
+        "act_percent": 16.769403355521405,
+        "library_copy_cycles": 356774112,
+        "library_copy_act_percent": 0.2870875548853515
+      },
+      {
+        "module": "root/interface/other",
+        "cycles": 16269722491,
+        "act_percent": 13.091854738060142,
+        "library_copy_cycles": 1406419868,
+        "library_copy_act_percent": 1.1317122724596642
+      },
+      {
+        "module": "ntt_masked_pwm",
+        "cycles": 15491014521,
+        "act_percent": 12.465247146427945,
+        "library_copy_cycles": 209840754,
+        "library_copy_act_percent": 0.1688538124121476
+      },
+      {
+        "module": "kv",
+        "cycles": 9950241709,
+        "act_percent": 8.00672040564157,
+        "library_copy_cycles": 167886051,
+        "library_copy_act_percent": 0.13509387105123652
+      },
+      {
+        "module": "caliptra_top_tb_axi_complex",
+        "cycles": 7704831099,
+        "act_percent": 6.199892443475623,
+        "library_copy_cycles": 7368916660,
+        "library_copy_act_percent": 5.929590166209512
+      },
+      {
+        "module": "abr_mem_top",
+        "cycles": 4491693190,
+        "act_percent": 3.614357577638045,
+        "library_copy_cycles": 4239799784,
+        "library_copy_act_percent": 3.4116650066583345
+      },
+      {
+        "module": "soc_ifc_top",
+        "cycles": 3359044305,
+        "act_percent": 2.702942236666585,
+        "library_copy_cycles": 20999541,
+        "library_copy_act_percent": 0.01689782603790683
+      },
+      {
+        "module": "abr_top",
+        "cycles": 2853970254,
+        "act_percent": 2.296521284415349,
+        "library_copy_cycles": 20997482,
+        "library_copy_act_percent": 0.016896169210083214
+      },
+      {
+        "module": "pv",
+        "cycles": 1951867906,
+        "act_percent": 1.5706212018901502,
+        "library_copy_cycles": 125923231,
+        "library_copy_act_percent": 0.10132739813547148
+      },
+      {
+        "module": "ecc_top",
+        "cycles": 1532446998,
+        "act_percent": 1.2331232756238129,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "aes_clp_wrapper",
+        "cycles": 1175627295,
+        "act_percent": 0.9459990347562824,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "csrng",
+        "cycles": 861173840,
+        "act_percent": 0.6929658956220145,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "el2_veer_wrapper",
+        "cycles": 818868403,
+        "act_percent": 0.6589237270392047,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "entropy_src",
+        "cycles": 818622165,
+        "act_percent": 0.6587255852375375,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "hmac_ctrl",
+        "cycles": 797923442,
+        "act_percent": 0.6420698202157772,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "dv",
+        "cycles": 609006984,
+        "act_percent": 0.49005328599812303,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha3_ctrl",
+        "cycles": 461932367,
+        "act_percent": 0.37170587580197756,
+        "library_copy_cycles": 20997937,
+        "library_copy_act_percent": 0.01689653533764987
+      },
+      {
+        "module": "doe_ctrl",
+        "cycles": 441448513,
+        "act_percent": 0.35522301070136025,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha512_ctrl",
+        "cycles": 419948086,
+        "act_percent": 0.33792213373520585,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha256_ctrl",
+        "cycles": 357202381,
+        "act_percent": 0.2874321726586365,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "caliptra_top",
+        "cycles": 167966097,
+        "act_percent": 0.13515828214398518,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      }
+    ],
+    "top_functions": [
+      {
+        "function": "Vsim___024root___eval_body__act",
+        "act_percent": 10.321774933904894
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___act_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__0",
+        "act_percent": 5.997187534399254
+      },
+      {
+        "function": "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5",
+        "act_percent": 4.426478300153236
+      },
+      {
+        "function": "Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__8",
+        "act_percent": 3.1922435867665033
+      },
+      {
+        "function": "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0",
+        "act_percent": 2.2127575840975457
+      },
+      {
+        "function": "Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0",
+        "act_percent": 1.8751508085079793
+      },
+      {
+        "function": "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4",
+        "act_percent": 1.6891237415433022
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__12",
+        "act_percent": 1.5549499764260584
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__11",
+        "act_percent": 1.5540684643609712
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__15",
+        "act_percent": 1.4700563122904626
+      },
+      {
+        "function": "Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6",
+        "act_percent": 1.452957944102468
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__14",
+        "act_percent": 1.4368779931351834
+      },
+      {
+        "function": "Vsim___024root___eval_triggers_vec__act",
+        "act_percent": 1.4019562050851695
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__20",
+        "act_percent": 1.3514400316888555
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__7",
+        "act_percent": 1.3175320798392505
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__13",
+        "act_percent": 1.317015423148111
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__19",
+        "act_percent": 1.3010156517038962
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__10",
+        "act_percent": 1.3008999215964419
+      },
+      {
+        "function": "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__1",
+        "act_percent": 1.283996307524278
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__6",
+        "act_percent": 1.2669226147249242
+      }
+    ],
+    "caveat": "Module-type attribution from the nearest generated function in sampled ACT stacks; reused instances are combined. Root/interface work is not reassigned to an inferred source instance."
+  },
+  "mlkem": {
+    "total_act_cycles": 502810055737,
+    "module_types": [
+      {
+        "module": "caliptra_top_tb_services",
+        "cycles": 133172265288,
+        "act_percent": 26.48560102737029,
+        "library_copy_cycles": 70938406725,
+        "library_copy_act_percent": 14.108390617013647
+      },
+      {
+        "module": "ntt_masked_gs_butterfly",
+        "cycles": 87281792492,
+        "act_percent": 17.35880010674521,
+        "library_copy_cycles": 1175321349,
+        "library_copy_act_percent": 0.23375056556441742
+      },
+      {
+        "module": "root/interface/other",
+        "cycles": 64183315091,
+        "act_percent": 12.764922729503196,
+        "library_copy_cycles": 4698136787,
+        "library_copy_act_percent": 0.9343760597853693
+      },
+      {
+        "module": "ntt_masked_pwm",
+        "cycles": 60630756782,
+        "act_percent": 12.058381905892817,
+        "library_copy_cycles": 398679673,
+        "library_copy_act_percent": 0.0792903141954133
+      },
+      {
+        "module": "caliptra_top_tb_axi_complex",
+        "cycles": 38900556286,
+        "act_percent": 7.736630531181608,
+        "library_copy_cycles": 36865600706,
+        "library_copy_act_percent": 7.331913967385516
+      },
+      {
+        "module": "kv",
+        "cycles": 36629175369,
+        "act_percent": 7.284893162152523,
+        "library_copy_cycles": 503689200,
+        "library_copy_act_percent": 0.10017484619747936
+      },
+      {
+        "module": "abr_mem_top",
+        "cycles": 17434566106,
+        "act_percent": 3.4674259011079385,
+        "library_copy_cycles": 16364369720,
+        "library_copy_act_percent": 3.2545828257180984
+      },
+      {
+        "module": "soc_ifc_top",
+        "cycles": 12946311535,
+        "act_percent": 2.5747916906760717,
+        "library_copy_cycles": 251839379,
+        "library_copy_act_percent": 0.05008638473446267
+      },
+      {
+        "module": "abr_top",
+        "cycles": 12377557190,
+        "act_percent": 2.4616765414242647,
+        "library_copy_cycles": 188807735,
+        "library_copy_act_percent": 0.037550508953774354
+      },
+      {
+        "module": "pv",
+        "cycles": 6293930162,
+        "act_percent": 1.2517510519503423,
+        "library_copy_cycles": 587518570,
+        "library_copy_act_percent": 0.11684702071815915
+      },
+      {
+        "module": "ecc_top",
+        "cycles": 5308128713,
+        "act_percent": 1.0556926323240583,
+        "library_copy_cycles": 104925889,
+        "library_copy_act_percent": 0.020867897887643396
+      },
+      {
+        "module": "aes_clp_wrapper",
+        "cycles": 5203145771,
+        "act_percent": 1.034813387606862,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "el2_veer_wrapper",
+        "cycles": 4048640711,
+        "act_percent": 0.8052028126338197,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "hmac_ctrl",
+        "cycles": 3734539148,
+        "act_percent": 0.7427335840620876,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "csrng",
+        "cycles": 3231463386,
+        "act_percent": 0.6426807398001305,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "entropy_src",
+        "cycles": 2601436666,
+        "act_percent": 0.5173796021614787,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "dv",
+        "cycles": 2391717665,
+        "act_percent": 0.4756702133759657,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "doe_ctrl",
+        "cycles": 1615419709,
+        "act_percent": 0.32127832181720767,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha256_ctrl",
+        "cycles": 1573782228,
+        "act_percent": 0.31299736551473883,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha512_ctrl",
+        "cycles": 1510441047,
+        "act_percent": 0.30039992831608203,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha3_ctrl",
+        "cycles": 1237461479,
+        "act_percent": 0.24610913502638201,
+        "library_copy_cycles": 20990407,
+        "library_copy_act_percent": 0.00417461957264022
+      },
+      {
+        "module": "caliptra_top",
+        "cycles": 503652913,
+        "act_percent": 0.10016762935692775,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      }
+    ],
+    "top_functions": [
+      {
+        "function": "Vsim___024root___eval_body__act",
+        "act_percent": 9.885195501936831
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___act_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__0",
+        "act_percent": 7.436271621734907
+      },
+      {
+        "function": "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5",
+        "act_percent": 4.117818954446262
+      },
+      {
+        "function": "Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__8",
+        "act_percent": 3.033361674050875
+      },
+      {
+        "function": "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0",
+        "act_percent": 2.102826601290256
+      },
+      {
+        "function": "Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0",
+        "act_percent": 1.6191290401038259
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__16",
+        "act_percent": 1.4602660697065493
+      },
+      {
+        "function": "Vsim___024root___eval_triggers_vec__act",
+        "act_percent": 1.4397460548773375
+      },
+      {
+        "function": "Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6",
+        "act_percent": 1.3769846342574878
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__21",
+        "act_percent": 1.3686269644932259
+      },
+      {
+        "function": "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4",
+        "act_percent": 1.3559690851859572
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__18",
+        "act_percent": 1.3518026002954961
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__19",
+        "act_percent": 1.3267703362101029
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__3",
+        "act_percent": 1.3227315486464304
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__12",
+        "act_percent": 1.2937090489300904
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__17",
+        "act_percent": 1.2895034098903133
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__20",
+        "act_percent": 1.2892611354993975
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__22",
+        "act_percent": 1.2732357332464748
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__14",
+        "act_percent": 1.2394247535215739
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__5",
+        "act_percent": 1.2226091017589875
+      }
+    ],
+    "caveat": "Module-type attribution from the nearest generated function in sampled ACT stacks; reused instances are combined. Root/interface work is not reassigned to an inferred source instance."
+  },
+  "sha3": {
+    "total_act_cycles": 159279919863,
+    "module_types": [
+      {
+        "module": "caliptra_top_tb_services",
+        "cycles": 42009376140,
+        "act_percent": 26.374558812016698,
+        "library_copy_cycles": 23228720629,
+        "library_copy_act_percent": 14.583583824614873
+      },
+      {
+        "module": "ntt_masked_gs_butterfly",
+        "cycles": 29025589311,
+        "act_percent": 18.223005973361563,
+        "library_copy_cycles": 461219730,
+        "library_copy_act_percent": 0.289565521125767
+      },
+      {
+        "module": "root/interface/other",
+        "cycles": 19993929207,
+        "act_percent": 12.552699187818023,
+        "library_copy_cycles": 1951131441,
+        "library_copy_act_percent": 1.2249701297427882
+      },
+      {
+        "module": "ntt_masked_pwm",
+        "cycles": 18445414991,
+        "act_percent": 11.580502430479177,
+        "library_copy_cycles": 146902843,
+        "library_copy_act_percent": 0.09222935516690002
+      },
+      {
+        "module": "kv",
+        "cycles": 12889697750,
+        "act_percent": 8.092481312827568,
+        "library_copy_cycles": 188850381,
+        "library_copy_act_percent": 0.1185650904159383
+      },
+      {
+        "module": "caliptra_top_tb_axi_complex",
+        "cycles": 10827702558,
+        "act_percent": 6.797908089929436,
+        "library_copy_cycles": 10240085644,
+        "library_copy_act_percent": 6.428987189852752
+      },
+      {
+        "module": "abr_mem_top",
+        "cycles": 6190769685,
+        "act_percent": 3.8867232544597026,
+        "library_copy_cycles": 5939382799,
+        "library_copy_act_percent": 3.728896149689545
+      },
+      {
+        "module": "abr_top",
+        "cycles": 4595445097,
+        "act_percent": 2.885137750541712,
+        "library_copy_cycles": 20984179,
+        "library_copy_act_percent": 0.013174403288279485
+      },
+      {
+        "module": "soc_ifc_top",
+        "cycles": 3882037873,
+        "act_percent": 2.4372424825044,
+        "library_copy_cycles": 62943978,
+        "library_copy_act_percent": 0.0395178363061329
+      },
+      {
+        "module": "aes_clp_wrapper",
+        "cycles": 1720548565,
+        "act_percent": 1.0802043135631156,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "pv",
+        "cycles": 1660271788,
+        "act_percent": 1.0423610141366435,
+        "library_copy_cycles": 146905243,
+        "library_copy_act_percent": 0.09223086194817041
+      },
+      {
+        "module": "hmac_ctrl",
+        "cycles": 1301421315,
+        "act_percent": 0.8170655259742595,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "el2_veer_wrapper",
+        "cycles": 1238296856,
+        "act_percent": 0.7774343790887672,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "ecc_top",
+        "cycles": 1217757418,
+        "act_percent": 0.7645391955542284,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "entropy_src",
+        "cycles": 965284144,
+        "act_percent": 0.6060300286629107,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "dv",
+        "cycles": 839292623,
+        "act_percent": 0.5269293352996995,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "csrng",
+        "cycles": 650582498,
+        "act_percent": 0.4084523011812033,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha3_ctrl",
+        "cycles": 609044274,
+        "act_percent": 0.38237354371087817,
+        "library_copy_cycles": 20970556,
+        "library_copy_act_percent": 0.01316585042109339
+      },
+      {
+        "module": "sha256_ctrl",
+        "cycles": 440701588,
+        "act_percent": 0.27668370776370094,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "doe_ctrl",
+        "cycles": 336119390,
+        "act_percent": 0.21102433394561182,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha512_ctrl",
+        "cycles": 335676378,
+        "act_percent": 0.21074619970221123,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "caliptra_top",
+        "cycles": 104960414,
+        "act_percent": 0.06589682747849111,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      }
+    ],
+    "top_functions": [
+      {
+        "function": "Vsim___024root___eval_body__act",
+        "act_percent": 9.813027238740355
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___act_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__0",
+        "act_percent": 6.5607351629685695
+      },
+      {
+        "function": "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5",
+        "act_percent": 4.4298111388233
+      },
+      {
+        "function": "Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__8",
+        "act_percent": 3.544511320608386
+      },
+      {
+        "function": "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0",
+        "act_percent": 2.502378959273874
+      },
+      {
+        "function": "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4",
+        "act_percent": 1.897440779477723
+      },
+      {
+        "function": "Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0",
+        "act_percent": 1.6340168310221421
+      },
+      {
+        "function": "Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6",
+        "act_percent": 1.5282115624453163
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__8",
+        "act_percent": 1.515343441958045
+      },
+      {
+        "function": "Vsim___024root___eval_triggers_vec__act",
+        "act_percent": 1.4752303981701307
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__17",
+        "act_percent": 1.4623731572714571
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__14",
+        "act_percent": 1.4362508205476645
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__9",
+        "act_percent": 1.396287063625417
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__7",
+        "act_percent": 1.3829938173592136
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__11",
+        "act_percent": 1.3576200972852948
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__13",
+        "act_percent": 1.357472676317101
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__4",
+        "act_percent": 1.3171602502088835
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__10",
+        "act_percent": 1.2776546979370575
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__6",
+        "act_percent": 1.2649852227029181
+      },
+      {
+        "function": "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__1",
+        "act_percent": 1.2513122958087233
+      }
+    ],
+    "caveat": "Module-type attribution from the nearest generated function in sampled ACT stacks; reused instances are combined. Root/interface work is not reassigned to an inferred source instance."
+  },
+  "trng": {
+    "total_act_cycles": 201708574701,
+    "module_types": [
+      {
+        "module": "caliptra_top_tb_services",
+        "cycles": 53352145822,
+        "act_percent": 26.45011294194401,
+        "library_copy_cycles": 28698275656,
+        "library_copy_act_percent": 14.22759329817312
+      },
+      {
+        "module": "ntt_masked_gs_butterfly",
+        "cycles": 34008677936,
+        "act_percent": 16.860303527706893,
+        "library_copy_cycles": 608690766,
+        "library_copy_act_percent": 0.30176742208519625
+      },
+      {
+        "module": "root/interface/other",
+        "cycles": 26328076782,
+        "act_percent": 13.052532258991503,
+        "library_copy_cycles": 2643328058,
+        "library_copy_act_percent": 1.3104688593027352
+      },
+      {
+        "module": "ntt_masked_pwm",
+        "cycles": 24634676813,
+        "act_percent": 12.213004256024753,
+        "library_copy_cycles": 251808031,
+        "library_copy_act_percent": 0.12483754415163771
+      },
+      {
+        "module": "caliptra_top_tb_axi_complex",
+        "cycles": 16154182643,
+        "act_percent": 8.008674230605187,
+        "library_copy_cycles": 15272930681,
+        "library_copy_act_percent": 7.571780576824572
+      },
+      {
+        "module": "kv",
+        "cycles": 13929606094,
+        "act_percent": 6.905807606170618,
+        "library_copy_cycles": 188824248,
+        "library_copy_act_percent": 0.09361240506503062
+      },
+      {
+        "module": "abr_mem_top",
+        "cycles": 7282461227,
+        "act_percent": 3.610387529531186,
+        "library_copy_cycles": 6988649378,
+        "library_copy_act_percent": 3.4647259732807743
+      },
+      {
+        "module": "abr_top",
+        "cycles": 4993223501,
+        "act_percent": 2.4754641732021745,
+        "library_copy_cycles": 41979827,
+        "library_copy_act_percent": 0.0208121182067883
+      },
+      {
+        "module": "soc_ifc_top",
+        "cycles": 4614556278,
+        "act_percent": 2.2877343141412436,
+        "library_copy_cycles": 104824317,
+        "library_copy_act_percent": 0.05196820073483981
+      },
+      {
+        "module": "pv",
+        "cycles": 2811587782,
+        "act_percent": 1.3938860983811519,
+        "library_copy_cycles": 230556531,
+        "library_copy_act_percent": 0.11430179968390654
+      },
+      {
+        "module": "aes_clp_wrapper",
+        "cycles": 2580943662,
+        "act_percent": 1.2795408751590394,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "ecc_top",
+        "cycles": 1888545412,
+        "act_percent": 0.9362742336558869,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "hmac_ctrl",
+        "cycles": 1657477031,
+        "act_percent": 0.8217186767875083,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "el2_veer_wrapper",
+        "cycles": 1343326704,
+        "act_percent": 0.6659740201879183,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "csrng",
+        "cycles": 1175229491,
+        "act_percent": 0.5826373483338949,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "entropy_src",
+        "cycles": 1135899365,
+        "act_percent": 0.5631388584663717,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "dv",
+        "cycles": 944097208,
+        "act_percent": 0.46805011110681327,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha256_ctrl",
+        "cycles": 650378313,
+        "act_percent": 0.3224346381724622,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "doe_ctrl",
+        "cycles": 650327661,
+        "act_percent": 0.3224095266966238,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha3_ctrl",
+        "cycles": 650188637,
+        "act_percent": 0.3223406034987845,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "sha512_ctrl",
+        "cycles": 566457009,
+        "act_percent": 0.28082941433683717,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      },
+      {
+        "module": "caliptra_top",
+        "cycles": 356509330,
+        "act_percent": 0.17674475689913868,
+        "library_copy_cycles": 0,
+        "library_copy_act_percent": 0.0
+      }
+    ],
+    "top_functions": [
+      {
+        "function": "Vsim___024root___eval_body__act",
+        "act_percent": 10.29612069183742
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___act_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__0",
+        "act_percent": 7.655003764162461
+      },
+      {
+        "function": "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5",
+        "act_percent": 3.8892389263217115
+      },
+      {
+        "function": "Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__8",
+        "act_percent": 3.2565227421476766
+      },
+      {
+        "function": "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0",
+        "act_percent": 2.1737589061345255
+      },
+      {
+        "function": "Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0",
+        "act_percent": 1.5811116090267971
+      },
+      {
+        "function": "Vsim___024root___eval_triggers_vec__act",
+        "act_percent": 1.4563254449417498
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__18",
+        "act_percent": 1.362663768297587
+      },
+      {
+        "function": "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4",
+        "act_percent": 1.342048009120447
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__17",
+        "act_percent": 1.3419478115952304
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__12",
+        "act_percent": 1.3417271546396896
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__22",
+        "act_percent": 1.3321371974310414
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__9",
+        "act_percent": 1.3313624242205735
+      },
+      {
+        "function": "Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6",
+        "act_percent": 1.331093216527839
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__7",
+        "act_percent": 1.321114132083939
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__11",
+        "act_percent": 1.3097632983209526
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__6",
+        "act_percent": 1.2691453686561143
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__21",
+        "act_percent": 1.2587253912054006
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__20",
+        "act_percent": 1.2379272471194656
+      },
+      {
+        "function": "Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__3",
+        "act_percent": 1.2271425747116385
+      }
+    ],
+    "caveat": "Module-type attribution from the nearest generated function in sampled ACT stacks; reused instances are combined. Root/interface work is not reassigned to an inferred source instance."
+  }
+}

@@ -1,0 +1,2433 @@
+{
+  "hmac": {
+    "diagnostic_only": true,
+    "samples": 295705,
+    "profiled_elapsed": 37.069048458,
+    "binary_sha256": "870fb9c8825361ba252ca201e28dbec2712d1a9a62b9103cf82c155b939d976d",
+    "unit_cycles": {
+      "caliptra_top_tb.caliptra_top_dut.abr_inst": 3809579615,
+      "caliptra_top_tb.caliptra_top_dut.rvtop": 2698214974,
+      "caliptra_top_tb.caliptra_top_dut.aes_inst": 1488065620,
+      "caliptra_top_tb.caliptra_top_dut.data_vault1": 355639840,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00": 3477393599,
+      "caliptra_top_tb.caliptra_top_dut": 475335841,
+      "caliptra_top_tb.caliptra_top_dut.entropy_src": 315418117,
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1": 1718339026,
+      "caliptra_top_tb.caliptra_top_dut.key_vault1": 35117276844,
+      "caliptra_top_tb.caliptra_top_dut.hmac": 1462091058,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 10904500390,
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": 1214986015,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01": 1010099544,
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1": 787302872,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 712236750,
+      "caliptra_top_tb.caliptra_top_dut.sha3": 301762850,
+      "caliptra_top_tb.tb_axi_complex_i": 557434837,
+      "caliptra_top_tb": 1625483644,
+      "caliptra_top_tb.caliptra_top_dut.csrng": 862777556,
+      "caliptra_top_tb.tb_services_i": 95811962,
+      "caliptra_top_tb.caliptra_top_dut.sha512": 133275316,
+      "caliptra_top_tb.caliptra_top_dut.doe": 293314186,
+      "caliptra_top_tb.caliptra_top_dut.sha256": 159221479,
+      "caliptra_top_tb.tb_services_i.abr_mem_top_inst": 996835023
+    },
+    "ambiguous_cycles": {
+      "caliptra_top_tb | caliptra_top_tb.tb_axi_complex_i": 8377714,
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut | caliptra_top_tb.tb_services_i": 16665565
+    },
+    "workers": [
+      {
+        "worker": 0,
+        "cycles": 154002145112,
+        "categories": {
+          "runtime_library_other": 47398571496,
+          "serial_act": 92235567495,
+          "dependency_wait": 9444020925,
+          "nba_unit_work": 2228958762,
+          "dependency_signal": 733326768,
+          "serial_other_generated": 1366437113,
+          "serial_or_caller_nba": 516116027,
+          "scheduler_other": 79146526
+        },
+        "percentages": {
+          "runtime_library_other": 30.777864465153257,
+          "serial_act": 59.89239138709433,
+          "dependency_wait": 6.132395700158408,
+          "nba_unit_work": 1.4473556588312206,
+          "dependency_signal": 0.47617958013940576,
+          "serial_other_generated": 0.8872844673729976,
+          "serial_or_caller_nba": 0.33513560906872314,
+          "scheduler_other": 0.051393132181658696
+        },
+        "top_symbols": [
+          [
+            "__memmove_avx512_unaligned_erms",
+            43533254389
+          ],
+          [
+            "Vsim___024root___eval_body__act(Vsim___024root*)",
+            12262622545
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            9444020925
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5(Vsim_kv__Ad_AB40*)",
+            4140439793
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            2274502718
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4(Vsim_kv__Ad_AB40*)",
+            1983100764
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6(Vsim_soc_ifc_top__pi8c871ce0*)",
+            1886455414
+          ],
+          [
+            "Vsim___024root___eval_triggers_vec__act(Vsim___024root*)",
+            1865836667
+          ],
+          [
+            "Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            1778344684
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__6(Vsim_kv__Ad_AB40*)",
+            974951265
+          ],
+          [
+            "Vsim___024root___act_sequent__TOP__0(Vsim___024root*)",
+            875318452
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst01__1(Vsim_ntt_masked_gs_butterfly*)",
+            866351219
+          ]
+        ]
+      },
+      {
+        "worker": 1,
+        "cycles": 154963204377,
+        "categories": {
+          "dependency_wait": 45259577223,
+          "nba_unit_work": 5087880661,
+          "dispatch_wait": 102650142188,
+          "dependency_signal": 1609284249,
+          "runtime_library_other": 343747419,
+          "scheduler_other": 12572637
+        },
+        "percentages": {
+          "dependency_wait": 29.206660642413464,
+          "nba_unit_work": 3.2832830744916857,
+          "dispatch_wait": 66.24162335870977,
+          "dependency_signal": 1.0384944319329354,
+          "runtime_library_other": 0.22182518771599422,
+          "scheduler_other": 0.008113304736144227
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            102666893152
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            45259577223
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            1609284249
+          ],
+          [
+            "Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__3(Vsim_abr_top__A10*)",
+            1320055289
+          ],
+          [
+            "Vsim_abr_top__A10___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__0(Vsim_abr_top__A10*)",
+            951321350
+          ],
+          [
+            "Vsim_abr_top__A10___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__6(Vsim_abr_top__A10*)",
+            494539459
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__2(Vsim_ntt_masked_pwm*)",
+            331048400
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            285151692
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__1(Vsim_ntt_masked_pwm*)",
+            268174519
+          ],
+          [
+            "Vsim_abr_top__A10___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__8(Vsim_abr_top__A10*)",
+            226401513
+          ],
+          [
+            "Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__5(Vsim_abr_top__A10*)",
+            217966372
+          ],
+          [
+            "__memmove_avx512_unaligned_erms",
+            167612143
+          ]
+        ]
+      },
+      {
+        "worker": 2,
+        "cycles": 154894643988,
+        "categories": {
+          "dispatch_wait": 137858626778,
+          "runtime_library_other": 184321772,
+          "scheduler_other": 4187497,
+          "nba_unit_work": 3913200989,
+          "dependency_wait": 12548811587,
+          "dependency_signal": 385495365
+        },
+        "percentages": {
+          "dispatch_wait": 89.00154532695151,
+          "runtime_library_other": 0.11899815723407439,
+          "scheduler_other": 0.0027034485455316414,
+          "nba_unit_work": 2.526363009235596,
+          "dependency_wait": 8.101514205986478,
+          "dependency_signal": 0.24887585204680487
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            137904705207
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            12548811587
+          ],
+          [
+            "Vsim___024root__nba_mtask2(void*)",
+            662035415
+          ],
+          [
+            "Vsim___024root__nba_mtask33(void*)",
+            502784134
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            385495365
+          ],
+          [
+            "Vsim___024root__nba_mtask69(void*)",
+            272320662
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__42(Vsim_soc_ifc_top__pi8c871ce0*)",
+            154986248
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__71(Vsim_soc_ifc_top__pi8c871ce0*)",
+            142418022
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__40(Vsim_soc_ifc_top__pi8c871ce0*)",
+            100622338
+          ],
+          [
+            "Vsim___024root__nba_mtask88(void*)",
+            96355824
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__56(Vsim_soc_ifc_top__pi8c871ce0*)",
+            79588779
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__2(Vsim_soc_ifc_top__pi8c871ce0*)",
+            71181706
+          ]
+        ]
+      },
+      {
+        "worker": 3,
+        "cycles": 154893493977,
+        "categories": {
+          "dispatch_wait": 101817683129,
+          "nba_unit_work": 37267122683,
+          "runtime_library_other": 311423606,
+          "dependency_wait": 14877208355,
+          "dependency_signal": 607492719,
+          "scheduler_other": 12563485
+        },
+        "percentages": {
+          "dispatch_wait": 65.7339959960609,
+          "nba_unit_work": 24.059837328308806,
+          "runtime_library_other": 0.20105660864377106,
+          "dependency_wait": 9.604798738163337,
+          "dependency_signal": 0.3922002812398344,
+          "scheduler_other": 0.008111047583357853
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            101847093857
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5(Vsim_kv__Ad_AB40*)",
+            20162631551
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            14877208355
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4(Vsim_kv__Ad_AB40*)",
+            14133369797
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__0(Vsim_aes_clp_wrapper__A40_ABc*)",
+            754273237
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            607492719
+          ],
+          [
+            "Vsim_kv__Ad_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__9(Vsim_kv__Ad_AB40*)",
+            594955770
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__0(Vsim_aes_clp_wrapper__A40_ABc*)",
+            284848440
+          ],
+          [
+            "Vsim_abr_mem_if___nba_comb__TOP__caliptra_top_tb__DOT__abr_memory_export__12(Vsim_abr_mem_if*)",
+            272275101
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__9(Vsim_aes_clp_wrapper__A40_ABc*)",
+            239465321
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__1(Vsim_aes_clp_wrapper__A40_ABc*)",
+            163418684
+          ],
+          [
+            "Vsim___024root__nba_mtask66(void*)",
+            150770193
+          ]
+        ]
+      },
+      {
+        "worker": 4,
+        "cycles": 154861710254,
+        "categories": {
+          "dispatch_wait": 138139324098,
+          "dependency_wait": 12695715452,
+          "nba_unit_work": 3071320138,
+          "dependency_signal": 695558627,
+          "runtime_library_other": 242983340,
+          "scheduler_other": 16808599
+        },
+        "percentages": {
+          "dispatch_wait": 89.20172964086966,
+          "dependency_wait": 8.19809843968327,
+          "nba_unit_work": 1.9832663173889167,
+          "dependency_signal": 0.44914822770532725,
+          "runtime_library_other": 0.15690343313493393,
+          "scheduler_other": 0.010853941217897562
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            138160249870
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            12695715452
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            695558627
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__0(Vsim_hmac_ctrl__A40_ABc*)",
+            552945010
+          ],
+          [
+            "Vsim_csrng__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__0(Vsim_csrng__ACc*)",
+            330870513
+          ],
+          [
+            "Vsim_entropy_src__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__entropy_src__0(Vsim_entropy_src__ACc*)",
+            255732759
+          ],
+          [
+            "Vsim_csrng__ACc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__1(Vsim_csrng__ACc*)",
+            247117363
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__5(Vsim_hmac_ctrl__A40_ABc*)",
+            222027160
+          ],
+          [
+            "Vsim_csrng__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__1(Vsim_csrng__ACc*)",
+            205222524
+          ],
+          [
+            "Vsim_dv__Ad_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__data_vault1__2(Vsim_dv__Ad_AB40*)",
+            204765530
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__0(Vsim_hmac_ctrl__A40_ABc*)",
+            159185058
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__1(Vsim_hmac_ctrl__A40_ABc*)",
+            134039031
+          ]
+        ]
+      },
+      {
+        "worker": 5,
+        "cycles": 154967494953,
+        "categories": {
+          "dispatch_wait": 143623986205,
+          "runtime_library_other": 5648792917,
+          "nba_unit_work": 4131225003,
+          "dependency_wait": 1173757867,
+          "dependency_signal": 389732961
+        },
+        "percentages": {
+          "dispatch_wait": 92.68007219743704,
+          "runtime_library_other": 3.645146950793274,
+          "nba_unit_work": 2.6658655121533434,
+          "dependency_wait": 0.7574219789485456,
+          "dependency_signal": 0.25149336066779804
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            143644947329
+          ],
+          [
+            "__memmove_avx512_unaligned_erms",
+            5460182690
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            1173757867
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            1157589029
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__2(Vsim_ntt_masked_pwm*)",
+            1125276955
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__1(Vsim_ntt_masked_pwm*)",
+            1081380856
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            389732961
+          ],
+          [
+            "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___nba_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__1(Vsim_caliptra_top_tb_axi_complex__pi1f097f54*)",
+            289189189
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            108968597
+          ],
+          [
+            "Vsim_ntt_masked_pwm___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            104761743
+          ],
+          [
+            "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___nba_comb__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__6(Vsim_caliptra_top_tb_axi_complex__pi1f097f54*)",
+            96400610
+          ],
+          [
+            "[unknown]",
+            37722178
+          ]
+        ]
+      },
+      {
+        "worker": 6,
+        "cycles": 154889249139,
+        "categories": {
+          "dispatch_wait": 109983563228,
+          "runtime_library_other": 30222611478,
+          "dependency_signal": 1839118810,
+          "nba_unit_work": 11909714059,
+          "dependency_wait": 934241564
+        },
+        "percentages": {
+          "dispatch_wait": 71.00787423231618,
+          "runtime_library_other": 19.512401051720357,
+          "dependency_signal": 1.1873766708944056,
+          "nba_unit_work": 7.689180575930121,
+          "dependency_wait": 0.6031674691389312
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            110004512324
+          ],
+          [
+            "__memmove_avx512_unaligned_erms",
+            29686461649
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            5671546953
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__1(Vsim_ntt_masked_gs_butterfly*)",
+            2739778243
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__2(Vsim_ntt_masked_gs_butterfly*)",
+            2237426318
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            1839118810
+          ],
+          [
+            "Vsim_abr_mem_top___nba_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__0(Vsim_abr_mem_top*)",
+            959136900
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            934241564
+          ],
+          [
+            "memcpy@plt",
+            209408457
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            175932899
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            146732628
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            100646576
+          ]
+        ]
+      },
+      {
+        "worker": 7,
+        "cycles": 154933065732,
+        "categories": {
+          "dispatch_wait": 100751709519,
+          "dependency_wait": 50379771334,
+          "dependency_signal": 448955286,
+          "nba_unit_work": 2988017942,
+          "runtime_library_other": 339473399,
+          "scheduler_other": 25138252
+        },
+        "percentages": {
+          "dispatch_wait": 65.02918472760244,
+          "dependency_wait": 32.517120277698425,
+          "dependency_signal": 0.289773705747612,
+          "nba_unit_work": 1.9285863400964462,
+          "runtime_library_other": 0.21910971515093752,
+          "scheduler_other": 0.016225233704136227
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            100764289563
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            50379771334
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__0(Vsim_ecc_top__Af_AB40*)",
+            850751167
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            448955286
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__1(Vsim_ecc_top__Af_AB40*)",
+            285120378
+          ],
+          [
+            "Vsim_abr_mem_if___nba_comb__TOP__caliptra_top_tb__DOT__abr_memory_export__5(Vsim_abr_mem_if*)",
+            201146200
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__0(Vsim_ecc_top__Af_AB40*)",
+            196942216
+          ],
+          [
+            "Vsim_sha3_ctrl__A40_ABd___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__sha3__0(Vsim_sha3_ctrl__A40_ABd*)",
+            180224133
+          ],
+          [
+            "Vsim___024root__nba_mtask77(void*)",
+            138316608
+          ],
+          [
+            "Vsim___024root__nba_mtask64(void*)",
+            117289462
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__1(Vsim_ecc_top__Af_AB40*)",
+            104712562
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            96404139
+          ]
+        ]
+      }
+    ],
+    "caveats": [
+      "Statistical cycle samples, including instruction skid; not exact task timings.",
+      "Only functions reachable from NBA tasks on the sampled worker are assigned to units.",
+      "Serial ACT, ambiguous shared functions, and library work are kept separate.",
+      "Sampling attaches after process launch; earliest initialization is not covered."
+    ]
+  },
+  "mlkem": {
+    "diagnostic_only": true,
+    "samples": 1162038,
+    "profiled_elapsed": 145.490689027,
+    "binary_sha256": "870fb9c8825361ba252ca201e28dbec2712d1a9a62b9103cf82c155b939d976d",
+    "unit_cycles": {
+      "caliptra_top_tb.caliptra_top_dut.hmac": 7710175885,
+      "caliptra_top_tb.caliptra_top_dut.csrng": 4480206497,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 22713078642,
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": 5940483427,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 3722584435,
+      "caliptra_top_tb.caliptra_top_dut.key_vault1": 30932311757,
+      "caliptra_top_tb.caliptra_top_dut.rvtop": 14323106161,
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1": 5900578822,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00": 15859683943,
+      "caliptra_top_tb.tb_axi_complex_i": 2242003561,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst": 8273371436,
+      "caliptra_top_tb.caliptra_top_dut.sha3": 1742623320,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01": 4721309611,
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1": 8942193595,
+      "caliptra_top_tb.caliptra_top_dut.sha512": 662250477,
+      "caliptra_top_tb.caliptra_top_dut.aes_inst": 7660825342,
+      "caliptra_top_tb.caliptra_top_dut.entropy_src": 1675195294,
+      "caliptra_top_tb": 2261737596,
+      "caliptra_top_tb.caliptra_top_dut.data_vault1": 1704476231,
+      "caliptra_top_tb.caliptra_top_dut": 2773431645,
+      "caliptra_top_tb.tb_services_i.abr_mem_top_inst": 858765345,
+      "caliptra_top_tb.tb_services_i": 358099417,
+      "caliptra_top_tb.caliptra_top_dut.doe": 1185270548,
+      "caliptra_top_tb.caliptra_top_dut.sha256": 737165022
+    },
+    "ambiguous_cycles": {
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut | caliptra_top_tb.tb_services_i": 166569529,
+      "caliptra_top_tb | caliptra_top_tb.tb_services_i": 8328411,
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut.key_vault1": 33502139
+    },
+    "workers": [
+      {
+        "worker": 0,
+        "cycles": 604835194953,
+        "categories": {
+          "serial_act": 361893264391,
+          "runtime_library_other": 157702190099,
+          "dependency_wait": 59694333151,
+          "nba_unit_work": 13625170921,
+          "dependency_signal": 4038938307,
+          "serial_or_caller_nba": 2560236638,
+          "serial_other_generated": 4912948493,
+          "scheduler_other": 408112953
+        },
+        "percentages": {
+          "serial_act": 59.833367405003884,
+          "runtime_library_other": 26.07358027689751,
+          "dependency_wait": 9.869520432857529,
+          "nba_unit_work": 2.2527080161164847,
+          "dependency_signal": 0.6677750138719778,
+          "serial_or_caller_nba": 0.423294917254104,
+          "serial_other_generated": 0.8122788710041536,
+          "scheduler_other": 0.06747506699435923
+        },
+        "top_symbols": [
+          [
+            "__memmove_avx512_unaligned_erms",
+            131345909671
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            59694333151
+          ],
+          [
+            "Vsim___024root___eval_body__act(Vsim___024root*)",
+            43398826000
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5(Vsim_kv__Ad_AB40*)",
+            21130757496
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4(Vsim_kv__Ad_AB40*)",
+            9873067745
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            9869224873
+          ],
+          [
+            "Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            8693962625
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6(Vsim_soc_ifc_top__pi8c871ce0*)",
+            7494287148
+          ],
+          [
+            "VlForceVec::trimEntries(int, int)",
+            7145949146
+          ],
+          [
+            "Vsim___024root___eval_triggers_vec__act(Vsim___024root*)",
+            6508703627
+          ],
+          [
+            "memcpy@plt",
+            5883059007
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__1(Vsim_ntt_masked_gs_butterfly*)",
+            4488124857
+          ]
+        ]
+      },
+      {
+        "worker": 1,
+        "cycles": 608536417472,
+        "categories": {
+          "dispatch_wait": 518680310597,
+          "dependency_wait": 72433565310,
+          "nba_unit_work": 13195742486,
+          "dependency_signal": 3309327298,
+          "runtime_library_other": 842068389,
+          "scheduler_other": 75403392
+        },
+        "percentages": {
+          "dispatch_wait": 85.23406253182301,
+          "dependency_wait": 11.902913815890537,
+          "nba_unit_work": 2.1684392432614215,
+          "dependency_signal": 0.5438174615329853,
+          "runtime_library_other": 0.13837600590908683,
+          "scheduler_other": 0.012390941582961132
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            518755748220
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            72433565310
+          ],
+          [
+            "Vsim_abr_top__A10___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__0(Vsim_abr_top__A10*)",
+            4406990811
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            3309327298
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__2(Vsim_ntt_masked_pwm*)",
+            1922733407
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            1323934306
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__1(Vsim_ntt_masked_pwm*)",
+            1307073466
+          ],
+          [
+            "Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__3(Vsim_abr_top__A10*)",
+            883869595
+          ],
+          [
+            "Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__5(Vsim_abr_top__A10*)",
+            573868300
+          ],
+          [
+            "Vsim_abr_top__A10___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__0(Vsim_abr_top__A10*)",
+            448297558
+          ],
+          [
+            "Vsim___024root__nba_mtask80(void*)",
+            339295704
+          ],
+          [
+            "Vsim_abr_top__A10___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__6(Vsim_abr_top__A10*)",
+            330916303
+          ]
+        ]
+      },
+      {
+        "worker": 2,
+        "cycles": 608390253439,
+        "categories": {
+          "dispatch_wait": 516762115476,
+          "dependency_wait": 68746908513,
+          "nba_unit_work": 20263589588,
+          "runtime_library_other": 862906843,
+          "dependency_signal": 1729616216,
+          "scheduler_other": 25116803
+        },
+        "percentages": {
+          "dispatch_wait": 84.93924952856152,
+          "dependency_wait": 11.299804381217438,
+          "nba_unit_work": 3.3306893845615693,
+          "runtime_library_other": 0.14183442915502245,
+          "dependency_signal": 0.28429387325374356,
+          "scheduler_other": 0.004128403250713537
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            516954763834
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            68746908513
+          ],
+          [
+            "Vsim___024root__nba_mtask2(void*)",
+            3781627972
+          ],
+          [
+            "Vsim___024root__nba_mtask33(void*)",
+            2768246850
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            1729616216
+          ],
+          [
+            "Vsim___024root__nba_mtask69(void*)",
+            1340214180
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__42(Vsim_soc_ifc_top__pi8c871ce0*)",
+            741376930
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__71(Vsim_soc_ifc_top__pi8c871ce0*)",
+            523565549
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__40(Vsim_soc_ifc_top__pi8c871ce0*)",
+            435525390
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__20(Vsim_soc_ifc_top__pi8c871ce0*)",
+            395170973
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__56(Vsim_soc_ifc_top__pi8c871ce0*)",
+            339260736
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__85(Vsim_soc_ifc_top__pi8c871ce0*)",
+            330850962
+          ]
+        ]
+      },
+      {
+        "worker": 3,
+        "cycles": 608426855100,
+        "categories": {
+          "dispatch_wait": 522616347264,
+          "dependency_wait": 43770421317,
+          "nba_unit_work": 39300917063,
+          "dependency_signal": 1721479549,
+          "runtime_library_other": 954881958,
+          "scheduler_other": 62807949
+        },
+        "percentages": {
+          "dispatch_wait": 85.89633131464976,
+          "dependency_wait": 7.194031780501531,
+          "nba_unit_work": 6.459431685759592,
+          "dependency_signal": 0.28293944203318583,
+          "runtime_library_other": 0.15694276970122517,
+          "scheduler_other": 0.010323007354709382
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            522800611973
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            43770421317
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5(Vsim_kv__Ad_AB40*)",
+            20331285777
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4(Vsim_kv__Ad_AB40*)",
+            7782163473
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__0(Vsim_aes_clp_wrapper__A40_ABc*)",
+            3999865439
+          ],
+          [
+            "Vsim_kv__Ad_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__9(Vsim_kv__Ad_AB40*)",
+            1784341677
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            1721479549
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__0(Vsim_aes_clp_wrapper__A40_ABc*)",
+            1416016890
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__9(Vsim_aes_clp_wrapper__A40_ABc*)",
+            1021961147
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__1(Vsim_aes_clp_wrapper__A40_ABc*)",
+            837671153
+          ],
+          [
+            "Vsim_kv__Ad_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__0(Vsim_kv__Ad_AB40*)",
+            297353984
+          ],
+          [
+            "__memmove_avx512_unaligned_erms",
+            272172512
+          ]
+        ]
+      },
+      {
+        "worker": 4,
+        "cycles": 608363117886,
+        "categories": {
+          "dispatch_wait": 520798114202,
+          "runtime_library_other": 921453612,
+          "nba_unit_work": 16022337084,
+          "dependency_signal": 3626756168,
+          "dependency_wait": 66688782829,
+          "scheduler_other": 305673991
+        },
+        "percentages": {
+          "dispatch_wait": 85.60645753998377,
+          "runtime_library_other": 0.15146441079498008,
+          "nba_unit_work": 2.633679888366013,
+          "dependency_signal": 0.5961499080684919,
+          "dependency_wait": 10.96200293350076,
+          "scheduler_other": 0.05024531928598598
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            520852553853
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            66688782829
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            3626756168
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__0(Vsim_hmac_ctrl__A40_ABc*)",
+            3237434055
+          ],
+          [
+            "Vsim_csrng__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__0(Vsim_csrng__ACc*)",
+            2080195244
+          ],
+          [
+            "Vsim_entropy_src__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__entropy_src__0(Vsim_entropy_src__ACc*)",
+            1352695140
+          ],
+          [
+            "Vsim_csrng__ACc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__1(Vsim_csrng__ACc*)",
+            1080741163
+          ],
+          [
+            "Vsim_dv__Ad_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__data_vault1__2(Vsim_dv__Ad_AB40*)",
+            954874109
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__1(Vsim_hmac_ctrl__A40_ABc*)",
+            933883280
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__0(Vsim_hmac_ctrl__A40_ABc*)",
+            887819007
+          ],
+          [
+            "Vsim_csrng__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__1(Vsim_csrng__ACc*)",
+            841850138
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__5(Vsim_hmac_ctrl__A40_ABc*)",
+            825113065
+          ]
+        ]
+      },
+      {
+        "worker": 5,
+        "cycles": 608643898788,
+        "categories": {
+          "dispatch_wait": 553213634190,
+          "runtime_library_other": 30385312573,
+          "nba_unit_work": 18550107586,
+          "dependency_wait": 5426413811,
+          "dependency_signal": 1030735415,
+          "scheduler_other": 37695213
+        },
+        "percentages": {
+          "dispatch_wait": 90.89282506431447,
+          "runtime_library_other": 4.9922972420337475,
+          "nba_unit_work": 3.0477768072495355,
+          "dependency_wait": 0.8915580722661779,
+          "dependency_signal": 0.1693495025666923,
+          "scheduler_other": 0.0061933115693861285
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            553297407179
+          ],
+          [
+            "__memmove_avx512_unaligned_erms",
+            29467471172
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            5597906702
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            5426413811
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__1(Vsim_ntt_masked_pwm*)",
+            4986391030
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__2(Vsim_ntt_masked_pwm*)",
+            4873136166
+          ],
+          [
+            "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___nba_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__1(Vsim_caliptra_top_tb_axi_complex__pi1f097f54*)",
+            1424887614
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            1030735415
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            406645572
+          ],
+          [
+            "Vsim_ntt_masked_pwm___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            360355315
+          ],
+          [
+            "[unknown]",
+            247219468
+          ],
+          [
+            "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___nba_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__0(Vsim_caliptra_top_tb_axi_complex__pi1f097f54*)",
+            213712213
+          ]
+        ]
+      },
+      {
+        "worker": 6,
+        "cycles": 608552176571,
+        "categories": {
+          "dispatch_wait": 552530258476,
+          "nba_unit_work": 23601176499,
+          "dependency_wait": 4045417024,
+          "runtime_library_other": 25392479292,
+          "dependency_signal": 2966087611,
+          "scheduler_other": 16757669
+        },
+        "percentages": {
+          "dispatch_wait": 90.79422927863541,
+          "nba_unit_work": 3.8782502811813444,
+          "dependency_wait": 0.6647609161131675,
+          "runtime_library_other": 4.172605122387144,
+          "dependency_signal": 0.4874007069883424,
+          "scheduler_other": 0.0027536946945821788
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            552655915149
+          ],
+          [
+            "__memmove_avx512_unaligned_erms",
+            24370288806
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            7559470677
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__1(Vsim_ntt_masked_gs_butterfly*)",
+            7072004932
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__2(Vsim_ntt_masked_gs_butterfly*)",
+            6921065295
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            4045417024
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            2966087611
+          ],
+          [
+            "Vsim_abr_mem_top___nba_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__0(Vsim_abr_mem_top*)",
+            829432029
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            573986279
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            561416568
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            410555229
+          ],
+          [
+            "[unknown]",
+            209482611
+          ]
+        ]
+      },
+      {
+        "worker": 7,
+        "cycles": 608412966174,
+        "categories": {
+          "dispatch_wait": 521079378261,
+          "runtime_library_other": 1632150315,
+          "dependency_wait": 70576993302,
+          "dependency_signal": 2035520685,
+          "nba_unit_work": 13030286861,
+          "scheduler_other": 58636750
+        },
+        "percentages": {
+          "dispatch_wait": 85.6456727965223,
+          "runtime_library_other": 0.26826356533191,
+          "dependency_wait": 11.600179027383794,
+          "dependency_signal": 0.33456234468511664,
+          "nba_unit_work": 2.1416846098696505,
+          "scheduler_other": 0.009637656207220027
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            521230146177
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            70576993302
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__0(Vsim_ecc_top__Af_AB40*)",
+            4535957769
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            2035520685
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__1(Vsim_ecc_top__Af_AB40*)",
+            1348679367
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__0(Vsim_ecc_top__Af_AB40*)",
+            1256470978
+          ],
+          [
+            "Vsim_sha3_ctrl__A40_ABd___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__sha3__0(Vsim_sha3_ctrl__A40_ABd*)",
+            967626671
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__1(Vsim_ecc_top__Af_AB40*)",
+            883815097
+          ],
+          [
+            "VlForceVec::readSel(int, WDataInP, WDataOutP, int, int) const",
+            573878261
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__2(Vsim_ecc_top__Af_AB40*)",
+            481691118
+          ],
+          [
+            "Vsim_sha3_ctrl__A40_ABd___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__sha3__4(Vsim_sha3_ctrl__A40_ABd*)",
+            448282286
+          ],
+          [
+            "Vsim_sha256_ctrl__A40_ABf___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__sha256__1(Vsim_sha256_ctrl__A40_ABf*)",
+            410433548
+          ]
+        ]
+      }
+    ],
+    "caveats": [
+      "Statistical cycle samples, including instruction skid; not exact task timings.",
+      "Only functions reachable from NBA tasks on the sampled worker are assigned to units.",
+      "Serial ACT, ambiguous shared functions, and library work are kept separate.",
+      "Sampling attaches after process launch; earliest initialization is not covered."
+    ]
+  },
+  "sha3": {
+    "diagnostic_only": true,
+    "samples": 364162,
+    "profiled_elapsed": 45.64453658,
+    "binary_sha256": "870fb9c8825361ba252ca201e28dbec2712d1a9a62b9103cf82c155b939d976d",
+    "unit_cycles": {
+      "caliptra_top_tb.caliptra_top_dut.rvtop": 4289093785,
+      "caliptra_top_tb": 741652538,
+      "caliptra_top_tb.caliptra_top_dut.key_vault1": 10179634602,
+      "caliptra_top_tb.caliptra_top_dut.hmac": 2283058026,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00": 5474131675,
+      "caliptra_top_tb.caliptra_top_dut.data_vault1": 585941398,
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": 1898897279,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01": 1685231962,
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1": 2883962853,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 6590853522,
+      "caliptra_top_tb.caliptra_top_dut.entropy_src": 657816107,
+      "caliptra_top_tb.caliptra_top_dut.doe": 385421145,
+      "caliptra_top_tb.caliptra_top_dut.aes_inst": 2598242593,
+      "caliptra_top_tb.tb_axi_complex_i": 653634617,
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1": 1939493154,
+      "caliptra_top_tb.caliptra_top_dut": 1015794505,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst": 2940746018,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 1265213669,
+      "caliptra_top_tb.caliptra_top_dut.sha512": 262263950,
+      "caliptra_top_tb.caliptra_top_dut.csrng": 1268980458,
+      "caliptra_top_tb.caliptra_top_dut.sha256": 175933421,
+      "caliptra_top_tb.caliptra_top_dut.sha3": 582152313,
+      "caliptra_top_tb.tb_services_i.abr_mem_top_inst": 263993085,
+      "caliptra_top_tb.tb_services_i": 83158708
+    },
+    "ambiguous_cycles": {
+      "caliptra_top_tb | caliptra_top_tb.tb_axi_complex_i": 20939536,
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut | caliptra_top_tb.tb_services_i": 49960290,
+      "caliptra_top_tb | caliptra_top_tb.tb_services_i": 4162875
+    },
+    "workers": [
+      {
+        "worker": 0,
+        "cycles": 189481698720,
+        "categories": {
+          "serial_act": 114754792514,
+          "dependency_wait": 19061002371,
+          "runtime_library_other": 47698668962,
+          "serial_or_caller_nba": 553909510,
+          "dependency_signal": 1240450197,
+          "nba_unit_work": 4632535095,
+          "serial_other_generated": 1403005281,
+          "scheduler_other": 137334790
+        },
+        "percentages": {
+          "serial_act": 60.56246766268172,
+          "dependency_wait": 10.059547966775796,
+          "runtime_library_other": 25.17323271018646,
+          "serial_or_caller_nba": 0.29232876512180767,
+          "dependency_signal": 0.6546543573229371,
+          "nba_unit_work": 2.4448456638788993,
+          "serial_other_generated": 0.7404436895371317,
+          "scheduler_other": 0.07247918449524865
+        },
+        "top_symbols": [
+          [
+            "__memmove_avx512_unaligned_erms",
+            39366581217
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            19061002371
+          ],
+          [
+            "Vsim___024root___eval_body__act(Vsim___024root*)",
+            14103029094
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5(Vsim_kv__Ad_AB40*)",
+            7146631760
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            3012126610
+          ],
+          [
+            "VlForceVec::trimEntries(int, int)",
+            2501091545
+          ],
+          [
+            "Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            2501047836
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4(Vsim_kv__Ad_AB40*)",
+            2468373839
+          ],
+          [
+            "Vsim___024root___eval_triggers_vec__act(Vsim___024root*)",
+            2110293364
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6(Vsim_soc_ifc_top__pi8c871ce0*)",
+            2014368949
+          ],
+          [
+            "memcpy@plt",
+            1635454621
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst01__1(Vsim_ntt_masked_gs_butterfly*)",
+            1469025155
+          ]
+        ]
+      },
+      {
+        "worker": 1,
+        "cycles": 190728823299,
+        "categories": {
+          "dispatch_wait": 162856527130,
+          "dependency_wait": 21708860014,
+          "nba_unit_work": 4680432149,
+          "dependency_signal": 1227526345,
+          "runtime_library_other": 230349321,
+          "scheduler_other": 25128340
+        },
+        "percentages": {
+          "dispatch_wait": 85.38642681955552,
+          "dependency_wait": 11.382055233449249,
+          "nba_unit_work": 2.4539721202298947,
+          "dependency_signal": 0.6435977131131579,
+          "runtime_library_other": 0.1207732093218486,
+          "scheduler_other": 0.013174904330326118
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            162877464726
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            21708860014
+          ],
+          [
+            "Vsim_abr_top__A10___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__0(Vsim_abr_top__A10*)",
+            1662958909
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            1227526345
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__2(Vsim_ntt_masked_pwm*)",
+            641120028
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            548807484
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__1(Vsim_ntt_masked_pwm*)",
+            436672910
+          ],
+          [
+            "Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__3(Vsim_abr_top__A10*)",
+            297556142
+          ],
+          [
+            "Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__5(Vsim_abr_top__A10*)",
+            159228955
+          ],
+          [
+            "Vsim_abr_top__A10___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__0(Vsim_abr_top__A10*)",
+            138207591
+          ],
+          [
+            "Vsim_abr_top__A10___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__6(Vsim_abr_top__A10*)",
+            129831272
+          ],
+          [
+            "Vsim_abr_top__A10___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__3(Vsim_abr_top__A10*)",
+            121498647
+          ]
+        ]
+      },
+      {
+        "worker": 2,
+        "cycles": 190690397548,
+        "categories": {
+          "nba_unit_work": 6187991064,
+          "dependency_signal": 556974752,
+          "runtime_library_other": 276494823,
+          "dispatch_wait": 162504909031,
+          "dependency_wait": 21151467968,
+          "scheduler_other": 12559910
+        },
+        "percentages": {
+          "nba_unit_work": 3.2450459716737323,
+          "dependency_signal": 0.29208327171261994,
+          "runtime_library_other": 0.14499672062952282,
+          "dispatch_wait": 85.21924078012096,
+          "dependency_wait": 11.092046710257561,
+          "scheduler_other": 0.006586545605600543
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            162563626209
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            21151467968
+          ],
+          [
+            "Vsim___024root__nba_mtask2(void*)",
+            1030519338
+          ],
+          [
+            "Vsim___024root__nba_mtask33(void*)",
+            766423574
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            556974752
+          ],
+          [
+            "Vsim___024root__nba_mtask69(void*)",
+            456490157
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__42(Vsim_soc_ifc_top__pi8c871ce0*)",
+            272191513
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__40(Vsim_soc_ifc_top__pi8c871ce0*)",
+            171707397
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__71(Vsim_soc_ifc_top__pi8c871ce0*)",
+            125632350
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__56(Vsim_soc_ifc_top__pi8c871ce0*)",
+            121431241
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__85(Vsim_soc_ifc_top__pi8c871ce0*)",
+            117236786
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__20(Vsim_soc_ifc_top__pi8c871ce0*)",
+            113162924
+          ]
+        ]
+      },
+      {
+        "worker": 3,
+        "cycles": 190783387218,
+        "categories": {
+          "nba_unit_work": 13046055604,
+          "runtime_library_other": 360348850,
+          "dispatch_wait": 162744067847,
+          "dependency_wait": 14062991100,
+          "dependency_signal": 536411197,
+          "scheduler_other": 33512620
+        },
+        "percentages": {
+          "nba_unit_work": 6.838150739557229,
+          "runtime_library_other": 0.18887852619381623,
+          "dispatch_wait": 85.30306030316954,
+          "dependency_wait": 7.371182210917989,
+          "dependency_signal": 0.2811624244762286,
+          "scheduler_other": 0.017565795685190642
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            162811112703
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            14062991100
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5(Vsim_kv__Ad_AB40*)",
+            6583959240
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4(Vsim_kv__Ad_AB40*)",
+            2707461841
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__0(Vsim_aes_clp_wrapper__A40_ABc*)",
+            1366082663
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            536411197
+          ],
+          [
+            "Vsim_kv__Ad_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__9(Vsim_kv__Ad_AB40*)",
+            532096769
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__0(Vsim_aes_clp_wrapper__A40_ABc*)",
+            456694093
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__9(Vsim_aes_clp_wrapper__A40_ABc*)",
+            423315758
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__1(Vsim_aes_clp_wrapper__A40_ABc*)",
+            230573002
+          ],
+          [
+            "Vsim_kv__Ad_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__0(Vsim_kv__Ad_AB40*)",
+            142445427
+          ],
+          [
+            "Vsim_abr_mem_if___nba_comb__TOP__caliptra_top_tb__DOT__abr_memory_export__12(Vsim_abr_mem_if*)",
+            100575561
+          ]
+        ]
+      },
+      {
+        "worker": 4,
+        "cycles": 190694183696,
+        "categories": {
+          "dispatch_wait": 163580816016,
+          "runtime_library_other": 297372145,
+          "scheduler_other": 113065012,
+          "nba_unit_work": 4930058272,
+          "dependency_wait": 20562373267,
+          "dependency_signal": 1210498984
+        },
+        "percentages": {
+          "dispatch_wait": 85.78175424415488,
+          "runtime_library_other": 0.15594190616430303,
+          "scheduler_other": 0.059291274546813384,
+          "nba_unit_work": 2.5853217840452745,
+          "dependency_wait": 10.782905313871572,
+          "dependency_signal": 0.6347854772171488
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            163597564047
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            20562373267
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            1210498984
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__0(Vsim_hmac_ctrl__A40_ABc*)",
+            942367625
+          ],
+          [
+            "Vsim_csrng__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__0(Vsim_csrng__ACc*)",
+            540232473
+          ],
+          [
+            "Vsim_entropy_src__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__entropy_src__0(Vsim_entropy_src__ACc*)",
+            519538824
+          ],
+          [
+            "Vsim_csrng__ACc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__1(Vsim_csrng__ACc*)",
+            422991163
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__0(Vsim_hmac_ctrl__A40_ABc*)",
+            293155914
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__5(Vsim_hmac_ctrl__A40_ABc*)",
+            268034537
+          ],
+          [
+            "Vsim_dv__Ad_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__data_vault1__2(Vsim_dv__Ad_AB40*)",
+            259665784
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__1(Vsim_hmac_ctrl__A40_ABc*)",
+            242892871
+          ],
+          [
+            "Vsim_csrng__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__1(Vsim_csrng__ACc*)",
+            213599409
+          ]
+        ]
+      },
+      {
+        "worker": 5,
+        "cycles": 190741674420,
+        "categories": {
+          "dispatch_wait": 173491947186,
+          "nba_unit_work": 6282765503,
+          "runtime_library_other": 8788367333,
+          "dependency_wait": 1772221425,
+          "dependency_signal": 389614746,
+          "scheduler_other": 16758227
+        },
+        "percentages": {
+          "dispatch_wait": 90.9564979512462,
+          "nba_unit_work": 3.2938609363183966,
+          "runtime_library_other": 4.607470999572239,
+          "dependency_wait": 0.9291212475663241,
+          "dependency_signal": 0.20426304172107415,
+          "scheduler_other": 0.00878582357576433
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            173512882020
+          ],
+          [
+            "__memmove_avx512_unaligned_erms",
+            8459649334
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__1(Vsim_ntt_masked_pwm*)",
+            1843591780
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            1843448182
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            1772221425
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__2(Vsim_ntt_masked_pwm*)",
+            1678187886
+          ],
+          [
+            "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___nba_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__1(Vsim_caliptra_top_tb_axi_complex__pi1f097f54*)",
+            456741481
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            389614746
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            188474936
+          ],
+          [
+            "Vsim_ntt_masked_pwm___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            108903827
+          ],
+          [
+            "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___nba_comb__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__6(Vsim_caliptra_top_tb_axi_complex__pi1f097f54*)",
+            75413867
+          ],
+          [
+            "[unknown]",
+            64851390
+          ]
+        ]
+      },
+      {
+        "worker": 6,
+        "cycles": 190818454554,
+        "categories": {
+          "dispatch_wait": 173099006718,
+          "nba_unit_work": 6859039717,
+          "dependency_wait": 1375066179,
+          "runtime_library_other": 8655412749,
+          "dependency_signal": 821544804,
+          "scheduler_other": 8384387
+        },
+        "percentages": {
+          "dispatch_wait": 90.7139758167439,
+          "nba_unit_work": 3.594536876965928,
+          "dependency_wait": 0.7206148808897663,
+          "runtime_library_other": 4.535941122272632,
+          "dependency_signal": 0.43053739530602364,
+          "scheduler_other": 0.004393907821754887
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            173103198380
+          ],
+          [
+            "__memmove_avx512_unaligned_erms",
+            8345187613
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__1(Vsim_ntt_masked_gs_butterfly*)",
+            2196668822
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            2105353871
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__2(Vsim_ntt_masked_gs_butterfly*)",
+            1986983164
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            1375066179
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            821544804
+          ],
+          [
+            "Vsim_abr_mem_top___nba_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__0(Vsim_abr_mem_top*)",
+            251421786
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            171920399
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            163545875
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            125735610
+          ],
+          [
+            "[unknown]",
+            83812183
+          ]
+        ]
+      },
+      {
+        "worker": 7,
+        "cycles": 190696026214,
+        "categories": {
+          "dispatch_wait": 163613168665,
+          "dependency_wait": 21757315703,
+          "runtime_library_other": 573380100,
+          "nba_unit_work": 4161486680,
+          "dependency_signal": 573924013,
+          "scheduler_other": 16751053
+        },
+        "percentages": {
+          "dispatch_wait": 85.79789097513364,
+          "dependency_wait": 11.40942270007443,
+          "runtime_library_other": 0.3006775292509505,
+          "nba_unit_work": 2.182261876464043,
+          "dependency_signal": 0.3009627543868899,
+          "scheduler_other": 0.008784164690040204
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            163642496382
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            21757315703
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__0(Vsim_ecc_top__Af_AB40*)",
+            1361283178
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            573924013
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__1(Vsim_ecc_top__Af_AB40*)",
+            485910320
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__0(Vsim_ecc_top__Af_AB40*)",
+            445999061
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__1(Vsim_ecc_top__Af_AB40*)",
+            343593368
+          ],
+          [
+            "Vsim_sha3_ctrl__A40_ABd___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__sha3__0(Vsim_sha3_ctrl__A40_ABd*)",
+            339219180
+          ],
+          [
+            "VlForceVec::readSel(int, WDataInP, WDataOutP, int, int) const",
+            234547120
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            171227323
+          ],
+          [
+            "Vsim_doe_ctrl__A40_ABf___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__doe__2(Vsim_doe_ctrl__A40_ABf*)",
+            146601031
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__2(Vsim_ecc_top__Af_AB40*)",
+            138275465
+          ]
+        ]
+      }
+    ],
+    "caveats": [
+      "Statistical cycle samples, including instruction skid; not exact task timings.",
+      "Only functions reachable from NBA tasks on the sampled worker are assigned to units.",
+      "Serial ACT, ambiguous shared functions, and library work are kept separate.",
+      "Sampling attaches after process launch; earliest initialization is not covered."
+    ]
+  },
+  "trng": {
+    "diagnostic_only": true,
+    "samples": 470336,
+    "profiled_elapsed": 58.927605608,
+    "binary_sha256": "870fb9c8825361ba252ca201e28dbec2712d1a9a62b9103cf82c155b939d976d",
+    "unit_cycles": {
+      "caliptra_top_tb.caliptra_top_dut.abr_inst": 3745303550,
+      "caliptra_top_tb.caliptra_top_dut.hmac": 2877041185,
+      "caliptra_top_tb.caliptra_top_dut.key_vault1": 12657152368,
+      "caliptra_top_tb.caliptra_top_dut.csrng": 1868941573,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00": 6677313624,
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1": 3552498391,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01": 2178916371,
+      "caliptra_top_tb.caliptra_top_dut.aes_inst": 3341186492,
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": 2253446570,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 8839080307,
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1": 2315217488,
+      "caliptra_top_tb.caliptra_top_dut.rvtop": 5420041308,
+      "caliptra_top_tb.caliptra_top_dut.data_vault1": 795679817,
+      "caliptra_top_tb.caliptra_top_dut": 1086938535,
+      "caliptra_top_tb": 733189106,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 1532372990,
+      "caliptra_top_tb.tb_axi_complex_i": 1043630096,
+      "caliptra_top_tb.caliptra_top_dut.sha3": 728864205,
+      "caliptra_top_tb.tb_services_i.abr_mem_top_inst": 456874633,
+      "caliptra_top_tb.caliptra_top_dut.doe": 502658346,
+      "caliptra_top_tb.caliptra_top_dut.sha512": 341465807,
+      "caliptra_top_tb.caliptra_top_dut.entropy_src": 665818731,
+      "caliptra_top_tb.tb_services_i": 183246164,
+      "caliptra_top_tb.caliptra_top_dut.sha256": 339245202
+    },
+    "ambiguous_cycles": {
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut | caliptra_top_tb.tb_services_i": 54222064,
+      "caliptra_top_tb | caliptra_top_tb.tb_services_i": 8329787,
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut.key_vault1": 4188450
+    },
+    "workers": [
+      {
+        "worker": 0,
+        "cycles": 244838176166,
+        "categories": {
+          "serial_act": 146980855391,
+          "serial_other_generated": 2195570895,
+          "runtime_library_other": 62954266370,
+          "dependency_wait": 24337745070,
+          "nba_unit_work": 5530128656,
+          "serial_or_caller_nba": 878505989,
+          "dependency_signal": 1832118992,
+          "scheduler_other": 128984803
+        },
+        "percentages": {
+          "serial_act": 60.03183722923469,
+          "serial_other_generated": 0.8967436898040791,
+          "runtime_library_other": 25.712602240312833,
+          "dependency_wait": 9.940339146089308,
+          "nba_unit_work": 2.2586872450195754,
+          "serial_or_caller_nba": 0.3588108695942801,
+          "dependency_signal": 0.7482979250579883,
+          "scheduler_other": 0.0526816548872462
+        },
+        "top_symbols": [
+          [
+            "__memmove_avx512_unaligned_erms",
+            52197542261
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            24337745070
+          ],
+          [
+            "Vsim___024root___eval_body__act(Vsim___024root*)",
+            17104435140
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5(Vsim_kv__Ad_AB40*)",
+            8645096890
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            4418115345
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4(Vsim_kv__Ad_AB40*)",
+            4068462219
+          ],
+          [
+            "VlForceVec::trimEntries(int, int)",
+            3236382704
+          ],
+          [
+            "Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            3222700053
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6(Vsim_soc_ifc_top__pi8c871ce0*)",
+            2955740242
+          ],
+          [
+            "Vsim___024root___eval_triggers_vec__act(Vsim___024root*)",
+            2627451670
+          ],
+          [
+            "memcpy@plt",
+            2360902037
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__1(Vsim_ntt_masked_gs_butterfly*)",
+            1911354716
+          ]
+        ]
+      },
+      {
+        "worker": 1,
+        "cycles": 246353499251,
+        "categories": {
+          "runtime_library_other": 418902881,
+          "nba_unit_work": 5991252223,
+          "dependency_signal": 1175080839,
+          "dispatch_wait": 209646298298,
+          "dependency_wait": 29105208463,
+          "scheduler_other": 16756547
+        },
+        "percentages": {
+          "runtime_library_other": 0.1700413764259935,
+          "nba_unit_work": 2.431973664354467,
+          "dependency_signal": 0.47698970892341813,
+          "dispatch_wait": 85.09978503873393,
+          "dependency_wait": 11.814408381244805,
+          "scheduler_other": 0.0068018303173877
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            209692373741
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            29105208463
+          ],
+          [
+            "Vsim_abr_top__A10___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__0(Vsim_abr_top__A10*)",
+            2220290606
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            1175080839
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__2(Vsim_ntt_masked_pwm*)",
+            754356992
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__1(Vsim_ntt_masked_pwm*)",
+            724805876
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            645284238
+          ],
+          [
+            "Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__3(Vsim_abr_top__A10*)",
+            372857493
+          ],
+          [
+            "Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__5(Vsim_abr_top__A10*)",
+            234589807
+          ],
+          [
+            "Vsim_abr_top__A10___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__0(Vsim_abr_top__A10*)",
+            196981595
+          ],
+          [
+            "Vsim_abr_top__A10___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__3(Vsim_abr_top__A10*)",
+            146606828
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            138223296
+          ]
+        ]
+      },
+      {
+        "worker": 2,
+        "cycles": 246294225104,
+        "categories": {
+          "dispatch_wait": 210049017212,
+          "dependency_wait": 27650257440,
+          "nba_unit_work": 7673487878,
+          "runtime_library_other": 242992201,
+          "dependency_signal": 674284451,
+          "scheduler_other": 4185922
+        },
+        "percentages": {
+          "dispatch_wait": 85.28377680122418,
+          "dependency_wait": 11.226514721701017,
+          "nba_unit_work": 3.115577669253024,
+          "runtime_library_other": 0.09865931728500509,
+          "dependency_signal": 0.2737719289663723,
+          "scheduler_other": 0.0016995615704072865
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            210099266399
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            27650257440
+          ],
+          [
+            "Vsim___024root__nba_mtask2(void*)",
+            1621038221
+          ],
+          [
+            "Vsim___024root__nba_mtask33(void*)",
+            1013616267
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            674284451
+          ],
+          [
+            "Vsim___024root__nba_mtask69(void*)",
+            531935514
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__42(Vsim_soc_ifc_top__pi8c871ce0*)",
+            318328449
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__40(Vsim_soc_ifc_top__pi8c871ce0*)",
+            184263741
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__71(Vsim_soc_ifc_top__pi8c871ce0*)",
+            171742459
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__56(Vsim_soc_ifc_top__pi8c871ce0*)",
+            167520733
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__20(Vsim_soc_ifc_top__pi8c871ce0*)",
+            121470514
+          ],
+          [
+            "Vsim_soc_ifc_top__pi8c871ce0___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__2(Vsim_soc_ifc_top__pi8c871ce0*)",
+            121468090
+          ]
+        ]
+      },
+      {
+        "worker": 3,
+        "cycles": 246450919703,
+        "categories": {
+          "dispatch_wait": 210090402261,
+          "nba_unit_work": 16220537085,
+          "dependency_wait": 19155111592,
+          "dependency_signal": 511341177,
+          "runtime_library_other": 452571983,
+          "scheduler_other": 20955605
+        },
+        "percentages": {
+          "dispatch_wait": 85.24634540385634,
+          "nba_unit_work": 6.581650052086436,
+          "dependency_wait": 7.772383894969424,
+          "dependency_signal": 0.2074819512202354,
+          "runtime_library_other": 0.18363574522075152,
+          "scheduler_other": 0.00850295264682062
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            210157457161
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            19155111592
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__5(Vsim_kv__Ad_AB40*)",
+            8744313337
+          ],
+          [
+            "Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__4(Vsim_kv__Ad_AB40*)",
+            3060142629
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__0(Vsim_aes_clp_wrapper__A40_ABc*)",
+            1874042730
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__0(Vsim_aes_clp_wrapper__A40_ABc*)",
+            540756347
+          ],
+          [
+            "Vsim_kv__Ad_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__9(Vsim_kv__Ad_AB40*)",
+            517425407
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__9(Vsim_aes_clp_wrapper__A40_ABc*)",
+            515620865
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            511341177
+          ],
+          [
+            "Vsim_aes_clp_wrapper__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__aes_inst__1(Vsim_aes_clp_wrapper__A40_ABc*)",
+            285031612
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            159228524
+          ],
+          [
+            "Vsim_abr_mem_if___nba_comb__TOP__caliptra_top_tb__DOT__abr_memory_export__12(Vsim_abr_mem_if*)",
+            96467111
+          ]
+        ]
+      },
+      {
+        "worker": 4,
+        "cycles": 246241610339,
+        "categories": {
+          "dispatch_wait": 211523117051,
+          "runtime_library_other": 397821044,
+          "nba_unit_work": 6349851405,
+          "dependency_signal": 1532832954,
+          "dependency_wait": 26350062767,
+          "scheduler_other": 87925118
+        },
+        "percentages": {
+          "dispatch_wait": 85.9006391161091,
+          "runtime_library_other": 0.16155719719844305,
+          "nba_unit_work": 2.578707715669249,
+          "dependency_signal": 0.6224914432169908,
+          "dependency_wait": 10.700897679609858,
+          "scheduler_other": 0.03570684819635227
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            211552427184
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            26350062767
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            1532832954
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__0(Vsim_hmac_ctrl__A40_ABc*)",
+            1147440236
+          ],
+          [
+            "Vsim_csrng__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__0(Vsim_csrng__ACc*)",
+            745475887
+          ],
+          [
+            "Vsim_csrng__ACc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__1(Vsim_csrng__ACc*)",
+            557309316
+          ],
+          [
+            "Vsim_entropy_src__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__entropy_src__0(Vsim_entropy_src__ACc*)",
+            552756475
+          ],
+          [
+            "Vsim_dv__Ad_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__data_vault1__2(Vsim_dv__Ad_AB40*)",
+            406195620
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__1(Vsim_hmac_ctrl__A40_ABc*)",
+            364309894
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__5(Vsim_hmac_ctrl__A40_ABc*)",
+            335118827
+          ],
+          [
+            "Vsim_csrng__ACc___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__csrng__1(Vsim_csrng__ACc*)",
+            331654434
+          ],
+          [
+            "Vsim_hmac_ctrl__A40_ABc___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__hmac__0(Vsim_hmac_ctrl__A40_ABc*)",
+            305743131
+          ]
+        ]
+      },
+      {
+        "worker": 5,
+        "cycles": 246414275922,
+        "categories": {
+          "dispatch_wait": 224728872057,
+          "nba_unit_work": 7867602151,
+          "dependency_wait": 1391453872,
+          "runtime_library_other": 12032405800,
+          "dependency_signal": 381366789,
+          "scheduler_other": 12575253
+        },
+        "percentages": {
+          "dispatch_wait": 91.19961545090662,
+          "nba_unit_work": 3.1928353670103156,
+          "dependency_wait": 0.5646807056099505,
+          "runtime_library_other": 4.882998663522538,
+          "dependency_signal": 0.15476651568706914,
+          "scheduler_other": 0.00510329726349969
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            224749830823
+          ],
+          [
+            "__memmove_avx512_unaligned_erms",
+            11655132597
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            2611881619
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__1(Vsim_ntt_masked_pwm*)",
+            2108164478
+          ],
+          [
+            "Vsim_ntt_masked_pwm___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__2(Vsim_ntt_masked_pwm*)",
+            1844121335
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            1391453872
+          ],
+          [
+            "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___nba_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__1(Vsim_caliptra_top_tb_axi_complex__pi1f097f54*)",
+            657875811
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            381366789
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            159288155
+          ],
+          [
+            "Vsim_ntt_masked_pwm___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0(Vsim_ntt_masked_pwm*)",
+            104760801
+          ],
+          [
+            "[unknown]",
+            96373551
+          ],
+          [
+            "Vsim_caliptra_top_tb_axi_complex__pi1f097f54___nba_comb__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__6(Vsim_caliptra_top_tb_axi_complex__pi1f097f54*)",
+            83808265
+          ]
+        ]
+      },
+      {
+        "worker": 6,
+        "cycles": 246427674201,
+        "categories": {
+          "dispatch_wait": 223992603763,
+          "dependency_wait": 1613693513,
+          "nba_unit_work": 9304333304,
+          "runtime_library_other": 10368583064,
+          "dependency_signal": 1127509693,
+          "scheduler_other": 20950864
+        },
+        "percentages": {
+          "dispatch_wait": 90.89588029804611,
+          "dependency_wait": 0.6548345344053292,
+          "nba_unit_work": 3.7756852326621697,
+          "runtime_library_other": 4.2075562728976665,
+          "dependency_signal": 0.4575418311501576,
+          "scheduler_other": 0.00850183083857348
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            224017737447
+          ],
+          [
+            "__memmove_avx512_unaligned_erms",
+            10024930236
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__2(Vsim_ntt_masked_gs_butterfly*)",
+            2908752111
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__1(Vsim_ntt_masked_gs_butterfly*)",
+            2803605322
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            2678247345
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            1613693513
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            1127509693
+          ],
+          [
+            "Vsim_abr_mem_top___nba_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__0(Vsim_abr_mem_top*)",
+            410799785
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            230461057
+          ],
+          [
+            "Vsim_ntt_masked_gs_butterfly___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0(Vsim_ntt_masked_gs_butterfly*)",
+            213818611
+          ],
+          [
+            "pthread_mutex_trylock@@GLIBC_2.34",
+            134103730
+          ],
+          [
+            "[unknown]",
+            79633254
+          ]
+        ]
+      },
+      {
+        "worker": 7,
+        "cycles": 246282483416,
+        "categories": {
+          "dispatch_wait": 212106592926,
+          "scheduler_other": 8378526,
+          "dependency_signal": 749676769,
+          "dependency_wait": 27431536169,
+          "nba_unit_work": 5265670458,
+          "runtime_library_other": 720628568
+        },
+        "percentages": {
+          "dispatch_wait": 86.12329629944777,
+          "scheduler_other": 0.003401998341005717,
+          "dependency_signal": 0.30439711286072585,
+          "dependency_wait": 11.138240847874235,
+          "nba_unit_work": 2.1380612965095307,
+          "runtime_library_other": 0.2926024449667311
+        },
+        "top_symbols": [
+          [
+            "void VlWorkerThread::dequeWork<true>(VlWorkerThread::ExecRec*)",
+            212144288312
+          ],
+          [
+            "VlMTaskVertex::waitUntilUpstreamDone(bool) const",
+            27431536169
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__0(Vsim_ecc_top__Af_AB40*)",
+            1776477480
+          ],
+          [
+            "VlMTaskVertex::signalUpstreamDone(bool)",
+            749676769
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__1(Vsim_ecc_top__Af_AB40*)",
+            599062491
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__0(Vsim_ecc_top__Af_AB40*)",
+            485848276
+          ],
+          [
+            "Vsim_sha3_ctrl__A40_ABd___nba_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__sha3__0(Vsim_sha3_ctrl__A40_ABd*)",
+            410510771
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__1(Vsim_ecc_top__Af_AB40*)",
+            305734265
+          ],
+          [
+            "VlForceVec::readSel(int, WDataInP, WDataOutP, int, int) const",
+            213699589
+          ],
+          [
+            "Vsim_sha3_ctrl__A40_ABd___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__sha3__4(Vsim_sha3_ctrl__A40_ABd*)",
+            184337088
+          ],
+          [
+            "Vsim___024root__nba_mtask77(void*)",
+            163324481
+          ],
+          [
+            "Vsim_ecc_top__Af_AB40___nba_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__2(Vsim_ecc_top__Af_AB40*)",
+            159230891
+          ]
+        ]
+      }
+    ],
+    "caveats": [
+      "Statistical cycle samples, including instruction skid; not exact task timings.",
+      "Only functions reachable from NBA tasks on the sampled worker are assigned to units.",
+      "Serial ACT, ambiguous shared functions, and library work are kept separate.",
+      "Sampling attaches after process launch; earliest initialization is not covered."
+    ]
+  }
+}

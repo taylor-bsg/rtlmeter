@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "case": "Caliptra-default-hmac",
+      "reference_sha256": "f4f0df1c55820d0b6f23be5f45ce6634283174c3373f3467b9c4f4a547916e41",
+      "exact_swap_accepted": true,
+      "changed_banner_rejected": true,
+      "changed_body_rejected": true
+    },
+    {
+      "case": "Caliptra-default-mlkem",
+      "reference_sha256": "d63237404be8eb5b4cb64ee2c4e1b85c4a7c8097d6141d2870eca8f96df01a93",
+      "exact_swap_accepted": true,
+      "changed_banner_rejected": true,
+      "changed_body_rejected": true
+    },
+    {
+      "case": "Caliptra-default-sha3",
+      "reference_sha256": "0f3191f054f0f3033c8f51ac209aba2dafe7a195adbb5c115f677e330e5a9539",
+      "exact_swap_accepted": true,
+      "changed_banner_rejected": true,
+      "changed_body_rejected": true
+    },
+    {
+      "case": "Caliptra-default-trng",
+      "reference_sha256": "6d1a9b0e4217d9f7f6015d45dc8d9a6ab0330668177c10719470dc15e453b13e",
+      "exact_swap_accepted": true,
+      "changed_banner_rejected": true,
+      "changed_body_rejected": true
+    }
+  ]
+}

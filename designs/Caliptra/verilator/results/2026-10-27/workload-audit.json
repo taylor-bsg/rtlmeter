@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "workloads": {
+    "Caliptra-default-hmac": {
+      "dccm.hex": "28f8d3f3bb77aa5abdbff1653d9f6c848108d55dddcf7f86386d7d7a72fa9cc2",
+      "iccm.hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mailbox.hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "program.hex": "16f87dab08b0c82c4364c4e662dee4d6ec803a28d5c92a0e812c2186a04be568",
+      "post.bash": "00471e6bee1c423d6f39e4febed8a433341189bbc584511d55538879c9d12f6d",
+      "case.json": "1bc6d264b62aaf27f2fddf10487152824e8c15bea6af4a44a293e307ea500010"
+    },
+    "Caliptra-default-mlkem": {
+      "dccm.hex": "f085c56ee4a14015e4085531efadfd2029a58761cf02383711a1d701f23a204f",
+      "iccm.hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mailbox.hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "program.hex": "95f5126ec8892dbd2c6db3aee36f915685af0589cc3682bd57ad98dc9c38a45f",
+      "post.bash": "00471e6bee1c423d6f39e4febed8a433341189bbc584511d55538879c9d12f6d",
+      "case.json": "cb4eded69d66f03db967131df5d33417704263484d9699f7823bfa1b05e905e5"
+    },
+    "Caliptra-default-sha3": {
+      "dccm.hex": "6887d886e1078820b2eeefc8aef9f576ff565ecb8db5b2333ec53415971248eb",
+      "iccm.hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mailbox.hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "program.hex": "c8109ed3cfccb81708d8cebec00d4a249a8af36a60df9a90131e7935c7bbea8d",
+      "post.bash": "00471e6bee1c423d6f39e4febed8a433341189bbc584511d55538879c9d12f6d",
+      "case.json": "1862965c1f930587e0ef7cc7f238b2e0f1ccfaef75fe7d80846662bfc6b32a1a"
+    },
+    "Caliptra-default-trng": {
+      "dccm.hex": "4ce2b77ace1801c7e8e4e0fe6c74f97bf0fa679705b9f6cc625be46f5f6a9fcb",
+      "iccm.hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mailbox.hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "program.hex": "796d93aea3484c1cf3575de877706dd3647aad420a34091a7f542f70887af80b",
+      "post.bash": "00471e6bee1c423d6f39e4febed8a433341189bbc584511d55538879c9d12f6d",
+      "case.json": "98d83a0c8d7fd68b51a0e37903fdd07be34cddd79e30373ac00d3374b7ca4534"
+    }
+  }
+}

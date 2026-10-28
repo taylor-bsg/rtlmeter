@@ -1,0 +1,670 @@
+{
+  "nodes": [
+    {
+      "instance": "caliptra_top_tb",
+      "module": "caliptra_top_tb",
+      "hierarchy_index": 0,
+      "cost": 3623,
+      "fixed_worker": 0
+    },
+    {
+      "instance": "caliptra_top_tb.__rtlmeter_utils_u",
+      "module": "__rtlmeter_utils",
+      "hierarchy_index": 0,
+      "cost": 0,
+      "fixed_worker": 0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut",
+      "module": "caliptra_top",
+      "hierarchy_index": 0,
+      "cost": 10722,
+      "fixed_worker": 0
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.abr_inst",
+      "module": "abr_top",
+      "hierarchy_index": 0,
+      "cost": 76259,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00",
+      "module": "ntt_masked_gs_butterfly",
+      "hierarchy_index": 0,
+      "cost": 94274,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01",
+      "module": "ntt_masked_gs_butterfly",
+      "hierarchy_index": 1,
+      "cost": 94274,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00",
+      "module": "ntt_masked_pwm",
+      "hierarchy_index": 0,
+      "cost": 82975,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01",
+      "module": "ntt_masked_pwm",
+      "hierarchy_index": 1,
+      "cost": 82975,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.aes_inst",
+      "module": "aes_clp_wrapper",
+      "hierarchy_index": 0,
+      "cost": 89449,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.csrng",
+      "module": "csrng",
+      "hierarchy_index": 0,
+      "cost": 31840,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.data_vault1",
+      "module": "dv",
+      "hierarchy_index": 0,
+      "cost": 10068,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.doe",
+      "module": "doe_ctrl",
+      "hierarchy_index": 0,
+      "cost": 17254,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+      "module": "ecc_top",
+      "hierarchy_index": 0,
+      "cost": 113391,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.entropy_src",
+      "module": "entropy_src",
+      "hierarchy_index": 0,
+      "cost": 12451,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.hmac",
+      "module": "hmac_ctrl",
+      "hierarchy_index": 0,
+      "cost": 103578,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.key_vault1",
+      "module": "kv",
+      "hierarchy_index": 0,
+      "cost": 64071,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+      "module": "pv",
+      "hierarchy_index": 0,
+      "cost": 28322,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.rvtop",
+      "module": "el2_veer_wrapper",
+      "hierarchy_index": 0,
+      "cost": 129562,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha3",
+      "module": "sha3_ctrl",
+      "hierarchy_index": 0,
+      "cost": 11959,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha256",
+      "module": "sha256_ctrl",
+      "hierarchy_index": 0,
+      "cost": 4023,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.sha512",
+      "module": "sha512_ctrl",
+      "hierarchy_index": 0,
+      "cost": 9103,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+      "module": "soc_ifc_top",
+      "hierarchy_index": 0,
+      "cost": 28615,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.tb_axi_complex_i",
+      "module": "caliptra_top_tb_axi_complex",
+      "hierarchy_index": 0,
+      "cost": 67312,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.tb_services_i",
+      "module": "caliptra_top_tb_services",
+      "hierarchy_index": 0,
+      "cost": 2124,
+      "fixed_worker": null
+    },
+    {
+      "instance": "caliptra_top_tb.tb_services_i.abr_mem_top_inst",
+      "module": "abr_mem_top",
+      "hierarchy_index": 0,
+      "cost": 53843,
+      "fixed_worker": null
+    },
+    {
+      "instance": "ROOT",
+      "module": "",
+      "hierarchy_index": 0,
+      "cost": 0,
+      "fixed_worker": 0
+    }
+  ],
+  "total_cost": 1222067,
+  "edges": [
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.hmac",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1",
+        "caliptra_top_tb.caliptra_top_dut.rvtop"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst"
+      ],
+      "variables": 120
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.caliptra_top_dut.aes_inst",
+        "caliptra_top_tb.caliptra_top_dut.hmac",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1",
+        "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+        "caliptra_top_tb.caliptra_top_dut.rvtop",
+        "caliptra_top_tb.caliptra_top_dut.sha256",
+        "caliptra_top_tb.caliptra_top_dut.sha3",
+        "caliptra_top_tb.caliptra_top_dut.sha512",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.caliptra_top_dut.data_vault1",
+        "caliptra_top_tb.caliptra_top_dut.entropy_src"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.caliptra_top_dut.entropy_src"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 20
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+        "caliptra_top_tb.tb_axi_complex_i"
+      ],
+      "variables": 5
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.tb_axi_complex_i"
+      ],
+      "variables": 15
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb",
+        "caliptra_top_tb.tb_services_i"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst"
+      ],
+      "variables": 16
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.aes_inst",
+        "caliptra_top_tb.caliptra_top_dut.csrng",
+        "caliptra_top_tb.caliptra_top_dut.data_vault1",
+        "caliptra_top_tb.caliptra_top_dut.doe",
+        "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+        "caliptra_top_tb.caliptra_top_dut.entropy_src",
+        "caliptra_top_tb.caliptra_top_dut.hmac",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1",
+        "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+        "caliptra_top_tb.caliptra_top_dut.sha256",
+        "caliptra_top_tb.caliptra_top_dut.sha3",
+        "caliptra_top_tb.caliptra_top_dut.sha512",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.doe"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.doe",
+        "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+        "caliptra_top_tb.caliptra_top_dut.hmac",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1",
+        "caliptra_top_tb.caliptra_top_dut.sha256",
+        "caliptra_top_tb.caliptra_top_dut.sha512",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1"
+      ],
+      "variables": 2
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.aes_inst"
+      ],
+      "variables": 14
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.aes_inst",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1"
+      ],
+      "variables": 2
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.csrng"
+      ],
+      "variables": 4
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.data_vault1"
+      ],
+      "variables": 3
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.doe"
+      ],
+      "variables": 8
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.doe",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.ecc_top1"
+      ],
+      "variables": 10
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1"
+      ],
+      "variables": 2
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.entropy_src"
+      ],
+      "variables": 4
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.hmac"
+      ],
+      "variables": 13
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.hmac",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1"
+      ],
+      "variables": 2
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1"
+      ],
+      "variables": 19
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1",
+        "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.pcr_vault1"
+      ],
+      "variables": 391
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.rvtop"
+      ],
+      "variables": 63
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.rvtop",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 5
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.sha256"
+      ],
+      "variables": 3
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.sha3"
+      ],
+      "variables": 5
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.sha512"
+      ],
+      "variables": 17
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 41
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut",
+        "caliptra_top_tb.tb_services_i"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00"
+      ],
+      "variables": 29
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01"
+      ],
+      "variables": 2
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01"
+      ],
+      "variables": 29
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.aes_inst",
+        "caliptra_top_tb.caliptra_top_dut.ecc_top1",
+        "caliptra_top_tb.caliptra_top_dut.hmac",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.aes_inst",
+        "caliptra_top_tb.caliptra_top_dut.entropy_src",
+        "caliptra_top_tb.caliptra_top_dut.hmac",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1",
+        "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+        "caliptra_top_tb.caliptra_top_dut.sha256",
+        "caliptra_top_tb.caliptra_top_dut.sha3",
+        "caliptra_top_tb.caliptra_top_dut.sha512",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.aes_inst",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1"
+      ],
+      "variables": 8
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.caliptra_top_dut.sha512"
+      ],
+      "variables": 16
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.abr_inst",
+        "caliptra_top_tb.tb_services_i.abr_mem_top_inst"
+      ],
+      "variables": 13
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.aes_inst",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 13
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.csrng",
+        "caliptra_top_tb.caliptra_top_dut.entropy_src"
+      ],
+      "variables": 6
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.data_vault1",
+        "caliptra_top_tb.caliptra_top_dut.entropy_src",
+        "caliptra_top_tb.caliptra_top_dut.rvtop",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+        "caliptra_top_tb.tb_services_i"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.data_vault1",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1",
+        "caliptra_top_tb.caliptra_top_dut.pcr_vault1",
+        "caliptra_top_tb.caliptra_top_dut.rvtop"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.data_vault1",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.doe",
+        "caliptra_top_tb.caliptra_top_dut.key_vault1"
+      ],
+      "variables": 2
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.entropy_src",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 1
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.rvtop",
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+      ],
+      "variables": 34
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.rvtop",
+        "caliptra_top_tb.tb_services_i"
+      ],
+      "variables": 8
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+        "caliptra_top_tb.tb_axi_complex_i"
+      ],
+      "variables": 10
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1",
+        "caliptra_top_tb.tb_services_i"
+      ],
+      "variables": 9
+    },
+    {
+      "terminals": [
+        "caliptra_top_tb.tb_axi_complex_i",
+        "caliptra_top_tb.tb_services_i"
+      ],
+      "variables": 1
+    }
+  ],
+  "metric": "Distinct shared NBA variables; structural proxy only, no widths or activity weighting",
+  "load_metric": "Disjoint hierarchy-preserved NBA instruction-cost estimates; not runtime"
+}

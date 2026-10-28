@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "generated_cpp_header_make_files": 293,
+  "all_code_hashes_identical": true,
+  "stats": {
+    "mtask count": 83,
+    "edge count": 131,
+    "total graph cost": 2112867,
+    "critical path cost": 627243
+  }
+}

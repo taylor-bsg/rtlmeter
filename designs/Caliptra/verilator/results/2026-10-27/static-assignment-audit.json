@@ -1,0 +1,509 @@
+{
+  "passed": true,
+  "units": 24,
+  "task_count": 90,
+  "listing_sha256": "969647d305ddd388b32f2ea88a17b764f084a69039730392ed9da654919a379e",
+  "owners": {
+    "caliptra_top_tb.caliptra_top_dut.abr_inst": [
+      1
+    ],
+    "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01": [
+      1
+    ],
+    "caliptra_top_tb": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "caliptra_top_tb.caliptra_top_dut.rvtop": [
+      2
+    ],
+    "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": [
+      2
+    ],
+    "caliptra_top_tb.caliptra_top_dut.aes_inst": [
+      3
+    ],
+    "caliptra_top_tb.caliptra_top_dut.key_vault1": [
+      3
+    ],
+    "caliptra_top_tb.caliptra_top_dut.hmac": [
+      4
+    ],
+    "caliptra_top_tb.caliptra_top_dut.csrng": [
+      4
+    ],
+    "caliptra_top_tb.caliptra_top_dut.entropy_src": [
+      4
+    ],
+    "caliptra_top_tb.caliptra_top_dut.data_vault1": [
+      4
+    ],
+    "caliptra_top_tb.tb_axi_complex_i": [
+      5
+    ],
+    "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00": [
+      5
+    ],
+    "caliptra_top_tb.tb_services_i.abr_mem_top_inst": [
+      6
+    ],
+    "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": [
+      6
+    ],
+    "caliptra_top_tb.caliptra_top_dut.ecc_top1": [
+      7
+    ],
+    "caliptra_top_tb.caliptra_top_dut.doe": [
+      7
+    ],
+    "caliptra_top_tb.caliptra_top_dut.sha3": [
+      7
+    ],
+    "caliptra_top_tb.caliptra_top_dut.sha256": [
+      7
+    ],
+    "caliptra_top_tb.caliptra_top_dut": [
+      0
+    ],
+    "caliptra_top_tb.tb_services_i": [
+      0
+    ],
+    "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": [
+      0
+    ],
+    "caliptra_top_tb.caliptra_top_dut.pcr_vault1": [
+      0
+    ],
+    "caliptra_top_tb.caliptra_top_dut.sha512": [
+      0
+    ],
+    "caliptra_top_tb.__rtlmeter_utils_u": []
+  },
+  "schedules": {
+    "1": {
+      "tasks": [
+        10,
+        16,
+        23,
+        35,
+        54,
+        58,
+        62,
+        61,
+        80
+      ],
+      "waits": 3,
+      "signals": 19
+    },
+    "2": {
+      "tasks": [
+        2,
+        14,
+        33,
+        67,
+        69,
+        71,
+        75,
+        82,
+        83,
+        76,
+        89,
+        88
+      ],
+      "waits": 6,
+      "signals": 15
+    },
+    "3": {
+      "tasks": [
+        11,
+        22,
+        19,
+        32,
+        38,
+        41,
+        66,
+        60,
+        56,
+        73,
+        81,
+        74
+      ],
+      "waits": 8,
+      "signals": 15
+    },
+    "4": {
+      "tasks": [
+        9,
+        12,
+        13,
+        21,
+        39,
+        30,
+        31,
+        44,
+        50,
+        48,
+        49,
+        65,
+        63,
+        57,
+        78
+      ],
+      "waits": 10,
+      "signals": 15
+    },
+    "5": {
+      "tasks": [
+        1,
+        36,
+        15,
+        40,
+        47,
+        53,
+        68
+      ],
+      "waits": 3,
+      "signals": 3
+    },
+    "6": {
+      "tasks": [
+        3,
+        17,
+        27,
+        25,
+        51
+      ],
+      "waits": 3,
+      "signals": 5
+    },
+    "7": {
+      "tasks": [
+        8,
+        7,
+        6,
+        5,
+        45,
+        34,
+        42,
+        43,
+        59,
+        64,
+        55,
+        77,
+        86
+      ],
+      "waits": 9,
+      "signals": 7
+    },
+    "0": {
+      "tasks": [
+        0,
+        18,
+        20,
+        4,
+        26,
+        28,
+        29,
+        24,
+        37,
+        46,
+        52,
+        70,
+        72,
+        79,
+        85,
+        84,
+        87
+      ],
+      "waits": 13,
+      "signals": 26
+    }
+  },
+  "tasks": {
+    "0": [
+      "caliptra_top_tb",
+      "caliptra_top_tb.caliptra_top_dut",
+      "caliptra_top_tb.tb_services_i"
+    ],
+    "1": [
+      "caliptra_top_tb.tb_axi_complex_i"
+    ],
+    "2": [
+      "caliptra_top_tb.caliptra_top_dut.rvtop"
+    ],
+    "3": [
+      "caliptra_top_tb.tb_services_i.abr_mem_top_inst"
+    ],
+    "4": [
+      "caliptra_top_tb.caliptra_top_dut.sha512"
+    ],
+    "5": [
+      "caliptra_top_tb.caliptra_top_dut.sha256"
+    ],
+    "6": [
+      "caliptra_top_tb.caliptra_top_dut.sha3"
+    ],
+    "7": [
+      "caliptra_top_tb.caliptra_top_dut.doe"
+    ],
+    "8": [
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1"
+    ],
+    "9": [
+      "caliptra_top_tb.caliptra_top_dut.hmac"
+    ],
+    "10": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst"
+    ],
+    "11": [
+      "caliptra_top_tb.caliptra_top_dut.aes_inst"
+    ],
+    "12": [
+      "caliptra_top_tb.caliptra_top_dut.csrng"
+    ],
+    "13": [
+      "caliptra_top_tb.caliptra_top_dut.entropy_src"
+    ],
+    "14": [
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+    ],
+    "15": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00"
+    ],
+    "16": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01"
+    ],
+    "17": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00"
+    ],
+    "18": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01"
+    ],
+    "19": [
+      "caliptra_top_tb.caliptra_top_dut.key_vault1"
+    ],
+    "20": [
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1"
+    ],
+    "21": [
+      "caliptra_top_tb.caliptra_top_dut.data_vault1"
+    ],
+    "22": [
+      "caliptra_top_tb",
+      "caliptra_top_tb.caliptra_top_dut.key_vault1"
+    ],
+    "23": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst"
+    ],
+    "24": [
+      "caliptra_top_tb",
+      "caliptra_top_tb.tb_services_i"
+    ],
+    "25": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00"
+    ],
+    "26": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01"
+    ],
+    "27": [
+      "caliptra_top_tb",
+      "caliptra_top_tb.tb_services_i.abr_mem_top_inst"
+    ],
+    "28": [
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1"
+    ],
+    "29": [
+      "caliptra_top_tb.caliptra_top_dut"
+    ],
+    "30": [
+      "caliptra_top_tb",
+      "caliptra_top_tb.caliptra_top_dut.data_vault1"
+    ],
+    "31": [
+      "caliptra_top_tb.caliptra_top_dut.entropy_src"
+    ],
+    "32": [
+      "caliptra_top_tb.caliptra_top_dut.aes_inst"
+    ],
+    "33": [
+      "caliptra_top_tb.caliptra_top_dut.rvtop"
+    ],
+    "34": [
+      "caliptra_top_tb.caliptra_top_dut.sha3"
+    ],
+    "35": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst"
+    ],
+    "36": [
+      "caliptra_top_tb"
+    ],
+    "37": [
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1"
+    ],
+    "38": [
+      "caliptra_top_tb.caliptra_top_dut.key_vault1"
+    ],
+    "39": [
+      "caliptra_top_tb.caliptra_top_dut.csrng"
+    ],
+    "40": [
+      "caliptra_top_tb"
+    ],
+    "41": [
+      "caliptra_top_tb.caliptra_top_dut.aes_inst"
+    ],
+    "42": [
+      "caliptra_top_tb.caliptra_top_dut.sha256"
+    ],
+    "43": [
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1"
+    ],
+    "44": [
+      "caliptra_top_tb.caliptra_top_dut.hmac"
+    ],
+    "45": [
+      "caliptra_top_tb.caliptra_top_dut.doe"
+    ],
+    "46": [
+      "caliptra_top_tb.caliptra_top_dut.sha512"
+    ],
+    "47": [
+      "caliptra_top_tb"
+    ],
+    "48": [
+      "caliptra_top_tb.caliptra_top_dut.entropy_src"
+    ],
+    "49": [
+      "caliptra_top_tb.caliptra_top_dut.data_vault1"
+    ],
+    "50": [
+      "caliptra_top_tb.caliptra_top_dut.csrng"
+    ],
+    "51": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00"
+    ],
+    "52": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01"
+    ],
+    "53": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00"
+    ],
+    "54": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01"
+    ],
+    "55": [
+      "caliptra_top_tb"
+    ],
+    "56": [
+      "caliptra_top_tb"
+    ],
+    "57": [
+      "caliptra_top_tb"
+    ],
+    "58": [
+      "caliptra_top_tb"
+    ],
+    "59": [
+      "caliptra_top_tb"
+    ],
+    "60": [
+      "caliptra_top_tb"
+    ],
+    "61": [
+      "caliptra_top_tb"
+    ],
+    "62": [
+      "caliptra_top_tb"
+    ],
+    "63": [
+      "caliptra_top_tb"
+    ],
+    "64": [
+      "caliptra_top_tb"
+    ],
+    "65": [
+      "caliptra_top_tb"
+    ],
+    "66": [
+      "caliptra_top_tb"
+    ],
+    "67": [
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+    ],
+    "68": [
+      "caliptra_top_tb",
+      "caliptra_top_tb.tb_axi_complex_i"
+    ],
+    "69": [
+      "caliptra_top_tb.caliptra_top_dut.rvtop"
+    ],
+    "70": [
+      "caliptra_top_tb.caliptra_top_dut"
+    ],
+    "71": [
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+    ],
+    "72": [
+      "caliptra_top_tb.caliptra_top_dut"
+    ],
+    "73": [
+      "caliptra_top_tb.caliptra_top_dut.key_vault1"
+    ],
+    "74": [
+      "caliptra_top_tb"
+    ],
+    "75": [
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+    ],
+    "76": [
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+    ],
+    "77": [
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1"
+    ],
+    "78": [
+      "caliptra_top_tb.caliptra_top_dut.hmac"
+    ],
+    "79": [
+      "caliptra_top_tb.caliptra_top_dut"
+    ],
+    "80": [
+      "caliptra_top_tb.caliptra_top_dut.abr_inst"
+    ],
+    "81": [
+      "caliptra_top_tb.caliptra_top_dut.aes_inst"
+    ],
+    "82": [
+      "caliptra_top_tb.caliptra_top_dut.rvtop"
+    ],
+    "83": [
+      "caliptra_top_tb.caliptra_top_dut.rvtop"
+    ],
+    "84": [
+      "caliptra_top_tb.tb_services_i"
+    ],
+    "85": [
+      "caliptra_top_tb.tb_services_i"
+    ],
+    "86": [
+      "caliptra_top_tb.caliptra_top_dut.doe"
+    ],
+    "87": [
+      "caliptra_top_tb.caliptra_top_dut"
+    ],
+    "88": [
+      "caliptra_top_tb.caliptra_top_dut.rvtop"
+    ],
+    "89": [
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1"
+    ]
+  },
+  "scope": "Parallel NBA dispatch for selected units; residual top-level tasks are automatic. Serial ACT stays on the caller. Utility has zero static NBA cost.",
+  "same_unit_auto_control_matches_inventory": true,
+  "all_emitted_unit_dispatch_owners_match": true
+}

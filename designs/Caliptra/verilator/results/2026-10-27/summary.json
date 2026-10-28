@@ -1,0 +1,230 @@
+{
+  "passed": true,
+  "selected": "Caliptra-default-runtime-8",
+  "configurations": [
+    {
+      "case": "Caliptra-default-hmac",
+      "label": "Caliptra-default-serial-1",
+      "workers": 1,
+      "median_seconds": 31.362152104499998,
+      "minimum_seconds": 31.240304272,
+      "maximum_seconds": 31.483999937,
+      "samples_seconds": [
+        31.483999937,
+        31.240304272
+      ],
+      "clocks": 74529,
+      "speedup_vs_one_worker": 1.0
+    },
+    {
+      "case": "Caliptra-default-hmac",
+      "label": "Caliptra-default-default-8",
+      "workers": 8,
+      "median_seconds": 38.114124877500004,
+      "minimum_seconds": 38.039992289,
+      "maximum_seconds": 38.188257466,
+      "samples_seconds": [
+        38.188257466,
+        38.039992289
+      ],
+      "clocks": 74529,
+      "speedup_vs_one_worker": 0.8228485425101308
+    },
+    {
+      "case": "Caliptra-default-hmac",
+      "label": "Caliptra-default-auto-8",
+      "workers": 8,
+      "median_seconds": 34.916286436,
+      "minimum_seconds": 34.906491435,
+      "maximum_seconds": 34.926081437,
+      "samples_seconds": [
+        34.926081437,
+        34.906491435
+      ],
+      "clocks": 74529,
+      "speedup_vs_one_worker": 0.8982098414728447
+    },
+    {
+      "case": "Caliptra-default-hmac",
+      "label": "Caliptra-default-runtime-8",
+      "workers": 8,
+      "median_seconds": 35.969603735999996,
+      "minimum_seconds": 35.929434967,
+      "maximum_seconds": 36.009772505,
+      "samples_seconds": [
+        36.009772505,
+        35.929434967
+      ],
+      "clocks": 74529,
+      "speedup_vs_one_worker": 0.8719070783955105
+    },
+    {
+      "case": "Caliptra-default-mlkem",
+      "label": "Caliptra-default-serial-1",
+      "workers": 1,
+      "median_seconds": 126.909876626,
+      "minimum_seconds": 126.507950169,
+      "maximum_seconds": 127.311803083,
+      "samples_seconds": [
+        127.311803083,
+        126.507950169
+      ],
+      "clocks": 299403,
+      "speedup_vs_one_worker": 1.0
+    },
+    {
+      "case": "Caliptra-default-mlkem",
+      "label": "Caliptra-default-default-8",
+      "workers": 8,
+      "median_seconds": 153.619032764,
+      "minimum_seconds": 152.349851663,
+      "maximum_seconds": 154.888213865,
+      "samples_seconds": [
+        154.888213865,
+        152.349851663
+      ],
+      "clocks": 299403,
+      "speedup_vs_one_worker": 0.8261338086991316
+    },
+    {
+      "case": "Caliptra-default-mlkem",
+      "label": "Caliptra-default-auto-8",
+      "workers": 8,
+      "median_seconds": 140.206711861,
+      "minimum_seconds": 140.174108065,
+      "maximum_seconds": 140.239315657,
+      "samples_seconds": [
+        140.239315657,
+        140.174108065
+      ],
+      "clocks": 299403,
+      "speedup_vs_one_worker": 0.905162634095703
+    },
+    {
+      "case": "Caliptra-default-mlkem",
+      "label": "Caliptra-default-runtime-8",
+      "workers": 8,
+      "median_seconds": 144.7991119345,
+      "minimum_seconds": 144.081615125,
+      "maximum_seconds": 145.516608744,
+      "samples_seconds": [
+        145.516608744,
+        144.081615125
+      ],
+      "clocks": 299403,
+      "speedup_vs_one_worker": 0.8764547995529682
+    },
+    {
+      "case": "Caliptra-default-sha3",
+      "label": "Caliptra-default-serial-1",
+      "workers": 1,
+      "median_seconds": 39.6423628495,
+      "minimum_seconds": 39.598739542,
+      "maximum_seconds": 39.685986157,
+      "samples_seconds": [
+        39.598739542,
+        39.685986157
+      ],
+      "clocks": 94259,
+      "speedup_vs_one_worker": 1.0
+    },
+    {
+      "case": "Caliptra-default-sha3",
+      "label": "Caliptra-default-default-8",
+      "workers": 8,
+      "median_seconds": 48.7774443085,
+      "minimum_seconds": 48.366336945,
+      "maximum_seconds": 49.188551672,
+      "samples_seconds": [
+        48.366336945,
+        49.188551672
+      ],
+      "clocks": 94259,
+      "speedup_vs_one_worker": 0.8127191453241409
+    },
+    {
+      "case": "Caliptra-default-sha3",
+      "label": "Caliptra-default-auto-8",
+      "workers": 8,
+      "median_seconds": 44.1496510545,
+      "minimum_seconds": 44.124178171,
+      "maximum_seconds": 44.175123938,
+      "samples_seconds": [
+        44.124178171,
+        44.175123938
+      ],
+      "clocks": 94259,
+      "speedup_vs_one_worker": 0.8979088600397763
+    },
+    {
+      "case": "Caliptra-default-sha3",
+      "label": "Caliptra-default-runtime-8",
+      "workers": 8,
+      "median_seconds": 45.338822354499996,
+      "minimum_seconds": 45.327640122,
+      "maximum_seconds": 45.350004587,
+      "samples_seconds": [
+        45.350004587,
+        45.327640122
+      ],
+      "clocks": 94259,
+      "speedup_vs_one_worker": 0.8743580179374772
+    },
+    {
+      "case": "Caliptra-default-trng",
+      "label": "Caliptra-default-serial-1",
+      "workers": 1,
+      "median_seconds": 51.172685871,
+      "minimum_seconds": 51.055305589,
+      "maximum_seconds": 51.290066153,
+      "samples_seconds": [
+        51.290066153,
+        51.055305589
+      ],
+      "clocks": 121296,
+      "speedup_vs_one_worker": 1.0
+    },
+    {
+      "case": "Caliptra-default-trng",
+      "label": "Caliptra-default-default-8",
+      "workers": 8,
+      "median_seconds": 62.078677041000006,
+      "minimum_seconds": 61.777995457,
+      "maximum_seconds": 62.379358625,
+      "samples_seconds": [
+        61.777995457,
+        62.379358625
+      ],
+      "clocks": 121296,
+      "speedup_vs_one_worker": 0.8243198520033357
+    },
+    {
+      "case": "Caliptra-default-trng",
+      "label": "Caliptra-default-auto-8",
+      "workers": 8,
+      "median_seconds": 56.8358752785,
+      "minimum_seconds": 56.715678494,
+      "maximum_seconds": 56.956072063,
+      "samples_seconds": [
+        56.715678494,
+        56.956072063
+      ],
+      "clocks": 121296,
+      "speedup_vs_one_worker": 0.9003588951564492
+    },
+    {
+      "case": "Caliptra-default-trng",
+      "label": "Caliptra-default-runtime-8",
+      "workers": 8,
+      "median_seconds": 58.392964106,
+      "minimum_seconds": 58.305020573,
+      "maximum_seconds": 58.480907639,
+      "samples_seconds": [
+        58.305020573,
+        58.480907639
+      ],
+      "clocks": 121296,
+      "speedup_vs_one_worker": 0.876350201680238
+    }
+  ]
+}

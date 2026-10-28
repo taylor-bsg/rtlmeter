@@ -1,0 +1,1115 @@
+{
+  "hmac": {
+    "diagnostic_only": true,
+    "samples": 57384,
+    "missing_stacks": 0,
+    "binary_sha256": "870fb9c8825361ba252ca201e28dbec2712d1a9a62b9103cf82c155b939d976d",
+    "profiled_elapsed": 36.117994541,
+    "unit_cycles": {
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1": 2235220632,
+      "caliptra_top_tb": 426111447,
+      "caliptra_top_tb.caliptra_top_dut.key_vault1": 6873033194,
+      "caliptra_top_tb.caliptra_top_dut.aes_inst": 2003418343,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 1197640733,
+      "caliptra_top_tb.tb_axi_complex_i": 8031453943,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 5059332805,
+      "caliptra_top_tb.caliptra_top_dut.rvtop": 3540392028,
+      "caliptra_top_tb.caliptra_top_dut.hmac": 1749879553,
+      "caliptra_top_tb.tb_services_i.abr_mem_top_inst": 5797048948,
+      "caliptra_top_tb.caliptra_top_dut.csrng": 1201497280,
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": 1748852740,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst": 2423676866,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00": 3498595255,
+      "caliptra_top_tb.caliptra_top_dut.doe": 316064814,
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1": 1574345619,
+      "caliptra_top_tb.caliptra_top_dut.entropy_src": 358284885,
+      "caliptra_top_tb.caliptra_top_dut.sha3": 316081763,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01": 1538429367,
+      "caliptra_top_tb.caliptra_top_dut.sha256": 210782445,
+      "caliptra_top_tb.caliptra_top_dut": 986143670,
+      "caliptra_top_tb.tb_services_i": 125957701,
+      "caliptra_top_tb.caliptra_top_dut.data_vault1": 358302140,
+      "caliptra_top_tb.caliptra_top_dut.sha512": 146962649
+    },
+    "ambiguous_cycles": {
+      "caliptra_top_tb | caliptra_top_tb.tb_axi_complex_i": 21078079,
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut | caliptra_top_tb.tb_services_i": 62997935,
+      "caliptra_top_tb | caliptra_top_tb.tb_services_i": 20958089
+    },
+    "workers": [
+      {
+        "worker": 0,
+        "cycles": 150567702154,
+        "categories": {
+          "serial_act": 124273625216,
+          "dependency_wait": 16910117112,
+          "nba_unit_work": 4136006851,
+          "dependency_signal": 1154798034,
+          "nba_unresolved": 776713375,
+          "serial_other": 3274454143,
+          "scheduler_other": 41987423
+        },
+        "percentages": {
+          "serial_act": 82.53670836318766,
+          "dependency_wait": 11.230906011107486,
+          "nba_unit_work": 2.7469416029008067,
+          "dependency_signal": 0.7669626470216551,
+          "nba_unresolved": 0.5158565641159755,
+          "serial_other": 2.174738736233686,
+          "scheduler_other": 0.027886075432734865
+        }
+      },
+      {
+        "worker": 1,
+        "cycles": 151227944977,
+        "categories": {
+          "unresolved": 189700833,
+          "dispatch_wait": 128987947123,
+          "dependency_signal": 801253530,
+          "dependency_wait": 17202629898,
+          "nba_unit_work": 4025330649,
+          "nba_unresolved": 21082944
+        },
+        "percentages": {
+          "unresolved": 0.12544032984700762,
+          "dispatch_wait": 85.29372474288238,
+          "dependency_signal": 0.5298316591697793,
+          "dependency_wait": 11.375298329033248,
+          "nba_unit_work": 2.6617637696605647,
+          "nba_unresolved": 0.01394116940702095
+        }
+      },
+      {
+        "worker": 2,
+        "cycles": 151163574609,
+        "categories": {
+          "dispatch_wait": 128848140772,
+          "dependency_wait": 16520566919,
+          "nba_unit_work": 5289244768,
+          "dependency_signal": 400297019,
+          "unresolved": 84275812,
+          "nba_unresolved": 21049319
+        },
+        "percentages": {
+          "dispatch_wait": 85.23755878708138,
+          "dependency_wait": 10.928933747255005,
+          "nba_unit_work": 3.499020701039368,
+          "dependency_signal": 0.2648105008335567,
+          "unresolved": 0.055751401895587596,
+          "nba_unresolved": 0.013924861895100199
+        }
+      },
+      {
+        "worker": 3,
+        "cycles": 151213474457,
+        "categories": {
+          "dispatch_wait": 130384170510,
+          "nba_unit_work": 8981805716,
+          "dependency_wait": 11362755117,
+          "dependency_signal": 400459652,
+          "scheduler_other": 42145354,
+          "nba_unresolved": 21060719,
+          "unresolved": 21077389
+        },
+        "percentages": {
+          "dispatch_wait": 86.225232888936,
+          "nba_unit_work": 5.939818358286663,
+          "dependency_wait": 7.51438002321095,
+          "dependency_signal": 0.2648306663397759,
+          "scheduler_other": 0.027871427563807956,
+          "nba_unresolved": 0.013927805756483003,
+          "unresolved": 0.013938829906321408
+        }
+      },
+      {
+        "worker": 4,
+        "cycles": 151179230021,
+        "categories": {
+          "dispatch_wait": 129929998893,
+          "nba_unit_work": 3778015197,
+          "dependency_wait": 16249020190,
+          "dependency_signal": 990379333,
+          "scheduler_other": 63227935,
+          "unresolved": 168588473
+        },
+        "percentages": {
+          "dispatch_wait": 85.94434491758669,
+          "nba_unit_work": 2.4990305854019788,
+          "dependency_wait": 10.74818292681004,
+          "dependency_signal": 0.6551027762626046,
+          "scheduler_other": 0.041823162474909505,
+          "unresolved": 0.11151563146378092
+        }
+      },
+      {
+        "worker": 5,
+        "cycles": 151179067645,
+        "categories": {
+          "dispatch_wait": 137689283050,
+          "nba_unit_work": 11614364603,
+          "dependency_wait": 1601497429,
+          "unresolved": 105342399,
+          "dependency_signal": 168580164
+        },
+        "percentages": {
+          "dispatch_wait": 91.07694947115507,
+          "nba_unit_work": 7.682521650598449,
+          "dependency_wait": 1.0593380776501746,
+          "unresolved": 0.06968054548885427,
+          "dependency_signal": 0.11151025510744741
+        }
+      },
+      {
+        "worker": 6,
+        "cycles": 151189487042,
+        "categories": {
+          "dispatch_wait": 138456902817,
+          "nba_unit_work": 10856381753,
+          "unresolved": 169040544,
+          "dependency_wait": 969529371,
+          "dependency_signal": 737632557
+        },
+        "percentages": {
+          "dispatch_wait": 91.57839313161838,
+          "nba_unit_work": 7.180645933393589,
+          "unresolved": 0.11180707554953277,
+          "dependency_wait": 0.6412677164058819,
+          "dependency_signal": 0.487886143032609
+        }
+      },
+      {
+        "worker": 7,
+        "cycles": 151156648263,
+        "categories": {
+          "dispatch_wait": 130101459476,
+          "nba_unit_work": 3141393386,
+          "dependency_wait": 17197406387,
+          "dependency_signal": 547811766,
+          "nba_unresolved": 42129477,
+          "unresolved": 126447771
+        },
+        "percentages": {
+          "dispatch_wait": 86.07061678797896,
+          "nba_unit_work": 2.0782369959237497,
+          "dependency_wait": 11.377208071640979,
+          "dependency_signal": 0.3624132793992978,
+          "nba_unresolved": 0.027871401942373194,
+          "unresolved": 0.08365346311463019
+        }
+      }
+    ],
+    "memory_copy_callers": {
+      "0": {
+        "serial_act | Vsim_caliptra_top_tb_axi_complex__pi1f097f54___act_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__0": 7368916660,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__8": 3967116831,
+        "serial_act | Vsim___024root___eval_body__act": 1406419868,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__15": 1175644248,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__11": 1154411391,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__12": 1113331238,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__7": 1091556631,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__20": 1028703545,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__10": 1008064166,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__14": 987670600,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__19": 944605017,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__5": 902308438,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__13": 881323864,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__8": 860718370,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__16": 839496840,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__3": 839486238,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__18": 820590851,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__17": 776835650,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__6": 734739665,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__9": 734635661,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__4": 713871604,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__21": 629537447,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__22": 566450274,
+        "serial_act | Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0": 356774112,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__23": 314528270,
+        "serial_act | Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0": 209840754,
+        "serial_act | Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__6": 167886051,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__4": 167793325,
+        "serial_other | Vsim___024root___eval_sample": 146927023,
+        "serial_act | Vsim_pv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__pcr_vault1__2": 125923231,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__2": 104889628,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.pcr_vault1": 62985066,
+        "serial_other | Vsim___024root___eval_act": 41934732,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__2": 21005915,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 21004395,
+        "serial_act | Vsim_soc_ifc_top__pi8c871ce0___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__17": 20999541,
+        "serial_act | Vsim_sha3_ctrl__A40_ABd___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__sha3__8": 20997937,
+        "serial_act | Vsim_abr_top__A10___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__0": 20997482
+      },
+      "5": {
+        "nba_unit_work | caliptra_top_tb.tb_axi_complex_i": 7440924946
+      },
+      "6": {
+        "nba_unit_work | caliptra_top_tb.tb_services_i.abr_mem_top_inst": 5523079881,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 126864249
+      },
+      "1": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst": 84318718
+      },
+      "3": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.key_vault1": 63223803
+      },
+      "2": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.rvtop": 42137631
+      },
+      "4": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.entropy_src": 42130137
+      },
+      "7": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.sha3": 63196969
+      }
+    },
+    "caveats": [
+      "Cycle-sampled call stacks at 199 Hz; aggregate work estimates, not exact task durations.",
+      "Library time is assigned through observed generated-code callers on the sampled worker.",
+      "Caller ACT and NBA are distinguished by stack ancestry, including reused helper functions.",
+      "Unknown and ambiguous work remains separate; no instruction or memory-copy count is inferred."
+    ]
+  },
+  "mlkem": {
+    "diagnostic_only": true,
+    "samples": 230129,
+    "missing_stacks": 0,
+    "binary_sha256": "870fb9c8825361ba252ca201e28dbec2712d1a9a62b9103cf82c155b939d976d",
+    "profiled_elapsed": 144.683446048,
+    "unit_cycles": {
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00": 17432897547,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 22508059657,
+      "caliptra_top_tb.caliptra_top_dut.rvtop": 13107720805,
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1": 6461547996,
+      "caliptra_top_tb.tb_axi_complex_i": 29989452769,
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1": 9230894032,
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": 6154098945,
+      "caliptra_top_tb.caliptra_top_dut.key_vault1": 33678066062,
+      "caliptra_top_tb.caliptra_top_dut.hmac": 7228427598,
+      "caliptra_top_tb.caliptra_top_dut.data_vault1": 2044200115,
+      "caliptra_top_tb.caliptra_top_dut.aes_inst": 8071800763,
+      "caliptra_top_tb.tb_services_i.abr_mem_top_inst": 25141469171,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst": 8620689996,
+      "caliptra_top_tb.caliptra_top_dut.csrng": 4699677753,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 4363718628,
+      "caliptra_top_tb": 2086671957,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01": 4699594327,
+      "caliptra_top_tb.caliptra_top_dut.entropy_src": 1601660740,
+      "caliptra_top_tb.caliptra_top_dut.doe": 1475156485,
+      "caliptra_top_tb.caliptra_top_dut": 3146889401,
+      "caliptra_top_tb.caliptra_top_dut.sha256": 821984996,
+      "caliptra_top_tb.caliptra_top_dut.sha512": 1174607098,
+      "caliptra_top_tb.caliptra_top_dut.sha3": 1306439700,
+      "caliptra_top_tb.tb_services_i": 650393876
+    },
+    "ambiguous_cycles": {
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut | caliptra_top_tb.tb_services_i": 335807309,
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut.key_vault1": 21069502,
+      "caliptra_top_tb | caliptra_top_tb.tb_services_i": 41973850,
+      "caliptra_top_tb | caliptra_top_tb.tb_axi_complex_i": 21065232
+    },
+    "workers": [
+      {
+        "worker": 0,
+        "cycles": 603452837754,
+        "categories": {
+          "serial_act": 502810055737,
+          "dependency_wait": 64893065421,
+          "nba_unit_work": 16237870901,
+          "serial_other": 13406268257,
+          "dependency_signal": 3545742949,
+          "nba_unresolved": 2161179078,
+          "scheduler_other": 398655411
+        },
+        "percentages": {
+          "serial_act": 83.32217934518565,
+          "dependency_wait": 10.75362668978846,
+          "nba_unit_work": 2.6908268360185312,
+          "serial_other": 2.221593373708704,
+          "dependency_signal": 0.5875758182191922,
+          "nba_unresolved": 0.35813553981181434,
+          "scheduler_other": 0.06606239726765747
+        }
+      },
+      {
+        "worker": 1,
+        "cycles": 606318369575,
+        "categories": {
+          "dispatch_wait": 517165616543,
+          "dependency_wait": 71744094218,
+          "nba_unit_work": 13509973358,
+          "dependency_signal": 3245354351,
+          "unresolved": 526880039,
+          "nba_unresolved": 63227139,
+          "scheduler_other": 63223927
+        },
+        "percentages": {
+          "dispatch_wait": 85.2960494839548,
+          "dependency_wait": 11.832742964441133,
+          "nba_unit_work": 2.2281979296569623,
+          "dependency_signal": 0.535255818370609,
+          "unresolved": 0.086898247758734,
+          "nba_unresolved": 0.010428042786221236,
+          "scheduler_other": 0.010427513031531097
+        }
+      },
+      {
+        "worker": 2,
+        "cycles": 606240327117,
+        "categories": {
+          "dispatch_wait": 513427689665,
+          "dependency_wait": 71612266579,
+          "nba_unit_work": 19261819750,
+          "dependency_signal": 1306457855,
+          "unresolved": 484616613,
+          "scheduler_other": 42136394,
+          "nba_unresolved": 105340261
+        },
+        "percentages": {
+          "dispatch_wait": 84.69045470904679,
+          "dependency_wait": 11.812521103562178,
+          "nba_unit_work": 3.1772580754567006,
+          "dependency_signal": 0.21550164127366986,
+          "unresolved": 0.07993803634024374,
+          "scheduler_other": 0.006950443927143762,
+          "nba_unresolved": 0.01737599039327354
+        }
+      },
+      {
+        "worker": 3,
+        "cycles": 606286922455,
+        "categories": {
+          "dispatch_wait": 515176060074,
+          "dependency_wait": 46009577194,
+          "nba_unit_work": 42466938192,
+          "nba_unresolved": 210771570,
+          "dependency_signal": 1770295403,
+          "unresolved": 547923322,
+          "scheduler_other": 105356700
+        },
+        "percentages": {
+          "dispatch_wait": 84.97231937445221,
+          "dependency_wait": 7.588746431754832,
+          "nba_unit_work": 7.00442919336628,
+          "nba_unresolved": 0.03476432728361281,
+          "dependency_signal": 0.2919897061001502,
+          "unresolved": 0.09037360063471732,
+          "scheduler_other": 0.017377366408199216
+        }
+      },
+      {
+        "worker": 4,
+        "cycles": 606256137921,
+        "categories": {
+          "dispatch_wait": 516428697532,
+          "dependency_wait": 69321897105,
+          "nba_unit_work": 16079776693,
+          "dependency_signal": 3540387937,
+          "unresolved": 548212643,
+          "scheduler_other": 231787180,
+          "nba_unresolved": 105378831
+        },
+        "percentages": {
+          "dispatch_wait": 85.18325262701006,
+          "dependency_wait": 11.43442396191182,
+          "nba_unit_work": 2.6523074468394614,
+          "dependency_signal": 0.5839756029754771,
+          "unresolved": 0.09042591220271265,
+          "scheduler_other": 0.03823254982536832,
+          "nba_unresolved": 0.01738189923509388
+        }
+      },
+      {
+        "worker": 5,
+        "cycles": 606213124671,
+        "categories": {
+          "dispatch_wait": 550129874937,
+          "nba_unit_work": 47759559065,
+          "dependency_wait": 6616806133,
+          "dependency_signal": 758595690,
+          "unresolved": 842939704,
+          "scheduler_other": 105349142
+        },
+        "percentages": {
+          "dispatch_wait": 90.74859196352155,
+          "nba_unit_work": 7.878344615339655,
+          "dependency_wait": 1.0914983301608703,
+          "dependency_signal": 0.12513679746074452,
+          "unresolved": 0.13905005841921927,
+          "scheduler_other": 0.017378235097957405
+        }
+      },
+      {
+        "worker": 6,
+        "cycles": 606256749145,
+        "categories": {
+          "dispatch_wait": 550894155350,
+          "nba_unit_work": 47691671861,
+          "dependency_wait": 4025094879,
+          "dependency_signal": 3161154082,
+          "unresolved": 442506360,
+          "nba_unresolved": 21076698,
+          "scheduler_other": 21089915
+        },
+        "percentages": {
+          "dispatch_wait": 90.86812742735194,
+          "nba_unit_work": 7.866579947894891,
+          "dependency_wait": 0.6639257846904906,
+          "dependency_signal": 0.5214216726590104,
+          "unresolved": 0.07298992722539813,
+          "nba_unresolved": 0.003476530039413884,
+          "scheduler_other": 0.0034787101388550267
+        }
+      },
+      {
+        "worker": 7,
+        "cycles": 606223984422,
+        "categories": {
+          "dispatch_wait": 517775890391,
+          "dependency_signal": 1897336100,
+          "dependency_wait": 72704693833,
+          "nba_unit_work": 13108426490,
+          "unresolved": 653359837,
+          "nba_unresolved": 63200104,
+          "scheduler_other": 21077667
+        },
+        "percentages": {
+          "dispatch_wait": 85.40999757452187,
+          "dependency_signal": 0.3129760861918061,
+          "dependency_wait": 11.993041466731109,
+          "nba_unit_work": 2.162307468335839,
+          "unresolved": 0.1077753196490471,
+          "nba_unresolved": 0.010425206792215206,
+          "scheduler_other": 0.0034768777781196422
+        }
+      }
+    ],
+    "memory_copy_callers": {
+      "0": {
+        "serial_act | Vsim_caliptra_top_tb_axi_complex__pi1f097f54___act_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__0": 36865600706,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__8": 15147132185,
+        "serial_act | Vsim___024root___eval_body__act": 4698136787,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__16": 4174358480,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__19": 4111108172,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__17": 3797958094,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__18": 3796304188,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__5": 3713818922,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__12": 3692608479,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__3": 3692224565,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__14": 3672256392,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__4": 3651325248,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__21": 3650286234,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__22": 3610833210,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__11": 3482721901,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__20": 3461693893,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__10": 3440479924,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__13": 3273922717,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__15": 3171494383,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__6": 2999694628,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__8": 2979315136,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__7": 2684942635,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__9": 2307164336,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__23": 1405972222,
+        "serial_act | Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0": 1175321349,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__4": 629994398,
+        "serial_act | Vsim_pv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__pcr_vault1__2": 587518570,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__2": 587243137,
+        "serial_act | Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__6": 503689200,
+        "serial_other | Vsim___024root___eval_sample": 420164847,
+        "serial_act | Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0": 398679673,
+        "serial_other | Vsim___024root___eval_nba": 272723359,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__2": 146929903,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.pcr_vault1": 146920565,
+        "serial_act | Vsim_abr_top__A10___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__0": 146840880,
+        "serial_act | Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6": 125922905,
+        "serial_act | Vsim_soc_ifc_top__pi8c871ce0___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__2": 104926087,
+        "serial_act | Vsim_ecc_top__Af_AB40___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__ecc_top1__13": 104925889,
+        "serial_other | Vsim___024root___eval_act": 104920038,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 62927464,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__33": 20993063,
+        "serial_act | Vsim_sha3_ctrl__A40_ABd___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__sha3__8": 20990407,
+        "serial_act | Vsim_soc_ifc_top__pi8c871ce0___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__17": 20990387,
+        "serial_act | Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__3": 20984679,
+        "serial_act | Vsim_abr_top__A10___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__6": 20982176
+      },
+      "5": {
+        "nba_unit_work | caliptra_top_tb.tb_axi_complex_i": 27143751871
+      },
+      "6": {
+        "nba_unit_work | caliptra_top_tb.tb_services_i.abr_mem_top_inst": 23982523681,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 842996749
+      },
+      "4": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.entropy_src": 126457266,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.hmac": 42145303
+      },
+      "1": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst": 210758653
+      },
+      "2": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.rvtop": 126436361,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": 21074125
+      },
+      "7": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.sha3": 84283729,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.ecc_top1": 42152224
+      },
+      "3": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.key_vault1": 252896162
+      }
+    },
+    "caveats": [
+      "Cycle-sampled call stacks at 199 Hz; aggregate work estimates, not exact task durations.",
+      "Library time is assigned through observed generated-code callers on the sampled worker.",
+      "Caller ACT and NBA are distinguished by stack ancestry, including reused helper functions.",
+      "Unknown and ambiguous work remains separate; no instruction or memory-copy count is inferred."
+    ]
+  },
+  "sha3": {
+    "diagnostic_only": true,
+    "samples": 72653,
+    "missing_stacks": 0,
+    "binary_sha256": "870fb9c8825361ba252ca201e28dbec2712d1a9a62b9103cf82c155b939d976d",
+    "profiled_elapsed": 45.726874337,
+    "unit_cycles": {
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 1154150745,
+      "caliptra_top_tb.tb_axi_complex_i": 9631749143,
+      "caliptra_top_tb.caliptra_top_dut.aes_inst": 2635618404,
+      "caliptra_top_tb.tb_services_i.abr_mem_top_inst": 7861482910,
+      "caliptra_top_tb.caliptra_top_dut.key_vault1": 9821941476,
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1": 2203820287,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00": 4595193372,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst": 2866635575,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 6238029512,
+      "caliptra_top_tb.caliptra_top_dut.sha512": 461953399,
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1": 3035071654,
+      "caliptra_top_tb.caliptra_top_dut.csrng": 1370189012,
+      "caliptra_top_tb.caliptra_top_dut.rvtop": 4214593475,
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": 1917667201,
+      "caliptra_top_tb.caliptra_top_dut.data_vault1": 484677590,
+      "caliptra_top_tb.caliptra_top_dut.entropy_src": 717457335,
+      "caliptra_top_tb": 906127227,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01": 1433250349,
+      "caliptra_top_tb.caliptra_top_dut.hmac": 2191617909,
+      "caliptra_top_tb.caliptra_top_dut": 1069982327,
+      "caliptra_top_tb.caliptra_top_dut.sha3": 653133676,
+      "caliptra_top_tb.caliptra_top_dut.sha256": 231829902,
+      "caliptra_top_tb.caliptra_top_dut.doe": 568940022,
+      "caliptra_top_tb.tb_services_i": 125892714
+    },
+    "ambiguous_cycles": {
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut | caliptra_top_tb.tb_services_i": 41951321
+    },
+    "workers": [
+      {
+        "worker": 0,
+        "cycles": 190568181149,
+        "categories": {
+          "nba_unit_work": 5078743862,
+          "dependency_signal": 1553157390,
+          "serial_act": 159279919863,
+          "dependency_wait": 19579947995,
+          "serial_other": 4090767333,
+          "nba_unresolved": 775840857,
+          "scheduler_other": 209803849
+        },
+        "percentages": {
+          "nba_unit_work": 2.665053437241483,
+          "dependency_signal": 0.8150140178887624,
+          "serial_act": 83.58159211188746,
+          "dependency_wait": 10.274510611869134,
+          "serial_other": 2.146616139344659,
+          "nba_unresolved": 0.40711983098237764,
+          "scheduler_other": 0.11009385078611847
+        }
+      },
+      {
+        "worker": 1,
+        "cycles": 191470078153,
+        "categories": {
+          "dispatch_wait": 164508031551,
+          "dependency_wait": 21607988222,
+          "nba_unit_work": 4320963723,
+          "dependency_signal": 738067627,
+          "scheduler_other": 84304199,
+          "nba_unresolved": 21077544,
+          "unresolved": 189645287
+        },
+        "percentages": {
+          "dispatch_wait": 85.91840204898483,
+          "dependency_wait": 11.285308091185652,
+          "nba_unit_work": 2.2567305370540467,
+          "dependency_signal": 0.3854741347158299,
+          "scheduler_other": 0.044029960092581234,
+          "nba_unresolved": 0.01100827043229039,
+          "unresolved": 0.09904695753477374
+        }
+      },
+      {
+        "worker": 2,
+        "cycles": 191414544252,
+        "categories": {
+          "dispatch_wait": 163426817283,
+          "dependency_wait": 20927924557,
+          "dependency_signal": 716814082,
+          "nba_unit_work": 6132260676,
+          "unresolved": 210727654
+        },
+        "percentages": {
+          "dispatch_wait": 85.37847420196358,
+          "dependency_wait": 10.933299054563005,
+          "dependency_signal": 0.3744825581572861,
+          "nba_unit_work": 3.2036545080538867,
+          "unresolved": 0.1100896772622325
+        }
+      },
+      {
+        "worker": 3,
+        "cycles": 191430840733,
+        "categories": {
+          "dispatch_wait": 164360958116,
+          "dependency_wait": 13621890484,
+          "nba_unit_work": 12879056449,
+          "dependency_signal": 316117155,
+          "scheduler_other": 21078537,
+          "nba_unresolved": 63212967,
+          "unresolved": 168527025
+        },
+        "percentages": {
+          "dispatch_wait": 85.85918417672522,
+          "dependency_wait": 7.115828584276691,
+          "nba_unit_work": 6.727785554138158,
+          "dependency_signal": 0.16513386964690158,
+          "scheduler_other": 0.011011045513507142,
+          "nba_unresolved": 0.03302130772552313,
+          "unresolved": 0.08803546197399545
+        }
+      },
+      {
+        "worker": 4,
+        "cycles": 191414237765,
+        "categories": {
+          "dispatch_wait": 163508041245,
+          "dependency_wait": 21371822173,
+          "nba_unit_work": 4953628279,
+          "dependency_signal": 1264660535,
+          "unresolved": 210715231,
+          "scheduler_other": 84300599,
+          "nba_unresolved": 21069703
+        },
+        "percentages": {
+          "dispatch_wait": 85.42104451275952,
+          "dependency_wait": 11.165220739346605,
+          "nba_unit_work": 2.587910040987436,
+          "dependency_signal": 0.6606930340012788,
+          "unresolved": 0.1100833634218453,
+          "scheduler_other": 0.0440409240108336,
+          "nba_unresolved": 0.011007385472478466
+        }
+      },
+      {
+        "worker": 5,
+        "cycles": 191419985000,
+        "categories": {
+          "dispatch_wait": 174369229561,
+          "nba_unit_work": 14353348464,
+          "dependency_wait": 2001996509,
+          "dependency_signal": 358211695,
+          "unresolved": 295024712,
+          "scheduler_other": 42174059
+        },
+        "percentages": {
+          "dispatch_wait": 91.0924894080417,
+          "nba_unit_work": 7.498354189088459,
+          "dependency_wait": 1.0458659836380197,
+          "dependency_signal": 0.18713390610703476,
+          "unresolved": 0.15412430003063682,
+          "scheduler_other": 0.02203221309415524
+        }
+      },
+      {
+        "worker": 6,
+        "cycles": 191395599474,
+        "categories": {
+          "dispatch_wait": 174914058908,
+          "nba_unit_work": 14099512422,
+          "dependency_signal": 590401560,
+          "dependency_wait": 1538736788,
+          "unresolved": 210725847,
+          "scheduler_other": 42163949
+        },
+        "percentages": {
+          "dispatch_wait": 91.38875678892559,
+          "nba_unit_work": 7.36668578627135,
+          "dependency_signal": 0.3084718570450742,
+          "dependency_wait": 0.803956199739602,
+          "unresolved": 0.11009963007463289,
+          "scheduler_other": 0.022029737943754412
+        }
+      },
+      {
+        "worker": 7,
+        "cycles": 191411145271,
+        "categories": {
+          "dispatch_wait": 163756720672,
+          "dependency_wait": 22342694255,
+          "dependency_signal": 464470210,
+          "nba_unit_work": 4615442662,
+          "unresolved": 231817472
+        },
+        "percentages": {
+          "dispatch_wait": 85.55234359010451,
+          "dependency_wait": 11.672619284194345,
+          "dependency_signal": 0.24265578127250784,
+          "nba_unit_work": 2.411271640146896,
+          "unresolved": 0.12110970428174007
+        }
+      }
+    ],
+    "memory_copy_callers": {
+      "5": {
+        "nba_unit_work | caliptra_top_tb.tb_axi_complex_i": 9315655744
+      },
+      "6": {
+        "nba_unit_work | caliptra_top_tb.tb_services_i.abr_mem_top_inst": 7587517397,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 168571438
+      },
+      "0": {
+        "serial_act | Vsim_caliptra_top_tb_axi_complex__pi1f097f54___act_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__0": 10240085644,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__8": 5645694791,
+        "serial_act | Vsim___024root___eval_body__act": 1951131441,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__17": 1468811815,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__7": 1405607759,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__14": 1385632581,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__13": 1323002268,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__9": 1280022284,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__8": 1238534401,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__6": 1238412951,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__11": 1217516088,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__4": 1216503341,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__5": 1174691628,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__18": 1133150727,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__3": 1111892569,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__10": 1091230554,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__15": 1069993912,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__12": 944324783,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__20": 944224475,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__16": 943495396,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__21": 921968503,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__19": 860763704,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__22": 734379062,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__23": 461587591,
+        "serial_act | Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0": 461219730,
+        "serial_act | Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__6": 188850381,
+        "serial_act | Vsim_pv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__pcr_vault1__2": 146905243,
+        "serial_act | Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0": 146902843,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__2": 146889557,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__4": 146798451,
+        "serial_other | Vsim___024root___eval_act": 62953823,
+        "serial_act | Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6": 62943978,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.pcr_vault1": 62923815,
+        "serial_other | Vsim___024root___eval_sample": 62882741,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__2": 41976932,
+        "serial_other | Vsim___024root___eval_nba": 41976528,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 41975306,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__33": 20997305,
+        "serial_act | Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__3": 20984179,
+        "serial_act | Vsim_sha3_ctrl__A40_ABd___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__sha3__8": 20970556
+      },
+      "1": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst": 105362280
+      },
+      "7": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.ecc_top1": 21079784,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.sha3": 21073514
+      },
+      "4": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.entropy_src": 42143700
+      },
+      "3": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.key_vault1": 42141510
+      }
+    },
+    "caveats": [
+      "Cycle-sampled call stacks at 199 Hz; aggregate work estimates, not exact task durations.",
+      "Library time is assigned through observed generated-code callers on the sampled worker.",
+      "Caller ACT and NBA are distinguished by stack ancestry, including reused helper functions.",
+      "Unknown and ambiguous work remains separate; no instruction or memory-copy count is inferred."
+    ]
+  },
+  "trng": {
+    "diagnostic_only": true,
+    "samples": 93079,
+    "missing_stacks": 0,
+    "binary_sha256": "870fb9c8825361ba252ca201e28dbec2712d1a9a62b9103cf82c155b939d976d",
+    "profiled_elapsed": 58.55442363,
+    "unit_cycles": {
+      "caliptra_top_tb.caliptra_top_dut.abr_inst": 3709258711,
+      "caliptra_top_tb.caliptra_top_dut.rvtop": 5479256944,
+      "caliptra_top_tb.caliptra_top_dut.aes_inst": 2930236450,
+      "caliptra_top_tb.caliptra_top_dut.hmac": 3076586413,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 8157270867,
+      "caliptra_top_tb.tb_axi_complex_i": 13005191841,
+      "caliptra_top_tb.caliptra_top_dut.csrng": 2002195945,
+      "caliptra_top_tb.caliptra_top_dut.key_vault1": 12287109837,
+      "caliptra_top_tb.caliptra_top_dut.sha3": 864405994,
+      "caliptra_top_tb.tb_services_i.abr_mem_top_inst": 10200270199,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst00": 6154244473,
+      "caliptra_top_tb.caliptra_top_dut.entropy_src": 674740633,
+      "caliptra_top_tb.caliptra_top_dut": 1510945797,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.pwm_inst01": 2065938100,
+      "caliptra_top_tb.caliptra_top_dut.sha512": 440742848,
+      "caliptra_top_tb.tb_services_i": 125899566,
+      "caliptra_top_tb.caliptra_top_dut.pcr_vault1": 2601685710,
+      "caliptra_top_tb.caliptra_top_dut.ecc_top1": 3497849630,
+      "caliptra_top_tb.caliptra_top_dut.soc_ifc_top1": 2170263952,
+      "caliptra_top_tb.caliptra_top_dut.sha256": 295072698,
+      "caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 1741403243,
+      "caliptra_top_tb.caliptra_top_dut.doe": 463646705,
+      "caliptra_top_tb": 885014619,
+      "caliptra_top_tb.caliptra_top_dut.data_vault1": 885241379
+    },
+    "ambiguous_cycles": {
+      "caliptra_top_tb | caliptra_top_tb.tb_services_i": 20985982,
+      "caliptra_top_tb | caliptra_top_tb.caliptra_top_dut | caliptra_top_tb.tb_services_i": 83991268
+    },
+    "workers": [
+      {
+        "worker": 0,
+        "cycles": 244065727118,
+        "categories": {
+          "serial_act": 201708574701,
+          "dependency_wait": 27312973946,
+          "nba_unresolved": 1112549268,
+          "nba_unit_work": 6546636336,
+          "dependency_signal": 1741700286,
+          "serial_other": 5454465399,
+          "scheduler_other": 188827182
+        },
+        "percentages": {
+          "serial_act": 82.64518623029717,
+          "dependency_wait": 11.190827269571866,
+          "nba_unresolved": 0.4558400235614027,
+          "nba_unit_work": 2.6823251315555896,
+          "dependency_signal": 0.7136193625243946,
+          "serial_other": 2.23483463385373,
+          "scheduler_other": 0.07736734863584781
+        }
+      },
+      {
+        "worker": 1,
+        "cycles": 245255576399,
+        "categories": {
+          "nba_unit_work": 5817338145,
+          "dispatch_wait": 209020327282,
+          "dependency_wait": 28604939770,
+          "dependency_signal": 1433643031,
+          "unresolved": 337180957,
+          "nba_unresolved": 21082162,
+          "scheduler_other": 21065052
+        },
+        "percentages": {
+          "nba_unit_work": 2.371949388639352,
+          "dispatch_wait": 85.22551468593325,
+          "dependency_wait": 11.663318808076093,
+          "dependency_signal": 0.5845506357285197,
+          "unresolved": 0.1374814640102001,
+          "nba_unresolved": 0.008595997004244247,
+          "scheduler_other": 0.008589020608334634
+        }
+      },
+      {
+        "worker": 2,
+        "cycles": 245203534869,
+        "categories": {
+          "nba_unit_work": 7649520896,
+          "dispatch_wait": 209569817433,
+          "dependency_wait": 27204540120,
+          "unresolved": 168572089,
+          "nba_unresolved": 21071199,
+          "dependency_signal": 590013132
+        },
+        "percentages": {
+          "nba_unit_work": 3.1196617536883213,
+          "dispatch_wait": 85.46769831232763,
+          "dependency_wait": 11.094676972962086,
+          "unresolved": 0.06874782171882622,
+          "nba_unresolved": 0.00859335042264268,
+          "dependency_signal": 0.24062178888049657
+        }
+      },
+      {
+        "worker": 3,
+        "cycles": 245227317785,
+        "categories": {
+          "dispatch_wait": 209986733748,
+          "nba_unit_work": 15554567307,
+          "dependency_wait": 18610969110,
+          "dependency_signal": 801104366,
+          "nba_unresolved": 63222973,
+          "unresolved": 189651132,
+          "scheduler_other": 21069149
+        },
+        "percentages": {
+          "dispatch_wait": 85.62942156880877,
+          "nba_unit_work": 6.342917847609977,
+          "dependency_wait": 7.5892723853534685,
+          "dependency_signal": 0.32667827272912486,
+          "nba_unresolved": 0.025781374428859492,
+          "unresolved": 0.07733687001636345,
+          "scheduler_other": 0.008591681053442877
+        }
+      },
+      {
+        "worker": 4,
+        "cycles": 245209316101,
+        "categories": {
+          "dispatch_wait": 208717389150,
+          "unresolved": 189603894,
+          "nba_unit_work": 6765202099,
+          "dependency_wait": 28250952303,
+          "dependency_signal": 1096519893,
+          "scheduler_other": 147500097,
+          "nba_unresolved": 42148665
+        },
+        "percentages": {
+          "dispatch_wait": 85.11805035336862,
+          "unresolved": 0.07732328323198923,
+          "nba_unit_work": 2.758949866412686,
+          "dependency_wait": 11.52115782230869,
+          "dependency_signal": 0.44717709360942515,
+          "scheduler_other": 0.06015272965373214,
+          "nba_unresolved": 0.01718885141486193
+        }
+      },
+      {
+        "worker": 5,
+        "cycles": 245221420479,
+        "categories": {
+          "dispatch_wait": 222732392091,
+          "nba_unit_work": 19433389456,
+          "unresolved": 294947895,
+          "dependency_signal": 632194805,
+          "dependency_wait": 2065275962,
+          "scheduler_other": 63220270
+        },
+        "percentages": {
+          "dispatch_wait": 90.82909301150309,
+          "nba_unit_work": 7.924833572059099,
+          "unresolved": 0.12027819365203393,
+          "dependency_signal": 0.25780570219563637,
+          "dependency_wait": 0.8422086284166451,
+          "scheduler_other": 0.02578089217349346
+        }
+      },
+      {
+        "worker": 6,
+        "cycles": 245208620583,
+        "categories": {
+          "dispatch_wait": 223842687407,
+          "dependency_wait": 1954395896,
+          "nba_unit_work": 18357541066,
+          "dependency_signal": 843256226,
+          "scheduler_other": 21066711,
+          "unresolved": 189673277
+        },
+        "percentages": {
+          "dispatch_wait": 91.28663049235338,
+          "dependency_wait": 0.7970339261944757,
+          "nba_unit_work": 7.486499056335666,
+          "dependency_signal": 0.3438933851489811,
+          "scheduler_other": 0.008591341915268915,
+          "unresolved": 0.07735179805222142
+        }
+      },
+      {
+        "worker": 7,
+        "cycles": 245206980063,
+        "categories": {
+          "dispatch_wait": 208727568593,
+          "dependency_wait": 30157160862,
+          "nba_unit_work": 5205254499,
+          "dependency_signal": 737679570,
+          "unresolved": 337181447,
+          "nba_unresolved": 42135092
+        },
+        "percentages": {
+          "dispatch_wait": 85.12301262360985,
+          "dependency_wait": 12.298655141975097,
+          "nba_unit_work": 2.1228002961671955,
+          "dependency_signal": 0.30083954780180855,
+          "unresolved": 0.13750891060008544,
+          "nba_unresolved": 0.017183479845954797
+        }
+      }
+    ],
+    "memory_copy_callers": {
+      "0": {
+        "serial_act | Vsim_caliptra_top_tb_axi_complex__pi1f097f54___act_sequent__TOP__caliptra_top_tb__DOT__tb_axi_complex_i__0": 15272930681,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__8": 6568685608,
+        "serial_act | Vsim___024root___eval_body__act": 2643328058,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__18": 1783541711,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__11": 1572430099,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__7": 1552221086,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__17": 1511046487,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__20": 1510802366,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__19": 1468488516,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__21": 1447660856,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__4": 1446968561,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__22": 1427594142,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__12": 1426572044,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__9": 1426249976,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__16": 1405066645,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__5": 1384820325,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__13": 1383488488,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__6": 1342776834,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__10": 1300853456,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__3": 1300591974,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__8": 1258659468,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__15": 1153780118,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__14": 1091091691,
+        "serial_act | Vsim_ntt_masked_gs_butterfly___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__masked_bf_1x2_inst0__DOT__masked_bf_inst00__0": 608690766,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__23": 419672281,
+        "serial_act | Vsim_ntt_masked_pwm___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__ntt_gen__BRA__0__KET____DOT__ntt_top_inst__DOT__hybrid_bf2x2__DOT__pwm_inst00__0": 251808031,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__4": 251707218,
+        "serial_other | Vsim___024root___eval_sample": 230791394,
+        "serial_act | Vsim_pv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__pcr_vault1__2": 230556531,
+        "serial_act | Vsim_kv__Ad_AB40___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__key_vault1__6": 188824248,
+        "serial_act | Vsim_abr_mem_top___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__abr_mem_top_inst__2": 168256552,
+        "serial_other | Vsim___024root___eval_nba": 125937926,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.pcr_vault1": 83928576,
+        "serial_act | Vsim_caliptra_top_tb_services___act_sequent__TOP__caliptra_top_tb__DOT__tb_services_i__2": 83898532,
+        "serial_act | Vsim_soc_ifc_top__pi8c871ce0___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__6": 62842094,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst01": 41953773,
+        "serial_act | Vsim_soc_ifc_top__pi8c871ce0___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__2": 20995713,
+        "serial_act | Vsim_abr_top__A10___act_comb__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__3": 20992677,
+        "serial_other | Vsim___024root___eval_act": 20991284,
+        "serial_act | Vsim_abr_top__A10___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__abr_inst__0": 20987150,
+        "serial_act | Vsim_soc_ifc_top__pi8c871ce0___act_sequent__TOP__caliptra_top_tb__DOT__caliptra_top_dut__soc_ifc_top1__17": 20986510
+      },
+      "5": {
+        "nba_unit_work | caliptra_top_tb.tb_axi_complex_i": 11929861283
+      },
+      "6": {
+        "nba_unit_work | caliptra_top_tb.tb_services_i.abr_mem_top_inst": 9694521094,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst.ntt_gen[0].ntt_top_inst.hybrid_bf2x2.masked_bf_1x2_inst0.masked_bf_inst00": 273960745
+      },
+      "3": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.key_vault1": 105333973
+      },
+      "4": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.hmac": 21082147,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.entropy_src": 21079542,
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.csrng": 21072696
+      },
+      "1": {
+        "nba_unit_work | caliptra_top_tb.caliptra_top_dut.abr_inst": 42157895
+      }
+    },
+    "caveats": [
+      "Cycle-sampled call stacks at 199 Hz; aggregate work estimates, not exact task durations.",
+      "Library time is assigned through observed generated-code callers on the sampled worker.",
+      "Caller ACT and NBA are distinguished by stack ancestry, including reused helper functions.",
+      "Unknown and ambiguous work remains separate; no instruction or memory-copy count is inferred."
+    ]
+  }
+}
