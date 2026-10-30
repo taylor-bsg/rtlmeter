@@ -1,25 +1,25 @@
 `verilator_config
 // Caliptra default: placement based on measured NBA work across four workloads.
 // Worker 0 is the caller. Workers 0-3 and 4-7 occupy two kk10 chiplets.
-threads_unit -module "__rtlmeter_utils" -workers 1->8: { 0 }
-threads_unit -module "abr_mem_top" -workers 1->8: { 1 }
-threads_unit -module "abr_top" -workers 1->8: { 7 }
-threads_unit -module "aes_clp_wrapper" -workers 1->8: { 6 }
-threads_unit -module "caliptra_top" -workers 1->8: { 0 }
-threads_unit -module "caliptra_top_tb_axi_complex" -workers 1->8: { 0 }
-threads_unit -module "caliptra_top_tb_services" -workers 1->8: { 3 }
-threads_unit -module "csrng" -workers 1->8: { 5 }
-threads_unit -module "doe_ctrl" -workers 1->8: { 2 }
-threads_unit -module "dv" -workers 1->8: { 5 }
-threads_unit -module "ecc_top" -workers 1->8: { 6 }
-threads_unit -module "el2_veer_wrapper" -workers 1->8: { 5 }
-threads_unit -module "entropy_src" -workers 1->8: { 5 }
-threads_unit -module "hmac_ctrl" -workers 1->8: { 6 }
-threads_unit -module "kv" -workers 1->8: { 2 }
-threads_unit -module "ntt_masked_gs_butterfly" -workers 2->8: { 7 7 }
-threads_unit -module "ntt_masked_pwm" -workers 2->8: { 4 4 }
-threads_unit -module "pv" -workers 1->8: { 3 }
-threads_unit -module "sha256_ctrl" -workers 1->8: { 6 }
-threads_unit -module "sha3_ctrl" -workers 1->8: { 6 }
-threads_unit -module "sha512_ctrl" -workers 1->8: { 7 }
-threads_unit -module "soc_ifc_top" -workers 1->8: { 3 }
+threads_group -module "__rtlmeter_utils" -workers 1->8: { 0 }
+threads_group -module "abr_mem_top" -workers 1->8: { 1 }
+threads_group -module "abr_top" -workers 1->8: { 7 }
+threads_group -module "aes_clp_wrapper" -workers 1->8: { 6 }
+threads_group -module "caliptra_top" -workers 1->8: { 0 }
+threads_group -module "caliptra_top_tb_axi_complex" -workers 1->8: { 0 }
+threads_group -module "caliptra_top_tb_services" -workers 1->8: { 3 }
+threads_group -module "csrng" -workers 1->8: { 5 }
+threads_group -module "doe_ctrl" -workers 1->8: { 2 }
+threads_group -module "dv" -workers 1->8: { 5 }
+threads_group -module "ecc_top" -workers 1->8: { 6 }
+threads_group -module "el2_veer_wrapper" -workers 1->8: { 5 }
+threads_group -module "entropy_src" -workers 1->8: { 5 }
+threads_group -module "hmac_ctrl" -workers 1->8: { 6 }
+threads_group -module "kv" -workers 1->8: { 2 }
+threads_group -module "ntt_masked_gs_butterfly" -workers 2->8: { 7 7 }
+threads_group -module "ntt_masked_pwm" -workers 2->8: { 4 4 }
+threads_group -module "pv" -workers 1->8: { 3 }
+threads_group -module "sha256_ctrl" -workers 1->8: { 6 }
+threads_group -module "sha3_ctrl" -workers 1->8: { 6 }
+threads_group -module "sha512_ctrl" -workers 1->8: { 7 }
+threads_group -module "soc_ifc_top" -workers 1->8: { 3 }

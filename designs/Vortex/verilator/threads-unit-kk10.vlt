@@ -3,11 +3,11 @@
 // Required worker-to-CPU affinity: 0 1 2 3 4 5 6 7.
 // Worker 0 is the calling/scheduler thread, pinned to physical CPU 0.
 // GPU core index = 4*cluster + core within the cluster.
-threads_unit -module "VX_core" -workers 8->8: {
+threads_group -module "VX_core" -workers 8->8: {
     0 1 2 3
     4 5 6 7
 }
 // Shared instruction cache for clusters 0 and 1, respectively.
-threads_unit -module "VX_cache_cluster" -instance "icache" -workers 2->8: { 1 5 }
+threads_group -module "VX_cache_cluster" -instance "icache" -workers 2->8: { 1 5 }
 // Shared data cache for clusters 0 and 1, respectively.
-threads_unit -module "VX_cache_cluster" -instance "dcache" -workers 2->8: { 2 6 }
+threads_group -module "VX_cache_cluster" -instance "dcache" -workers 2->8: { 2 6 }

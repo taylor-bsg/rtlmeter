@@ -1,3 +1,3 @@
 `verilator_config
 // Portable GPU-core grouping; automatic worker placement.
-threads_unit -module "VX_core"
+threads_group -module "VX_core"

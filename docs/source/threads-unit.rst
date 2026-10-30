@@ -1,15 +1,23 @@
-Thread-unit profiles
-====================
+Thread-group profiles
+=====================
 
 Experimental Verilator configuration files live beside each design in
 ``designs/<design>/verilator/``. A profile is shared by the design's workloads.
 Select one explicitly with ``--compileArgs``; profiles are not enabled by default.
 
-These files currently require the experimental Verilator
-`worker-assignment branch
-<https://github.com/taylor-bsg/verilator/tree/codex/threads-unit-worker-assignment>`_
-(validated at ``8c052270d87fe6edef528d1f23b176b52682b212``), based on PR #8804.
+These files require the experimental Verilator
+`parallel-simulation integration branch
+<https://github.com/taylor-bsg/verilator/tree/codex/parallel-simulation-integration>`_
+at ``f951824c9eee74cd4bb3e3a4212ad740766114d5``. It combines PRs #8804, #8953,
+and #8980 with the depth-zero grouping policy and explicit worker assignment.
 They are not configurations for a released Verilator version.
+
+Profiles use ``threads_group`` and the listing option is
+``--threads-group-list``. Historical result bundles retain the syntax and
+compiler revisions used for those measurements. The BlackParrot, OpenPiton,
+and Vortex timings below used worker-assignment revision
+``8c052270d87fe6edef528d1f23b176b52682b212``; OpenTitan and Caliptra record their
+compiler revisions separately.
 
 Layout
 ------
@@ -43,10 +51,10 @@ Use an absolute profile path because Verilator runs in a compilation directory::
 
     profile="$PWD/designs/OpenPiton/verilator/threads-unit.vlt"
     ./rtlmeter run --cases 'OpenPiton:4x4:dhry' \
-        --compileArgs="--threads 8 --threads-unit-list '$profile'" \
+        --compileArgs="--threads 8 --compiler clang --threads-group-list '$profile'" \
         --nExecute 0 --workRoot work-openpiton-units
 
-``--threads-unit-list`` writes ``obj_dir/Vsim__threads_units.txt`` in the case's
+``--threads-group-list`` writes ``obj_dir/Vsim__threads_groups.txt`` in the case's
 compilation directory. It lists the module type, instance index, explicit worker
 index (or ``auto``), hierarchical instance name, and instance pattern. Indices
 start at zero for each module type and pattern, in natural hierarchical-name
@@ -73,7 +81,7 @@ an 8x2 region, with even workers on the left and odd workers on the right.
 The I/O routers use the original ``bsg_manycore_mesh_node`` module, selected by
 their local instance names::
 
-    threads_unit -module "bsg_manycore_mesh_node" -instance "io_rtr*" -workers 16->8: {
+    threads_group -module "bsg_manycore_mesh_node" -instance "io_rtr*" -workers 16->8: {
         4 4 0 0 6 6 2 2 5 5 1 1 3 3 7 7
     }
 
@@ -86,7 +94,7 @@ To compile and inspect the mapping::
 
     profile="$PWD/designs/HammerBlade/verilator/threads-unit-kk10.vlt"
     ./rtlmeter run --cases 'HammerBlade:16x8:amoadd' \
-        --compileArgs="--threads 8 --threads-unit-list '$profile'" \
+        --compileArgs="--threads 8 --compiler clang --threads-group-list '$profile'" \
         --nExecute 0 --workRoot work-hammerblade-kk10
 
 Use the same CPU pinning as the placement experiment when comparing performance.
@@ -122,16 +130,17 @@ To compile and inspect the mapping::
 
     profile="$PWD/designs/BlackParrot/verilator/threads-unit-kk10.vlt"
     ./rtlmeter run --cases 'BlackParrot:4x4:dhry' \
-        --compileArgs="--threads 8 --threads-unit-list '$profile'" \
+        --compileArgs="--threads 8 --compiler clang --threads-group-list '$profile'" \
         --nExecute 0 --workRoot work-blackparrot-kk10
 
 Only this design-size/worker-count combination is currently mapped.
 
 The following measurements used ``BlackParrot:4x4:dhry`` with 300 workload
 iterations on kk10 on 2026-10-24, at RTLMeter revision
-``cd176bf19f231c615054f1822aaaf13f0e124bec`` and the Verilator revision recorded
-above. Verilator and all freshly built models used Clang 21.1.8. Worker ``i``
-was pinned to CPU ``i``: CPUs 0 through 3 and 4 through 7 occupy two chiplets
+``cd176bf19f231c615054f1822aaaf13f0e124bec`` and the earlier worker-assignment
+revision recorded above. Verilator and all freshly built models used Clang
+21.1.8. Worker ``i`` was pinned to CPU ``i``: CPUs 0 through 3 and 4 through 7
+occupy two chiplets
 on socket 0. Memory was bound to node 0; the one-worker reference used CPU 0.
 Times are medians of three interleaved, isolated process runs, including
 initialization and cleanup, with the default Verilator C++ optimization flags.
@@ -205,8 +214,13 @@ To compile and inspect the logical mapping::
 
     profile="$PWD/designs/OpenPiton/verilator/threads-unit-kk10.vlt"
     ./rtlmeter run --cases 'OpenPiton:4x4:dhry' \
-        --compileArgs="--threads 8 --threads-unit-list '$profile'" \
+        --compileArgs="--threads 8 --compiler clang --threads-group-list '$profile'" \
         --nExecute 0 --workRoot work-openpiton-kk10
+
+For executions using the original vendored OpenPiton RTL, also add
+``--x-initial-edge`` to ``--compileArgs`` so simulation starts with the
+integration compiler. The separate PR #180 RTL changes described below remove
+this startup requirement.
 
 Only this design-size/worker-count combination is currently mapped.
 
@@ -214,8 +228,9 @@ The following measurements used ``OpenPiton:4x4:dhry`` on kk10 on 2026-10-24,
 with the bundled RTL at RTLMeter revision
 ``f16e42a7b979bbcce37262b74b650f3213ba3744``, the default two workload iterations,
 and 111,764 simulated cycles.
-Verilator and all four freshly built models used Clang 21.1.8 and the compiler
-revision recorded above, with the default Verilator C++ optimization flags.
+Verilator and all four freshly built models used Clang 21.1.8 and the earlier
+worker-assignment revision recorded above, with the default Verilator C++
+optimization flags.
 All eight-worker configurations used the affinity above, including the caller
 on CPU 3; the one-worker reference also used CPU 3. Memory was bound to node 0.
 Times are medians of three interleaved, isolated process runs, including
@@ -332,7 +347,7 @@ To compile and inspect the mapping::
 
     profile="$PWD/designs/Vortex/verilator/threads-unit-kk10.vlt"
     ./rtlmeter run --cases 'Vortex:sane:saxpy' \
-        --compileArgs="--threads 8 --threads-unit-list '$profile'" \
+        --compileArgs="--threads 8 --compiler clang --threads-group-list '$profile'" \
         --nExecute 0 --workRoot work-vortex-kk10
 
 Only this design-size/worker-count combination is currently mapped. All twelve
@@ -343,9 +358,10 @@ A grouping-only control confirmed the same unit indices.
 The following measurements used ``Vortex:sane:saxpy`` and
 ``Vortex:sane:sgemm`` on kk10 on 2026-10-25, with the default one workload
 iteration, at RTLMeter base revision
-``d8f866ebf975aa9a119966dad66503b615865e50`` and the Verilator revision recorded
-above. Verilator and all four freshly built models used Clang 21.1.8, with
-default Verilator C++ optimization flags. Worker ``i`` was pinned to CPU ``i``;
+``d8f866ebf975aa9a119966dad66503b615865e50`` and the earlier worker-assignment
+revision recorded above. Verilator and all four freshly built models used
+Clang 21.1.8, with default Verilator C++ optimization flags. Worker ``i`` was
+pinned to CPU ``i``;
 the calling/scheduler thread and the one-worker reference used CPU 0. All runs
 used memory node 0. Times are medians of three interleaved, isolated process
 runs, including initialization, simulation, and cleanup.
@@ -566,6 +582,13 @@ worker assignment and placement benchmarking remain pending.
 
 Coverage and validation
 -----------------------
+
+On 2026-10-30, all twelve profiles passed eight-worker code generation with
+the integration revision above, built using Clang 21.1.8. The configurations
+were HammerBlade 16x8, BlackParrot 4x4, OpenPiton 4x4, Vortex sane, OpenTitan
+default, and Caliptra default. The generated index listings matched all 306
+explicit worker assignments. This checks profile compatibility; the runtime
+measurements retain their original compiler revisions recorded above.
 
 This is an initial inventory, not a claim of complete design coverage. Portable
 profiles are starting points; grouping can hurt performance on some designs.

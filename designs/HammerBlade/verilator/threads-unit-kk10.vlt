@@ -1,9 +1,9 @@
 `verilator_config
 // Accepted HammerBlade 16x8 placement; logical worker 0 is the calling thread.
-threads_unit -module "bsg_manycore_mesh_node" -instance "io_rtr*" -workers 16->8: {
+threads_group -module "bsg_manycore_mesh_node" -instance "io_rtr*" -workers 16->8: {
     4 4 0 0 6 6 2 2 5 5 1 1 3 3 7 7
 }
-threads_unit -module "bsg_manycore_tile_compute_ruche" -workers 128->8: {
+threads_group -module "bsg_manycore_tile_compute_ruche" -workers 128->8: {
     0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1
     0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1
     2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3
@@ -13,7 +13,7 @@ threads_unit -module "bsg_manycore_tile_compute_ruche" -workers 128->8: {
     6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7
     6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7
 }
-threads_unit -module "bsg_manycore_tile_vcache" -workers 32->8: {
+threads_group -module "bsg_manycore_tile_vcache" -workers 32->8: {
     0 0 0 0 2 2 2 2 1 1 1 1 3 3 3 3
     4 4 4 4 6 6 6 6 5 5 5 5 7 7 7 7
 }
