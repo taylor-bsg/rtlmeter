@@ -198,7 +198,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc0_inst_done && ((spc0_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint0 = 1;
-       linebuf0 = {linebuf0, spc0_phy_pc_w[8:1]};
+       linebuf0 = {linebuf0, string'(spc0_phy_pc_w[8:1])};
        if (spc0_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 0, linebuf0);
           linebuf0 = "";

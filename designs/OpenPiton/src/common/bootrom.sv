@@ -20,9 +20,10 @@ module bootrom (
    input  logic [63:0]  addr_i,
    output logic [63:0]  rdata_o
 );
-    localparam int RomSize = 1;
+    localparam int RomSize = 2;
 
     const logic [RomSize-1:0][63:0] mem = {
+        64'h00000000_00000000,
         64'h00008502_057e4505
     };
 

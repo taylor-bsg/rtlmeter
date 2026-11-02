@@ -2592,7 +2592,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc0_inst_done && ((spc0_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint0 = 1;
-       linebuf0 = {linebuf0, spc0_phy_pc_w[8:1]};
+       linebuf0 = {linebuf0, string'(spc0_phy_pc_w[8:1])};
        if (spc0_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 0, linebuf0);
           linebuf0 = "";
@@ -2610,7 +2610,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc1_inst_done && ((spc1_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint1 = 1;
-       linebuf1 = {linebuf1, spc1_phy_pc_w[8:1]};
+       linebuf1 = {linebuf1, string'(spc1_phy_pc_w[8:1])};
        if (spc1_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 1, linebuf1);
           linebuf1 = "";
@@ -2628,7 +2628,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc2_inst_done && ((spc2_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint2 = 1;
-       linebuf2 = {linebuf2, spc2_phy_pc_w[8:1]};
+       linebuf2 = {linebuf2, string'(spc2_phy_pc_w[8:1])};
        if (spc2_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 2, linebuf2);
           linebuf2 = "";
@@ -2646,7 +2646,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc3_inst_done && ((spc3_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint3 = 1;
-       linebuf3 = {linebuf3, spc3_phy_pc_w[8:1]};
+       linebuf3 = {linebuf3, string'(spc3_phy_pc_w[8:1])};
        if (spc3_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 3, linebuf3);
           linebuf3 = "";
@@ -2664,7 +2664,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc4_inst_done && ((spc4_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint4 = 1;
-       linebuf4 = {linebuf4, spc4_phy_pc_w[8:1]};
+       linebuf4 = {linebuf4, string'(spc4_phy_pc_w[8:1])};
        if (spc4_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 4, linebuf4);
           linebuf4 = "";
@@ -2682,7 +2682,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc5_inst_done && ((spc5_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint5 = 1;
-       linebuf5 = {linebuf5, spc5_phy_pc_w[8:1]};
+       linebuf5 = {linebuf5, string'(spc5_phy_pc_w[8:1])};
        if (spc5_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 5, linebuf5);
           linebuf5 = "";
@@ -2700,7 +2700,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc6_inst_done && ((spc6_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint6 = 1;
-       linebuf6 = {linebuf6, spc6_phy_pc_w[8:1]};
+       linebuf6 = {linebuf6, string'(spc6_phy_pc_w[8:1])};
        if (spc6_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 6, linebuf6);
           linebuf6 = "";
@@ -2718,7 +2718,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc7_inst_done && ((spc7_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint7 = 1;
-       linebuf7 = {linebuf7, spc7_phy_pc_w[8:1]};
+       linebuf7 = {linebuf7, string'(spc7_phy_pc_w[8:1])};
        if (spc7_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 7, linebuf7);
           linebuf7 = "";
@@ -2736,7 +2736,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc8_inst_done && ((spc8_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint8 = 1;
-       linebuf8 = {linebuf8, spc8_phy_pc_w[8:1]};
+       linebuf8 = {linebuf8, string'(spc8_phy_pc_w[8:1])};
        if (spc8_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 8, linebuf8);
           linebuf8 = "";
@@ -2754,7 +2754,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc9_inst_done && ((spc9_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint9 = 1;
-       linebuf9 = {linebuf9, spc9_phy_pc_w[8:1]};
+       linebuf9 = {linebuf9, string'(spc9_phy_pc_w[8:1])};
        if (spc9_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 9, linebuf9);
           linebuf9 = "";
@@ -2772,7 +2772,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc10_inst_done && ((spc10_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint10 = 1;
-       linebuf10 = {linebuf10, spc10_phy_pc_w[8:1]};
+       linebuf10 = {linebuf10, string'(spc10_phy_pc_w[8:1])};
        if (spc10_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 10, linebuf10);
           linebuf10 = "";
@@ -2790,7 +2790,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc11_inst_done && ((spc11_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint11 = 1;
-       linebuf11 = {linebuf11, spc11_phy_pc_w[8:1]};
+       linebuf11 = {linebuf11, string'(spc11_phy_pc_w[8:1])};
        if (spc11_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 11, linebuf11);
           linebuf11 = "";
@@ -2808,7 +2808,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc12_inst_done && ((spc12_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint12 = 1;
-       linebuf12 = {linebuf12, spc12_phy_pc_w[8:1]};
+       linebuf12 = {linebuf12, string'(spc12_phy_pc_w[8:1])};
        if (spc12_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 12, linebuf12);
           linebuf12 = "";
@@ -2826,7 +2826,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc13_inst_done && ((spc13_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint13 = 1;
-       linebuf13 = {linebuf13, spc13_phy_pc_w[8:1]};
+       linebuf13 = {linebuf13, string'(spc13_phy_pc_w[8:1])};
        if (spc13_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 13, linebuf13);
           linebuf13 = "";
@@ -2844,7 +2844,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc14_inst_done && ((spc14_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint14 = 1;
-       linebuf14 = {linebuf14, spc14_phy_pc_w[8:1]};
+       linebuf14 = {linebuf14, string'(spc14_phy_pc_w[8:1])};
        if (spc14_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 14, linebuf14);
           linebuf14 = "";
@@ -2862,7 +2862,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc15_inst_done && ((spc15_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint15 = 1;
-       linebuf15 = {linebuf15, spc15_phy_pc_w[8:1]};
+       linebuf15 = {linebuf15, string'(spc15_phy_pc_w[8:1])};
        if (spc15_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 15, linebuf15);
           linebuf15 = "";
@@ -2880,7 +2880,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc16_inst_done && ((spc16_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint16 = 1;
-       linebuf16 = {linebuf16, spc16_phy_pc_w[8:1]};
+       linebuf16 = {linebuf16, string'(spc16_phy_pc_w[8:1])};
        if (spc16_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 16, linebuf16);
           linebuf16 = "";
@@ -2898,7 +2898,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc17_inst_done && ((spc17_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint17 = 1;
-       linebuf17 = {linebuf17, spc17_phy_pc_w[8:1]};
+       linebuf17 = {linebuf17, string'(spc17_phy_pc_w[8:1])};
        if (spc17_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 17, linebuf17);
           linebuf17 = "";
@@ -2916,7 +2916,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc18_inst_done && ((spc18_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint18 = 1;
-       linebuf18 = {linebuf18, spc18_phy_pc_w[8:1]};
+       linebuf18 = {linebuf18, string'(spc18_phy_pc_w[8:1])};
        if (spc18_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 18, linebuf18);
           linebuf18 = "";
@@ -2934,7 +2934,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc19_inst_done && ((spc19_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint19 = 1;
-       linebuf19 = {linebuf19, spc19_phy_pc_w[8:1]};
+       linebuf19 = {linebuf19, string'(spc19_phy_pc_w[8:1])};
        if (spc19_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 19, linebuf19);
           linebuf19 = "";
@@ -2952,7 +2952,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc20_inst_done && ((spc20_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint20 = 1;
-       linebuf20 = {linebuf20, spc20_phy_pc_w[8:1]};
+       linebuf20 = {linebuf20, string'(spc20_phy_pc_w[8:1])};
        if (spc20_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 20, linebuf20);
           linebuf20 = "";
@@ -2970,7 +2970,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc21_inst_done && ((spc21_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint21 = 1;
-       linebuf21 = {linebuf21, spc21_phy_pc_w[8:1]};
+       linebuf21 = {linebuf21, string'(spc21_phy_pc_w[8:1])};
        if (spc21_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 21, linebuf21);
           linebuf21 = "";
@@ -2988,7 +2988,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc22_inst_done && ((spc22_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint22 = 1;
-       linebuf22 = {linebuf22, spc22_phy_pc_w[8:1]};
+       linebuf22 = {linebuf22, string'(spc22_phy_pc_w[8:1])};
        if (spc22_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 22, linebuf22);
           linebuf22 = "";
@@ -3006,7 +3006,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc23_inst_done && ((spc23_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint23 = 1;
-       linebuf23 = {linebuf23, spc23_phy_pc_w[8:1]};
+       linebuf23 = {linebuf23, string'(spc23_phy_pc_w[8:1])};
        if (spc23_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 23, linebuf23);
           linebuf23 = "";
@@ -3024,7 +3024,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc24_inst_done && ((spc24_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint24 = 1;
-       linebuf24 = {linebuf24, spc24_phy_pc_w[8:1]};
+       linebuf24 = {linebuf24, string'(spc24_phy_pc_w[8:1])};
        if (spc24_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 24, linebuf24);
           linebuf24 = "";
@@ -3042,7 +3042,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc25_inst_done && ((spc25_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint25 = 1;
-       linebuf25 = {linebuf25, spc25_phy_pc_w[8:1]};
+       linebuf25 = {linebuf25, string'(spc25_phy_pc_w[8:1])};
        if (spc25_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 25, linebuf25);
           linebuf25 = "";
@@ -3060,7 +3060,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc26_inst_done && ((spc26_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint26 = 1;
-       linebuf26 = {linebuf26, spc26_phy_pc_w[8:1]};
+       linebuf26 = {linebuf26, string'(spc26_phy_pc_w[8:1])};
        if (spc26_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 26, linebuf26);
           linebuf26 = "";
@@ -3078,7 +3078,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc27_inst_done && ((spc27_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint27 = 1;
-       linebuf27 = {linebuf27, spc27_phy_pc_w[8:1]};
+       linebuf27 = {linebuf27, string'(spc27_phy_pc_w[8:1])};
        if (spc27_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 27, linebuf27);
           linebuf27 = "";
@@ -3096,7 +3096,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc28_inst_done && ((spc28_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint28 = 1;
-       linebuf28 = {linebuf28, spc28_phy_pc_w[8:1]};
+       linebuf28 = {linebuf28, string'(spc28_phy_pc_w[8:1])};
        if (spc28_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 28, linebuf28);
           linebuf28 = "";
@@ -3114,7 +3114,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc29_inst_done && ((spc29_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint29 = 1;
-       linebuf29 = {linebuf29, spc29_phy_pc_w[8:1]};
+       linebuf29 = {linebuf29, string'(spc29_phy_pc_w[8:1])};
        if (spc29_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 29, linebuf29);
           linebuf29 = "";
@@ -3132,7 +3132,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc30_inst_done && ((spc30_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint30 = 1;
-       linebuf30 = {linebuf30, spc30_phy_pc_w[8:1]};
+       linebuf30 = {linebuf30, string'(spc30_phy_pc_w[8:1])};
        if (spc30_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 30, linebuf30);
           linebuf30 = "";
@@ -3150,7 +3150,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc31_inst_done && ((spc31_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint31 = 1;
-       linebuf31 = {linebuf31, spc31_phy_pc_w[8:1]};
+       linebuf31 = {linebuf31, string'(spc31_phy_pc_w[8:1])};
        if (spc31_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 31, linebuf31);
           linebuf31 = "";
@@ -3168,7 +3168,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc32_inst_done && ((spc32_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint32 = 1;
-       linebuf32 = {linebuf32, spc32_phy_pc_w[8:1]};
+       linebuf32 = {linebuf32, string'(spc32_phy_pc_w[8:1])};
        if (spc32_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 32, linebuf32);
           linebuf32 = "";
@@ -3186,7 +3186,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc33_inst_done && ((spc33_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint33 = 1;
-       linebuf33 = {linebuf33, spc33_phy_pc_w[8:1]};
+       linebuf33 = {linebuf33, string'(spc33_phy_pc_w[8:1])};
        if (spc33_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 33, linebuf33);
           linebuf33 = "";
@@ -3204,7 +3204,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc34_inst_done && ((spc34_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint34 = 1;
-       linebuf34 = {linebuf34, spc34_phy_pc_w[8:1]};
+       linebuf34 = {linebuf34, string'(spc34_phy_pc_w[8:1])};
        if (spc34_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 34, linebuf34);
           linebuf34 = "";
@@ -3222,7 +3222,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc35_inst_done && ((spc35_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint35 = 1;
-       linebuf35 = {linebuf35, spc35_phy_pc_w[8:1]};
+       linebuf35 = {linebuf35, string'(spc35_phy_pc_w[8:1])};
        if (spc35_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 35, linebuf35);
           linebuf35 = "";
@@ -3240,7 +3240,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc36_inst_done && ((spc36_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint36 = 1;
-       linebuf36 = {linebuf36, spc36_phy_pc_w[8:1]};
+       linebuf36 = {linebuf36, string'(spc36_phy_pc_w[8:1])};
        if (spc36_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 36, linebuf36);
           linebuf36 = "";
@@ -3258,7 +3258,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc37_inst_done && ((spc37_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint37 = 1;
-       linebuf37 = {linebuf37, spc37_phy_pc_w[8:1]};
+       linebuf37 = {linebuf37, string'(spc37_phy_pc_w[8:1])};
        if (spc37_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 37, linebuf37);
           linebuf37 = "";
@@ -3276,7 +3276,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc38_inst_done && ((spc38_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint38 = 1;
-       linebuf38 = {linebuf38, spc38_phy_pc_w[8:1]};
+       linebuf38 = {linebuf38, string'(spc38_phy_pc_w[8:1])};
        if (spc38_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 38, linebuf38);
           linebuf38 = "";
@@ -3294,7 +3294,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc39_inst_done && ((spc39_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint39 = 1;
-       linebuf39 = {linebuf39, spc39_phy_pc_w[8:1]};
+       linebuf39 = {linebuf39, string'(spc39_phy_pc_w[8:1])};
        if (spc39_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 39, linebuf39);
           linebuf39 = "";
@@ -3312,7 +3312,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc40_inst_done && ((spc40_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint40 = 1;
-       linebuf40 = {linebuf40, spc40_phy_pc_w[8:1]};
+       linebuf40 = {linebuf40, string'(spc40_phy_pc_w[8:1])};
        if (spc40_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 40, linebuf40);
           linebuf40 = "";
@@ -3330,7 +3330,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc41_inst_done && ((spc41_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint41 = 1;
-       linebuf41 = {linebuf41, spc41_phy_pc_w[8:1]};
+       linebuf41 = {linebuf41, string'(spc41_phy_pc_w[8:1])};
        if (spc41_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 41, linebuf41);
           linebuf41 = "";
@@ -3348,7 +3348,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc42_inst_done && ((spc42_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint42 = 1;
-       linebuf42 = {linebuf42, spc42_phy_pc_w[8:1]};
+       linebuf42 = {linebuf42, string'(spc42_phy_pc_w[8:1])};
        if (spc42_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 42, linebuf42);
           linebuf42 = "";
@@ -3366,7 +3366,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc43_inst_done && ((spc43_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint43 = 1;
-       linebuf43 = {linebuf43, spc43_phy_pc_w[8:1]};
+       linebuf43 = {linebuf43, string'(spc43_phy_pc_w[8:1])};
        if (spc43_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 43, linebuf43);
           linebuf43 = "";
@@ -3384,7 +3384,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc44_inst_done && ((spc44_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint44 = 1;
-       linebuf44 = {linebuf44, spc44_phy_pc_w[8:1]};
+       linebuf44 = {linebuf44, string'(spc44_phy_pc_w[8:1])};
        if (spc44_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 44, linebuf44);
           linebuf44 = "";
@@ -3402,7 +3402,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc45_inst_done && ((spc45_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint45 = 1;
-       linebuf45 = {linebuf45, spc45_phy_pc_w[8:1]};
+       linebuf45 = {linebuf45, string'(spc45_phy_pc_w[8:1])};
        if (spc45_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 45, linebuf45);
           linebuf45 = "";
@@ -3420,7 +3420,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc46_inst_done && ((spc46_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint46 = 1;
-       linebuf46 = {linebuf46, spc46_phy_pc_w[8:1]};
+       linebuf46 = {linebuf46, string'(spc46_phy_pc_w[8:1])};
        if (spc46_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 46, linebuf46);
           linebuf46 = "";
@@ -3438,7 +3438,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc47_inst_done && ((spc47_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint47 = 1;
-       linebuf47 = {linebuf47, spc47_phy_pc_w[8:1]};
+       linebuf47 = {linebuf47, string'(spc47_phy_pc_w[8:1])};
        if (spc47_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 47, linebuf47);
           linebuf47 = "";
@@ -3456,7 +3456,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc48_inst_done && ((spc48_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint48 = 1;
-       linebuf48 = {linebuf48, spc48_phy_pc_w[8:1]};
+       linebuf48 = {linebuf48, string'(spc48_phy_pc_w[8:1])};
        if (spc48_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 48, linebuf48);
           linebuf48 = "";
@@ -3474,7 +3474,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc49_inst_done && ((spc49_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint49 = 1;
-       linebuf49 = {linebuf49, spc49_phy_pc_w[8:1]};
+       linebuf49 = {linebuf49, string'(spc49_phy_pc_w[8:1])};
        if (spc49_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 49, linebuf49);
           linebuf49 = "";
@@ -3492,7 +3492,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc50_inst_done && ((spc50_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint50 = 1;
-       linebuf50 = {linebuf50, spc50_phy_pc_w[8:1]};
+       linebuf50 = {linebuf50, string'(spc50_phy_pc_w[8:1])};
        if (spc50_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 50, linebuf50);
           linebuf50 = "";
@@ -3510,7 +3510,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc51_inst_done && ((spc51_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint51 = 1;
-       linebuf51 = {linebuf51, spc51_phy_pc_w[8:1]};
+       linebuf51 = {linebuf51, string'(spc51_phy_pc_w[8:1])};
        if (spc51_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 51, linebuf51);
           linebuf51 = "";
@@ -3528,7 +3528,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc52_inst_done && ((spc52_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint52 = 1;
-       linebuf52 = {linebuf52, spc52_phy_pc_w[8:1]};
+       linebuf52 = {linebuf52, string'(spc52_phy_pc_w[8:1])};
        if (spc52_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 52, linebuf52);
           linebuf52 = "";
@@ -3546,7 +3546,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc53_inst_done && ((spc53_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint53 = 1;
-       linebuf53 = {linebuf53, spc53_phy_pc_w[8:1]};
+       linebuf53 = {linebuf53, string'(spc53_phy_pc_w[8:1])};
        if (spc53_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 53, linebuf53);
           linebuf53 = "";
@@ -3564,7 +3564,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc54_inst_done && ((spc54_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint54 = 1;
-       linebuf54 = {linebuf54, spc54_phy_pc_w[8:1]};
+       linebuf54 = {linebuf54, string'(spc54_phy_pc_w[8:1])};
        if (spc54_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 54, linebuf54);
           linebuf54 = "";
@@ -3582,7 +3582,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc55_inst_done && ((spc55_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint55 = 1;
-       linebuf55 = {linebuf55, spc55_phy_pc_w[8:1]};
+       linebuf55 = {linebuf55, string'(spc55_phy_pc_w[8:1])};
        if (spc55_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 55, linebuf55);
           linebuf55 = "";
@@ -3600,7 +3600,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc56_inst_done && ((spc56_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint56 = 1;
-       linebuf56 = {linebuf56, spc56_phy_pc_w[8:1]};
+       linebuf56 = {linebuf56, string'(spc56_phy_pc_w[8:1])};
        if (spc56_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 56, linebuf56);
           linebuf56 = "";
@@ -3618,7 +3618,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc57_inst_done && ((spc57_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint57 = 1;
-       linebuf57 = {linebuf57, spc57_phy_pc_w[8:1]};
+       linebuf57 = {linebuf57, string'(spc57_phy_pc_w[8:1])};
        if (spc57_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 57, linebuf57);
           linebuf57 = "";
@@ -3636,7 +3636,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc58_inst_done && ((spc58_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint58 = 1;
-       linebuf58 = {linebuf58, spc58_phy_pc_w[8:1]};
+       linebuf58 = {linebuf58, string'(spc58_phy_pc_w[8:1])};
        if (spc58_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 58, linebuf58);
           linebuf58 = "";
@@ -3654,7 +3654,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc59_inst_done && ((spc59_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint59 = 1;
-       linebuf59 = {linebuf59, spc59_phy_pc_w[8:1]};
+       linebuf59 = {linebuf59, string'(spc59_phy_pc_w[8:1])};
        if (spc59_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 59, linebuf59);
           linebuf59 = "";
@@ -3672,7 +3672,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc60_inst_done && ((spc60_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint60 = 1;
-       linebuf60 = {linebuf60, spc60_phy_pc_w[8:1]};
+       linebuf60 = {linebuf60, string'(spc60_phy_pc_w[8:1])};
        if (spc60_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 60, linebuf60);
           linebuf60 = "";
@@ -3690,7 +3690,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc61_inst_done && ((spc61_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint61 = 1;
-       linebuf61 = {linebuf61, spc61_phy_pc_w[8:1]};
+       linebuf61 = {linebuf61, string'(spc61_phy_pc_w[8:1])};
        if (spc61_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 61, linebuf61);
           linebuf61 = "";
@@ -3708,7 +3708,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc62_inst_done && ((spc62_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint62 = 1;
-       linebuf62 = {linebuf62, spc62_phy_pc_w[8:1]};
+       linebuf62 = {linebuf62, string'(spc62_phy_pc_w[8:1])};
        if (spc62_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 62, linebuf62);
           linebuf62 = "";
@@ -3726,7 +3726,7 @@ always @(posedge clk) begin
   if (rst_l) begin
     if (spc63_inst_done && ((spc63_phy_pc_w >> 9) == (64'h80000400 >> 9))) begin
        hitMadPrint63 = 1;
-       linebuf63 = {linebuf63, spc63_phy_pc_w[8:1]};
+       linebuf63 = {linebuf63, string'(spc63_phy_pc_w[8:1])};
        if (spc63_phy_pc_w[8:1] == "\n") begin
           $write("%016t hart %4d: %s", $time, 63, linebuf63);
           linebuf63 = "";
