@@ -46,6 +46,6 @@ threads_group -module "xbar_main" -workers 1->8: { 0 }
 threads_group -module "xbar_peri" -workers 1->8: { 2 }
 
 threads_group -module "kmac_entropy" -workers 1->8: { 4 }
-threads_group -module "keccak_2share" -workers 2->8: { 5 6 }
+threads_group -module "keccak_2share" -workers 2->8: { 6 5 }
 threads_group -module "kmac_reg_top" -workers 1->8: { 6 }
 threads_group -module "alert_handler_reg_top" -workers 1->8: { 3 }
