@@ -1,0 +1,13 @@
+`verilator_config
+// OpenPiton 4x4 on eight workers; coordinates below are (y, x).
+// Required worker-to-CPU affinity: 3 1 2 0 4 5 6 7.
+// Worker 0 is the calling/scheduler thread, pinned to physical CPU 3.
+// CPU owners by tile row: 0 1 2 3 / 0 1 2 3 / 4 5 6 7 / 4 5 6 7.
+// Tile index = 4*y + x; entries below are logical worker indices.
+threads_group -module "tile" -workers 16->8: { 3 3 4 4 1 1 5 5 2 2 6 6 0 0 7 7 } -workers 16->1 -workers 16->2 -workers 16->4: { 1 1 2 2 0 0 2 2 1 1 3 3 0 0 3 3 }
+// Both chipset I/O crossbars run on physical CPU 0 (logical worker 3).
+threads_group -module "io_xbar_top_wrap" -workers 2->8: { 3 3 } -workers 2->1 -workers 2->2 -workers 2->4: { 1 1 }
+// Shared RISC-V peripherals run on physical CPU 1.
+threads_group -module "riscv_peripherals" -workers 1->8: { 1 } -workers 1->1 -workers 1->2 -workers 1->4: { 0 }
+// The PC monitor runs on physical CPU 4.
+threads_group -module "pc_cmp" -workers 1->8: { 4 } -workers 1->1 -workers 1->2 -workers 1->4: { 2 }
